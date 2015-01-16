@@ -1,0 +1,186 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  PREAMBLE: sets up compiler modes, loads packages, defines macros, etc
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{preamble}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MAIN DOCUMENT TEXT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\shorttitle{A \SNIa Behind Abell 2744}
+\shortauthors{Rodney et al.}
+
+\begin{document}
+
+\title{Illuminating a Dark Lens : A Type Ia Supernova Magnified by Galaxy Cluster Abell 2744}
+
+\ifms
+    \author{Steven A.~Rodney\altaffilmark{1}}
+    \author{\etal\altaffilmark{2}}
+
+    \altaffiltext{1}{\JHU}
+    \altaffiltext{1}{\elsewhere}
+\else 
+    \author{
+      Steven~A.~Rodney\altaffilmark{1},
+      \etal\altaffilmark{2}
+    }
+    \altaffiltext{1}{\JHU}
+    \altaffiltext{2}{\elsewhere}
+\fi
+
+
+
+\begin{abstract}
+SN \tomas\ is a Type Ia Supernova (\SNIa) discovered at $z=1.33$
+behind the galaxy cluster Abell 2744 ($z=0.308$). This SN has a
+projected separation from the cluster core of $\sim$40\arcsec, closer
+than any other cluster-lensed \SNIa.  As such, it provides the first
+opportunity to confront gravitational lens models of galaxy clusters
+with the direct measurement of an absolute magnification at the edge
+of the strong-lensing region.  We derive a tightly constrained measure
+of the peak apparent magnitude, corrected for light curve shape and
+exinction.  In a cosmology-independent analysis, we find that \tomas\
+is $0.71\pm0.12$ magnitudes brighter than unlensed \SNeIa\ at similar
+redshift, implying a lensing magnification of $\mu_{\rm
+obs}=1.9\pm0.2$.  Predicted magnifications from 7 independent groups
+are systematically biased to higher values, with a mean of $\mu_{\rm
+mod}=2.4\pm0.3$ and some models disagreeing by $>6\sigma$.  The most
+significant discrepancies arise from models with a strict ``light
+traces mass'' assumption.  We evaluate possible causes for this bias,
+including variation of the mass-to-light ratio in the nearest cluster
+member galaxy.  A sample of \textcolor{red}{$\sim$10??} \SNeIa\ behind
+any single cluster could provide a robust evaluation of systematic
+biases in lens models.  Until such a sample exists, it is advisable to
+increase the estimated uncertainty of any predicted magnification
+by an amount comparable to the dispersion from all available lens
+models.
+
+\end{abstract}
+
+\keywords{ supernovae: general }
+
+\section{Introduction}
+\label{sec:Introduction}
+
+Massive galaxy clusters can be used as cosmic telescopes to magnify
+distant background objects through gravitational lensing.  This can
+substantially increase the reach of deep imaging surveys, and has
+recently been used to discover candidate proto-galaxies formed in the
+first Gyr after the Big
+Bang \citep{Zheng:2012,Coe:2013,} 
+\textcolor{red}{(cite other high-z galaxy candidates discovered with lensing)}
+
+Lensed SNe have been discovered
+\textcolor{red}{\citep{Goobar:2009,Riehm:2011,Patel:2014,Nordin:2014,}}
+
+
+\section{Discovery and Follow-up}
+\label{sec:DiscoveryAndFollowUp}
+
+\section{Spectrum}
+\label{sec:Spectrum}
+
+
+\section{Light Curve}
+\label{sec:LightCurve}
+
+\textcolor{red}{Light curve fitting with MLCS2k2}
+
+
+\begin{figure*}
+\begin{center}
+\includegraphics[width=0.49\textwidth]{FIG/lcfit_mlcs2k2_ABmag}
+\includegraphics[width=0.49\textwidth]{FIG/specfit_11fe_t-3_z131}
+\caption{ {\it (Left)} Light curve fit using MLCS2k2. 
+{\it (Right)} Spectral template match to the HST ACS G800L SN
+spectrum.  Assuming minimal reddening, the best-fit template is from
+SN 2011fe at $z=1.31$ and $t=-3$ rest-frame days before peak
+brightness.  Allowing a correction for the broad SED shape using
+3rd-order polynomials, the best match is from SN 2012cg at $z=1.31$
+and $t=+3 days$.
+\label{fig:mlcsfit} }
+\end{center}
+\end{figure*}
+
+\section{Lensing Magnification}
+\label{sec:LensingMagnification}
+
+
+\subsection{Direct Magnification Measurement}
+\label{sec:DirectMagnificationMeasurement}
+
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=\columnwidth]{FIG/magnification_measurement}
+\caption{ Deriving the magnification from comparison to field SN
+\label{fig:magmeasure} }
+\end{center}
+\end{figure}
+
+\subsection{Comparison to Model Predictions}
+\label{sec:ComparisonToModelPredictions}
+
+
+1) All of the lens models predict a higher magnification than we observe, some with discrepancies >5 sigma.  This suggests a systematic bias inherent to all the models -- at least for this particular line of sight. 
+
+2) the addition of new lensing constraints from the HFF data does not reduce the tension.  From both of the most recent models (Jauzac+ 2014 and Lam+ 2014) the predicted magnification is still significantly higher than the observed. 
+
+3) The pre-HFF models that come closest to matching the observed magnification are the Zitrin-NFW and Merten models (also the Williams model, though it has very large uncertainties).  Those happen to be two models that relax or remove the assumption of light-traces-mass.  
+
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=\columnwidth]{FIG/lensing_test}
+\caption{ 
+Comparison of the observed lensing magnification to predictions from
+lens models.
+\label{fig:lensingtest} }
+\end{center}
+\end{figure}
+
+
+\section{Discussion}
+
+Possible sources for the bias. 
+
+Implications for the systematic error budget of high-z lenses.
+
+Proposal for a survey to build a bigger sample : HST GO, Snapshot, ground-based.
+
+\bigskip
+
+
+{\bf Acknowledgments:}
+
+We are very pleased to thank the Hubble Frontier Fields team at STScI
+for their substantial efforts to make the HFF program successful.  In
+particular, thanks are due to Matt Mountain for the allocation of
+discretionary orbits for the HFF program; to Jennifer Lotz, Norman
+Grogin and Patricia Royle for accommodations in strategy and
+implementation to make the FrontierSN program possible; and to Dan Coe
+for curating the excellent and accessible lens model comparison tools.
+We also must thank the CLASH team, led by Marc Postman, for
+observations, catalogs, and high level science products that were of
+significant value for this analysis.
+
+Financial support for this work was provided by NASA through grants
+HST-HF-51312 and HST-GO-13386 from the Space Telescope
+Science Institute, which is operated by Associated Universities for
+Research in Astronomy, Inc., under NASA contract NAS 5-26555.  Support
+for this research at Rutgers University was provided in part by NSF
+CAREER award AST-0847157 to SWJ.  The Dark Cosmology Centre is
+supported by the Danish National Research Foundation.
+
+
+{\it Facilities:} \facility{HST (WFC3)}
+\smallskip
+
+\bibliographystyle{apj}
+\bibliography{bibdesk}
+
+\end{document}
+

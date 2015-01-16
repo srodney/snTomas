@@ -1,0 +1,21 @@
+.DS_Store
+*~
+#*#
+*log
+*blg
+*out
+*aux
+
+# bibliography files:
+*bbl
+
+SPECTRUM
+LENSING
+LCFIT
+LCFIT.BAD
+LCCOMPARE
+IMAGES
+HUBBLEFIG
+HSTACS_IA*
+HIGHZ_IA*
+FOREGROUND_GALAXY
