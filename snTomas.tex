@@ -16,20 +16,12 @@
 
 \title{Illuminating a Dark Lens : A Type Ia Supernova Magnified by Galaxy Cluster Abell 2744}
 
-\ifms
-    \author{Steven A.~Rodney\altaffilmark{1}}
-    \author{\etal\altaffilmark{2}}
-
-    \altaffiltext{1}{\JHU}
-    \altaffiltext{1}{\elsewhere}
-\else 
-    \author{
-      Steven~A.~Rodney\altaffilmark{1},
-      \etal\altaffilmark{2}
-    }
-    \altaffiltext{1}{\JHU}
-    \altaffiltext{2}{\elsewhere}
-\fi
+\author{
+ Steven~A.~Rodney\altaffilmark{1},
+  \etal
+}
+\altaffiltext{1}{\JHU}
+\altaffiltext{2}{Hubble fellow}
 
 
 
@@ -74,11 +66,65 @@ Bang \citep{Zheng:2012,Coe:2013,}
 \textcolor{red}{(cite other high-z galaxy candidates discovered with lensing)}
 
 Lensed SNe have been discovered
-\textcolor{red}{\citep{Goobar:2009,Riehm:2011,Patel:2014,Nordin:2014,}}
+\citep{Goobar:2009,Riehm:2011,Patel:2014,Nordin:2014}
+
+In Section~\ref{sec:DiscoveryAndFollowup} we present the discovery and
+follow-up observations of SN \tomas at $z=1.31$, discovered behind the
+galaxy cluster Abell 2744.  Sections~\ref{sec:Spectrum} and \ref{sec:LightCurve}
+describe the spectroscopy and photometry of this SN, leading to a
+classification of the object as a normal Type Ia SN.  In
+Section~\ref{sec:LensingMagnification} we make a direct measurement of
+the magnification of this source due to gravitational lensing, and
+compare to predicitions from lens models.  Finally,
+Section~\ref{sec:Discussion} discusses the tension between our
+magnification measurement and the lens models, with implications for
+the systematic error budget in magnification estimates for other
+high-$z$ lensed sources.
 
 
 \section{Discovery and Follow-up}
-\label{sec:DiscoveryAndFollowUp}
+\label{sec:DiscoveryAndFollowup}
+
+SN \tomas\ was discovered in \HST\ observations with the Advanced
+Camera for Surveys (ACS) in the F606W and F814W bands (V and i),
+collected on UT 2014 May 15 as part of the Hubble Frontier Fields
+(HFF) survey (PI:J.Lotz,
+HST-PID:13495).\footnote{\url{http://www.stsci.edu/hst/campaigns/frontier-fields}}
+The HFF program is a 3-year director's discretionary initiative that
+is collecting 140 orbits of HST imaging (roughly 340 ksec) on six
+massive galaxy clusters, plus 6 accompanying ``parallel fields.''
+Each field is observed in 3 optical bands (ACS F435W, F606W and F814W)
+and 4 infrared (IR) bands (WFC3-IR F105W, F125W, F140W, and F160W),
+although the optical and IR imaging campaigns are separated by $\sim$6
+months. Abell 2744 was the first cluster observed, with IR imaging
+spanning October-November 2013, and the optical imaging from May-July
+2014.
+
+The SN detection was made in difference images using template imaging
+of Abell 2744 from HST+ACS observations taken in 2009 (PI:Dupke,
+HST-PID:11689).  Upon discovery, HST target-of-opportunity
+observations were triggered from the FrontierSN program (PI:Rodney,
+HST-PID:13386), which aims to discover and follow transient sources in
+the HFF cluster and parallel fields. The FrontierSN observations
+provided WFC3-IR imaging as well as spectroscopy using the ACS G800L
+grism, supplementing the rapid-cadence optical imaging from HST+ACS
+already being provided by the HFF program. Difference images for the
+IR follow-up data were generated using templates constructed from the
+HFF WFC3-IR imaging campaign, which concluded in November, 2013.
+
+All of the imaging data were processed using the {\tt sndrizpipe}
+pipeline,\footnote{\url{https://github.com/srodney/sndrizpipe}
+v1.2 DOI:10.5281/zenodo.10731} a custom data reduction package in
+Python that is employs the {\tt DrizzlePac} tools from the Space
+Telescope Science Institute (STScI) \citep{Fruchter:2010}.  Photometry
+was collected using the {\tt PyPhot} software
+package,\footnote{\url{https://github.com/djones1040/PyPhot}} a pure-Python
+implementation of the photometry algorithms from the IDL AstroLib
+package \citep{Landsman:1993}, which in turn are based on the DAOPHOT
+program \citep{Stetson:1987}.  For the IR bands we used point spread
+function (PSF) fitting on the difference images, and for the ACS
+images we used 0\farcs3-aperture photometry.
+ 
 
 \section{Spectrum}
 \label{sec:Spectrum}
