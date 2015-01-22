@@ -9,7 +9,7 @@
 % MAIN DOCUMENT TEXT
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\shorttitle{A \SNIa Behind Abell 2744}
+\shorttitle{A Type Ia SN Behind Abell 2744}
 \shortauthors{Rodney et al.}
 
 \begin{document}
@@ -39,16 +39,18 @@ is $0.71\pm0.12$ magnitudes brighter than unlensed \SNeIa\ at similar
 redshift, implying a lensing magnification of $\mu_{\rm
 obs}=1.9\pm0.2$.  Predicted magnifications from 7 independent groups
 are systematically biased to higher values, with a mean of $\mu_{\rm
-mod}=2.4\pm0.3$ and some models disagreeing by $>6\sigma$.  The most
-significant discrepancies arise from models with a strict ``light
-traces mass'' assumption.  We evaluate possible causes for this bias,
-including variation of the mass-to-light ratio in the nearest cluster
-member galaxy.  A sample of \textcolor{red}{$\sim$10??} \SNeIa\ behind
-any single cluster could provide a robust evaluation of systematic
-biases in lens models.  Until such a sample exists, it is advisable to
-increase the estimated uncertainty of any predicted magnification
-by an amount comparable to the dispersion from all available lens
-models.
+mod}=2.4\pm0.3$ and some models disagreeing by $>6\sigma$.  
+\textcolor{red}{TODO: summarize lensing discussion.}
+%The most
+%significant discrepancies arise from models with a strict ``light
+%traces mass'' assumption.  We evaluate possible causes for this bias,
+%including variation of the mass-to-light ratio in the nearest cluster
+%member galaxy.  A sample of \textcolor{red}{$\sim$10??} \SNeIa\ behind
+%any single cluster could provide a robust evaluation of systematic
+%biases in lens models.  Until such a sample exists, it is advisable to
+%increase the estimated uncertainty of any predicted magnification
+%by an amount comparable to the dispersion from all available lens
+%models.
 
 \end{abstract}
 
@@ -62,7 +64,7 @@ distant background objects through gravitational lensing.  This can
 substantially increase the reach of deep imaging surveys, and has
 recently been used to discover candidate proto-galaxies formed in the
 first Gyr after the Big
-Bang \citep{Zheng:2012,Coe:2013,} 
+Bang \citep{Zheng:2012,Coe:2013} 
 \textcolor{red}{(cite other high-z galaxy candidates discovered with lensing)}
 
 Lensed SNe have been discovered
@@ -70,7 +72,7 @@ Lensed SNe have been discovered
 
 In Section~\ref{sec:DiscoveryAndFollowup} we present the discovery and
 follow-up observations of SN \tomas at $z=1.31$, discovered behind the
-galaxy cluster Abell 2744.  Sections~\ref{sec:Spectrum} and \ref{sec:LightCurve}
+galaxy cluster Abell 2744.  Sections~\ref{sec:Spectroscopy} and \ref{sec:PhotometricClassification}
 describe the spectroscopy and photometry of this SN, leading to a
 classification of the object as a normal Type Ia SN.  In
 Section~\ref{sec:LensingMagnification} we make a direct measurement of
@@ -87,17 +89,23 @@ high-$z$ lensed sources.
 
 \begin{figure*}
 \begin{center}
-\includegraphics[width=\textwidth]{FIG/discovery_image}
-\caption{  \label{fig:DiscoveryImage}
+%\includegraphics[width=\textwidth]{FIG/discovery_image}
+\includegraphics[width=\textwidth]{FIG/discovery_image_lowres}
+\caption{  \label{fig:DiscoveryImage} 
 SN \tomas\ in the Abell 2744 field.  The left panel shows a
 UV/Optical/IR color composite image constructed from all available HST
-imaging of the Abell 2744 cluster field.\footnote{Image Credit: NASA,
-ESA, and J. Lotz, M. Mountain, A. Koekemoer, and the HFF Team
-(STScI)}  The inset panels at right show F814W imaging of the
-immediate vicinity of SN \tomas, approximately 40\arcsec\ from the
-center of the cluster.  The top panel shows the template image,
-combining all data prior to the SN appearance.  Labeled ellipses mark the nearest galaxies and their redshift constraints: a photometric redshift for the most likely host galaxy is marked in blue, and the spectroscopic redshift for a likely background galaxy is given in yellow. The bottom panel is
-constructed from all HFF F814W imaging taken while the SN was detectable, and marks the SN location with an arrow.}
+imaging of the Abell 2744 cluster field.  The inset panels at right
+show F814W imaging of the immediate vicinity of SN \tomas,
+approximately 40\arcsec\ from the center of the cluster. The top panel
+shows the template image, combining all data prior to the SN
+appearance.  Labeled ellipses mark the nearest galaxies and their
+redshift constraints: a photometric redshift for the most likely host
+galaxy is marked in blue, and the spectroscopic redshift for a likely
+background galaxy is given in yellow. The bottom panel is constructed
+from all HFF F814W imaging taken while the SN was detectable, and
+marks the SN location with an arrow.  (Left panel image credit: NASA,
+ESA, and J. Lotz, M. Mountain, A. Koekemoer, and the HFF Team (STScI))
+}
 \end{center}
 \end{figure*}
 
@@ -171,37 +179,53 @@ imaging data.
  
 
 
-\section{Spectrum}
-\label{sec:Spectrum}
+\section{Spectroscopy}
+\label{sec:Spectroscopy}
 
 \begin{figure}
 \begin{center}
 \includegraphics[width=\columnwidth]{FIG/specfit}
 \caption{  \label{fig:SpecFit}
-Best-fit Type Ia spectral template matches to the SN \tomas\ spectrum.
-When the templates are not warped, an acceptable fit can be found with
-a normal Type Ia at $z\sim1$ (top), or at $z=1.31$ (middle).  Introducing a smooth 3rd-order polynomial to warp the shape of the template pseudo-continuum makes the $z=1.31$ solution far superior.}
+Redshift and age determination from spectral template matching to the
+the SN \tomas\ maximum light spectrum.  The y axis plots flux in
+arbitrary units, and the x axis marks wavelength in \AA\ with the
+observer-frame on the bottom and rest-frame on the top.
+The \tomas\ spectrum observed with the
+HST ACS G800L grism is shown in black, overlaid with model fits
+derived from a library of Type Ia templates that have extended
+rest-frame UV coverage.  {\it Top}: The best match is at $z=1.31$ with
+age=$+3$ days, from the normal Type Ia SN 2012cg template when using a
+smooth 3rd-order polynomial to warp the shape of the template
+pseudo-continuum.  When the templates are not warped, an acceptable
+fit can be found with a normal Type Ia at $z=1.31$ (middle) or at
+$z\sim1$ (bottom), although the latter is inconsistent with the host
+galaxy redshift prior and the light curve. No \CCSN\ templates can
+provide a statistically acceptable fit at any redshift, within the age
+constraints imposed by the light curve.}
 \end{center}
 \end{figure}
 
 
 A spectrum of SN \tomas\ was collected with the ACS G800L grism on
-2014 June 4 and 7, using 5 HST orbits from the FrontierSN program for
-a total spectroscopic exposure time of $\sim$10 ksec.  Details of the
-observations are given at the bottom of
-Table~\ref{tab:Photometry}. The grism data were processed and the
-target spectrum was extracted using the custom pipeline employed by
-the Grism Lens Amplified Survey from Space program (GLASS; PI:Treu,
-PID:13459). \textcolor{red}{Is there a citation for this? or more to
-say here?}  Figure~\ref{fig:spectrum} shows the composite 1-D ACS
-grism spectrum, combining all available G800L exposures.  The spectrum
-is largely free of contamination, because as the SN is well separated
-from nearby foreground sources and is hosted by a diffuse and
-optically faint galaxy.  Thus, the SN spectral features can be
-unambiguously identified, most notably the red slope of the continuum
-and a prominent absorption feature at $\sim$8700\AA.  However, the
-signal to noise ratio (S/N) for the host galaxy spectrum was too weak
-to yield any additional constraints on the host type or redshift.  
+2014 June 4 and 7, when the SN was very near to its peak brightness.
+The observations -- listed at the bottom of Table~\ref{tab:Photometry}
+-- used 5 HST orbits from the FrontierSN program for a total
+spectroscopic exposure time of $\sim$10 ksec.  The grism data were
+processed and the target spectrum was extracted using the custom
+pipeline employed by the Grism Lens Amplified Survey from Space
+program (GLASS; PI:Treu, PID:13459). \textcolor{red}{Is there a
+citation for this? or more to say here?}  
+
+Figure~\ref{fig:SpecFit} shows the composite 1-D ACS grism spectrum,
+combining all available G800L exposures, overlaid with SN model fits
+that will be described below.  The spectrum is largely free of
+contamination, because the orientation was chosen to avoid nearby
+bright sources and the host galaxy is diffuse and optically faint.
+Thus, the SN spectral features can be unambiguously identified, most
+notably the red slope of the continuum and a prominent absorption
+feature at $\sim$8700\AA.  However, the signal to noise ratio (S/N)
+for the host galaxy spectrum was too weak to yield any additional
+constraints on the host type or redshift.
 
 As described below, we fit the SN \tomas\ spectrum in two steps.
 First we determine a spectral classification -- and get a preliminary
@@ -210,7 +234,7 @@ estimate of the redshift and age -- using the SuperNova IDentification
 and age measurement using a custom Type Ia spectral template matching
 program.
 
-\subsection{SNID Fitting}
+\subsection{Classification with SNID}
 \label{sec:SNID}
 
 The SNID program is designed to estimate the type, redshift, and age
@@ -227,29 +251,44 @@ which includes template SEDs covering all Type Ia and Core Collapse
 sub-classes, and has recently been updated with corrections and
 improvements to the Type Ib/c templates \citep{Liu:2014}.
 
-Using SNID to fit the \tomas\ spectrum, we find strong evidence that
-the spectral type is a normal Type Ia, with $>$97\% of the matching
-SEDs coming from Type Ia spectra.  
-In SNID the goodness of fit is evaluated primarily through the {\it rlap} parameter, which measures the degree of wavelength overlap and the strength of the cross-correlation peak.  For SN \tomas\ the best matching Type Ia template is the normal Type Ia SN 2004fu at z=1.321 and age=2.4 days past peak, which delivers {\it rlap}=20.8.
-Despite the relatively small rest-frame wavelength window of this spectrum, the SNID classification is quite definitive: \textcolor{red}{no \CCSN\ template achieves an {\it rlap} value better than 5.0 at any redshift.}
+In SNID the goodness of fit is evaluated primarily through the {\it
+rlap} parameter, which measures the degree of wavelength overlap and
+the strength of the cross-correlation peak.  Typically, an {\it rlap}
+value $>5$ is required to be considered an acceptable match.  
 
-The best-fit Type Ia SEDs are also
-consistent in redshift at $z=1.32\pm0.01$, and in phase at $0.4\pm1.7$
-rest-frame days from peak (meaning MJD$_{\rm pk}$=56813$\pm$4).  At
-this redshift, the absorption at $\sim$8700\AA\ corresponds to the
-blended \ion{Ca}{2} H\&K features.  This \ion{Ca}{2} absorption is
-commonly seen in Type Ia SN spectra near maximum light, although it is
-also prominent in the spectra of Type Ib and Ic core collapse SNe
-(\CCSNe).  The red color of the \tomas\ SED is qualitatively
-consistent with a redshift of $z>1$ -- although this information was
-not used by SNID for the template matching.  As we will see in
-Section~\ref{sec:LightCurve}, this spectral classification of
-SN \tomas\ is supported by the photometric information, which is also
-most consistent with a Type Ia SN at $z=1.3$.
+To match the SN \tomas\ spectrum we use conservative constraints on
+age and redshift: limiting the age to $\pm$5 rest-frame days of peak
+brightness and $0.8<z<1.8$, consistent with the SN light curve and
+host galaxy photo-$z$.  With these constraints we find that the only
+acceptable match is a normal Type Ia SN near $z=1.3$. The best match
+has {\it rlap}$=8.7$, using the normal Type Ia SN 2005cf at $z=1.35$
+and age=-2.2 rest-frame days before peak.  Within these constraints,
+the best non-Ia matches all have {\it rlap}$<2.5$.
+
+The {\tt SNID} library can generate an acceptable \CCSN\ match only
+when we remove all age and redshift constraints, In this case the best
+non-Ia match is the Type Ic SN 1997ef, which delivers {\it rlap}$=6.8$
+at $z=0.51$ and age=47.3 rest-frame days past peak.  This is not as
+good a fit as the best Type Ia models, is at odds with the host galaxy
+redshift prior, and is strongly disfavored by the shape and colors of
+the SN light curve (see Section~\ref{sec:PhotometricClassification}).  
+
+From the preceding analysis, we conclude that \tomas\ is a Type Ia SN
+at $z\approx1.3$.  At this redshift, the absorption at $\sim$8700\AA\
+corresponds to the blended \ion{Ca}{2} H\&K features.
+This \ion{Ca}{2} absorption is commonly seen in Type Ia SN spectra
+near maximum light, although it is also prominent in the spectra of
+Type Ib and Ic core collapse SNe (\CCSNe).  The red color of
+the \tomas\ SED is qualitatively consistent with a redshift of $z>1$
+-- although this information was not used by {\tt SNID} for the
+template matching.  As we will see in Section~\ref{sec:PhotometricClassification},
+this spectral classification of SN \tomas\ is reinforced by the
+photometric information, which also supports classification as a Type
+Ia SN at $z=1.3$.
 
 
-\subsection{Extended Type Ia Template Matching}
-\label{sec:FittingWithAdditionalTypeIaTemplates}
+\subsection{Spectroscopic Redshift}
+\label{sec:SpecRedshift}
 
 To refine the redshift and phase constraints on \tomas, we next fit
 the spectrum with a custom spectral matching program that employs a
@@ -258,27 +297,39 @@ spectral set used by SNID, but also includes more recent SNe with
 well-observed spectral time series that extend to rest-frame UV
 wavelengths (e.g. SN 2011fe and 2014J).  We first use an approach
 similar to the SNID algorithm: warping the pseudo-continuum of each
-template spectrum by dividing out a 3$^{\rm rd}$-order polynomial to match the
-observed SED of SN \tomas.  From this analysis we find results that
-are consistent with the SNID fits: a redshift of $z=1.31\pm0.01$ and a
-phase of $0\pm3$ rest-frame days.   
+template spectrum by dividing out a 3$^{\rm rd}$-order polynomial to
+match the observed SED of SN \tomas.  From this analysis we find
+results that are consistent with the SNID fits: a redshift of
+$z=1.31\pm0.01$ and a phase of $0\pm3$ rest-frame days. The
+best-fitting spectral template is the normal Type Ia SN 2012cg, shown
+in the bottom panel of Figure~\ref{fig:SpecFit}, which has $\chi^2$
+per degree of freedom $\nu$ equal to 42.1/87.
 
 Finally, we repeat the fitting, but without any warping of the
 templates to account for differences in the continuum shape.  In this
 iteration we only allow each template SED to be scaled in flux
-coherently at all wavelengths.  Here we again find that the \tomas\
-SED is well matched by a normal Type Ia SN (SN 2011fe) at redshift
-$z=1.31\pm0.01$.  Without the continuum warping, an alternative fit
-also arises: the normal Type Ia SN 2011iv at
-$z=0.98\pm0.01$. Formally, this match provides a better fit to the
-unwarped \tomas\ spectrum, although this redshift is at odds with the
-host galaxy photo-z ($1.5\pm0.2$), and we will see in the following
-section that the photometric data is incompatible with a normal Type
-Ia SN at $z\sim1.0$.
+coherently at all wavelengths.  As shown in Figure~\ref{fig:SpecFit},
+we again find that the \tomas\ SED can be matched by a normal Type Ia
+SN (SN 2011fe) at redshift $z=1.31\pm0.01$.  Without the continuum
+warping, an alternative fit also arises: the normal Type Ia SN 2011iv
+at $z=0.98\pm0.01$. Formally, this match provides a slightly better
+fit to the unwarped \tomas\ spectrum, although the fit is notably poor
+at $\sim8700$\AA\ where the most significant absorption feature is
+found. Furthermore, a redshift $z\sim1$ is at odds with the host
+galaxy photo-z ($1.5\pm0.2$), and we will see in the following section
+that the photometric data is incompatible with a normal Type Ia SN at
+$z\sim1.0$.
+
+Setting aside the $z\sim1$ solution, all other template matches
+provide a consistent redshift constraint of $z=1.31\pm0.01$,
+regardless of whether the templates are warped to match the SN \tomas\
+continuum shape.  The inferred age from these fits is $0\pm3$
+rest-frame days from peak brightness, which is also consistent with
+the observed light curve.
 
 
-\section{Light Curve}
-\label{sec:LightCurve}
+\section{Photometric Classification}
+\label{sec:PhotometricClassification}
 
 Relative to other SNe at $z>1$, the SN \tomas\ light curve was
 unusually well sampled at rest-frame ultraviolet wavelengths, due to
@@ -288,9 +339,6 @@ and the evolution of the SN color.  Supplemental observations with the
 WFC3-IR camera provided critical rest-frame optical photometry,
 enabling a measurement of the apparent luminosity distance through
 light curve fitting.
-
-\subsection{Photometric Classification}
-\label{sec:PhotometricClassification}
 
 As a check on the spectral classification of SN \tomas\
 (Section~\ref{sec:SNID}), we independently classified the SN using a
@@ -303,42 +351,109 @@ in][]{Jones:2013,Rodney:2014,Graur:2014,Rodney:2015}.  In this
 analysis we represent normal Type Ia SNe with the SALT2
 model \citep{Guy:2010}, and \CCSNe\ with 42 discrete templates (26
 Type II and 16 Type Ib/c) drawn from the template library of the
-SuperNova Analysis software \citep[SNANA,][]{Kessler:2009a}.  Due to
-the expected impact of gravitational lensing magnification, we do not
-include any prior on the intrinsic luminosity for any SN sub-class.
+SuperNova Analysis software package \citep[SNANA,][]{Kessler:2009a}.
+Likelihoods are defined by comparing the observed fluxes to model
+predictions in all passbands where the model is defined.  In practice,
+this means we exclude the F435W and F606W bands, which are too blue
+for our models at $z>1$. 
 
-From this photometric analysis we derive a Type Ia classification
-probability of $p(\rm Ia|{\bf \rm D})=XX\%$.  Marginalizing over the
-light curve shape and color parameters of the SALT2 model, we extract
-a posterior probability distribution in redshift that is well
-described by a single Gaussian centered at $z=1.32\pm0.03$.
+The \CCSN\ models have free parameters for date of peak brightness
+($t_{\rm pk}$), amplitude, and redshift ($z$). Due to the expected
+impact of gravitational lensing magnification, we do not include any
+prior on the intrinsic luminosity for any SN sub-class.  We also do
+not assign a prior for the SN redshift. This allows our photometric
+analysis to provide an independent check on the host galaxy photo-$z$
+and spectroscopic redshift (Sections~\ref{sec:HostGalaxy}
+and \ref{sec:SpecFit}).
+
+For Type Ia SNe, the SALT2 model has two additional parameters that
+control the shape ($x_1$) and color ($c$) of the light curve.  We use
+conservative priors here, defined to encompass a range of Type Ia SN
+shapes and colors that is broader than typically allowed in
+cosmological analyses \citep[see
+e.g.][]{Kessler:2009b,Sullivan:2011,Rest:2014}. For $x_1$ the prior is
+a bifurcated Gaussian distribution with mean $\bar{x}_1=0$, dispersion
+$\sigma_{x_1}^+={0.9}$ and $\sigma_{x_1}^-={-1.5}$.  The prior for the
+color parameter $c$ has $\bar{c}=0.0$, $\sigma_c^-=0.08$, and
+$\sigma_c^+=0.54$.  The $c$ parameter in SALT2 combines intrinsic SN
+color and extinction due to dust, so the large red tail of this
+distribution allows for the possibility of several magnitudes
+of dust extinction along the \tomas\ line of sight.
+
+We also assign a class prior for each of the three primary SN
+sub-classes (Type Ia, Ib/c, and II), using a fixed relative fraction for
+each sub-class as determined at $z=0$ by \citet{Smartt:2009}
+and \citet{Li:2011a}.  A more rigorous classification would extrapolate
+these local SN class fractions to higher redshift using models or
+measurements of the volumetric SN rate.  For simplicity, we do not
+vary the class priors with redshift, and in practice these priors do
+not have any significant impact on the resulting classification.
+
+The final photometric classification probability for SN \tomas\ is
+$p({\rm Ia}|{\bf \rm D})=1.0$, with the classification
+probability from all \CCSN\ sub-classes totaling less than $10^{-100}$.  The
+marginal posterior distribution in redshift for the Type Ia model is
+sharply peaked at $z=1.36\pm0.02$, which is $<2.5\sigma$ from
+the spectroscopic redshift of $z=1.31\pm0.01$ derived in
+Section~\ref{sec:SpecRedshift}.  The time of peak brightness is also
+tightly constrained at $t_{\rm pk}=56816.0\pm0.2$, which means the
+spectroscopic observations were collected within 2 rest-frame days of
+the epoch of peak brightness, consistent with our spectroscopic
+analysis. 
 
 
+\section{Light Curve Fitting}
+\label{sec:LightCurveFitting}
+
+With the spectroscopic type and redshift securely defined as a normal
+Type Ia SN at $z=1.3$, we now turn to fitting the light curve with
+Type Ia templates to measure the distance modulus.  Here we use two
+independent light curve fitters: first the SALT2 model described
+above, and then the MLCS2k2 model from \citep{Jha:2007}.
+
+\subsection{SALT2 Fit}
+\label{sec:SALT2Fit}
+
+in \citep{Patel:2014}:   $\alpha=1.367\pm0.086$,
+$\beta=3.179\pm0.101$, $M=-19.12\pm0.03$.
+
+For the SALT2 Type Ia model one can define a shape- and color-corrected apparent
+B-band magnitude using 
+$m_{\rm B}^\prime = m_{\rm B} + \alpha x_1 - \beta c$. 
+
+For the SALT2 model we fix the model parameters to the values
+derived in the \citet{Rest:2014} analysis of the Pan-STARRS1 SN sample:
+$\alpha=0.147$, $\beta=3.13$, $M_B=-19.34$.
+
+Comparing salt2 color to Av \citep{Kessler:2009b}:
+$c = (0.464 ± 0.021)AV − (0.121 ± 0.014)$
+
+from \citet{Patel:2014}:
+``Finally, to ensure a consistent zeropoint between the SALT2 and
+MLCS2k2 distance moduli, we applied both methods to a sample of SDSS
+Supernova Survey SNe Ia from Holtzman et al. (2008) and Kessler et
+al. (2009a). We added a zeropoint correction of 0.20 mag to the
+distance moduli reported by SNANA in the MLCS2k2 fit (dmMLCS2k2), to
+put them on the same scale as the SALT2 distances (dmSALT2).''
 
 
-\textcolor{red}{Light curve fitting with MLCS2k2}
+\subsection{MLCS2k2 Fit}
+\label{sec:MLCS2k2Fit}
 
-determine a photometric classification 
-
-derive a constraint on the time of peak 
-
+As in \citep{Patel:2014}.
 
 
+$R_v$ fixed to 1.9. 
 
-\begin{figure*}
+for Rv = 1.9, the calibrated distance is: $\mu = \mu_{\rm mlcs}-0.2006$. 
+
+\begin{figure}
 \begin{center}
 \includegraphics[width=0.49\textwidth]{FIG/lcfit_mlcs2k2_ABmag}
-\includegraphics[width=0.49\textwidth]{FIG/specfit_11fe_t-3_z131}
-\caption{ {\it (Left)} Light curve fit using MLCS2k2. 
-{\it (Right)} Spectral template match to the HST ACS G800L SN
-spectrum.  Assuming minimal reddening, the best-fit template is from
-SN 2011fe at $z=1.31$ and $t=-3$ rest-frame days before peak
-brightness.  Allowing a correction for the broad SED shape using
-3rd-order polynomials, the best match is from SN 2012cg at $z=1.31$
-and $t=+3 days$.
+\caption{  Light curve fit using MLCS2k2. 
 \label{fig:mlcsfit} }
 \end{center}
-\end{figure*}
+\end{figure}
 
 \section{Lensing Magnification}
 \label{sec:LensingMagnification}
@@ -384,7 +499,7 @@ Possible sources for the bias.
 
 Implications for the systematic error budget of high-z lenses.
 
-Proposal for a survey to build a bigger sample : HST GO, Snapshot, ground-based.
+Design elements for a survey to build a bigger sample : HST GO, Snapshot, ground-based.
 
 \bigskip
 
