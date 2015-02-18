@@ -17,7 +17,7 @@
 \title{Illuminating a Dark Lens : A Type Ia Supernova Magnified by Galaxy Cluster Abell 2744}
 
 \author{
- Steven~A.~Rodney\altaffilmark{1},
+ Steven~A.~Rodney\altaffilmark{1,2},
   \etal
 }
 \altaffiltext{1}{\JHU}
@@ -68,7 +68,14 @@ Bang \citep{Zheng:2012,Coe:2013}
 \textcolor{red}{(cite other high-z galaxy candidates discovered with lensing)}
 
 Lensed SNe have been discovered
-\citep{Goobar:2009,Riehm:2011,Patel:2014,Nordin:2014}
+\citep{Goobar:2009,Riehm:2011}
+
+\citet[][hereafter P14]{Patel:2014} and \citet{Nordin:2014} presented
+independent analyses of three lensed SNe, of which at least 2 are securely
+classified as Type Ia SNe.  All of these three objects were found in
+the Cluster Lensing and Supernova survey with Hubble (CLASH,
+PI:Postman, HST Program ID 12068). 
+
 
 In Section~\ref{sec:DiscoveryAndFollowup} we present the discovery and
 follow-up observations of SN \tomas at $z=1.31$, discovered behind the
@@ -340,22 +347,43 @@ WFC3-IR camera provided critical rest-frame optical photometry,
 enabling a measurement of the apparent luminosity distance through
 light curve fitting.
 
+\begin{figure}
+\begin{center}
+\includegraphics[width=\columnwidth]{FIG/snTomas_lightcurve_classification}
+\caption{ 
+Maximum likelihood model for each SN sub-class, derived from Bayesian
+model selection using the photometric data alone. Grey points show the
+observed SN \tomas\ photometry with error bars, though these are typically
+smaller than the size of the marker.  The Type Ia model
+(orange solid line) is drawn from the SALT2 template at $z=1.35$. The
+best match from all Type Ib/Ic models is based on the Type Ic SN
+SDSS-14475 at $z=0.695$ (green dashed line). For the Type II class, the
+best match is from the Type II-L SN 2007pg at $z=1.8$ (blue dash-dot line). The Type
+Ia model is by far the best match, and the only one that is consistent
+with both the photo-$z$ of the probable host galaxy and the
+spectroscopic redshift from the SN spectrum.
+\label{fig:photoclass} }
+\end{center}
+\end{figure}
+
 As a check on the spectral classification of SN \tomas\
 (Section~\ref{sec:SNID}), we independently classified the SN using a
-Bayesian photometric classifier.  This classification code uses the
+Bayesian photometric classifier.  We use the
 {\tt sncosmo} software
 package\footnote{\url{http://sncosmo.github.io/}} to simulate SN light
-curves at a range of redshifts and evaluate the classification
+curves from $z=0.3$ to 2.3 and evaluate the classification
 probability using traditional Bayesian model selection \citep[as
 in][]{Jones:2013,Rodney:2014,Graur:2014,Rodney:2015}.  In this
 analysis we represent normal Type Ia SNe with the SALT2
 model \citep{Guy:2010}, and \CCSNe\ with 42 discrete templates (26
 Type II and 16 Type Ib/c) drawn from the template library of the
-SuperNova Analysis software package \citep[SNANA,][]{Kessler:2009a}.
+SuperNova Analysis software
+package \citep[SNANA,][]{Kessler:2009a}.\footnote{Throughout this work
+we use SNANA v10\_35g.}
 Likelihoods are defined by comparing the observed fluxes to model
 predictions in all passbands where the model is defined.  In practice,
 this means we exclude the F435W and F606W bands, which are too blue
-for our models at $z>1$. 
+for our models at $z>0.85$.
 
 The \CCSN\ models have free parameters for date of peak brightness
 ($t_{\rm pk}$), amplitude, and redshift ($z$). Due to the expected
@@ -363,8 +391,8 @@ impact of gravitational lensing magnification, we do not include any
 prior on the intrinsic luminosity for any SN sub-class.  We also do
 not assign a prior for the SN redshift. This allows our photometric
 analysis to provide an independent check on the host galaxy photo-$z$
-and spectroscopic redshift (Sections~\ref{sec:HostGalaxy}
-and \ref{sec:SpecFit}).
+and spectroscopic redshift (Sections~\ref{sec:DiscoveryAndFollowup}
+and \ref{sec:SpecRedshift}).
 
 For Type Ia SNe, the SALT2 model has two additional parameters that
 control the shape ($x_1$) and color ($c$) of the light curve.  We use
@@ -390,16 +418,24 @@ vary the class priors with redshift, and in practice these priors do
 not have any significant impact on the resulting classification.
 
 The final photometric classification probability for SN \tomas\ is
-$p({\rm Ia}|{\bf \rm D})=1.0$, with the classification
-probability from all \CCSN\ sub-classes totaling less than $10^{-100}$.  The
-marginal posterior distribution in redshift for the Type Ia model is
-sharply peaked at $z=1.36\pm0.02$, which is $<2.5\sigma$ from
-the spectroscopic redshift of $z=1.31\pm0.01$ derived in
-Section~\ref{sec:SpecRedshift}.  The time of peak brightness is also
-tightly constrained at $t_{\rm pk}=56816.0\pm0.2$, which means the
-spectroscopic observations were collected within 2 rest-frame days of
-the epoch of peak brightness, consistent with our spectroscopic
-analysis. 
+$p({\rm Ia}|{\rm {\bf D}})=1.0$, with the classification probability
+from all \CCSN\ sub-classes totaling less than $10^{-32}$.  The
+best-fit models for each sub-class are shown in
+Figure~\ref{fig:photoclass}, which demonstrates that the \CCSN\ models
+cannot adequately match the observed photometry. In particular, only
+the Type Ia model can simultaneously provide an acceptable fit to the
+well-sampled rising light curve in F814W and the F814W-F160W
+color near peak.
+
+The marginal posterior distribution in redshift for the Type Ia model
+is sharply peaked at $z=1.35\pm0.02$, which is fully consistent with
+the photo-$z$ of the presumed host galaxy ($z=1.5\pm0.2$), and
+$<2\sigma$ from the spectroscopic redshift of $z=1.31\pm0.01$ derived
+in Section~\ref{sec:SpecRedshift}.  The time of peak brightness is
+also tightly constrained at $t_{\rm pk}=56816.3\pm0.3$, which means
+the spectroscopic observations were collected within 2 rest-frame days
+of the epoch of peak brightness, consistent with our spectroscopic
+analysis.
 
 
 \section{Light Curve Fitting}
@@ -408,66 +444,131 @@ analysis.
 With the spectroscopic type and redshift securely defined as a normal
 Type Ia SN at $z=1.3$, we now turn to fitting the light curve with
 Type Ia templates to measure the distance modulus.  Here we use two
-independent light curve fitters: first the SALT2 model described
-above, and then the MLCS2k2 model from \citep{Jha:2007}.
-
-\subsection{SALT2 Fit}
-\label{sec:SALT2Fit}
-
-in \citep{Patel:2014}:   $\alpha=1.367\pm0.086$,
-$\beta=3.179\pm0.101$, $M=-19.12\pm0.03$.
-
-For the SALT2 Type Ia model one can define a shape- and color-corrected apparent
-B-band magnitude using 
-$m_{\rm B}^\prime = m_{\rm B} + \alpha x_1 - \beta c$. 
-
-For the SALT2 model we fix the model parameters to the values
-derived in the \citet{Rest:2014} analysis of the Pan-STARRS1 SN sample:
-$\alpha=0.147$, $\beta=3.13$, $M_B=-19.34$.
-
-Comparing salt2 color to Av \citep{Kessler:2009b}:
-$c = (0.464 ± 0.021)AV − (0.121 ± 0.014)$
-
-from \citet{Patel:2014}:
-``Finally, to ensure a consistent zeropoint between the SALT2 and
-MLCS2k2 distance moduli, we applied both methods to a sample of SDSS
-Supernova Survey SNe Ia from Holtzman et al. (2008) and Kessler et
-al. (2009a). We added a zeropoint correction of 0.20 mag to the
-distance moduli reported by SNANA in the MLCS2k2 fit (dmMLCS2k2), to
-put them on the same scale as the SALT2 distances (dmSALT2).''
+independent light curve fitters: the SALT2 model described
+above and the MLCS2k2 model \citep{Jha:2007}.   
 
 
-\subsection{MLCS2k2 Fit}
-\label{sec:MLCS2k2Fit}
-
-As in \citep{Patel:2014}.
-
-
-$R_v$ fixed to 1.9. 
-
-for Rv = 1.9, the calibrated distance is: $\mu = \mu_{\rm mlcs}-0.2006$. 
-
-\begin{figure}
+\begin{figure*}
 \begin{center}
-\includegraphics[width=0.49\textwidth]{FIG/lcfit_mlcs2k2_ABmag}
-\caption{  Light curve fit using MLCS2k2. 
-\label{fig:mlcsfit} }
+\includegraphics[width=\textwidth]{FIG/snTomas_lightcurve_fit_fluxAB25}
+\caption{ Type Ia light curve fits to SN \tomas\ using the MLCS2k2
+(top row) and SALT2 (bottom row) fitters. The model redshifts are set to
+$z=1.33\pm0.02$, encompassing both redshift values as determined from
+spectroscopic and photometric constraints.  Solid lines denote the
+best-fit model and shaded lines show the range allowed by 1-$\sigma$
+uncertainties on the model parameters. 
+Observed fluxes are shown as diamonds, scaled to an AB magnitude
+zero point of 25. Error bars are plotted, but most are commensurate
+with the size of the points. The left-most panel includes observations
+in the F435W and F606W filters, although these were not used for the
+fit, as they are bluer than the minimum wavelength for the model. The
+lower axis marks time in observer frame days, while the top axis shows
+the time in the rest frame relative to the epoch of peak brightness.
+\label{fig:LightCurveFits} }
 \end{center}
-\end{figure}
+\end{figure*}
 
-\section{Lensing Magnification}
-\label{sec:LensingMagnification}
+With both fitters we find light curve shape and color parameters that
+are fully consistent with a normal Type Ia SN, regardless of whether
+we adopt the spectroscopic redshift $z=1.31$ from
+Section~\ref{sec:SpecRedshift} or the photometric redshift $z=1.35$
+from Section~\ref{sec:PhotometricClassification}.  For SALT2, with the
+redshift range set to $1.33\pm0.02$, we find a light curve shape
+parameter of $x_1=0.164\pm0.199$ and a color parameter of
+$c=-0.115\pm0.025$, yielding a $\chi^2$ value of 48.4 for 36 degrees
+of freedom, $\nu$.  With the MLCS2k2 fitter the best-fit shape
+parameter is $\Delta=-0.033\pm0.083$ and the color term is
+$A_{\rm V}=0.014\pm0.037$, giving $\chi^2/\nu=23.9/36$.
+
+\subsection{Distance Modulus}
+\label{sec:DistanceModulus}
+
+As in \citet{Patel:2014}, we derive a distance modulus 
+from the SALT2 fit using\footnote{This avoids confusion by reserving the symbol $\mu$
+to refer to the lensing magnification. The 'dm' is a standard distance
+modulus, defined as ${\rm dm}=5\log_{10}d_L+25$, where $d_L$ is the
+luminosity distance in Mpc.}
+
+\begin{equation} \label{eqn:dmSALT2}
+ {\rm dm}_{\rm SALT2} = m_B^* - M + \alpha(s-1) - \beta C.
+\end{equation}
+
+\noindent  Here the parameters for light curve shape $s$ and color $C$ 
+correspond to the SiFTO light curve fitter \citep{Conley:2008}, so we
+first use the formulae from \citet{Guy:2010} to convert from SALT2
+($x_1$ and $c$) into the equivalent SiFTO parameters.  We also add an
+offset of 0.27 mag to the value of $m_B^*$ returned by SNANA, in order
+to match the arbitrary normalization of the SALT2 fitter used
+by \citet{Guy:2010} and \citet{Sullivan:2011}.  This conversion allows
+us to adopt values for the constants $M$, $\alpha$, and $\beta$
+from \citet{Sullivan:2011}, which have been calibrated using 472 SNe
+from the SNLS3 sample \citep{Conley:2011}: $M=-19.12\pm0.03$,
+$\alpha=1.367\pm0.086$, and $\beta=3.179\pm0.101$.
+
+\input{TABLE/lcfits}
+
+The SNANA version of the MLCS2k2 fitter returns a value for the
+distance modulus (dm$_{\rm MLCS2k2}$) that has an arbitrary zero point
+offset relative to the SALT2 distances (dm$_{\rm SALT2}$).  To put the
+two distances onto the same reference frame we add a zeropoint
+correction of 0.20 mag to the MLCS2k2 distances as
+in \citet{Patel:2014}.  This correction was derived by applying both
+fitters to a sample of Type Ia SNe from the SDSS
+survey \citep{Holtzman:2008,Kessler:2009b}, with the extinction law
+$R_V$ fixed at 1.9.
+
+Final values for the SN distance modulus are shown in
+Table~\ref{tab:DistanceAndMagnification}, both for the spectroscopic
+redshift ($z=1.31$) and the photometric redshift ($z=1.35$).  The two
+light curve fitters are consistent within the uncertainties. 
 
 
-\subsection{Direct Magnification Measurement}
-\label{sec:DirectMagnificationMeasurement}
+\subsection{Magnification}
+\label{sec:Magnification}
 
+To measure the lensing magnification, we would like to avoid
+introducing systematic uncertainties inherent to any assumed
+cosmological model \citep[e.g.][]{Nordin:2014}.  To that end, we
+follow \citet{Patel:2014} and define the magnification by comparing
+the measured distance modulus of SN \tomas\ against an average
+distance modulus derived from a ``control sample'' of unlensed Type Ia
+SN at similar redshift.  This allows us to make only the minimal
+assumption that the redshift-distance relationship for Type Ia SN is
+smooth and approximately linear over a small redshift span, which
+should be true for any plausible cosmological model.
+
+The unlensed sample comprises 18 spectroscopically confirmed Type Ia
+SNe in the range $1.14\leq z \leq1.42$ from the GOODS and SCP
+surveys,\footnote{GOODS: Great Observatories Origins Deep Survey,
+PI:Giavalisco, HST-PID:; SCP: Supernova Cosmology Project,
+PI:Perlmutter} which used the HST Advanced Camera for
+Surveys \citep{Riess:2006,Suzuki:2012}.  Using the SALT2 and MLCS2k2
+fitters as described above, we get distance modulus measures for every
+object in this control sample.  We then fit a linear relationship for
+distance modulus vs. redshift, and derive a prediction for the
+distance modulus of a normal Type Ia SN at the redshift of SN \tomas
+(Figure~\ref{fig:MagnificationMeasurement}).
+This predicted value is given in
+Table~\ref{tab:DistanceAndMagnification} under the ``Control'' column.
+The difference between the observed distance of SN \tomas\ and this
+control sample value is attributed to the magnification from
+gravitational lensing:
+
+\begin{equation} \label{eqn:mu}
+{\rm dm}_{\rm control} - {\rm dm}_{\rm \tomas} = 2.5 \log_{10}\mu.
+\end{equation}
+
+\noindent This inferred magnification is reported in the final column of
+Table~\ref{tab:DistanceAndMagnification}.
 
 \begin{figure}
 \begin{center}
 \includegraphics[width=\columnwidth]{FIG/magnification_measurement}
-\caption{ Deriving the magnification from comparison to field SN
-\label{fig:magmeasure} }
+\caption{ Measurement of the lensing magnification from comparison of
+the \tomas\ distance modulus to a sample of unlensed field SN.
+The distance modulus for each SN is derived from light curve fits
+using the SALT2 fitter (top panel) and the MLCS2k2 fitter (right).
+\label{fig:MagnificationMeasurement} }
 \end{center}
 \end{figure}
 
