@@ -1,0 +1,31 @@
+\begin{deluxetable*}{lccp{1.5in}p{2.2in}}
+\tablecolumns{5}
+\tablecaption{Predicted magnifications for SN \tomas\ from lens models.\label{tab:PredictedMagnifications}}
+\tablehead{ \colhead{Model} & \colhead{Best}\tablenotemark{a} & \colhead{Median\tablenotemark{b}} & \colhead{References} & \colhead{Description}}
+\startdata
+%Sharon         & 2.57$^{+0.19}_{-0.16}$ &   \citealt{Jullo:2007} \\[2mm]
+Sharon(v2)   & 2.73 & 2.69$^{+0.14}_{-0.06}$ &   \citealt{Jullo:2007};\citealt{Johnson:2014} & LENSTOOL parametric, strong-lensing based model\\
+CATS-SL      & 2.25 & 2.27$^{+0.05}_{-0.04}$ &   \citealt{Jullo:2009,Jauzac:2012} &  LENSTOOL hybrid parametric/free-form, strong lensing based model.\\
+CATS-SL+WL   & \nodata & 2.62$^{+0.18}_{-0.18}$ & \citealt{Jullo:2009,Jauzac:2012} &  LENSTOOL hybrid parametric/free-form, strong+weak lensing based model.\\
+Jauzac		 & \nodata & 3.37$^{+0.14}_{-0.15}$ &   \citealt{Jauzac:2014,Richard:2014} & Updated version of the CATS-SL model, adds 33 new multiply-imaged galaxies.\\
+GLAFIC       & 2.32 & 2.28$^{+0.07}_{-0.11}$ &   \citealt{Oguri:2010,Ishigaki:2015} & Parametric strong-lensing model using the {\tt GLAFIC} code.\tablenotemark{d} \\
+Zitrin-NFW   & 2.07 & 2.27$^{+0.23}_{-0.22}$ &   \citealt{Zitrin:2009a} &  Parametric strong-lensing model using PIEMD\tablenotemark{e} profiles for galaxies and NFW\tablenotemark{f} profiles for dark matter halos.\\
+Zitrin-LTM   & 2.64 & 2.96$^{+0.77}_{-0.38}$ &   \citealt{Zitrin:2013a} & Parametric strong-lensing model, adopts the Light-Traces-Mass assumption for both the luminous and dark matter.\\
+Bradac       & 3.15 & 2.45$^{+0.19}_{-0.16}$ &   \citealt{Bradac:2005,Bradac:2009} & Free-form, strong+weak-lensing based model\\
+Williams     & 2.67 & 2.78$^{+2.68}_{-1.14}$ &   \citealt{Liesenborgs:2006,Mohammed:2014} & {\tt GRALE}\tablenotemark{f} : Free-form strong-lensing model using a genetic algorithm.  \\
+Merten       & 2.31 & 2.22$^{+0.67}_{-0.19}$ &   \citealt{Merten:2009,Merten:2011} &  SaWLENS, free-form strong+weak lensing based model.\\
+Lam			 & \nodata & 2.77$^{+0.36}_{-0.36}$ &   \citealt{Sendra:2014,Lam:2014} & {\tt WSLAP+}\tablenotemark{g} : Free-form strong+weak lensing model using a grid-based method, supplemented by deflections fixed to cluster member galaxies.
+\enddata
+\tablenotetext{a}{The magnification returned for the optimal version of each model, as independently defined by each lens modeling team.}  
+\tablenotetext{b}{Median magnification from 100-600 Monte Carlo realizations of the model. Uncertainties enclose 68\%\ of the realized values.}  
+\tablenotetext{c}{{\tt LENSTOOL} : \url{http://projects.lam.fr/repos/lenstool/wiki}}
+\tablenotetext{e}{{\tt GLAFIC} : \url{http://www.slac.stanford.edu/~oguri/glafic/}}
+\tablenotetext{e}{PIEMD: Pseudo Isothermal Elliptical Mass Distrubition}
+\tablenotetext{f}{NFW : Navarro-Frenk-White mass density profile \citep{Navarro:1997}.}
+\tablenotetext{g}{{\tt GRALE} : }
+\tablenotetext{f}{{\tt WSLAP+} : Weak and Strong Lensing Analysis Package plus member galaxies}
+\end{deluxetable*}
+
+
+
+
