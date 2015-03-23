@@ -26,7 +26,7 @@
 
 
 \begin{abstract}
-SN \tomas\ is a Type Ia Supernova (\SNIa) discovered at $z=1.31$
+SN \tomas\ is a Type Ia Supernova (\SNIa) discovered at $z=1.31\pm0.01$
 behind the galaxy cluster Abell 2744 ($z=0.308$). This SN has a
 projected separation from the cluster core of $\sim$40\arcsec, closer
 than any other cluster-lensed \SNIa.  As such, it provides the first
@@ -125,7 +125,7 @@ Frontier Fields (HFF) survey (PI:J.Lotz,
 HST-PID:13495).\footnote{\url{http://www.stsci.edu/hst/campaigns/frontier-fields}}
 The HFF program is a 3-year director's discretionary initiative that
 is collecting 140 orbits of HST imaging (roughly 340 ksec) on six
-massive galaxy clusters, plus 6 accompanying ``parallel fields.''
+massive galaxy clusters, plus 6 accompanying parallel fields.
 Each field is observed in 3 optical bands (ACS F435W, F606W and F814W)
 and 4 infrared (IR) bands (WFC3-IR F105W, F125W, F140W, and F160W),
 although the optical and IR imaging campaigns are separated by $\sim$6
@@ -279,7 +279,7 @@ and age=-2.2 rest-frame days before peak.  Within these constraints,
 the best non-Ia matches all have {\it rlap}$<2.5$.
 
 The {\tt SNID} library can generate an acceptable \CCSN\ match only
-when we remove all age and redshift constraints, In this case the best
+when we remove all age and redshift constraints. In this case the best
 non-Ia match is the Type Ic SN 1997ef, which delivers {\it rlap}$=6.8$
 at $z=0.51$ and age=47.3 rest-frame days past peak.  This is not as
 good a fit as the best Type Ia models, is at odds with the host galaxy
@@ -405,7 +405,7 @@ control the shape ($x_1$) and color ($c$) of the light curve.  We use
 conservative priors here, defined to encompass a range of Type Ia SN
 shapes and colors that is broader than typically allowed in
 cosmological analyses \citep[see
-e.g.][]{Kessler:2009b,Sullivan:2011,Rest:2014}. For $x_1$ the prior is
+e.g.,][]{Kessler:2009b,Sullivan:2011,Rest:2014}. For $x_1$ the prior is
 a bifurcated Gaussian distribution with mean $\bar{x}_1=0$, dispersion
 $\sigma_{x_1}^+={0.9}$ and $\sigma_{x_1}^-={-1.5}$.  The prior for the
 color parameter $c$ has $\bar{c}=0.0$, $\sigma_c^-=0.08$, and
@@ -744,7 +744,7 @@ This shift to higher magnifications is not, however, unique to the
 SN \tomas\ position.  \citet{Jauzac:2014c} noted that their updated
 mass model of Abell 2744 results in a systematic increase in the
 magnification values across the cluster field. Examining a sample of
-$\sim$30 multiple images, \citeauthor{Jauzac} found that the
+$\sim$30 multiple images, \citeauthor{Jauzac:2014c} found that the
 magnifications increased by a factor of $\sim1.5$ relative to pre-HFF
 models.  Although this single sight-line can only provide a very
 limited test of the model, the $5.6\sigma$ discrepancy is at least a
@@ -797,6 +797,50 @@ The revised magnification of $\mu=2.62\pm0.18$ is further from the
 measured value, which serves to reinforce the conclusion that adding
 weak lensing constraints cannot resolve this bias.
 
+
+\subsection{Redshift Error}
+\label{sec:RedshiftError}
+
+If the redshift of the SN derived in Section~\ref{sec:Spectroscopy}
+were incorrect, then one would derive a different value for the
+magnification, both from the SN measurement and the lens model
+predictions.  Conceivably, this could resolve the tension between the
+measurement and the models.  It is often the case in SN surveys that
+redshifts are assigned based on a host galaxy association, typically
+inferred from the projected separation between the SN and nearby
+galaxies.  In this case the redshift evidence comes from the SN
+itself, and we find a consistent redshift from both the SN spectrum
+(Section~\ref{sec:SpecRedshift}) and the light curve
+Section~\ref{sec:PhotometricClassification}, which are both within the
+$1\sigma$ range of the photometric redshift for the nearest detected
+galaxy: $z=1.5\pm0.2$. This appears to be a solid and self-consistent
+picture, so the evidence strongly disfavors any redshift that is
+significantly different from $z=1.3$.
+
+We have adopted the spectroscopic redshift of $z=1.31\pm0.01$ for the
+magnification comparison.  Spectroscopic redshifts are generally more
+precise and accurate than those derived from photometric
+observations \citep{Rodney:2010b,Kessler:2010,Sako:2011}.  However, in
+this case the spectrum is limited to the rest-frame near-UV
+wavelengths, where the available SN spectral template libraries are
+more limited than at optical wavelengths.  If we use the photometric
+redshift of $z=1.35\pm0.02$ instead, then the measured magnification
+is reduced. \footnote{By increasing the redshift, the SN is presumed
+to be at a greater distance, so to first order one would be expect it
+to appear slightly fainter (larger distance modulus). If the distance
+modulus inferred from the light curve fit remained constant, this
+would drive the inferred magnification to a higher value.  However,
+the intrinsic peak brightness as derived from light curve fitting is
+more strongly affected by the covariance between redshift, color, and
+light curve width.  In this case, these effects drive the distance
+modulus to a larger value at $z=1.35$ that is closer to the unlensed
+population than we get at $z=1.31$.}  From the SALT2 fitter we derive
+$\mu_{\rm SALT2}=1.80\pm0.30$ and from MLCS2k2 we get $\mu_{\rm
+MLCS2k2}=1.83\pm0.17$.  The lens models are also shifted, and they
+uniformly move in the opposite direction, to magnification values that
+are {\it larger}, by $\sim1$\%.  Thus, shifting the SN to the
+photometric redshift of $z=1.35$ only serves to (slightly) exacerbate
+the tension between the observations and models.
 
 \section{Summary and Conclusions}
 \label{sec:SummaryAndConclusions}
