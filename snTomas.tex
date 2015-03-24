@@ -224,10 +224,10 @@ A spectrum of SN \tomas\ was collected with the ACS G800L grism on
 The observations -- listed at the bottom of Table~\ref{tab:Photometry}
 -- used 5 HST orbits from the FrontierSN program for a total
 spectroscopic exposure time of $\sim$10 ksec.  The grism data were
-processed and the target spectrum was extracted using the custom
-pipeline employed by the Grism Lens Amplified Survey from Space
-program (GLASS; PI:Treu, PID:13459). \textcolor{red}{Is there a
-citation for this? or more to say here?}  
+processed and the target spectrum was extracted using a custom
+pipeline \citep{Brammer:2012}, which was developed for the 3D-HST
+program (PI:Van Dokkum; PID:12177, 12328) and also used by the Grism
+Lens Amplified Survey from Space (GLASS; PI:Treu; PID:13459).
 
 Figure~\ref{fig:SpecFit} shows the composite 1-D ACS grism spectrum,
 combining all available G800L exposures, overlaid with SN model fits
@@ -629,13 +629,14 @@ of the mean from naively assuming all are independent predictions.
 
 Table~\ref{tab:PredictedMagnifications} lists the 11 models, giving
 for each one the predicted magnification and uncertainty for a source
-at $z=1.31\pm0.01$ and at the position of \tomas.  These
-models represent a broad sampling of the techniques and assumptions
-that can be applied to the modeling of mass distributions in galaxy
-clusters. A rigorous comparison of these disparate lens modeling
-techniques is beyond the scope of this work. Table 10 includes a brief
-description of each model, but for a complete discussion of the
-methodology the reader is referred to the listed references.
+at $z=1.31\pm0.01$ and at the position of \tomas.  These models
+represent a broad sampling of the techniques and assumptions that can
+be applied to the modeling of mass distributions in galaxy clusters. A
+rigorous comparison of these disparate lens modeling techniques is
+beyond the scope of this work. Table~\ref{tab:PredictedMagnifications}
+includes a brief description of each model, but for a complete
+discussion of the methodology the reader is referred to the listed
+references.
 
 In Figure~\ref{fig:lensingtest} the model predictions are plotted
 alongside the observed magnification of SN \tomas, derived in
@@ -752,10 +753,61 @@ strong suggestion that improving the number and quality of
 strong-lensing constraints can still lead to magnification maps that
 are susceptible to systematic biases.
 
+\change{
+\subsection{Misidentification of System 3}
+\label{sec:MisidentificationOfSystem3}
+}
+\change{
+It is important to note that in regards to the impact on this
+particular sight-line, not all strong-lensing constraints are equal.
+An error in the association of multiple images or 
+in the redshift of a multiply-imaged galaxy would have a
+more significant impact if that system has a projected position
+close to our SN sight-line.  It happens that there is one such system,
+for which the position of a multiple image near SN \tomas\ is presently disputed.  
+}
+
+\change{
+This multiply-imaged galaxy was originally labeled as {\it System 3}
+in \citet{Merten:2011}.  As shown in Figure~\ref{fig:System3}, it is
+stretched into two adjacent arcs northwest of the cluster core (images
+3.1 and 3.2), with a third image on the western edge of the
+strong-lensing region (image 3.3 at 00:14:18.595,
+-30:23:58.42).  \citet{Richard:2014} echoed this initial
+identification in producing the {\tt CATS} models, which we cite in
+Table~\ref{tab:PredictedMagnifications} and
+Figure~\ref{fig:lensingtest}.  In developing the {\tt Sharon-v2}
+models, \citet{Johnson:2014} provided a secure spectroscopic
+constraint of $z=3.98\pm0.02$ for this system, based on a spectrum of
+the combined 3.1+3.2 source. The identification of the original image
+3.3 has been called into question by two independent analyses.  Using
+HFF imaging data, \citet{Lam:2014} suggested an alternative third
+image for this system roughly 8\arcsec\ to the south, which we will
+call \33p\ (00:14:18.39, -30:24:06.53).
+However, \citeauthor{Lam:2014} rejected this possibility based on a
+difference in colors between \33p\ and images 3.1 and 3.2.  In
+contrast, \citeauthor{Jauzac:2014c} argue that the position \33p\
+is correct, and find that reassigning this multiple image results in a
+tighter model reconstruction for the locations of other
+multiply-imaged systems in the vicinity.
+}
+
+\change{
+Resolving the identification of this single multiply-imaged galaxy
+could be an important component in resolving the magnification
+discrepancy, though it is unlikely to completely remove the tension.
+It is true that the model that reassigns the position to \33p\
+({\tt Jauzac}) is also the one with the largest deviation from our
+observed $\mu$ value.  However, the bias is still present even if we
+remove that model and only consider models using the original position
+3.3.  
+}
+
+
 \subsection{Mass Profile Truncation}
 \label{sec:MassProfileTruncation}
 
-Seven of the mass models evaluated here are constrained only using
+Eight of the mass models evaluated here are constrained only using
 strong-lensing features such as multiply-imaged background galaxies
 and highly magnified arcs.  There are now $\sim$150 known lensed
 images behind Abell 2744 \citep{Jauzac:2014c}, but SN \tomas\ is
@@ -769,8 +821,8 @@ then these seven models might well overestimate the mass interior to
 the \tomas\ position, and thus systematically overestimate the
 magnification.
 
-The other four models in our comparison set also use the strong
-lensing constraints from the core region, but also utilize weak
+The other three models in our comparison set also use the strong
+lensing constraints from the core region, but additionally utilize weak
 lensing measurements to provide additional constraints on the mass
 distribution farther from the cluster core.  The signal from weak
 lensing relies on a large sample of background galaxies, so this
@@ -781,7 +833,7 @@ one would expect that models incorporating both of those constraints
 would be less susceptible to the systematic bias of a truncated mass
 profile.  The lowest magnification estimate in our sample (from the
 Merten model) is among this sub-sample.  However, we find that
-collectively these four strong+weak models (shown as diamonds in
+collectively these three strong+weak models (shown as diamonds in
 Figure~\ref{fig:lensingtest}) exhibit the same propensity to
 overestimate the magnification along this line of sight.  Thus, a
 sudden change in the mass profile outside the strong lensing region is
@@ -801,6 +853,7 @@ weak lensing constraints cannot resolve this bias.
 \subsection{Redshift Error}
 \label{sec:RedshiftError}
 
+\change{
 If the redshift of the SN derived in Section~\ref{sec:Spectroscopy}
 were incorrect, then one would derive a different value for the
 magnification, both from the SN measurement and the lens model
@@ -816,7 +869,9 @@ $1\sigma$ range of the photometric redshift for the nearest detected
 galaxy: $z=1.5\pm0.2$. This appears to be a solid and self-consistent
 picture, so the evidence strongly disfavors any redshift that is
 significantly different from $z=1.3$.
+}
 
+\change{
 We have adopted the spectroscopic redshift of $z=1.31\pm0.01$ for the
 magnification comparison.  Spectroscopic redshifts are generally more
 precise and accurate than those derived from photometric
@@ -825,22 +880,23 @@ this case the spectrum is limited to the rest-frame near-UV
 wavelengths, where the available SN spectral template libraries are
 more limited than at optical wavelengths.  If we use the photometric
 redshift of $z=1.35\pm0.02$ instead, then the measured magnification
-is reduced. \footnote{By increasing the redshift, the SN is presumed
-to be at a greater distance, so to first order one would be expect it
-to appear slightly fainter (larger distance modulus). If the distance
+is reduced.\footnote{By increasing the redshift, the SN is presumed to
+be at a greater distance, so to first order one would be expect it to
+appear slightly fainter (larger distance modulus). If the distance
 modulus inferred from the light curve fit remained constant, this
 would drive the inferred magnification to a higher value.  However,
-the intrinsic peak brightness as derived from light curve fitting is
-more strongly affected by the covariance between redshift, color, and
-light curve width.  In this case, these effects drive the distance
-modulus to a larger value at $z=1.35$ that is closer to the unlensed
-population than we get at $z=1.31$.}  From the SALT2 fitter we derive
-$\mu_{\rm SALT2}=1.80\pm0.30$ and from MLCS2k2 we get $\mu_{\rm
-MLCS2k2}=1.83\pm0.17$.  The lens models are also shifted, and they
-uniformly move in the opposite direction, to magnification values that
-are {\it larger}, by $\sim1$\%.  Thus, shifting the SN to the
-photometric redshift of $z=1.35$ only serves to (slightly) exacerbate
-the tension between the observations and models.
+the light curve fitting is more strongly affected by the covariance
+between redshift, color, and light curve width.  In this case, these
+effects drive the distance modulus to a larger value at $z=1.35$,
+resulting in a smaller value of the observed magnification $\mu$.}
+From the SALT2 fitter we derive $\mu_{\rm SALT2}=1.80\pm0.30$ and from
+MLCS2k2 we get $\mu_{\rm MLCS2k2}=1.83\pm0.17$.  The lens models are
+also shifted, and they uniformly move in the opposite direction, to
+magnification values that are {\it larger} than at $z=1.31$, by
+$\sim1$\%.  Thus, shifting the SN to the photometric redshift of
+$z=1.35$ only serves to (slightly) exacerbate the tension between the
+observations and models.
+}
 
 \section{Summary and Conclusions}
 \label{sec:SummaryAndConclusions}
@@ -876,8 +932,8 @@ that all models predict a larger magnification value than we observe
 is an indication that there is a small systematic bias inherent to
 this cluster or sight-line. 
 
-We have speculated on the possible origin of this systematic bias,
-evaluating three possible causes: 
+We have speculated on the origin of this systematic bias,
+evaluating five possible causes: 
 
 \begin{enumerate}
 \item The close proximity of a cluster member galaxy is leading to a
@@ -886,18 +942,44 @@ biased magnification, because that galaxy's M/L is atypical.
 \item The cluster mass profile exhibits a sudden change outside of the core
 strong-lensing region, where we lack multiply-imaged background
 sources to constrain it. 
+\item \change{The redshift assigned to SN \tomas\ is in error.}
+\item \change{SN \tomas\ is not a normal Type Ia SN.}
 \end{enumerate}
 
-\noindent None of these three explanations is completely
-satisfactory.  For each of these scenarios, we would expect that
-certain subsets of the available lens models would be less sensitive
-to the proposed systematic bias.  However, the small discrepancy
-between the predicted and observed lensing magnification is persistent
-when we bifurcate the sample of lens models according to methodology
-(parametric vs. free-form), number of strong-lensing constraints (pre-
-vs post-HFF), and scope of lensing constraints (strong-lensing only
-vs. strong+weak).  We do not have any definitive explanation for this
-magnification discrepancy.
+\noindent The first three of these take on the discrepancy from 
+the lens modeling side, but none are completely satisfactory. For each
+of these scenarios, we would expect that certain subsets of the
+available lens models would be less sensitive to the proposed
+systematic bias.  However, the small discrepancy between the predicted
+and observed lensing magnification is persistent when we bifurcate the
+sample of lens models according to methodology (parametric
+vs. free-form), number of strong-lensing constraints (pre- vs
+post-HFF), and scope of lensing constraints (strong-lensing only
+vs. strong+weak). Thus, comparison of the available models does not
+provide any definitive explanation for this magnification tension.
+
+\change{
+The last two possible explanations presume an error in the
+interpretation of the available SN data.  We reject the possibility
+that a redshift error is the primary cause of the discrepancy, as the
+redshift evidence is derived principally from the SN itself and not
+from the host galaxy. A value of $z\sim1.3$ is well supported by both
+the spectroscopic and photometric SN data, and changing the redshift
+within the constraints of these complementary observations only serves
+to increase the tension between the observed and predicted
+magnifications.
+}
+
+\change{
+Finally, we have considered whether the SN could be
+mis-classified. Once again the combination of spectroscopic and
+photometric evidence strongly supports our classification of
+SN \tomas\ as a normal Type Ia SN.  The most plausible
+mis-classification would be that the object is a peculiar Type Ia of
+the SN 2006bt-like sub-class.  We find this possibility to be 
+ \textcolor{red}{TODO: summarize the 06bt misclassification discussion}
+}
+
 
 This single object behind a single cluster is not in and of itself a
 cause for alarm.  Previous analyses of lensed \SNIa\ found no
@@ -942,7 +1024,9 @@ to improve these lenses with a larger sample of magnified SNe.
 
 {\bf Acknowledgments:}
 
-We are very pleased to thank the Hubble Frontier Fields team at STScI
+We are p
+
+We thank the Hubble Frontier Fields team at STScI
 for their substantial efforts to make the HFF program successful.  In
 particular, thanks are due to Matt Mountain for the allocation of
 discretionary orbits for the HFF program; to Jennifer Lotz, Norman
@@ -961,6 +1045,9 @@ for this research at Rutgers University was provided in part by NSF
 CAREER award AST-0847157 to SWJ.  The Dark Cosmology Centre is
 supported by the Danish National Research Foundation.
 
+J.M.D acknowledges support of the consolider project CAD2010-00064 and
+AYA2012-39475-C02-01 funded by the Ministerio de Economia y
+Competitividad.
 
 {\it Facilities:} \facility{HST (WFC3)}
 \smallskip

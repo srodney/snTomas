@@ -11,19 +11,22 @@ Jauzac		 & \nodata & 3.37$^{+0.14}_{-0.15}$ &   \citealt{Jauzac:2014,Richard:201
 GLAFIC       & 2.32 & 2.28$^{+0.07}_{-0.11}$ &   \citealt{Oguri:2010,Ishigaki:2015} & Parametric strong-lensing model using the {\tt GLAFIC} code.\tablenotemark{d} \\
 Zitrin-NFW   & 2.07 & 2.27$^{+0.23}_{-0.22}$ &   \citealt{Zitrin:2009a} &  Parametric strong-lensing model using PIEMD\tablenotemark{e} profiles for galaxies and NFW\tablenotemark{f} profiles for dark matter halos.\\
 Zitrin-LTM   & 2.64 & 2.96$^{+0.77}_{-0.38}$ &   \citealt{Zitrin:2013a} & Parametric strong-lensing model, adopts the Light-Traces-Mass assumption for both the luminous and dark matter.\\
-Bradac       & 3.15 & 2.45$^{+0.19}_{-0.16}$ &   \citealt{Bradac:2005,Bradac:2009} & {\tt SWUnited} : Free-form, strong+weak-lensing based model\\
-Williams     & 2.67 & 2.78$^{+2.68}_{-1.14}$ &   \citealt{Liesenborgs:2006,Mohammed:2014} & {\tt GRALE}\tablenotemark{f} : Free-form strong-lensing model using a genetic algorithm.  \\
+Bradac(v1)   & 3.15 & 2.45$^{+0.19}_{-0.16}$ &   \citealt{Bradac:2005,Bradac:2009} & {\tt SWUnited} : Free-form, strong+weak-lensing based model\\
+Bradac(v2)   & 2.23 & 2.20$^{+0.03}_{-0.01}$ &   \citealt{Bradac:2005,Bradac:2009} & \change{Updated version of the {\tt SWUnited} model with new strong-lensing constraints from HFF imaging.}\\
+Williams     & 2.67 & 2.78$^{+2.68}_{-1.14}$ &   \citealt{Liesenborgs:2006,Mohammed:2014} & {\tt GRALE}\tablenotemark{g} : Free-form strong-lensing model using a genetic algorithm.  \\
 Merten       & 2.31 & 2.22$^{+0.67}_{-0.19}$ &   \citealt{Merten:2009,Merten:2011} &  SaWLENS, free-form strong+weak lensing based model.\\
-Lam			 & \nodata & 2.77$^{+0.36}_{-0.36}$ &   \citealt{Sendra:2014,Lam:2014} & {\tt WSLAP+}\tablenotemark{g} : Free-form strong-lensing model using a grid-based method, supplemented by deflections fixed to cluster member galaxies.
+Lam			 & \nodata & 2.77$^{+0.36}_{-0.36}$ &   \citealt{Sendra:2014,Lam:2014} & {\tt WSLAP+}\tablenotemark{h} : Free-form model strong-lensing using a grid-based method, supplemented by deflections fixed to cluster member galaxies.\\
+Diego\tablenotemark{i}			 & \nodata & 2.10$^{+0.36}_{-0.36}$ &   \citealt{Sendra:2014,Lam:2014} & \change{Alternative implementation of the {\tt WSLAP+}\tablenotemark{h} model, using a different set of strong-lensing constraints and redshifts.}
 \enddata
 \tablenotetext{a}{The magnification returned for the optimal version of each model, as independently defined by each lens modeling team.}  
 \tablenotetext{b}{Median magnification from 100-600 Monte Carlo realizations of the model. Uncertainties enclose 68\%\ of the realized values.}  
 \tablenotetext{c}{{\tt LENSTOOL} : \url{http://projects.lam.fr/repos/lenstool/wiki}}
-\tablenotetext{e}{{\tt GLAFIC} : \url{http://www.slac.stanford.edu/~oguri/glafic/}}
+\tablenotetext{d}{{\tt GLAFIC} : \url{http://www.slac.stanford.edu/~oguri/glafic/}}
 \tablenotetext{e}{PIEMD: Pseudo Isothermal Elliptical Mass Distrubition}
 \tablenotetext{f}{NFW : Navarro-Frenk-White mass density profile \citep{Navarro:1997}.}
 \tablenotetext{g}{{\tt GRALE} : }
-\tablenotetext{f}{{\tt WSLAP+} : Weak and Strong Lensing Analysis Package plus member galaxies}
+\tablenotetext{h}{{\tt WSLAP+} : Weak and Strong Lensing Analysis Package plus member galaxies \change{(Note: no weak-lensing constraints used for Abell 2744)}}
+\tablenotetext{i}{\change{No uncertainty estimates were available for the Diego implementation of the {\tt WSLAP+} model, so we adopt the uncertainties from the Lam model.}}
 \end{deluxetable*}
 
 
