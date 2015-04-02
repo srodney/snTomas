@@ -36,15 +36,15 @@ measurement of an absolute magnification at the edge of the
 strong-lensing region.  We derive a tightly constrained measure of the
 peak apparent magnitude, corrected for light curve shape and
 exinction.  In a cosmology-independent analysis, we find that \tomas\
-is $0.75\pm0.10$ magnitudes brighter than unlensed \SNeIa\ at similar
-redshift, implying a lensing magnification of $\mu_{\rm
-obs}=2.00\pm0.19$.  We compare this direct measurement of the
-magnification against predicted magnifications from 11 lens models,
-representing a broad range of methodologies and incorporating a
-variety of strong- and weak-lensing constraints. 
-The models are collectively fairly accurate, with 3 that are
-consistent within the 1$\sigma$ uncertainties.
-% a naive unweighted mean of  $\mu_{\rm mod}=2.6$.  
+is \change{$0.75\pm0.15$} magnitudes brighter than unlensed \SNeIa\ at
+similar redshift, implying a lensing magnification
+of \change{$\mu_{\rm obs}=2.00\pm0.28$}.  We compare this direct
+measurement of the magnification against predicted magnifications
+from \change{14 lens models,} representing a broad range of
+methodologies and incorporating a variety of strong- and weak-lensing
+constraints.  The models are collectively fairly accurate. \change{
+Half of the models deliver median magnifications that are consistent
+with the measured $\mu$ to within the 1$\sigma$ uncertainties.}
 However, the models are systematically biased to higher values: none
 of the tested models predict a magnification equal to or lower than
 the observed $\mu$, and some models are more than $5\sigma$ above the
@@ -72,7 +72,7 @@ first Gyr after the Big
 Bang \citep{Zheng:2012,Coe:2013} 
 \textcolor{red}{(cite other high-z galaxy candidates discovered with lensing)}
 
-\textcolor{red}{TODO: describe past examples of lensed SN studies  \citep{Goobar:2009,Riehm:2011,Quimby:2014}.}
+\textcolor{red}{TODO: describe past examples of lensed SN studies  \citep{Goobar:2009,Riehm:2011,Li:2012,Quimby:2014}.}
 
 \citet[][hereafter P14]{Patel:2014} and \citet{Nordin:2014} presented
 independent analyses of three lensed SNe, of which at least 2 are securely
@@ -96,7 +96,7 @@ produce exactly the same values for all positional and shear
 constraints from strong and weak lensing.  This is the simplest case
 illustrating a positional constraint degeneracy, but there are more
 complex versions \citep{Schneider:2014}.  Such mass sheet
-degeneracies do not extend to the \citep{absolute} magnification of a
+degeneracies do not extend to the {\it absolute} magnification of a
 background source's flux and size.  Therefore, an absolute measurement
 of magnification from a standard candle or a standard ruler
 \citep{Sonnenfeld:2011}  can break this fundamental degeneracy
@@ -193,8 +193,7 @@ of the Grism Lens Amplified Survey from Space (GLASS, PI:Treu,
 PID:13459, \citealt{Treu:2015}). \change{As we will see in Sections~\ref{sec:Spectroscopy}
 and \ref{sec:PhotometricClassification}, the SN data are inconsistent
 with that redshift, meaning that this nearby galaxy is a background
-object and therefore has no impact on the SN classification or
-luminosity measurement.}
+object and therefore has no impact on the SN magnification.}
 
 Upon discovery, HST target-of-opportunity observations were triggered
 from the FrontierSN program (PI:Rodney, HST-PID:13386), which aims to
@@ -560,11 +559,73 @@ fitters to a sample of Type Ia SNe from the SDSS
 survey \citep{Holtzman:2008,Kessler:2009b}, with the extinction law
 $R_V$ fixed at 1.9.
 
-Final values for the SN distance modulus are shown in
-Table~\ref{tab:MeasuredMagnification}, both for the spectroscopic
-redshift ($z=1.31$) and the photometric redshift ($z=1.35$).  The two
-light curve fitters are consistent within the uncertainties. 
+\change{
+The total uncertainty in the distance modulus is  
+}
 
+\begin{equation} \label{eqn:sigmatot}
+ \sigma_{\rm tot} = \sqrt{ \sigma_{\rm stat}^2 + \sigma_{int}^2}.
+\end{equation}
+
+\change{
+\noindent
+The $\sigma_{\rm stat}$ term is the statistical uncertainty, which
+encapsulates uncertainties from the data and the model, and
+$\sigma_{\rm int}$ accounts for the remaining {\it unmodeled} scatter.
+This latter term is derived by finding the amount of additional
+distance modulus scatter that needs to be added to a Type Ia SN
+population to get $\chi^2$ per degree of freedom equal to 1 for a
+fiducial cosmological model fit to the SN Ia Hubble diagram (distance
+modulus vs redshift).  Thus, $\sigma_{\rm int}$ is designed to
+account for any unknown sources of scatter in the Type Ia SN
+population, including unidentified errors in the data analysis as well
+as the natural scatter in intrinsic Type Ia SN luminosities.  The value of 
+$\sigma_{\rm int}$ may be expected to vary as a function of
+redshift and also from survey to survey.  
+}
+
+\change{
+Recent work has highlighted the inadequacy of this simplistic approach
+for handling intrinsic scatter in the Type Ia SN
+population \citep{Marriner:2011,Kessler:2013,Mosher:2014,Scolnic:2014a,Betoule:2014},
+but a full consideration of those alternative approaches is beyond the
+scope of this work.  We adopt the simple approach of using a single
+empirically defined value for $\sigma_{\rm int}$, reflecting
+principally an intrinsic scatter in Type Ia SN intrinsic luminosity
+that is fixed across time and phase.  Measurements of $\sigma_{\rm
+int}$ range from 0.08 mag \citep{Jha:2007,Conley:2011} to 0.15
+mag \citep{Kessler:2009b,Suzuki:2012}.  We adopt a value of
+$\sigma_{\rm int}=0.08$ mag, as derived by \citet{Jha:2007}
+and \citet{Conley:2011}.  Although this is on the low end of the range
+reported in the literature, this value is the most appropriate to
+apply to our analysis for two reasons.  First and foremost, for the
+SALT2 fitter we are using light curve fit parameters
+($\alpha$,$\beta$) with associated uncertainties that have been
+derived from the joint analysis of \citet{Conley:2011}
+and \citet{Sullivan:2011}. Similarly, the implementation of MLCS2k2
+that we have used is based on the uncertainty model derived from model
+training in \citet{Jha:2007}.  Inflating $\sigma_{int}$ beyond 0.08
+mag would therefore be equivalent to driving the reduced $\chi^2$ of
+the Type Ia SN Hubble diagram to $<1$.  Second, the value of 0.08 mag
+determined in \citet{Conley:2011} is specific to the HST SN sample,
+from \citet{Riess:2007} and \citet{Suzuki:2011}, which is the SN
+subset that is most similar to \tomas\ in terms of redshift and data
+analysis.  Larger values for $\sigma_{\rm int}$ are typically
+associated with SN samples at significantly lower redshifts that have
+less homogeneous data collection and analysis. }
+
+\change{
+Final values for the SN distance modulus are shown in
+Table~\ref{tab:MeasuredMagnification}, adopting the spectroscopic
+redshift ($z=1.31$).  In addition to modifying the distance modulus
+uncertainty for SN \tomas, we also add $\sigma_{\rm int}=0.08$ mag in
+quadrature to the uncertainty for every SN in the control sample. Note
+however that the uncertainty on the control sample value at $z=1.31$
+is only 0.05 mag, smaller than the intrinsic dispersion because it
+reflects only our measurement error on the mean distance modulus of
+the population.  The distance moduli derived from the SALT2 and
+MLCS2k2 light curve fitters are fully consistent within the
+uncertainties.  }
 
 \subsection{Magnification}
 \label{sec:Magnification}
@@ -649,7 +710,7 @@ lens models. Solid vertical lines show the constraints from SN \tomas\
 derived in Section~\ref{sec:Magnification} using the SALT2 (red) and
 MLCS2k2 (blue) fitters, with shaded regions marking the total
 uncertainty for each. Markers with horizontal error bars show the
-median magnification and 68\%\ confidence region from each of the 10
+median magnification and 68\%\ confidence region from each of the 14
 lensing models.  Circles indicate models that use only strong-lensing
 constraints, while diamonds denote those that also incorporate
 weak-lensing measurements.  Models shown with open markers were
@@ -659,13 +720,12 @@ additional input constraints, including new multiply imaged systems
 and redshifts.  The seven models shown in black at the top are from
 the ``parametric'' family, and the four in green at the bottom are
 ``free-form.''  The dashed grey line marks the unweighted mean of all
-model magnifications, with grey shading indicating the standard error
-of the mean from naively assuming all are independent predictions.
+model magnifications.
 \label{fig:lensingtest} }
 \end{center}
 \end{figure}
 
-Table~\ref{tab:PredictedMagnifications} lists the 11 models, giving
+Table~\ref{tab:PredictedMagnifications} lists the \change{14} models, giving
 for each one the predicted magnification and uncertainty for a source
 at $z=1.31\pm0.01$ and at the position of \tomas.  These models
 represent a broad sampling of the techniques and assumptions that can
@@ -682,30 +742,32 @@ Section~\ref{sec:Magnification}.  This comparison shows that these 11
 models are largely consistent with each other. Naively treating each
 model as an independent prediction for the magnification (and ignoring
 their quoted uncertainties), one would get a mean for the full sample
-of $\mu=2.62\pm0.34$ (shown as a grey band in
+of $\mu=2.51\pm0.34$ (shown as a grey dashed line in
 Figure~\ref{fig:lensingtest}).  This is separated from the observed SN
 magnification by $\delta\mu/\mu=30\%$, which is a 1.7$\sigma$
 difference.
 
 The models shown in Figure~\ref{fig:lensingtest} are separated along
 the $y$ direction into two broad classes, with the
-six \change{so-called} {\it parametrized} models on top and the four
-{\it free-form} models on the bottom.\footnote{\change{Although this
+six \change{so-called} {\it parametric}\footnote{\change{Although this
 nomenclature is becoming standard in the literature, it is somewhat
 misleading, as the pixels or grid cells in free-form models are
 effectively parameters as well. Perhaps ``simply-parameterized'' would
 be more accurate, though we adopt the more common usage here.}}
+models on top and the four {\it free-form} models on the bottom.
 Broadly speaking, the parametric models use parameterized density
 distributions to describe the arrangement of mass within the cluster,
 typically associating massive dark matter halos with the positions of
 bright cluster member galaxies. Therefore, parametric models rely (to
 varying degrees) on the assumption that the observed light from
 cluster galaxies is a good tracer of the cluster's dark matter.
-Free-form models divide the cluster into a grid, generally using an
-adaptive mesh to get better sampling in denser regions. Each grid cell
-is assigned a mass or a potential, and then the grid spacing and the
-mass values are iteratively refined to match the observed lensing
-constraints.
+Free-form models divide the cluster into a grid, generally using a
+\change{multi-scale grid} to get better sampling in denser regions. Each grid cell
+is assigned a mass or a potential, and then the mass values are
+iteratively refined to match the observed lensing
+constraints. \change{In some cases an adaptive grid is used so
+that the grid spacing itself can also be modified as the model is
+iterated \citep[e.g.][]{Liesenborgs:2006,Merten:2009}.}
 
 Figure~\ref{fig:lensingtest} also separates the models based on the
 scope of input data constraints used.  Seven of the models rely only
@@ -1001,7 +1063,7 @@ the magnitude of such a bias is insufficient to account for the
 observed discrepancy, \citet{Menard:2010a} estimate the opacity of the
 universe as $\langle A_{V}\rangle\sim0.03$ mag up to $z=0.5$.  While
 this can have a measurable impact on precise cosmological constraints,
-it is far less than the 0.285 mag difference between the observed
+it is far less than the 0.25 mag difference between the observed
 magnification of \tomas\ and the mean of the model predictions.  
 }
 
@@ -1020,9 +1082,9 @@ V}=0.014\pm0.037$ magnitudes.  These colors are tightly constrained,
 as we are fitting to photometry that covers a rest-frame wavelength
 range from $\sim3500-7000$\AA and extends to $\sim$30 days past
 maximum brightness.  
+}
 
 \textcolor{red}{TODO : discuss 2006bt-like colors}
-}
 
 \section{Summary and Conclusions}
 \label{sec:SummaryAndConclusions}
