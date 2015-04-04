@@ -6,6 +6,8 @@
 *out
 *aux
 
+*pyc
+
 # bibliography files:
 *bbl
 
