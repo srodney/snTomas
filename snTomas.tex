@@ -24,7 +24,7 @@ SN \tomas\ is a Type Ia Supernova (\SNIa) discovered at
 $z=1.31\pm0.01$ behind the galaxy cluster Abell 2744 ($z=0.308$). This
 SN has a projected separation from the cluster core of
 $\sim$40\arcsec, closer to the critical lensing line than any previous
-cluster-lensed \SNIa.  As such, it provides the first opportunity to
+cluster-lensed \SNIa.  As such, it provides a valuable opportunity to
 confront gravitational lens models of galaxy clusters with the direct
 measurement of an absolute magnification at the edge of the
 strong-lensing region.  We derive a tightly constrained measure of the
@@ -77,8 +77,8 @@ PI:Postman, HST Program ID 12068).
 
 \change{
 One of the key values in observing standard candles behind
-gravitational lenses is that {\it all} lensing reconstructions suffer
-from the mass-sheet degeneracy \citep{Falco:1985,Bradac:2004}.  This
+gravitational lenses is that most lensing reconstructions suffer from
+the mass-sheet degeneracy \citep{Falco:1985,Bradac:2004}.  This
 degeneracy arises because one can introduce into a lens model an
 unassociated sheet of mass in front of or behind the lens, without
 disturbing the primary observable quantities.  For example, take a
@@ -87,16 +87,19 @@ transform the surface mass density to
 $\kappa^{\prime}=(1-\lambda)\kappa+\lambda$ for any arbitrary value
 $\lambda$.  Both the $\kappa$ and $\kappa^{\prime}$ models will
 produce exactly the same values for all positional and shear
-constraints from strong and weak lensing.  This is the simplest case
-illustrating a positional constraint degeneracy, but there are more
-complex versions \citep{Schneider:2014}.  Such mass sheet
+constraints from strong and weak lensing.  When lensed background
+sources are available across a wide range of redshifts (as is the case
+for the Abell 2744 cluster discussed here), it should in principle be
+possible to account for the simplest form of a single mass sheet
+within that redshift range.  However, there are more complex versions
+of positional constraint
+degeneracies \citep{Schneider:2014,Liesenborgs:2012}.  Such
 degeneracies do not extend to the {\it absolute} magnification of a
 background source's flux and size.  Therefore, an absolute measurement
 of magnification from a standard candle or a standard ruler
-\citep{Sonnenfeld:2011}  can break this fundamental degeneracy
+\citep{Sonnenfeld:2011}  can break these fundamental degeneracies
 \citep{Holz:2001}.
 }
-
 
 
 In Section~\ref{sec:DiscoveryAndFollowup} we present the discovery and
@@ -352,13 +355,14 @@ iteration we only allow each template SED to be scaled in flux
 coherently at all wavelengths.  As shown in Figure~\ref{fig:SpecFit},
 we again find that the \tomas\ SED can be matched by a normal Type Ia
 SN (SN 2011fe) at redshift $z=1.31\pm0.01$.  Without the continuum
-warping, an alternative fit also arises: the normal Type Ia SN 2011iv
+warping, an alternative fit also arises: the \change{fast-declining
+(91bg-like)} Type Ia SN 2011iv
 at $z=0.98\pm0.01$. Formally, this match provides a slightly better
 fit to the unwarped \tomas\ spectrum, although the fit is notably poor
 at $\sim8700$\AA\ where the most significant absorption feature is
 found. Furthermore, a redshift $z\sim1$ is at odds with the host
 galaxy photo-z ($1.5\pm0.2$), and we will see in the following section
-that the photometric data is incompatible with a normal Type Ia SN at
+that the photometric data is also incompatible with a Type Ia SN at
 $z\sim1.0$.
 
 Setting aside the $z\sim1$ solution, all other template matches
@@ -602,7 +606,7 @@ training in \citet{Jha:2007}.  Inflating $\sigma_{int}$ beyond 0.08
 mag would therefore be equivalent to driving the reduced $\chi^2$ of
 the Type Ia SN Hubble diagram to $<1$.  Second, the value of 0.08 mag
 determined in \citet{Conley:2011} is specific to the HST SN sample,
-from \citet{Riess:2007} and \citet{Suzuki:2011}, which is the SN
+from \citet{Riess:2007} and \citet{Suzuki:2012}, which is the SN
 subset that is most similar to \tomas\ in terms of redshift and data
 analysis.  Larger values for $\sigma_{\rm int}$ are typically
 associated with SN samples at significantly lower redshifts that have
@@ -650,9 +654,8 @@ size of the mass step correction is allowed to vary with redshift,
 there is no significant evidence that a non-zero mass step is required
 at $z>1$ \citep{Rigault:2013,Shafer:2014,Betoule:2014}.  Given the
 absence of a clear physical model and the lack of empirical support
-for a high-$z$ mass step, we do not apply any correction to SN \tomas
-or the control sample.
-}
+for a high-$z$ mass step, we do not apply any correction to SN \tomas\ 
+or the control sample.  }
 
 \subsection{Magnification}
 \label{sec:Magnification}
@@ -677,7 +680,7 @@ Surveys \citep{Riess:2006,Suzuki:2012}.  Using the SALT2 and MLCS2k2
 fitters as described above, we get distance modulus measures for every
 object in this control sample.  We then fit a linear relationship for
 distance modulus vs. redshift, and derive a prediction for the
-distance modulus of a normal Type Ia SN at the redshift of SN \tomas
+distance modulus of a normal Type Ia SN at the redshift of SN \tomas\
 (Figure~\ref{fig:MagnificationMeasurement}).
 This predicted value is given in
 Table~\ref{tab:MeasuredMagnification} under the ``Control'' column.
@@ -796,6 +799,19 @@ constraints. \change{In some cases an adaptive grid is used so
 that the grid spacing itself can also be modified as the model is
 iterated \citep[e.g.][]{Liesenborgs:2006,Merten:2009}.}
 
+\change{
+In general, free-form methods tend to explore the model parameter
+space more fully than parametric methods. This is reflected in the
+size of the error-bars in Figure~\ref{fig:lensingtest}.  For example,
+GRALE, which has the largest, and possibly the most realistic
+uncertainties is able to account for mass sheet degeneracy by
+introducing a free parameter in the reconstruction that represents an
+arbitrarily positioned mass sheet, with normalization to be chosen by
+the genetic algorithm.  More complex degeneracies are also accounted
+for in GRALE through the use of basis
+functions \citep{Liesenborgs:2006,Liesenborgs:2007,Mohammed:2014}
+}
+
 Figure~\ref{fig:lensingtest} also separates the models based on the
 scope of input data constraints used.  Seven of the models rely only
 on strong-lensing constraints (plotted as circles), while the other
@@ -824,16 +840,16 @@ generated quickly and without access to the rich data from the
 Frontier Fields program.
 
 However, beyond this first-order agreement, there is a systematic bias
-apparent. All of the lens models predict a magnification that is {\it
-higher} than the observed value, and no model has a median value that
-falls within the $1\sigma$ range of the observed magnifications.  It
-is important to emphasize that SN \tomas\ only samples a single
-sight-line through the cluster, so any conclusions to be drawn from
-this analysis are necesssarily limited.  Nevertheless, a systematic shift
-common to all models is surprising, given the wide range of modeling
-strategies, input data, and physical assumptions represented by this
-set of models.  In the following subsections we examine possible
-explanations for this apparently universal bias.
+apparent. All of the lens models \change{return median magnifications
+that are} {\it higher} than the observed value, and \change{half of
+the models are discrepant by more than $1\sigma$.}  It is important to
+emphasize that SN \tomas\ only samples a single sight-line through the
+cluster, so any conclusions to be drawn from this analysis are
+necesssarily limited.  Nevertheless, a systematic shift common to all
+models is surprising, given the wide range of modeling strategies,
+input data, and physical assumptions represented by this set of
+models.  In the following subsections we examine possible explanations
+for this \change{small but} apparently universal bias.
 
 \subsection{Nearby Cluster Member Galaxy}
 \label{sec:NearbyClusterMemberGalaxy}
@@ -900,12 +916,11 @@ are susceptible to systematic biases.
 \change{
 It is important to note that in regards to the impact on this
 particular sight-line, not all strong-lensing constraints are equal.
-An error in the association of multiple images or 
-in the redshift of a multiply-imaged galaxy would have a
-more significant impact if that system has a projected position
-close to our SN sight-line.  It happens that there is one such system,
-for which the position of a multiple image near SN \tomas\ is presently disputed.  
-}
+An error in the association of multiple images or in the redshift of a
+multiply-imaged galaxy would have a more significant impact if that
+system has a projected position close to our SN sight-line.  It
+happens that there is one such system, for which the position of a
+multiple image near SN \tomas\ is presently disputed.  }
 
 \change{
 This multiply-imaged galaxy was originally labeled as {\it System 3}
@@ -934,48 +949,50 @@ multiply-imaged systems in the vicinity.
 
 \change{
 Resolving the identification of this single multiply-imaged galaxy
-could be an important component in resolving the magnification
+could be a component in resolving the magnification
 discrepancy, though it is unlikely to completely remove the tension.
 It is true that the model that reassigns the position to \33p\
 ({\tt Jauzac}) is also the one with the largest deviation from our
-observed $\mu$ value.  However, the bias is still present even if we
-remove that model and only consider models using the original position
-3.3.  
-}
+observed $\mu$ value.  However, \citet{Jauzac:2014c} have already
+evaluated the impact of relocating this single source, and
+they find that it is not responsible for the observed increase in
+magnifications across the field. Rather, the 
+primary cause for the general magnification increase is the addition
+of new multiple images in the Northern region, detected using the new
+HFF data. } 
 
-
-\subsection{Mass Profile Truncation}
-\label{sec:MassProfileTruncation}
+\subsection{Mass Profile Extrapolation}
+\label{sec:MassProfileExtrapolation}
 
 Eight of the mass models evaluated here are constrained only using
 strong-lensing features such as multiply-imaged background galaxies
 and highly magnified arcs.  There are now $\sim$150 known lensed
 images behind Abell 2744 \citep{Jauzac:2014c}, but SN \tomas\ is
 located several arcseconds outside the core region of the cluster
-where these multiply-imaged galaxies are found.  Therefore these seven
+where these multiply-imaged galaxies are found.  Therefore these eight
 ``strong-lensing only'' models must necessarily rely on extrapolations
-to provide a prediction for the SN \tomas\ magnification.  If the true
-cluster density profile for Abell 2744 happens to be truncated -- with
-a sharp drop right at the edge of this core strong-lensing region --
-then these seven models might well overestimate the mass interior to
-the \tomas\ position, and thus systematically overestimate the
-magnification.
+to provide a prediction for the SN \tomas\ magnification.  Let us
+suppose that the true cluster density profile for Abell 2744 happens
+to have a sharp drop right at the edge of this core strong-lensing
+region. In that case these eight models might well overestimate the
+mass interior to the \tomas\ position, and thus systematically
+overestimate the magnification.
 
 The other three models in our comparison set also use the strong
-lensing constraints from the core region, but additionally utilize weak
-lensing measurements to provide additional constraints on the mass
-distribution farther from the cluster core.  The signal from weak
+lensing constraints from the core region, but additionally utilize
+weak lensing measurements to provide additional constraints on the
+mass distribution farther from the cluster core.  The signal from weak
 lensing relies on a large sample of background galaxies, so this
-constraint operates principally at separations more than 1\arcmin from
+constraint operates principally at separations more than 1\arcmin\ from
 the cluster core.  At a projected separation of $\sim40\arcsec$,
 SN \tomas\ falls in between the strong- and weak-lensing regimes, and
 one would expect that models incorporating both of those constraints
-would be less susceptible to the systematic bias of a truncated mass
-profile.  The lowest magnification estimate in our sample (from the
-Merten model) is among this sub-sample.  However, we find that
-collectively these three strong+weak models (shown as diamonds in
-Figure~\ref{fig:lensingtest}) exhibit the same propensity to
-overestimate the magnification along this line of sight.  Thus, a
+would be less susceptible to the systematic bias of a sharply
+steepening mass profile.  The lowest magnification estimate in our
+sample (from the Merten model) is among this sub-sample.  However, we
+find that collectively these three strong+weak models (shown as
+diamonds in Figure~\ref{fig:lensingtest}) exhibit the same propensity
+to overestimate the magnification along this line of sight.  Thus, a
 sudden change in the mass profile outside the strong lensing region is
 not a likely explanation for this small systematic bias.
 
@@ -987,7 +1004,7 @@ A second iteration of this model, labeled here as CATS-SL+WL, used the
 same strong-lensing features, but added in weak lensing constraints.
 The revised magnification of $\mu=2.62\pm0.18$ is further from the
 measured value, which serves to reinforce the conclusion that adding
-weak lensing constraints cannot resolve this bias.
+weak lensing constraints cannot, by itself, resolve this bias.
 
 
 \subsection{Redshift Error}
@@ -1013,9 +1030,9 @@ significantly different from $z=1.3$.
 
 \change{
 We have adopted the spectroscopic redshift of $z=1.31\pm0.01$ for the
-magnification comparison.  Spectroscopic redshifts are generally more
-precise and accurate than those derived from photometric
-observations \citep{Rodney:2010b,Kessler:2010,Sako:2011}.  However, in
+magnification comparison.  Spectroscopic SN redshifts are generally more
+precise and accurate than those derived from SN
+photometry \citep{Rodney:2010b,Kessler:2010,Sako:2011}.  However, in
 this case the spectrum is limited to the rest-frame near-UV
 wavelengths, where the available SN spectral template libraries are
 more limited than at optical wavelengths.  If we use the photometric
@@ -1035,8 +1052,7 @@ also shifted, and they uniformly move in the opposite direction, to
 magnification values that are {\it larger} than at $z=1.31$, by
 $\sim1$\%.  Thus, shifting the SN to the photometric redshift of
 $z=1.35$ only serves to (slightly) exacerbate the tension between the
-observations and models.
-}
+observations and models.  }
 
 
 \subsection{Foreground Dust}
@@ -1066,7 +1082,7 @@ fitter we measured a color parameter $c=-0.115\pm0.025$, and with
 MLCS2k2 we found the host galaxy dust extinction to be $A_{\rm
 V}=0.014\pm0.037$ magnitudes.  These colors are tightly constrained,
 as we are fitting to photometry that covers a rest-frame wavelength
-range from $\sim3500-7000$\AA and extends to $\sim$30 days past
+range from $\sim3500-7000$\AA\ and extends to $\sim$30 days past
 maximum brightness.  This leaves little room for the luminosity
 measurement to be biased by dust, as the dimming of \tomas\ would also
 necessarily be accompanied by some degree of reddening. 
@@ -1323,9 +1339,8 @@ magnified SNe.
 
 {\bf Acknowledgments:}
 
-This work is dedicated to our colleague and friend Tomas Dahlen
-(-2014), for whom this supernova has been named in memorium. He is
-greatly missed.
+This work is dedicated to our colleague and friend Tomas Dahlen, for
+whom this supernova has been named in memorium. He is dearly missed.
 
 We thank the Hubble Frontier Fields team at STScI
 for their substantial efforts to make the HFF program successful.  In
@@ -1338,11 +1353,13 @@ We also must thank the CLASH team, led by Marc Postman, for
 observations, catalogs, and high level science products that were of
 significant value for this analysis.
 
-
 Financial support for this work was provided to SAR by NASA through grants
 HST-HF-51312 and HST-GO-13386 from the Space Telescope
 Science Institute, which is operated by Associated Universities for
 Research in Astronomy, Inc., under NASA contract NAS 5-26555.
+
+AM acknowledge the financial support of the Brazilian funding agency
+FAPESP (Post-doc fellowship - process number 2014/11806-9)
 
 Support for this research at Rutgers University was provided in part
 by NSF CAREER award AST-0847157 to SWJ.  The Dark Cosmology Centre is
