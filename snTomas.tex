@@ -1060,25 +1060,38 @@ discrepancy we observe.
 }
 
 \change{
-One might suppose that a bias could be introduced if we have adopted
-incorrect values for the color correction parameter $\beta$ or
-extinction law $R_V$ in the SALT2 and MLCS2k2 fits, respectively.  The
-appropriate value to use for this color correction and how it affects
-inferences about the intrinsic scatter in Type Ia SN luminosities is a
-complex question that is beyond the scope of this work \citep[see
+In Section~\ref{sec:LightCurveFitting} we found that SN \tomas\ is on
+the blue end of the normal range of Type Ia SN colors.  With the SALT2
+fitter we measured a color parameter $c=-0.115\pm0.025$, and with
+MLCS2k2 we found the host galaxy dust extinction to be $A_{\rm
+V}=0.014\pm0.037$ magnitudes.  These colors are tightly constrained,
+as we are fitting to photometry that covers a rest-frame wavelength
+range from $\sim3500-7000$\AA and extends to $\sim$30 days past
+maximum brightness.  This leaves little room for the luminosity
+measurement to be biased by dust, as the dimming of \tomas\ would also
+necessarily be accompanied by some degree of reddening. 
+}
+
+\change{
+Nevertheless, one might suppose that a bias could be introduced if we
+have adopted incorrect values for the color correction parameter
+$\beta$ or extinction law $R_V$ in the SALT2 and MLCS2k2 fits,
+respectively.  The appropriate value to use for this color correction
+and how it affects inferences about the intrinsic scatter in Type Ia
+SN luminosities is a complex question that is beyond the scope of this
+work \citep[see
 e.g.][]{Marriner:2011,Chotard:2011,Kessler:2013,Scolnic:2014a}.
 However, we can already rule this out as a solution for the
 magnification discrepancy.  Our error on the \tomas\ distance modulus
 already includes an uncertainty in the extinction law and a related
 error to account for the intrinsic luminosity scatter. These are well
 vetted paraemeters, based on observations of $\sim500$ SNe extending
-to $z\sim1.5$ \citep{Sullivan:2011}.  Furthermore, changing the color
-correction applied to SN \tomas\ would requre the same adjustment to
-be applied to the unlensed SNe at similar redshift that make up our
-comparison sample, unless one proposes without evidence that
-SN \tomas\ is uniquely affected by a peculiar type of dust.  
-}
-
+to $z\sim1.5$ \citep{Sullivan:2011}.  Furthermore, there is no reason
+to propose that SN \tomas\ is uniquely affected by a peculiar type of
+dust.  Thus, any change in the color correction applied to SN \tomas\
+would require the same adjustment to be applied to the unlensed SNe at
+similar redshift that make up our comparison sample, largely negating
+the effect on the inferred magnification.  }
 
 \change{
 The traditional color corrections as formalized in SN light curve
@@ -1103,27 +1116,60 @@ magnification of \tomas\ and the mean of the model predictions.
 \includegraphics[width=\columnwidth]{FIG/snTomas_sn06bt_colorcurves}
 \caption{ 
 Comparing \tomas\ observations to the color curves of SN 2006bt and a
-normal Type Ia SN model. Grey points show the observed colors of SN \tomas, k-corrected to rest-frame UBVr bands. Solid orange lines show the observed color
-curves for the peculiar Type Ia SN 2006bt. Dashed blue lines show the
-color curves for a normal Type Ia SN, derived from the SALT2 model with a color parameter $c=-0.12$, set to match the best-fit color for SN \tomas.
+normal Type Ia SN model. Grey points show the observed colors of
+SN \tomas, k-corrected to rest-frame UBVr bands. Solid orange lines
+show the observed color curves for the peculiar Type Ia SN
+2006bt. Dashed blue lines show the color curves for a normal Type Ia
+SN, derived from the SALT2 model with a color parameter $c=-0.12$, set
+to match the best-fit color for SN \tomas.
 \label{fig:colorcomparison} }
 \end{center}
 \end{figure}
 
-\textcolor{red}{TODO : discuss 2006bt-like misclassification}
-
 \change{
-In Section~\ref{sec:LightCurveFitting} we found that SN \tomas\ is on
-the blue end of the normal range of Type Ia SN colors.  With the SALT2
-fitter we measured a color parameter $c=-0.115\pm0.025$, and with
-MLCS2k2 we found the host galaxy dust extinction to be $A_{\rm
-V}=0.014\pm0.037$ magnitudes.  These colors are tightly constrained,
-as we are fitting to photometry that covers a rest-frame wavelength
-range from $\sim3500-7000$\AA and extends to $\sim$30 days past
-maximum brightness.  
+Is it possible that \tomas\ is an example of a peculiar stellar
+explosion that does not follow the relationship between light curve
+shape and luminosity observed in normal Type Ia SNe?  In
+Sections~\ref{sec:SNID} and \ref{sec:PhotometricClassification} we
+classified SN Tomas as a normal Type Ia SN based on both the
+spectroscopic and photometric evidence.  This rules out the
+possibility that \tomas\ belongs to a different class of normal SN
+explosions (Type Ib, Ic, or II). In
+Section \ref{sec:LightCurveFitting} we fit the \tomas\ light curve to
+determine a luminosity distance and found that the light curve shape
+and color are consistent with a Type Ia SN of average light curve
+width, with minimal dust extinction.  This excludes the possibility
+that \tomas\ is one of the sub-class of ``fast declining'' Type Ia SNe
+like SN 1991bg.
 }
 
-\textcolor{red}{TODO : discuss 2006bt-like colors}
+\change{
+One remaining possibility is that \tomas\ could be part of a rare
+sub-category of peculiar Type Ia SNe that masquerade as their normal
+cousins, epitomized by the prototype SN 2006bt \citep{Foley:2010}.
+These objects appear to have a normal Type Ia light curve shape,
+except for the absence of a secondary maximum or ``shoulder'' in
+near-IR bands.  The reddest filter available for the \tomas\ light
+curve is F160W, which has an effective rest-frame wavelength of
+6623\AA\ at $z=1.31$, making it close to the rest-frame {\it r} band.
+Although the near-IR shoulder is more prominent in the rest-frame {\it
+i} band, we can see in Figures~\ref{fig:LightCurveFits} that the F160W
+light curve may suggest a weak or delayed near-IR shoulder.  The
+second-to-last observation in F160W is $\sim1\sigma$ lower than
+predicted by the best-fit SALT2 and MLCS2k2 models. This is tenuous
+evidence, but it would be consistent with a 2006bt-like light curve.
+}
+
+\change{
+In this case, however, the color of SN \tomas\ can rule out a
+classification as a 2006bt-like object.  All members of this peculiar
+sub-class exhibit very red colors across all optical and near-IR
+bands, consistent with a very cool photosphere \citep{Foley:2010}.
+Figure~\ref{fig:colorcomparison} shows that \tomas\ is bluer than the
+SN 2006bt prototype by at least 0.25 magnitudes in every color. The
+observed \tomas\ colors are fully consistent with the a normal, blue
+Type Ia SN (the SALT2 model is shown).
+}
 
 \section{Summary and Conclusions}
 \label{sec:SummaryAndConclusions}
@@ -1170,7 +1216,7 @@ biased magnification, because that galaxy's M/L is atypical.
 strong-lensing region, where we lack multiply-imaged background
 sources to constrain it. 
 \item \change{The redshift assigned to SN \tomas\ is in error.}
-\item \change{The color corrections for SN \tomas\ underestimate the foreground dust.}
+\item \change{SN \tomas\ is dimmed by foreground dust.}
 \item \change{SN \tomas\ is not a normal Type Ia SN.}
 \end{enumerate}
 
@@ -1187,7 +1233,7 @@ vs. strong+weak). Thus, comparison of the available models does not
 provide any definitive explanation for this magnification tension.
 
 \change{
-The last two possible explanations presume an error in the
+The last three possible explanations presume an error in the
 interpretation of the available SN data.  We reject the possibility
 that a redshift error is the primary cause of the discrepancy, as the
 redshift evidence is derived principally from the SN itself and not
@@ -1195,8 +1241,10 @@ from the host galaxy. A value of $z\sim1.3$ is well supported by both
 the spectroscopic and photometric SN data, and changing the redshift
 within the constraints of these complementary observations only serves
 to increase the tension between the observed and predicted
-magnifications.
-}
+magnifications.  We also find it implausible that there is sufficient
+dust in the cluster or elsewhere along the line of sight to account
+for the magnification discrepancy.  A dust-induced bias is also
+disfavored by the very blue color of SN \tomas.  }
 
 \change{
 Finally, we have considered whether the SN could be
@@ -1204,10 +1252,10 @@ mis-classified. Once again the combination of spectroscopic and
 photometric evidence strongly supports our classification of
 SN \tomas\ as a normal Type Ia SN.  The most plausible
 mis-classification would be that the object is a peculiar Type Ia of
-the SN 2006bt-like sub-class.  We find this possibility to be 
- \textcolor{red}{TODO: summarize the 06bt misclassification discussion}
+the SN 2006bt-like sub-class.  Although the light curve shape could
+allow this possibility, the blue color of \tomas\ can once again
+reject this alternative. 
 }
-
 
 This single object behind a single cluster is not in and of itself a
 cause for alarm.  Previous analyses of lensed \SNIa\ found no
