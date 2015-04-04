@@ -4,6 +4,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+
 %%%%%%%%%%%%%%%%%%%%
 % COMPILER MODES
 %%%%%%%%%%%%%%%%%%%%
@@ -51,18 +52,6 @@
   %\journalinfo{astro-ph/xxxxxx}  % top left corner of first page.
 \fi
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% changetext  mode settings
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\ifchangetext
-  % Changed text is highlighted in bold, blue font 
-  \newcommand{\change}[1]{{\bf \textcolor{blue}{#1}}}
-\else
-  % Changed text is indistinguishable
-  \newcommand{\change}[1]{#1}
-\fi
-
-
 %%%%%%%%%%%%%%%%%%%%
 % PACKAGES INCLUDED
 %%%%%%%%%%%%%%%%%%%%
@@ -73,7 +62,7 @@
 \usepackage{amssymb}  % extended symbols lib
 %\usepackage{url}      % url text formatting
 \usepackage{hyperref}      % url text formatting
-\usepackage[usenames]{color}  % colored text
+\usepackage[usenames,dvipsnames]{xcolor}  % colored text
 %\usepackage{multirow}  % muti-row table cells
 %\usepackage{amsmath}  % extended equations lib (split)
 %\usepackage{mathrsfs} % extended math fonts (mathscr)
@@ -81,6 +70,24 @@
 %\usepackage{authblk}
 \usepackage{appendix}
 %\usepackage{array}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% changetext  mode settings
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifchangetext
+  % Changed text is highlighted in bold, blue font 
+  \newcommand{\change}[1]{{\bf \textcolor{blue}{#1}}}
+  \newcommand{\changeB}[1]{{\bf \textcolor{blue}{#1}}}
+  \newcommand{\changeG}[1]{{\bf \textcolor{ForestGreen}{#1}}}
+  \newcommand{\changeR}[1]{{\bf \textcolor{red}{#1}}}
+\else
+  % Changed text is indistinguishable
+  \newcommand{\change}[1]{#1}
+  \newcommand{\changeB}[1]{#1}
+  \newcommand{\changeG}[1]{#1}
+  \newcommand{\changeR}[1]{#1}
+\fi
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -77,13 +77,13 @@ PI:Postman, HST Program ID 12068).
 
 \change{
 One of the key values in observing standard candles behind
-gravitational lenses is that most lensing reconstructions suffer from
-the mass-sheet degeneracy \citep{Falco:1985,Bradac:2004}.  This
+gravitational lenses is \changeG{in addressing the problem of the
+mass-sheet degeneracy} \citep{Falco:1985,Bradac:2004}.  This
 degeneracy arises because one can introduce into a lens model an
-unassociated sheet of mass in front of or behind the lens, without
-disturbing the primary observable quantities.  For example, take a
-lens model with a given surface mass density $\kappa$, and then
-transform the surface mass density to
+unassociated sheet of uniform mass in front of or behind the
+lens, without disturbing the primary observable quantities.  For
+example, take a lens model with a given surface mass density $\kappa$,
+and then transform the surface mass density to
 $\kappa^{\prime}=(1-\lambda)\kappa+\lambda$ for any arbitrary value
 $\lambda$.  Both the $\kappa$ and $\kappa^{\prime}$ models will
 produce exactly the same values for all positional and shear
@@ -270,12 +270,16 @@ feature at $\sim$8700\AA.  However, the signal to noise ratio (S/N)
 for the host galaxy spectrum was too weak to yield any additional
 constraints on the host type or redshift.
 
-As described below, we fit the SN \tomas\ spectrum in two steps.
-First we determine a spectral classification -- and get a preliminary
-estimate of the redshift and age -- using the SuperNova IDentification
-(SNID) software \citep{Blondin:2007}.  Second, we refine the redshift
-and age measurement using a custom Type Ia spectral template matching
-program.
+\changeG{
+Spectra of Type I SNe (including all sub-classes Ia, Ib and Ic) are
+dominated by broad absorption features, which cannot in general be
+used to directly extract a spectroscopic redshift \citep[see
+e.g.][]{Filippenko:1997}.  As described below, we fit template spectra
+to the SN \tomas\ data in two steps.}  First we determine a spectral
+classification -- and get a preliminary estimate of the redshift and
+age -- using the SuperNova IDentification (SNID)
+software \citep{Blondin:2007}.  Second, we refine the redshift and age
+measurement using a custom Type Ia spectral template matching program.
 
 \subsection{Classification with SNID}
 \label{sec:SNID}
@@ -527,7 +531,10 @@ As in \P14, we derive a distance modulus\footnote{We use 'dm' to
 indicate the distance modulus to avoid confusion, reserving the symbol
 $\mu$ to refer to the lensing magnification. This 'dm' is a standard
 distance modulus, defined as ${\rm dm}=5\log_{10}d_L+25$, where $d_L$
-is the luminosity distance in Mpc.}  from the SALT2 fit using
+is the luminosity distance in Mpc.} \changeG{while ignoring the
+effects of gravitational lensing, so that we can later use it to
+derive a direct measurment of the magnification.}  From the SALT2 fit
+we get
 
 \begin{equation} \label{eqn:dmSALT2}
  {\rm dm}_{\rm SALT2} = m_B^* - M + \alpha(s-1) - \beta C.
@@ -801,7 +808,8 @@ iterated \citep[e.g.][]{Liesenborgs:2006,Merten:2009}.}
 
 \change{
 In general, free-form methods tend to explore the model parameter
-space more fully than parametric methods. This is reflected in the
+space more fully than parametric methods. 
+ This is reflected in the
 size of the error-bars in Figure~\ref{fig:lensingtest}.  For example,
 GRALE, which has the largest, and possibly the most realistic
 uncertainties is able to account for mass sheet degeneracy by
@@ -821,14 +829,14 @@ three others added new multiply-imaged systems and redshifts.
 
 In spite of the great variety in input data and methodology, these
 lens models overall are delivering consistent and fairly accurate
-estimates of the magnification.  \change{Four of the tested models
-(CATS, GLAFIC, Zitrin-NFW, Merten) report a median value that falls
-within the 1$\sigma$ uncertainty range of the measured magnification,
-and two of the models (Williams, Merten) report uncertainties that
-overlap the central $\mu$ from at least one of the light curve
-fitters.}  Furthermore, the scatter amongst
-models provides a reasonable estimate of the magnification
-uncertainty. 
+estimates of the magnification.  \change{Six of the tested models
+(CATS, GLAFIC, Zitrin-NFW, Bradac(v2), Merten, Diego) report a median
+value that falls within the 1$\sigma$ uncertainty range of the
+measured magnification, and two of the free-form models (Williams,
+Diego) report uncertainties that overlap the central $\mu$ as measured
+from both of the SN light curve fitters.}  Furthermore, the scatter
+amongst models provides a reasonable estimate of the magnification
+uncertainty.
 
 This is largely in agreement with the results
 of \citetalias{Patel:2014} and \citet{Nordin:2014}.  The fact that the
@@ -918,9 +926,11 @@ It is important to note that in regards to the impact on this
 particular sight-line, not all strong-lensing constraints are equal.
 An error in the association of multiple images or in the redshift of a
 multiply-imaged galaxy would have a more significant impact if that
-system has a projected position close to our SN sight-line.  It
-happens that there is one such system, for which the position of a
-multiple image near SN \tomas\ is presently disputed.  }
+system has a projected position close to our SN
+sight-line \changeG{\citep[see][for a quantitative assessment of this
+effect]{Johnson:2014}.}  It happens that there is one such system, for
+which the position of a multiple image near SN \tomas\ is presently
+disputed.  }
 
 \change{
 This multiply-imaged galaxy was originally labeled as {\it System 3}
@@ -1222,7 +1232,7 @@ is an indication that there is a small systematic bias inherent to
 this cluster or sight-line. 
 
 We have speculated on the origin of this systematic bias,
-evaluating five possible causes: 
+evaluating six possible causes: 
 
 \begin{enumerate}
 \item The close proximity of a cluster member galaxy is leading to a
@@ -1247,6 +1257,15 @@ vs. free-form), number of strong-lensing constraints (pre- vs
 post-HFF), and scope of lensing constraints (strong-lensing only
 vs. strong+weak). Thus, comparison of the available models does not
 provide any definitive explanation for this magnification tension.
+
+\changeG{
+At least for this particular sight-line, the free-form models perform
+better in the sense that they deliver more realistic uncertainties.
+This may indicate that the free-form approach in general is more
+successful in capturing the uncertainty from biases inherent to the
+mass modeling exercise, such as the mass sheet degeneracy and more
+complex ``approximate
+invariances'' \citep{Liesenborgs:2012,Schneider:2014}.  }
 
 \change{
 The last three possible explanations presume an error in the
@@ -1307,10 +1326,11 @@ important step for moving toward precision science with cluster-lensed
 sources. 
 }
 
-Increasing the sample of SNe behind well studied strong lensing
-clusters would allow this test to be repeated and refined.  With 10 or
-100 such objects, it would be possible to see whether the SN \tomas\
-$\mu$ discrepancy is simply an outlier, or an indication of a more
+Increasing the sample of SNe behind clusters \changeG{like those in
+the HFF program -- with rich lensing constraints and deep imaging -- }
+would allow this test to be repeated and refined.  With 10 or 100 such
+objects, it would be possible to see whether the SN \tomas\ $\mu$
+discrepancy is simply an outlier, or an indication of a more
 pernicious systematic error.  Any cluster that has been vetted by
 pencil-beam magnification tests using lensed \SNIa\ will be able to
 provide a more reliable measure of the magnifications for very high
