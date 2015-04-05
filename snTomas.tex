@@ -36,16 +36,19 @@ of \change{$\mu_{\rm obs}=2.00\pm0.28$}.  We compare this direct
 measurement of the magnification against predicted magnifications
 from \change{14 lens models,} representing a broad range of
 methodologies and incorporating a variety of strong- and weak-lensing
-constraints.  The models are collectively fairly accurate. \change{
-Half of the models deliver median magnifications that are consistent
+constraints.  The models are collectively fairly accurate: \change{
+half of the models deliver median magnifications that are consistent
 with the measured $\mu$ to within the 1$\sigma$ uncertainties.}
 However, the models are systematically biased to higher values: none
 of the tested models predict a magnification equal to or lower than
-the observed $\mu$, and some models are more than $5\sigma$ above the
+the observed $\mu$, and three models are $2-4\sigma$ above the
 measured magnification.  We evaluate possible causes for this bias,
-and find that intercomparison of the lens models rules out several
-simple possibilities.  A larger sample of $\sim$10 \SNeIa\ behind any
-single cluster could provide a robust evaluation of systematic biases
+\changeG{considering both modeling errors and misinterpretation of the SN
+data. Although we find no single explanation that accounts for the
+entire discrepancy, we do find that the subset of ``free-form'' lens
+models are more accurate and provide more realistic uncertainties than
+``parametric models'' for this sight-line.} A larger sample of 10-100
+lensed \SNeIa\ could provide a robust evaluation of systematic biases
 in lens models.  Until such a sample exists, it is advisable
 to \change{increase the estimated uncertainty of predicted
 magnifications to match the dispersion observed across multiple lens
@@ -57,23 +60,71 @@ models.}
 \section{Introduction}
 \label{sec:Introduction}
 
-\textcolor{red}{TODO: write and polish introduction}.
-Massive galaxy clusters can be used as cosmic telescopes to magnify
-distant background objects through gravitational lensing.  This can
-substantially increase the reach of deep imaging surveys, and has
-recently been used to discover candidate proto-galaxies formed in the
-first Gyr after the Big 
-Bang \citep{Zheng:2012,Coe:2013} 
-\textcolor{red}{(cite other high-z galaxy candidates discovered with lensing)}
+\changeG{
+Galaxy clusters can be used as cosmic telescopes to magnify distant
+background objects through gravitational lensing, which can
+substantially increase the reach of deep imaging surveys.  The lensing
+magnification enables the study of objects that would otherwise be
+unobservable because they are either intrinsically
+faint \citep[e.g.][]{Schenker:2012,Alavi:2014} or extremely
+distant \citep[e.g.][]{Franx:1997,Ellis:2001,Hu:2002,Kneib:2004,Richard:2006,Richard:2008,Bouwens:2009a,Maizy:2010,Zheng:2012,Coe:2013,Bouwens:2014,Zitrin:2014}.
+Background galaxies are also {\it spatially} magnified, allowing for
+studies of the internal structure of galaxies in the early universe
+with resolutions of $\sim$100
+pc \citep[e.g.]{Stark:2008,Jones:2010,Yuan:2011,Livermore:2015}.
+}
 
-\textcolor{red}{TODO: describe past examples of lensed SN studies  \citep{Goobar:2009,Riehm:2011,Li:2012,Quimby:2014}.}
+\changeG{
+Gravitational lensing can also provide a powerful window onto the {\it
+transient} sky through an appropriately cadenced imaging survey.  The
+flux magnification from strong-lensing clusters is especially valuable
+for the study of $z>1.5$ supernovae
+(SNe) \citep[e.g.]{Kovner:1988,Kolatt:1998,Sullivan:2000,Saini:2000,Gunnarsson:2003,Goobar:2009,Postman:2012},
+which are still extremely difficult to characterize in unlensed
+fields \citep[e.g.]{Riess:2001,Riess:2007,Suzuki:2012,Rodney:2012,Rubin:2013,Jones:2013}.
+}
 
+\changeG{
+In the case of lensed SNe, we can also reverse the experimental setup:
+instead of using strong-lensing clusters to study distant SNe, we can
+use the SNe as tools for examining the lenses \citep{Riehm:2011}.  The
+most valuable transients for testing and improving cluster lens models
+would be {\it strongly lensed} SNe that are resolved into multiple
+images \citep{Holz:2001,Oguri:2003}.  Transients that are lensed into
+multiple images can also become cosmological tools, as the measurement
+of time delays between the images can provide cosmographic information
+to constrain the Hubble parameter \citep{Refsdal:1964} and other
+cosmological parameters \citep{Linder:2011}.  We have recently
+observed the first example of a multiply-imaged
+SN \citep{Kelly:2015}, and expect to detect the reappearance of this
+object (called ``SN Refsdal'') within 5 years, delivering a precise
+test of lens model predictions \citep{Oguri:2015,Sharon:2015}.
+Although detections of such objects are currently very
+unlikely \citep{Li:2012}, they will become much more common in the
+next decade \citep{Coe:2009,Dobke:2009}, and may be developed into an
+important new cosmological tool.
+}
+
+\changeG{
+In addition to time delays from multiply-imaged SNe, we can also
+put cluster mass models to the test with the much more common category
+of lensed Type Ia SNe.  
 \citet[][hereafter P14]{Patel:2014} and \citet{Nordin:2014} presented
-independent analyses of three lensed SNe, of which at least 2 are securely
-classified as Type Ia SNe.  All of these three objects were found in
-the Cluster Lensing and Supernova survey with Hubble (CLASH,
-PI:Postman, HST Program ID 12068). 
-
+independent analyses of three lensed SNe, of which at least 2 are
+securely classified as Type Ia SNe -- all found in the Cluster Lensing
+and Supernova survey with Hubble (CLASH, PI:Postman, HST Program ID
+12068, \citealt{Postman:2012}).  Both groups demonstrated that these
+standard candles can be used to provide accurate and precise
+measurements of the true absolute magnification along a random sight
+line through the cluster.  Although in these cases the SNe were used
+to {\it test} the cluster mass models, one could in principle
+incorporate the measured magnifications of Type Ia SNe into the
+cluster as additional model constraints.  In that role, Type Ia SNe
+have the particular value that they can be found anywhere in the
+cluster field.  Thus, they can deliver model constraints in regions of
+``middle distance'' from the cluster core, where both strong- and
+weak-lensing constraints are unavailable.
+}
 
 \change{
 One of the key values in observing standard candles behind
@@ -754,17 +805,17 @@ weak-lensing measurements.  Models shown with open markers were
 constructed using only data available before the start of the Frontier
 Fields observations.  Filled markers indicate models that use
 additional input constraints, including new multiply imaged systems
-and redshifts.  The seven models shown in black at the top are from
-the ``parametric'' family, and the four in green at the bottom are
-``free-form.''  The dashed grey line marks the unweighted mean of all
-model magnifications.
+and redshifts.  The eight models shown in black at the top are from
+the ``parametric'' family, and the six in green at the bottom are
+``free-form.''  Dashed lines mark the unweighted mean of each model
+family and shaded regions show the standard error of the mean.
 \label{fig:lensingtest} }
 \end{center}
 \end{figure}
 
-Table~\ref{tab:PredictedMagnifications} lists the \change{14} models, giving
-for each one the predicted magnification and uncertainty for a source
-at $z=1.31\pm0.01$ and at the position of \tomas.  These models
+Table~\ref{tab:PredictedMagnifications} lists the \change{14} models,
+giving for each one the predicted magnification and uncertainty for a
+source at $z=1.31\pm0.01$ and at the position of \tomas.  These models
 represent a broad sampling of the techniques and assumptions that can
 be applied to the modeling of mass distributions in galaxy clusters. A
 rigorous comparison of these disparate lens modeling techniques is
@@ -775,23 +826,22 @@ references.
 
 In Figure~\ref{fig:lensingtest} the model predictions are plotted
 alongside the observed magnification of SN \tomas, derived in
-Section~\ref{sec:Magnification}.  This comparison shows that these 11
+Section~\ref{sec:Magnification}.  This comparison shows that these 14
 models are largely consistent with each other. Naively treating each
 model as an independent prediction for the magnification (and ignoring
 their quoted uncertainties), one would get a mean for the full sample
-of $\mu=2.51\pm0.34$ (shown as a grey dashed line in
-Figure~\ref{fig:lensingtest}).  This is separated from the observed SN
-magnification by $\delta\mu/\mu=30\%$, which is a 1.7$\sigma$
+of $\mu=2.51\pm0.34$.  This is separated from the observed SN
+magnification by $\delta\mu/\mu=27\%$, which is only a 1.2$\sigma$
 difference.
 
 The models shown in Figure~\ref{fig:lensingtest} are separated along
-the $y$ direction into two broad classes, with the
-six \change{so-called} {\it parametric}\footnote{\change{Although this
+the $y$ direction into two broad classes, with 
+eight \change{so-called} {\it parametric}\footnote{\change{Although this
 nomenclature is becoming standard in the literature, it is somewhat
 misleading, as the pixels or grid cells in free-form models are
 effectively parameters as well. Perhaps ``simply-parameterized'' would
 be more accurate, though we adopt the more common usage here.}}
-models on top and the four {\it free-form} models on the bottom.
+models on top and six {\it free-form} models on the bottom.
 Broadly speaking, the parametric models use parameterized density
 distributions to describe the arrangement of mass within the cluster,
 typically associating massive dark matter halos with the positions of
@@ -808,8 +858,7 @@ iterated \citep[e.g.][]{Liesenborgs:2006,Merten:2009}.}
 
 \change{
 In general, free-form methods tend to explore the model parameter
-space more fully than parametric methods. 
- This is reflected in the
+space more fully than parametric methods.  This is reflected in the
 size of the error-bars in Figure~\ref{fig:lensingtest}.  For example,
 GRALE, which has the largest, and possibly the most realistic
 uncertainties is able to account for mass sheet degeneracy by
@@ -817,15 +866,14 @@ introducing a free parameter in the reconstruction that represents an
 arbitrarily positioned mass sheet, with normalization to be chosen by
 the genetic algorithm.  More complex degeneracies are also accounted
 for in GRALE through the use of basis
-functions \citep{Liesenborgs:2006,Liesenborgs:2007,Mohammed:2014}
-}
+functions \citep{Liesenborgs:2006,Liesenborgs:2007,Mohammed:2014} }
 
 Figure~\ref{fig:lensingtest} also separates the models based on the
-scope of input data constraints used.  Seven of the models rely only
+scope of input data constraints used.  Ten of the models rely only
 on strong-lensing constraints (plotted as circles), while the other
-four also use weak-lensing measurements (diamonds).  Eight of the
+four also use weak-lensing measurements (diamonds).  Ten of the
 models were constructed using only pre-HFF data (open symbols), and
-three others added new multiply-imaged systems and redshifts.
+four others added new multiply-imaged systems and redshifts.
 
 In spite of the great variety in input data and methodology, these
 lens models overall are delivering consistent and fairly accurate
@@ -891,7 +939,7 @@ At the outset of the HFF survey, only 33 multiply-imaged galaxies
 behind Abell 2744 were known.  One might expect that the addition of
 new lensing constraints from the HFF data would improve the model
 constraints and reduce the tension between the predicted and observed
-magnification.  However, for both of the most recent
+magnification.  However, for \changeG{two} of the most recent
 models \citep{Jauzac:2014c,Lam:2014} that include new strong-lensing
 constraints, the predicted magnification is still significantly higher
 than the observed value.  Again the CATS model family provides a
@@ -903,7 +951,7 @@ multiply-imaged system near the SN \tomas\ position.  These
 improvements should in principle make the Jauzac model magnification
 estimates more accurate, though we in fact see the opposite result:
 the Jauzac model predicts a $\mu$ that is higher than the measured
-value by $5.6\sigma$.
+value by \changeG{$4.3\sigma$.}
 
 This shift to higher magnifications is not, however, unique to the
 SN \tomas\ position.  \citet{Jauzac:2014c} noted that their updated
@@ -912,8 +960,8 @@ magnification values across the cluster field. Examining a sample of
 $\sim$30 multiple images, \citeauthor{Jauzac:2014c} found that the
 magnifications increased by a factor of $\sim1.5$ relative to pre-HFF
 models.  Although this single sight-line can only provide a very
-limited test of the model, the $5.6\sigma$ discrepancy is at least a
-strong suggestion that improving the number and quality of
+limited test of the model, the \changeG{$4.3\sigma$} discrepancy is at
+least a strong suggestion that improving the number and quality of
 strong-lensing constraints can still lead to magnification maps that
 are susceptible to systematic biases.
 
@@ -921,6 +969,23 @@ are susceptible to systematic biases.
 \subsection{Misidentification of System 3}
 \label{sec:MisidentificationOfSystem3}
 }
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=\columnwidth]{FIG/system3.png}
+\caption{ 
+The disputed component of the multiply-imaged galaxy System 3. The
+original position, as given in \citet{Merten:2011} is marked with a
+dashed magenta circle labeled 3.3. The solid magenta circle shows the
+revised location as proposed in \citet{Jauzac:2014c}.  Both positions
+are $\sim$10\arcsec\ from the SN location.  The inset panel shows the
+other two components of this multiply-imaged system, 3.1 and 3.2 (on
+the same scale as the main panel), which are located north-east of the
+cluster center.
+\label{fig:system3} }
+\end{center}
+\end{figure}
+
 \change{
 It is important to note that in regards to the impact on this
 particular sight-line, not all strong-lensing constraints are equal.
@@ -934,8 +999,8 @@ disputed.  }
 
 \change{
 This multiply-imaged galaxy was originally labeled as {\it System 3}
-in \citet{Merten:2011}.  As shown in Figure~\ref{fig:System3}, it is
-stretched into two adjacent arcs northwest of the cluster core (images
+in \citet{Merten:2011}.  As shown in Figure~\ref{fig:system3}, it is
+stretched into two adjacent arcs northeast of the cluster core (images
 3.1 and 3.2), with a third image on the western edge of the
 strong-lensing region (image 3.3 at 00:14:18.595,
 -30:23:58.42).  \citet{Richard:2014} echoed this initial
@@ -1165,9 +1230,8 @@ Section \ref{sec:LightCurveFitting} we fit the \tomas\ light curve to
 determine a luminosity distance and found that the light curve shape
 and color are consistent with a Type Ia SN of average light curve
 width, with minimal dust extinction.  This excludes the possibility
-that \tomas\ is one of the sub-class of ``fast declining'' Type Ia SNe
-like SN 1991bg.
-}
+that \tomas\ is one of the sub-class of faint and fast-declining Type
+Ia SNe like SN 1991bg.  }
 
 \change{
 One remaining possibility is that \tomas\ could be part of a rare
@@ -1260,12 +1324,19 @@ provide any definitive explanation for this magnification tension.
 
 \changeG{
 At least for this particular sight-line, the free-form models perform
-better in the sense that they deliver more realistic uncertainties.
-This may indicate that the free-form approach in general is more
-successful in capturing the uncertainty from biases inherent to the
-mass modeling exercise, such as the mass sheet degeneracy and more
-complex ``approximate
-invariances'' \citep{Liesenborgs:2012,Schneider:2014}.  }
+better both in the sense that the mean and standard error for this
+subset ($2.34\pm0.27$) is closer to the measured value ($2.00\pm0.28$)
+than is the parametric set ($2.59 +- 0.36$).  These free-form models
+also deliver more realistic uncertainties (with the exception of the
+Bradac(v2) model -- see \citet{Wang:2015} for further discussion of
+the changes made from v1 to v2 of that model).  This may indicate that
+the free-form approach in general is more successful in capturing the
+uncertainty from biases inherent to the mass modeling exercise, such
+as the mass sheet degeneracy and more complex ``approximate
+invariances'' \citep{Liesenborgs:2012,Schneider:2014}.  It may also be
+the case that the greater flexibility of the free-form models makes
+them better suited for predicting magnifications of sources that fall
+outside the strong-lensing region -- such as SN \tomas.  }
 
 \change{
 The last three possible explanations presume an error in the
@@ -1318,13 +1389,12 @@ modeling teams who attempt to reconstruct the (known) mass profile of
 the simulated cluster.  This exercise has recently been pursued with a
 set of synthetic clusters similar to those observed in the HFF program
 (Meneghetti et al. in prep).  Preliminary analysis of this simulation
-comparison suggests that systematic biases such as we have seen for
-SN \tomas\ may be common for sources that lie close to the critical
-curve in elongated and highly asymmetric clusters like Abell 2744.
-This SN analysis indicates that such simulation efforts will be an
+comparison suggests that \changeG{magnifications tend to be
+overestimated} for sources that lie outside the strong-lensing region
+along the minor axis direction of an elongated cluster.  Our analysis
+of SN \tomas\ here indicates that such simulation efforts will be an
 important step for moving toward precision science with cluster-lensed
-sources. 
-}
+sources.  }
 
 Increasing the sample of SNe behind clusters \changeG{like those in
 the HFF program -- with rich lensing constraints and deep imaging -- }
