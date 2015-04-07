@@ -240,7 +240,7 @@ taken with the G141 grism of the HST WFC3-IR camera, collected as part
 of the Grism Lens Amplified Survey from Space (GLASS, PI:Treu,
 PID:13459, \citealt{Treu:2015}). \change{As we will see in Sections~\ref{sec:Spectroscopy}
 and \ref{sec:PhotometricClassification}, the SN data are inconsistent
-with that redshift, meaning that this nearby galaxy is a background
+with that redshift, meaning that this spatially nearby galaxy is a background
 object and therefore has no impact on the SN magnification.}
 
 Upon discovery, HST target-of-opportunity observations were triggered
@@ -401,7 +401,7 @@ match the observed SED of SN \tomas.  From this analysis we find
 results that are consistent with the SNID fits: a redshift of
 $z=1.31\pm0.01$ and a phase of $0\pm3$ rest-frame days. The
 best-fitting spectral template is the normal Type Ia SN 2012cg, shown
-in the bottom panel of Figure~\ref{fig:SpecFit}, which has $\chi^2$
+in the top panel of Figure~\ref{fig:SpecFit}, which has $\chi^2$
 per degree of freedom $\nu$ equal to 42.1/87.
 
 Finally, we repeat the fitting, but without any warping of the
@@ -496,7 +496,7 @@ e.g.,][]{Kessler:2009b,Sullivan:2011,Rest:2014}. For $x_1$ the prior is
 a bifurcated Gaussian distribution with mean $\bar{x}_1=0$, dispersion
 $\sigma_{x_1}^+={0.9}$ and $\sigma_{x_1}^-={-1.5}$.  The prior for the
 color parameter $c$ has $\bar{c}=0.0$, $\sigma_c^-=0.08$, and
-$\sigma_c^+=0.54$.  The $c$ parameter in SALT2 combines intrinsic SN
+$\sigma_c^+=0.54$, using the same distribution as for $x_1$.  The $c$ parameter in SALT2 combines intrinsic SN
 color and extinction due to dust, so the large red tail of this
 distribution allows for the possibility of several magnitudes
 of dust extinction along the \tomas\ line of sight.
@@ -750,7 +750,7 @@ gravitational lensing:
 {\rm dm}_{\rm control} - {\rm dm}_{\rm \tomas} = 2.5 \log_{10}\mu.
 \end{equation}
 
-\noindent This inferred magnification is reported in the final column of
+\noindent The inferred magnifications for the two different fitters are reported in the final column of
 Table~\ref{tab:MeasuredMagnification}.
 
 \begin{figure}
@@ -860,12 +860,12 @@ iterated \citep[e.g.][]{Liesenborgs:2006,Merten:2009}.}
 In general, free-form methods tend to explore the model parameter
 space more fully than parametric methods.  This is reflected in the
 size of the error-bars in Figure~\ref{fig:lensingtest}.  For example,
-GRALE, which has the largest, and possibly the most realistic
+GRALE(Williams?), which has the largest, and possibly the most realistic
 uncertainties is able to account for mass sheet degeneracy by
 introducing a free parameter in the reconstruction that represents an
 arbitrarily positioned mass sheet, with normalization to be chosen by
 the genetic algorithm.  More complex degeneracies are also accounted
-for in GRALE through the use of basis
+for in GRALE(Williams?) through the use of basis
 functions \citep{Liesenborgs:2006,Liesenborgs:2007,Mohammed:2014} }
 
 Figure~\ref{fig:lensingtest} also separates the models based on the
@@ -1176,7 +1176,7 @@ However, we can already rule this out as a solution for the
 magnification discrepancy.  Our error on the \tomas\ distance modulus
 already includes an uncertainty in the extinction law and a related
 error to account for the intrinsic luminosity scatter. These are well
-vetted paraemeters, based on observations of $\sim500$ SNe extending
+vetted parameters, based on observations of $\sim500$ SNe extending
 to $z\sim1.5$ \citep{Sullivan:2011}.  Furthermore, there is no reason
 to propose that SN \tomas\ is uniquely affected by a peculiar type of
 dust.  Thus, any change in the color correction applied to SN \tomas\
