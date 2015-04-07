@@ -258,7 +258,7 @@ concluded in November, 2013.
 All of the imaging data were processed using the {\tt sndrizpipe}
 pipeline,\footnote{\url{https://github.com/srodney/sndrizpipe} v1.2
 DOI:10.5281/zenodo.10731} a custom data reduction package in Python
-that is employs the {\tt DrizzlePac} tools from the Space Telescope
+that employs the {\tt DrizzlePac} tools from the Space Telescope
 Science Institute (STScI) \citep{Fruchter:2010}.  Photometry was
 collected using the {\tt PyPhot} software
 package,\footnote{\url{https://github.com/djones1040/PyPhot}} a
@@ -446,37 +446,38 @@ light curve fitting.
 \caption{ 
 Maximum likelihood model for each SN sub-class, derived from Bayesian
 model selection using the photometric data alone. Grey points show the
-observed SN \tomas\ photometry with error bars, though these are typically
-smaller than the size of the marker.  The Type Ia model
+observed SN \tomas\ photometry with error bars, though these are
+typically smaller than the size of the marker.  The Type Ia model
 (orange solid line) is drawn from the SALT2 template at $z=1.35$. The
 best match from all Type Ib/Ic models is based on the Type Ic SN
-SDSS-14475 at $z=0.695$ (green dashed line). For the Type II class, the
-best match is from the Type II-L SN 2007pg at $z=1.8$ (blue dash-dot line). The Type
-Ia model is by far the best match, and the only one that is consistent
-with both the photo-$z$ of the probable host galaxy and the
-spectroscopic redshift from the SN spectrum.
+SDSS-14475 at $z=0.695$ (green dashed line). For the Type II class,
+the best match is from the Type II-L SN 2007pg at $z=1.8$ (blue
+dash-dot line). The Type Ia model is by far the best match, and the
+only one that is consistent with both the photo-$z$ of the probable
+host galaxy and the spectroscopic redshift from the SN spectrum.  The
+date of the HST spectral observations is marked with a thin grey
+vertical line.
 \label{fig:photoclass} }
 \end{center}
 \end{figure}
 
 As a check on the spectral classification of SN \tomas\
 (Section~\ref{sec:SNID}), we independently classified the SN using a
-Bayesian photometric classifier.  We use the
-{\tt sncosmo} software
+Bayesian photometric classifier.  We use the {\tt sncosmo} software
 package\footnote{\url{http://sncosmo.github.io/}} to simulate SN light
-curves from $z=0.3$ to 2.3 and evaluate the classification
-probability using traditional Bayesian model selection \citep[as
+curves from $z=0.3$ to 2.3 and evaluate the classification probability
+using traditional Bayesian model selection \citep[as
 in][]{Jones:2013,Rodney:2014,Graur:2014,Rodney:2015a}.  In this
 analysis we represent normal Type Ia SNe with the SALT2
 model \citep{Guy:2010}, and \CCSNe\ with 42 discrete templates (26
 Type II and 16 Type Ib/c) drawn from the template library of the
 SuperNova Analysis software
 package \citep[SNANA,][]{Kessler:2009a}.\footnote{Throughout this work
-we use SNANA v10\_35g.}
-Likelihoods are defined by comparing the observed fluxes to model
-predictions in all passbands where the model is defined.  In practice,
-this means we exclude the F435W and F606W bands, which are too blue
-for our models at $z>0.85$.
+we use SNANA v10\_35g.}  Likelihoods are defined by comparing the
+observed fluxes to model predictions in all passbands where the model
+is defined.  In practice, this means we exclude the SN detections in
+the F435W and F606W bands, which are too blue for our models at
+$z>0.85$.
 
 The \CCSN\ models have free parameters for date of peak brightness
 ($t_{\rm pk}$), amplitude, and redshift ($z$). Due to the expected
@@ -836,19 +837,20 @@ magnification by $\delta\mu/\mu=27\%$, which is only a 1.2$\sigma$
 difference.
 
 The models shown in Figure~\ref{fig:lensingtest} are separated along
-the $y$ direction into two broad classes, with 
-eight \change{so-called} {\it parametric}\footnote{\change{Although this
-nomenclature is becoming standard in the literature, it is somewhat
-misleading, as the pixels or grid cells in free-form models are
-effectively parameters as well. Perhaps ``simply-parameterized'' would
-be more accurate, though we adopt the more common usage here.}}
-models on top and six {\it free-form} models on the bottom.
-Broadly speaking, the parametric models use parameterized density
+the $y$ direction into two broad classes, with
+eight \change{so-called} {\it parametric}\footnote{\change{Although
+this nomenclature is becoming standard in the literature, it is
+somewhat misleading, as the pixels or grid cells in free-form models
+are effectively parameters as well. Perhaps ``simply-parameterized''
+would be more accurate, though we adopt the more common usage here.}}
+models on top and six {\it free-form} models on the bottom.  Broadly
+speaking, the parametric models use parameterized density
 distributions to describe the arrangement of mass within the cluster,
 typically associating massive dark matter halos with the positions of
 bright cluster member galaxies. Therefore, parametric models rely (to
-varying degrees) on the assumption that the observed light from
-cluster galaxies is a good tracer of the cluster's dark matter.
+varying degrees) on the assumption that the 
+\changeR{cluster's dark matter can be described
+by analytic forms such as NFW halos \citep{Navarro:1997}, or pseudo isothermal elliptical mass distributions \citep{Kassiola:1993}.}
 Free-form models divide the cluster into a grid, generally using a
 \change{multi-scale grid} to get better sampling in denser regions. Each grid cell
 is assigned a mass or a potential, and then the mass values are
@@ -864,7 +866,7 @@ size of the error-bars in Figure~\ref{fig:lensingtest}.  For example,
 the Williams model (using GRALE), which has the largest, and possibly the
 most realistic uncertainties is able to account for mass sheet
 degeneracy by introducing a free parameter in the reconstruction that
-represents an arbitrarily positioned mass sheet, with normalization to
+represents an arbitrarily scaled mass sheet, with normalization to
 be chosen by the genetic algorithm.  More complex degeneracies are
 also accounted for in this model through the use of basis
 functions \citep{Liesenborgs:2006,Liesenborgs:2007,Mohammed:2014} }
@@ -962,9 +964,10 @@ $\sim$30 multiple images, \citeauthor{Jauzac:2014c} found that the
 magnifications increased by a factor of $\sim1.5$ relative to pre-HFF
 models.  Although this single sight-line can only provide a very
 limited test of the model, the \changeG{$4.3\sigma$} discrepancy is at
-least a strong suggestion that improving the number and quality of
-strong-lensing constraints can still lead to magnification maps that
-are susceptible to systematic biases.
+least a strong suggestion that \changeR{even with a large number of
+high-quality} strong-lensing constraints \changeR{it is still possible
+to generate} magnification maps that are susceptible to systematic
+biases.
 
 \change{
 \subsection{Misidentification of System 3}
@@ -1059,18 +1062,18 @@ lensing constraints from the core region, but additionally utilize
 weak lensing measurements to provide additional constraints on the
 mass distribution farther from the cluster core.  The signal from weak
 lensing relies on a large sample of background galaxies, so this
-constraint operates principally at separations more than 1\arcmin\ from
-the cluster core.  At a projected separation of $\sim40\arcsec$,
+constraint operates principally at separations more than 1\arcmin\
+from the cluster core.  At a projected separation of $\sim40\arcsec$,
 SN \tomas\ falls in between the strong- and weak-lensing regimes, and
 one would expect that models incorporating both of those constraints
-would be less susceptible to the systematic bias of a sharply
-steepening mass profile.  The lowest magnification estimate in our
-sample (from the Merten model) is among this sub-sample.  However, we
-find that collectively these three strong+weak models (shown as
-diamonds in Figure~\ref{fig:lensingtest}) exhibit the same propensity
-to overestimate the magnification along this line of sight.  Thus, a
-sudden change in the mass profile outside the strong lensing region is
-not a likely explanation for this small systematic bias.
+would be less susceptible to the \changeR{possible} systematic bias of
+a sharply steepening mass profile.  The lowest magnification estimate
+in our sample (from the Merten model) is among this sub-sample.
+However, we find that collectively these three strong+weak models
+(shown as diamonds in Figure~\ref{fig:lensingtest}) exhibit the same
+propensity to overestimate the magnification along this line of sight.
+Thus, a sudden change in the mass profile outside the strong lensing
+region is not a likely explanation for this small systematic bias.
 
 With two versions of the CATS model, we also have a more direct test
 of the effect of introducing weak lensing constraints.  The initial
@@ -1372,10 +1375,10 @@ the predictions from lens models
 smaller set of lens models being tested.  The observed systematic bias
 for \tomas\ is small, and many of the lens models being evaluated are
 preliminary models that have not been updated to include all of the
-HFF data.  Future revisions of the lens models for Abell 2744 should
-either incorporate the observed magnification of \tomas\ as a new
-model constraint, or can revisit this test to evaluate whether the
-bias persists.
+HFF data.  Future revisions of the lens models for Abell
+2744 \changeR{could} either incorporate the observed magnification
+of \tomas\ as a new model constraint, or can revisit this test to
+evaluate whether the bias persists.
 
 \change{
 A promising avenue for exploring the origins of systematic biases in

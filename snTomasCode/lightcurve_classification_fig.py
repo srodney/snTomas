@@ -128,18 +128,23 @@ def mk_figure(yunit='flux'):
     ax814.set_xlim(56790,56969)
     ax814.xaxis.set_major_locator( ticker.MultipleLocator(50) )
     ax814.xaxis.set_minor_locator( ticker.MultipleLocator(10) )
+    ax814.axvline(56813.5,ls='-',color='0.5',lw=0.75)
+    ax814.legend(loc='right', frameon=False, labelspacing=0.08,
+                 fontsize=11.5, handletextpad=0.08)
 
     ax105 = axdict['F105W']
     ax105.set_xlim(56790,56969)
     ax105.xaxis.set_major_locator( ticker.MultipleLocator(50) )
     ax105.xaxis.set_minor_locator( ticker.MultipleLocator(10) )
-    ax814.legend(loc='right', frameon=False, labelspacing=0.08,
-                 fontsize=11.5, handletextpad=0.08)
+    ax105.axvline(56813.5,ls='-',color='0.5',lw=0.75)
+    ax105.text(56812,0.2,'spectrum',rotation=90,ha='right',va='bottom',
+               color='0.5', fontsize='small')
 
     ax125 = axdict['F125W']
     ax125.set_xlim(56790,56877)
     ax125.xaxis.set_major_locator( ticker.MultipleLocator(50) )
     ax125.xaxis.set_minor_locator( ticker.MultipleLocator(10) )
+    ax125.axvline(56813.5,ls='-',color='0.5',lw=0.75)
 
     ax140 = axdict['F140W']
     pl.setp(ax140.yaxis.get_ticklabels(), visible=False)
@@ -148,12 +153,14 @@ def mk_figure(yunit='flux'):
     ax140.set_xlim(56883,56969)
     ax140.xaxis.set_major_locator( ticker.MultipleLocator(50) )
     ax140.xaxis.set_minor_locator( ticker.MultipleLocator(10) )
+    ax140.axvline(56813.5,ls='-',color='0.5',lw=0.75)
 
     ax160 = axdict['F160W']
     ax160.set_xlim(56790,56969)
     ax160.xaxis.set_major_locator( ticker.MultipleLocator(50) )
     ax160.xaxis.set_minor_locator( ticker.MultipleLocator(10) )
     ax160.set_xlabel('Observer-frame Days (MJD)')
+    ax160.axvline(56813.5,ls='-',color='0.5',lw=0.75)
 
     for ax in axdict.values():
         ax.yaxis.set_major_locator( ticker.MultipleLocator(1) )
