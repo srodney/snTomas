@@ -1,49 +1,179 @@
-\author{Steven~A.~Rodney\altaffilmark{1,*}}
-\author{Brandon Patel\altaffilmark{2}}
-\author{Daniel Scolnic\altaffilmark{3}}
-\author{Ryan Foley\altaffilmark{4}}
-\author{Alberto Molino\altaffilmark{5,6}}
-\author{Mathilde Jauzac\altaffilmark{7,8}}
-\author{Gabriel Brammer\altaffilmark{9}}
-\author{Marusa Bradac\altaffilmark{10}}
-\author{Jose~Maria~Diego\altaffilmark{11}}
-\author{Jens Hjorth\altaffilmark{12}}
-\author{Or Graur\altaffilmark{13,14}}
-\author{Austin Hoag\altaffilmark{10}}
-\author{Saurabh Jha\altaffilmark{2}}
-\author{Patrick Kelly\altaffilmark{15}}
-\author{Daniel Lam\altaffilmark{16}}
-\author{Elinor Medezinski\altaffilmark{1,17}}
-\author{Julian~Merten\altaffilmark{18}}
-\author{Johan Richard\altaffilmark{19}}
-\author{Keren Sharon\altaffilmark{20}}
-\author{Louis-Gregory Strolger\altaffilmark{9,21}}
-\author{Tommaso Treu\altaffilmark{22}}
-\author{Liliya Williams\altaffilmark{23}}
-\author{Adi Zitrin\altaffilmark{24,*}}
+% --------------------------------------------------
+% Institutions
+%   define a command for each institution's mailing address
+% --------------------------------------------------
+\newcommand{\HubbleFellow}{Hubble Fellow}
+\newcommand{\JHU}{Department of Physics and Astronomy, The Johns Hopkins University, 3400 N. Charles St., Baltimore, MD 21218, USA}
+\newcommand{\elsewhere}{St. Elsewhere University.}
+\newcommand{\STScI}{Space Telescope Science Institute, 3700 San Martin Dr., Baltimore, MD 21218, USA}
+\newcommand{\Chicago}{Department of Physics, The University of Chicago, Chicago, IL 60637, USA}
+\newcommand{\Berkeley}{Department of Astronomy, University of California, Berkeley, CA 94720-3411, USA}
+\newcommand{\LBNL}{Lawrence Berkeley National Laboratory, Berkeley, CA 94720, USA}
+\newcommand{\Riverside}{Department of Physics and Astronomy, University of California, Riverside, CA 92521, USA}
+\newcommand{\Andalucia}{Instituto de Astrof\'isica de Andaluc\'ia (CSIC), E-18080 Granada, Spain}
+\newcommand{\Cantabria}{IFCA, Instituto de F\'isica de Cantabria (UC-CSIC), Av. de Los Castros s/n, 39005 Santander, Spain}
+\newcommand{\IFCA}{\Cantabria}
+\newcommand{\SaoPaulo}{Instituto de Astronomia, Geof\'isica e Ci\^encias Atmosf\'ericas, Universidade de S\~ao Paulo, Cidade Universit\'aria, 05508-090, S\~ao Paulo, Brazil}
+\newcommand{\WKU}{Department of Physics, Western Kentucky University, Bowling Green, KY 42101, USA}
+\newcommand{\AMNH}{Department of Astrophysics, American Museum of Natural History, Central Park West and 79th Street, New York, NY 10024, USA}
+\newcommand{\NYU}{Center for Cosmology and Particle Physics, New York University, New York, NY 10003, USA}
+\newcommand{\DARK}{Dark Cosmology Centre, Niels Bohr Institute, University of Copenhagen, Juliane Maries Vej 30, DK-2100 Copenhagen, Denmark}
+\newcommand{\Copenhagen}{\DARK}
+\newcommand{\Arizona}{Department of Astronomy, University of Arizona, Tucson, AZ 85721, USA}
+\newcommand{\SantaCruz}{Department of Astronomy and Astrophysics, University of California, Santa Cruz, CA 92064, USA}
+\newcommand{\NotreDame}{Department of Physics, University of Notre Dame, Notre Dame, IN 46556, USA}
+\newcommand{\TelAviv}{Department of Astrophysics, Tel Aviv University, 69978 Tel Aviv, Israel}
+\newcommand{\Rutgers}{Department of Physics and Astronomy, Rutgers, The State University of New Jersey, Piscataway, NJ 08854, USA}
+\newcommand{\CfA}{Harvard/Smithsonian Center for Astrophysics, Cambridge, MA 02138, USA}
+\newcommand{\Minnesota}{Department of Astronomy, University of Minnesota, 116 Church Street SE, Minneapolis, MN 55455, USA}
+\newcommand{\NOAO}{National Optical Astronomical Observatory, Tucson, AZ 85719, USA}
+\newcommand{\UCSB}{Department of Physics, University of California, Santa Barbara, CA 93106-9530, USA}
+\newcommand{\SantaBarbara}{\UCSB}
+\newcommand{\LCOGT}{Las Cumbres Observatory Global Telescope Network, 6740 Cortona Dr., Suite 102, Goleta, California 93117, USA}
+\newcommand{\Colby}{Colby College, 4000 Mayflower Hill Dr, Waterville, ME 04901, USA}
+\newcommand{\Kentucky}{University of Kentucky, Lexington, KY 40506}
+\newcommand{\UCDavis}{University of California Davis, 1 Shields Avenue, Davis, CA 95616}
+\newcommand{\UCLA}{University of California, Los Angeles, CA 90095}
+\newcommand{\CalTech}{California Institute of Technology, 1200 East California Boulevard, Pasadena, CA 91125}
+\newcommand{\Durham}{Institute for Computational Cosmology, Durham University, South Road, Durham DH1 3LE, UK}
+\newcommand{\KwaZulu}{Astrophysics and Cosmology Research Unit, School of Mathematical Sciences, University of KwaZulu-Natal, Durban 4041, South Africa}
+\newcommand{\HongKong}{Department of Physics, The University of Hong Kong, Pokfulam Road, Hong Kong}
+\newcommand{\Oxford}{Department of Physics, University of Oxford, Clarendon Laboratory, Parks Road, Oxford, UK}
+\newcommand{\CRAL}{CRAL, Observatoire de Lyon, Universit\'e Lyon 1, 9 Avenue Ch. Andr\'e, F-69561 Saint Genis Laval Cedex, France}
+\newcommand{\Michigan}{Department of Astronomy, University of Michigan, 1085 S. University Avenue, Ann Arbor, MI 48109, USA}
+\newcommand{\Hebrew}{The Hebrew University, The Edmond J. Safra Campus - Givat Ram, Jerusalem 9190401, Israel}
+\newcommand{\IllinoisAstro}{ Astronomy Department, University of Illinois at Urbana-Champaign, 1002 W.\ Green Street, Urbana, IL 61801, USA }
+\newcommand{\IllinoisPhysics}{ Department of Physics, University of Illinois at Urbana-Champaign, 1110 W.\ Green Street, Urbana, IL 61801, USA }
 
-\altaffiltext{1}{\JHU}
-\altaffiltext{2}{\Rutgers}
-\altaffiltext{3}{\Chicago}
-\altaffiltext{4}{\Illinois}
-\altaffiltext{5}{\CSIC}
-\altaffiltext{6}{\SaoPaulo}
-\altaffiltext{7}{\Durham}
-\altaffiltext{8}{\KwaZulu}
-\altaffiltext{9}{\STScI}
-\altaffiltext{10}{\UCDavis}
-\altaffiltext{11}{\IFCA}
-\altaffiltext{12}{\Copenhagen}
-\altaffiltext{13}{\NYU}
-\altaffiltext{14}{\AMNH}
-\altaffiltext{15}{\Berkeley}
-\altaffiltext{16}{\HongKong}
-\altaffiltext{17}{\Hebrew}
-\altaffiltext{18}{\Oxford}
-\altaffiltext{19}{\CRAL}
-\altaffiltext{20}{\Michigan}
-\altaffiltext{21}{\WKU}
-\altaffiltext{22}{\UCLA}
-\altaffiltext{23}{\Minnesota}
-\altaffiltext{24}{\CalTech}
-\altaffiltext{*}{Hubble fellow}
+% --------------------------------------------------
+% Author list 
+%   use the \affilref and \affilreftxt commands 
+%   to get an author list and footnoted institutional
+%   addresses that count themselves without duplicating
+% --------------------------------------------------
+\newcounter{affilct}
+\setcounter{affilct}{0}
+
+% --------------------------------------------------
+% \affilref{refcode}
+%   Use this command inside each \altaffilmark{} instance.
+%   It checks if the affiliation has already been used, and generates
+%   a new affiliation reference number only if needed.
+%   The user-defined refcode value will then be used by \affilreftxt
+%   to set the same index number in the author list at the top and 
+%   the footnoted list of institutional addresses. 
+\makeatletter
+\newcommand{\affilref}[1]{%
+    \@ifundefined{c@#1}{%
+    	\newcounter{#1}%
+    	\setcounter{#1}{0}%
+    }{}%
+    \ifthenelse{\value{#1} > 0}{%
+      \ref{#1}%
+    }{%
+      \refstepcounter{affilct}%
+    	\label{#1}%
+      \ref{#1}%
+    	\addtocounter{#1}{1}%
+    }%
+}
+\makeatother
+
+% --------------------------------------------------
+% \affilreftxt{refcode}{address} : 
+%   Use this command after each author definition 
+%   to generate the footnote text containing one institutional
+%   address for that author. 
+%   It checks if the address has already been used, and generates
+%   a new affiliation footnote with text only if needed.
+\makeatletter
+\newcommand{\affilreftxt}[2]{%
+    \@ifundefined{c@#1txt}{%
+    	\newcounter{#1txt}%
+    	\setcounter{#1txt}{0}%
+    }{}%
+    \ifthenelse{\value{#1txt} > 0}{%
+    }{%
+      \altaffiltext{\ref{#1}}{#2}%
+    	\addtocounter{#1txt}{1}%
+    }%
+}
+\makeatother
+% --------------------------------------------------
+
+
+\author{Steven~A.~Rodney\altaffilmark{\affilref{JHU},\affilref{HubbleFellow}}}
+\affilreftxt{JHU}{\JHU}
+\affilreftxt{HubbleFellow}{\HubbleFellow}
+
+\author{Brandon~Patel\altaffilmark{\affilref{Rutgers}}}
+\affilreftxt{Rutgers}{\Rutgers}
+
+\author{Daniel~Scolnic\altaffilmark{\affilref{Chicago}}}
+\affilreftxt{Chicago}{\Chicago}
+
+\author{Ryan Foley\altaffilmark{\affilref{IllinoisPhysics},\affilref{IllinoisAstro}}}
+\affilreftxt{IllinoisPhysics}{\IllinoisPhysics}
+\affilreftxt{IllinoisAstro}{\IllinoisAstro}
+
+\author{Alberto Molino\altaffilmark{\affilref{Andalucia},\affilref{SaoPaulo}}}
+\affilreftxt{Andalucia}{\Andalucia}
+\affilreftxt{SaoPaulo}{\SaoPaulo}
+
+\author{Mathilde Jauzac\altaffilmark{\affilref{Durham},\affilref{KwaZulu}}}
+\affilreftxt{Durham}{\Durham}
+\affilreftxt{KwaZulu}{\KwaZulu}
+
+\author{Gabriel Brammer\altaffilmark{\affilref{STScI}}}
+\affilreftxt{STScI}{\STScI}
+
+\author{Marusa Bradac\altaffilmark{\affilref{UCDavis}}}
+\affilreftxt{UCDavis}{\UCDavis}
+
+\author{Jose~Maria~Diego\altaffilmark{\affilref{Cantabria}}}
+\affilreftxt{Cantabria}{\Cantabria}
+
+\author{Jens Hjorth\altaffilmark{\affilref{DARK}}}
+\affilreftxt{DARK}{\DARK}
+
+\author{Or Graur\altaffilmark{\affilref{NYU},\affilref{AMNH}}}
+\affilreftxt{NYU}{\NYU}
+\affilreftxt{AMNH}{\AMNH}
+
+\author{Austin Hoag\altaffilmark{\affilref{UCDavis}}}
+\affilreftxt{UCDavis}{\UCDavis}
+
+\author{Saurabh Jha\altaffilmark{\affilref{Rutgers}}}
+\affilreftxt{Rutgers}{\Rutgers}
+
+\author{Patrick Kelly\altaffilmark{\affilref{Berkeley}}}
+\affilreftxt{Berkeley}{\Berkeley}
+
+\author{Daniel Lam\altaffilmark{\affilref{HongKong}}}
+\affilreftxt{HongKong}{\HongKong}
+
+\author{Elinor Medezinski\altaffilmark{\affilref{JHU},\affilref{Hebrew}}}
+\affilreftxt{JHU}{\JHU}
+\affilreftxt{Hebrew}{\Hebrew}
+
+\author{Julian~Merten\altaffilmark{\affilref{Oxford}}}
+\affilreftxt{Oxford}{\Oxford}
+
+\author{Johan Richard\altaffilmark{\affilref{CRAL}}}
+\affilreftxt{CRAL}{\CRAL}
+
+\author{Keren Sharon\altaffilmark{\affilref{Michigan}}}
+\affilreftxt{Michigan}{\Michigan}
+
+\author{Louis-Gregory Strolger\altaffilmark{\affilref{STScI},\affilref{WKU}}}
+\affilreftxt{STScI}{\STScI}
+\affilreftxt{WKU}{\WKU}
+
+\author{Tommaso Treu\altaffilmark{\affilref{UCLA}}}
+\affilreftxt{UCLA}{\UCLA}
+
+\author{Liliya Williams\altaffilmark{\affilref{Minnesota}}}
+\affilreftxt{Minnesota}{\Minnesota}
+
+\author{Adi Zitrin\altaffilmark{\affilref{CalTech},\affilref{HubbleFellow}}}
+\affilreftxt{CalTech}{\CalTech}
