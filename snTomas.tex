@@ -67,7 +67,7 @@ substantially increase the reach of deep imaging surveys.  The lensing
 magnification enables the study of objects that would otherwise be
 unobservable because they are either intrinsically
 faint \citep[e.g.][]{Schenker:2012,Alavi:2014} or extremely
-distant \citep[e.g.][]{Franx:1997,Ellis:2001,Hu:2002,Kneib:2004,Richard:2006,Richard:2008,Bouwens:2009a,Maizy:2010,Zheng:2012,Coe:2013,Bouwens:2014,Zitrin:2014}.
+distant \citep[e.g.][]{Franx:1997,Ellis:2001,Hu:2002,Kneib:2004,Richard:2006,Richard:2008,Bouwens:2009a,Maizy:2010,Zheng:2012,Coe:2013,Bouwens:2014,Zitrin:2014b}.
 Background galaxies are also {\it spatially} magnified, allowing for
 studies of the internal structure of galaxies in the early universe
 with resolutions of $\sim$100
@@ -200,17 +200,20 @@ Frontier Fields (HFF) survey (PI:J.Lotz,
 HST-PID:13495).\footnote{\url{http://www.stsci.edu/hst/campaigns/frontier-fields}}
 The HFF program is a 3-year director's discretionary initiative that
 is collecting 140 orbits of HST imaging (roughly 340 ksec) on six
-massive galaxy clusters, plus 6 accompanying parallel fields.
-Each field is observed in 3 optical bands (ACS F435W, F606W and F814W)
-and 4 infrared (IR) bands (WFC3-IR F105W, F125W, F140W, and F160W),
+massive galaxy clusters, plus 6 accompanying parallel fields.  Each
+field is observed in 3 optical bands (ACS F435W, F606W and F814W) and
+4 infrared (IR) bands (WFC3-IR F105W, F125W, F140W, and F160W),
 although the optical and IR imaging campaigns are separated by $\sim$6
 months. Abell 2744 was the first cluster observed, with IR imaging
 spanning 2013 October-November, and optical imaging from 2014
 May-July.  A composite image of the HFF data showing the SN is
-presented in Figure~\ref{fig:DiscoveryImage}.  The SN detection was
-made in difference images constructed using template imaging of Abell
-2744 from HST+ACS observations taken in 2009 (PI:Dupke,
-HST-PID:11689).
+presented in Figure~\ref{fig:DiscoveryImage}, \changeR{and the
+locations of the cluster center, the SN, and the presumed host galaxy
+are given in Table~\ref{tab:Positions}.}  The SN detection was made in
+difference images constructed using template imaging of Abell 2744
+from HST+ACS observations taken in 2009 (PI:Dupke, HST-PID:11689).
+
+\input{TABLE/positions}
 
 \input{TABLE/photometry}
 
@@ -770,8 +773,8 @@ using the MLCS2k2 fitter (top panel) and the SALT2 fitter (bottom panel).
 \section{Discussion}
 \label{sec:Discussion}
 
-\subsection{Comparison to Model Predictions}
-\label{sec:ComparisonToModelPredictions}
+%\subsection{Comparison to Model Predictions}
+%\label{sec:ComparisonToModelPredictions}
 
 Before the Frontier Fields observations began, the Space Telescope
 Science Institute (STScI) issued a call for lens modeling teams to
@@ -919,11 +922,11 @@ Figure~\ref{fig:DiscoveryImage}).  If the mass-to-light ratio (M/L)
 for this galaxy were significantly different from the M/L for other
 cluster member galaxies, then its proximity to the SN sight-line could
 introduce a bias in the magnification.  This bias might be
-particularly acute for models that make a strict ``light traces mass''
-assumption, such as the Sharon, CATS, Jauzac, GLAFIC and Zitrin-LTM
-models.  
+particularly acute for models that \changeR{hew more closely to a
+simple} ``light traces mass'' assumption, such as the Sharon, CATS,
+GLAFIC and Zitrin-LTM models.
 
-We tested this hypothesis using the Jauzac model by allowing the mass
+We tested this hypothesis using the CATS-SL(v2) model by allowing the mass
 of the nearby cluster member galaxy to vary as a free parameter in the
 model. We found that the change in the SN \tomas\ magnification
 prediction was less than $\Delta\mu=0.1$.  This additional dispersion
@@ -938,6 +941,23 @@ Bradac, Williams and Merten models).
 \subsection{Sparse Strong Lensing Constraints}
 \label{sec:SparseStrongLensingConstraints}
 
+\begin{figure}
+\begin{center}
+\includegraphics[width=\columnwidth]{FIG/system3.png}
+\caption{ 
+The disputed component of the multiply-imaged galaxy System 3. The
+original position, as given in \citet{Merten:2011} is marked with a
+dashed magenta circle labeled 3.3. The solid magenta circle
+labeled \33p\ shows the revised location as proposed
+in \citet{Jauzac:2014c}.  Both positions are $\sim$10\arcsec\ from the
+SN location.  The inset panel shows the other two components of this
+multiply-imaged system, 3.1 and 3.2 (on the same scale as the main
+panel), which are located north-east of the cluster center, and have a
+secure spectroscopic redshift of $z=3.98\pm0.02$ \citep{Johnson:2014}.
+\label{fig:system3} }
+\end{center}
+\end{figure}
+
 At the outset of the HFF survey, only 33 multiply-imaged galaxies
 behind Abell 2744 were known.  One might expect that the addition of
 new lensing constraints from the HFF data would improve the model
@@ -946,99 +966,48 @@ magnification.  However, for \changeG{two} of the most recent
 models \citep{Jauzac:2014c,Lam:2014} that include new strong-lensing
 constraints, the predicted magnification is still significantly higher
 than the observed value.  Again the CATS model family provides a
-useful case study.  The Jauzac model shares the same lens modeling
-software (LensTool), and the same primary methodology as the earlier
-CATS models.  A key difference is that the Jauzac model incorporates
-many new multiply imaged galaxies and corrects a mis-identified
-multiply-imaged system near the SN \tomas\ position.  These
-improvements should in principle make the Jauzac model magnification
-estimates more accurate, though we in fact see the opposite result:
-the Jauzac model predicts a $\mu$ that is higher than the measured
-value by \changeG{$4.3\sigma$.}
+useful case study.  The CATS-SL(v2) model \citep[from][]{Jauzac:2014c}
+shares the same lens modeling software (LensTool), and the same
+primary methodology as the earlier CATS models, \changeR{though with
+two key differences:  (1) the CATS-SL(v2) model changes the location of a
+multiply-imaged system near the SN \tomas\ position; and (2) the model
+incorporates 33 new multiply imaged galaxies.}  These improvements
+should in principle make the CATS-SL(v2) model magnification estimates
+more accurate, though we in fact see the opposite result: the
+CATS-SL(v2) model predicts a $\mu$ that is higher than the measured
+value by \changeR{$4.1\sigma$, and higher than either of the previous
+two versions of the CATS models.}
 
-This shift to higher magnifications is not, however, unique to the
+\changeR{
+The change in location proposed by \citet{Jauzac:2014c} is for image
+3.3, the third component of a triply-imaged
+galaxy \citep{Merten:2011}, shown in Figure~\ref{fig:system3}.  Images
+3.1 and 3.2 of this system have a secure spectroscopic redshift of
+$z=3.98\pm0.02$ \citep{Johnson:2014}. \citet{Jauzac:2014c} found that
+reassigning this multiple image to a source roughly 8\arcsec\ to the
+south results in a tighter model reconstruction for the locations of
+other multiply-imaged systems in the vicinity \citep[though][argue
+against the reassignment based on the colors of the two sources in
+question]{Lam:2014}.  Given the large discrepancy between the
+CATS-SL(v2) model and the SN measurement, one might question whether
+this change in the position of image 3.3 is driving the increase in
+the predicted $\mu$ for SN \tomas. However, \citet{Jauzac:2014c} also
+examined a version of the CATS-SL(v2) model where this single source
+is left in the original position, and find that it does not
+significantly affect the predicted magnification.}
+
+\changeR{Furthermore,} the shift to higher magnifications is not unique to the
 SN \tomas\ position.  \citet{Jauzac:2014c} noted that their updated
 mass model of Abell 2744 results in a systematic increase in the
 magnification values across the cluster field. Examining a sample of
 $\sim$30 multiple images, \citeauthor{Jauzac:2014c} found that the
 magnifications increased by a factor of $\sim1.5$ relative to pre-HFF
-models.  Although this single sight-line can only provide a very
-limited test of the model, the \changeG{$4.3\sigma$} discrepancy is at
-least a strong suggestion that \changeR{even with a large number of
-high-quality} strong-lensing constraints \changeR{it is still possible
-to generate} magnification maps that are susceptible to systematic
-biases.
-
-\change{
-\subsection{Misidentification of System 3}
-\label{sec:MisidentificationOfSystem3}
-}
-
-\begin{figure}
-\begin{center}
-\includegraphics[width=\columnwidth]{FIG/system3.png}
-\caption{ 
-The disputed component of the multiply-imaged galaxy System 3. The
-original position, as given in \citet{Merten:2011} is marked with a
-dashed magenta circle labeled 3.3. The solid magenta circle shows the
-revised location as proposed in \citet{Jauzac:2014c}.  Both positions
-are $\sim$10\arcsec\ from the SN location.  The inset panel shows the
-other two components of this multiply-imaged system, 3.1 and 3.2 (on
-the same scale as the main panel), which are located north-east of the
-cluster center.
-\label{fig:system3} }
-\end{center}
-\end{figure}
-
-\change{
-It is important to note that in regards to the impact on this
-particular sight-line, not all strong-lensing constraints are equal.
-An error in the association of multiple images or in the redshift of a
-multiply-imaged galaxy would have a more significant impact if that
-system has a projected position close to our SN
-sight-line \changeG{\citep[see][for a quantitative assessment of this
-effect]{Johnson:2014}.}  It happens that there is one such system, for
-which the position of a multiple image near SN \tomas\ is presently
-disputed.  }
-
-\change{
-This multiply-imaged galaxy was originally labeled as {\it System 3}
-in \citet{Merten:2011}.  As shown in Figure~\ref{fig:system3}, it is
-stretched into two adjacent arcs northeast of the cluster core (images
-3.1 and 3.2), with a third image on the western edge of the
-strong-lensing region (image 3.3 at 00:14:18.595,
--30:23:58.42).  \citet{Richard:2014} echoed this initial
-identification in producing the {\tt CATS} models, which we cite in
-Table~\ref{tab:PredictedMagnifications} and
-Figure~\ref{fig:lensingtest}.  In developing the {\tt Sharon-v2}
-models, \citet{Johnson:2014} provided a secure spectroscopic
-constraint of $z=3.98\pm0.02$ for this system, based on a spectrum of
-the combined 3.1+3.2 source. The identification of the original image
-3.3 has been called into question by two independent analyses.  Using
-HFF imaging data, \citet{Lam:2014} suggested an alternative third
-image for this system roughly 8\arcsec\ to the south, which we will
-call \33p\ (00:14:18.39, -30:24:06.53).
-However, \citeauthor{Lam:2014} rejected this possibility based on a
-difference in colors between \33p\ and images 3.1 and 3.2.  In
-contrast, \citeauthor{Jauzac:2014c} argue that the position \33p\
-is correct, and find that reassigning this multiple image results in a
-tighter model reconstruction for the locations of other
-multiply-imaged systems in the vicinity.
-}
-
-\change{
-Resolving the identification of this single multiply-imaged galaxy
-could be a component in resolving the magnification
-discrepancy, though it is unlikely to completely remove the tension.
-It is true that the model that reassigns the position to \33p\
-({\tt Jauzac}) is also the one with the largest deviation from our
-observed $\mu$ value.  However, \citet{Jauzac:2014c} have already
-evaluated the impact of relocating this single source, and
-they find that it is not responsible for the observed increase in
-magnifications across the field. Rather, the 
-primary cause for the general magnification increase is the addition
-of new multiple images in the Northern region, detected using the new
-HFF data. } 
+models.  Although \changeR{the single sight-line to SN \tomas\ } can
+only provide a very limited test of the model,
+the \changeR{$4.1\sigma$} discrepancy is at least a strong suggestion
+that \changeR{even with a large number of high-quality} strong-lensing
+constraints \changeR{it is still possible to generate} magnification
+maps that are susceptible to systematic biases.
 
 \subsection{Mass Profile Extrapolation}
 \label{sec:MassProfileExtrapolation}
@@ -1085,6 +1054,40 @@ The revised magnification of $\mu=2.62\pm0.18$ is further from the
 measured value, which serves to reinforce the conclusion that adding
 weak lensing constraints cannot, by itself, resolve this bias.
 
+
+\subsection{Cosmological Uncertainty}
+
+\changeR{
+All of the models presented here use a fixed assumption for the
+parameters of a standard \LCDM\ cosmology (typically: \Om=0.3,\OL=0.7,\Ho=70 km
+s$^{-1}$ Mpc$^{-1}$).  The parameter values selected for this fiducial
+cosmology do have an impact on the inferred magnifications, and
+variation of these parameters must be accounted for when using cluster
+mass models for cosmological tests \citep{Zitrin:2014b}. 
+\citep{Bayliss:2015} demonstrated that
+changing the cosmological parameter within the range of current
+acceptable cosmologies \citep[e.g.][]{Hinshaw:2013,Planck:2015},
+introduces a magnification uncertainty that is comparable in magnitude
+to that of the statistical uncertainties.  This leads to the
+conclusion that the lens modeling uncertainties presented here are
+underestimated, and should be significantly increased. 
+}
+
+\changeR{
+As a quantitative example, we have modified the Sharon(v2) model to
+include this cosmological parameter uncertainty,
+following \citep{Bayliss:2015}. At the position of SN \tomas, the
+68\%\ confidence range for the magnification at $z=1.31$ increases
+from [2.63,2.83] to [2.42,2.85], and the best-fit magnification value
+of $mu=2.73$ remains the same.  This moves the Sharon(v2) model from
+being discrepant at the $2.5\sigma$ level to a $1.75\sigma$ tension.
+Incorporating this cosmological parameter uncertainty in the other
+models would similarly reduce the tension between models and
+observation, but would not resolve the overall systematic shift.  Even
+a factor of 2.5 increase in the uncertainties (the most drastic change
+seen in the analysis of \citep{Bayliss:2015}) would still leave the
+most extreme outlier (CATS-SL(v2)) discrepant by $2.6\sigma$.
+}
 
 \subsection{Redshift Error}
 \label{sec:RedshiftError}
@@ -1288,7 +1291,7 @@ have derived a consistent measured magnification of $\mu_{\rm
 SALT2}=1.88\pm0.35$.  $\mu_{\rm MLCS2k2}=2.00\pm0.28$, from the two
 light curve fitters.
 
-Taking advantage of the availability of eleven well-constrained lens
+Taking advantage of the availability of \changeR{14} well-constrained lens
 models for the Abell 2744 cluster, we have used SN \tomas\ to ask
 how accurately these lens models can predict the magnification along
 this line of sight.   We find that these models are consistent, and
@@ -1300,21 +1303,23 @@ is an indication that there is a small systematic bias inherent to
 this cluster or sight-line. 
 
 We have speculated on the origin of this systematic bias,
-evaluating six possible causes: 
+evaluating \changeR{seven} possible causes: 
 
 \begin{enumerate}
 \item The close proximity of a cluster member galaxy is leading to a
 biased magnification, because that galaxy's M/L is atypical.
 \item The models are limited by a scarcity of strong lensing constraints
+\item Model uncertainties are underestimated, by not accounting for 
+       uncertainties in cosmological parameters.
 \item The cluster mass profile exhibits a sudden change outside of the core
 strong-lensing region, where we lack multiply-imaged background
-sources to constrain it. 
+sources to constrain it.
 \item \change{The redshift assigned to SN \tomas\ is in error.}
 \item \change{SN \tomas\ is dimmed by foreground dust.}
 \item \change{SN \tomas\ is not a normal Type Ia SN.}
 \end{enumerate}
 
-\noindent The first three of these take on the discrepancy from 
+\noindent The first \changeR{four} of these take on the discrepancy from 
 the lens modeling side, but none are completely satisfactory. For each
 of these scenarios, we would expect that certain subsets of the
 available lens models would be less sensitive to the proposed
