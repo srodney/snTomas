@@ -4,7 +4,6 @@
 % --------------------------------------------------
 \newcommand{\HubbleFellow}{Hubble Fellow}
 \newcommand{\JHU}{Department of Physics and Astronomy, The Johns Hopkins University, 3400 N. Charles St., Baltimore, MD 21218, USA}
-\newcommand{\elsewhere}{St. Elsewhere University.}
 \newcommand{\STScI}{Space Telescope Science Institute, 3700 San Martin Dr., Baltimore, MD 21218, USA}
 \newcommand{\Chicago}{Department of Physics, The University of Chicago, Chicago, IL 60637, USA}
 \newcommand{\Berkeley}{Department of Astronomy, University of California, Berkeley, CA 94720-3411, USA}
@@ -64,20 +63,16 @@
 %   the footnoted list of institutional addresses. 
 \makeatletter
 \newcommand{\affilref}[1]{%
-    \@ifundefined{c@#1}{%
-    	\newcounter{#1}%
-    	\setcounter{#1}{0}%
-    }{}%
-    \ifthenelse{\value{#1} > 0}{%
-      \ref{#1}%
-    }{%
-      \refstepcounter{affilct}%
-    	\label{#1}%
-      \ref{#1}%
-    	\addtocounter{#1}{1}%
-    }%
-}
+  \@ifundefined{c@#1}%
+    {\newcounter{#1}%
+     \setcounter{#1}{\theaffilct}%
+     \refstepcounter{affilct}%
+     \label{#1}%
+     }{}%
+  \ref{#1}%
+ }
 \makeatother
+
 
 % --------------------------------------------------
 % \affilreftxt{refcode}{address} : 
@@ -87,17 +82,14 @@
 %   It checks if the address has already been used, and generates
 %   a new affiliation footnote with text only if needed.
 \makeatletter
-\newcommand{\affilreftxt}[2]{%
-    \@ifundefined{c@#1txt}{%
-    	\newcounter{#1txt}%
-    	\setcounter{#1txt}{0}%
-    }{}%
-    \ifthenelse{\value{#1txt} > 0}{%
-    }{%
-      \altaffiltext{\ref{#1}}{#2}%
-    	\addtocounter{#1txt}{1}%
-    }%
-}
+\newcommand*\affilreftxt[2]{%
+  \@ifundefined{c@#1txt}
+    {\newcounter{#1txt}%
+     \setcounter{#1txt}{1}
+     \altaffiltext{\ref{#1}}{#2}
+     }{
+     }
+  }
 \makeatother
 % --------------------------------------------------
 

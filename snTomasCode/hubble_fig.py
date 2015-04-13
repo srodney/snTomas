@@ -11,11 +11,11 @@ def plot_hubble_fig( fitter='both', datfilename='data/distances/hubblefig.dat'):
     dmint_mlcs=0.08 # intrinsic scatter in SNIa luminosities for MLCS2k2 (Jha:2007)
     dmint_salt=0.08 # intrinsic scatter in SNIa luminosities for SALT2 (Conley:2011)
 
-    zTomas = 1.31#,1.35]
-    zerrTomas = 0.01#,0.02]
-    dmTomas_mlcs = 44.06#,44.22]
+    zTomas = 1.3457#1.31#,
+    zerrTomas = 0.001#,0.01]
+    dmTomas_mlcs = 44.22#,44.06#,
     dmerrTomas_mlcs = np.sqrt(0.09**2 + dmint_mlcs**2)
-    dmTomas_salt = 44.09#,44.19]
+    dmTomas_salt = 44.19#44.09
     dmerrTomas_salt = np.sqrt(0.16**2 + dmint_salt**2)
 
     thisfile = sys.argv[0]
@@ -66,7 +66,7 @@ def plot_hubble_fig( fitter='both', datfilename='data/distances/hubblefig.dat'):
 
     # dm_mlcs = slope * z - intercept
     def line( x, slope, intercept ):
-        return slope*(x-1.31) + intercept
+        return slope*(x-1.3457) + intercept
 
     lineparam0 = np.array([1,45])
     fit_mlcs, cov_mlcs = scopt.curve_fit( line, z, dm_mlcs, lineparam0, dm_mlcs_err)
@@ -83,16 +83,16 @@ def plot_hubble_fig( fitter='both', datfilename='data/distances/hubblefig.dat'):
         if fitter.lower().startswith('salt') and fittername!='SALT2' : continue
         slope, intercept  = fit
         slope_err, intercept_err = np.sqrt( np.diagonal(cov) )
-        fit_string = r'dm$_{\rm %s} = (%.2f\pm%.2f)(z-1.31)+(%.2f\pm%.2f)$'%(
+        fit_string = r'dm$_{\rm %s} = (%.2f\pm%.2f)(z-1.3457)+(%.2f\pm%.2f)$'%(
             fittername, round(slope,2),round(slope_err,2),
             round(intercept,2),round(intercept_err,2) )
 
         zfit = np.arange(0.9,1.8,0.01)
-        dmfit =  slope*(zfit-1.31) + intercept
-        a =  (slope+slope_err)*(zfit-1.31) + intercept+intercept_err
-        b =  (slope+slope_err)*(zfit-1.31) + intercept-intercept_err
-        c =  (slope-slope_err)*(zfit-1.31) + intercept+intercept_err
-        d =  (slope-slope_err)*(zfit-1.31) + intercept-intercept_err
+        dmfit =  slope*(zfit-1.3457) + intercept
+        a =  (slope+slope_err)*(zfit-1.3457) + intercept+intercept_err
+        b =  (slope+slope_err)*(zfit-1.3457) + intercept-intercept_err
+        c =  (slope-slope_err)*(zfit-1.3457) + intercept+intercept_err
+        d =  (slope-slope_err)*(zfit-1.3457) + intercept-intercept_err
 
         top = np.max( np.array([a,b,c,d]), axis=0)
         bot = np.min( np.array([a,b,c,d]), axis=0)
@@ -111,7 +111,7 @@ def plot_hubble_fig( fitter='both', datfilename='data/distances/hubblefig.dat'):
 
         ax.plot( [zTomas,zTomas], [dmTom+dmerrTom,intercept],
                  ls=':', color=color )
-        ax.plot(  [1.27,1.31], [43.95,dmTom+deltam_mu/3.],
+        ax.plot(  [1.27,1.3457], [43.95,dmTom+deltam_mu/2.5],
                   ls='-', lw=0.5, color=color )
 
         if fitter=='both':
@@ -122,7 +122,7 @@ def plot_hubble_fig( fitter='both', datfilename='data/distances/hubblefig.dat'):
         else :
             ax.text( 0.04, 0.92, 'Unlensed SNIa', color='0.3', fontsize='small',
                      ha='left', va='top',transform=ax.transAxes )
-            ax.text( 1.33, 44.05, 'SN Tomas', color=cp.teal,fontsize='small',
+            ax.text( 1.36, 44.05, 'SN Tomas', color=cp.teal,fontsize='small',
                      ha='left', va='bottom')
             ax.text( 1.16,43.65, mu_string, color=color, fontsize='small')
 

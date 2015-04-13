@@ -3,7 +3,7 @@
 
 
 def plot_light_curve_fit( fitter='mlcs2k2', plotmags=True,
-                          compare=False ) :
+                          showblue=False, compare=False ) :
     """ make the SN Tomas light curve fit figure"""
     from pytools import plotsetup, colorpalette as cp
     from astropy.io import ascii
@@ -43,6 +43,10 @@ def plot_light_curve_fit( fitter='mlcs2k2', plotmags=True,
     fig = pl.gcf()
     pl.clf()
 
+    if showblue:
+        bandlist = ['B','V','I','Y','J','N','H']
+    else:
+        bandlist = ['I','Y','J','N','H']
     for fitter in fitterlist :
         axdict = {
             'B':fig.add_subplot(gs[rowdict[fitter],0]),
@@ -54,7 +58,7 @@ def plot_light_curve_fit( fitter='mlcs2k2', plotmags=True,
         axdict['V'] = axdict['B']
         axdict['I'] = axdict['B']
 
-        for band in ['V','I','Y','J','N','H'] :
+        for band in bandlist:
             ax = axdict[band.upper()]
             filtname = alpha2filter[band]
             color = colordict[band]

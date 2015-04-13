@@ -29,9 +29,6 @@ clean:
 
 #Generate a compact pdf file using emulateapj
 pdf: $(PAPER).tex
-	echo "\\msfalse" >> $(PAPER)-options.tex; \
-	echo "\\grayscalefalse" >> $(PAPER)-options.tex; \
-	echo "\\endinput" >> $(PAPER)-options.tex; \
 	pdflatex $(PAPER); \
 	bibtex $(PAPER); \
 	pdflatex $(PAPER); \
@@ -45,38 +42,9 @@ update: $(PAPER).tex
 	open $(PAPER).pdf
 
 
-#compact pdf  using emulateapj, with grayscale figs when available
-grayscale: $(PAPER).tex
-	echo "\\msfalse" >> $(PAPER)-options.tex; \
-	echo "\\grayscaletrue" >> $(PAPER)-options.tex; \
-	echo "\\endinput" >> $(PAPER)-options.tex; \
-	pdflatex $(PAPER); \
-	bibtex $(PAPER); \
-	pdflatex $(PAPER); \
-	pdflatex $(PAPER); \
-	mv $(PAPER).pdf $(PAPER)_grayscale.pdf; \
-	rm $(PAPER)-options.tex; \
-	open $(PAPER)_grayscale.pdf
-
-#aastex manuscript-style pdf : double-spaced, wide margins, full-page figs
-manuscript: $(PAPER).tex
-	echo "\\mstrue" >> $(PAPER)-options.tex; \
-	echo "\\grayscalefalse" >> $(PAPER)-options.tex; \
-	echo "\\endinput" >> $(PAPER)-options.tex; \
-	pdflatex $(PAPER); \
-	bibtex $(PAPER); \
-	pdflatex $(PAPER); \
-	pdflatex $(PAPER); \
-	mv $(PAPER).pdf $(PAPER)_manuscript.pdf; \
-	rm $(PAPER)-options.tex; \
-	open $(PAPER)_manuscript.pdf
-
-
 #Changes (marked with \change{} commands) are highlighted in blue text
 changetext:
-	echo "\\msfalse" > $(PAPER)-options.tex; \
-	echo "\\grayscalefalse" >> $(PAPER)-options.tex; \
-	echo "\\\changetexttrue" >> $(PAPER)-options.tex; \
+	echo "\\\changetexttrue" > $(PAPER)-options.tex; \
 	echo "\\endinput" >> $(PAPER)-options.tex; \
 	pdflatex $(PAPER); \
 	bibtex $(PAPER); \
@@ -85,18 +53,3 @@ changetext:
 	rm $(PAPER)-options.tex; \
 	mv $(PAPER).pdf $(PAPER)_changetext.pdf; \
 	open $(PAPER)_changetext.pdf
-
-
-#Postscript file in manuscript mode (for submission to the journal)
-postscript: $(PAPER).tex
-	echo "\\mstrue" >> $(PAPER)-options.tex; \
-	echo "\\grayscaletrue" >> $(PAPER)-options.tex; \
-	echo "\\\changetextfalse" >> $(PAPER)-options.tex; \
-	echo "\\endinput" >> $(PAPER)-options.tex; \
-	latex $(PAPER); \
-	bibtex $(PAPER); \
-	latex $(PAPER); \
-	latex $(PAPER)
-	dvips -o $(PAPER)_submit.ps $(PAPER).dvi; \
-	dvipdf $(PAPER).dvi $(PAPER)_submit.pdf 
-	open $(PAPER)_submit.pdf
