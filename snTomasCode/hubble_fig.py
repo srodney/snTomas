@@ -1,4 +1,4 @@
-def plot_hubble_fig( fitter='both', datfilename='data/distances/hubblefig.dat'):
+def plot_hubble_fig( fitter='both', showlcdm=False, datfilename='data/distances/z135/hubblefig.dat'):
     from pytools import plotsetup, colorpalette as cp
     from astropy.io import ascii
     import numpy as np
@@ -8,15 +8,17 @@ def plot_hubble_fig( fitter='both', datfilename='data/distances/hubblefig.dat'):
     import os
     import sys
 
+    from pytools import cosmo
+
     dmint_mlcs=0.08 # intrinsic scatter in SNIa luminosities for MLCS2k2 (Jha:2007)
     dmint_salt=0.08 # intrinsic scatter in SNIa luminosities for SALT2 (Conley:2011)
 
     zTomas = 1.3457#1.31#,
     zerrTomas = 0.001#,0.01]
-    dmTomas_mlcs = 44.22#,44.06#,
-    dmerrTomas_mlcs = np.sqrt(0.09**2 + dmint_mlcs**2)
-    dmTomas_salt = 44.19#44.09
-    dmerrTomas_salt = np.sqrt(0.16**2 + dmint_salt**2)
+    dmTomas_mlcs = 44.205#,44.06#,
+    dmerrTomas_mlcs = np.sqrt(0.0859**2 + dmint_mlcs**2)
+    dmTomas_salt = 44.177#44.09
+    dmerrTomas_salt = np.sqrt(0.163**2 + dmint_salt**2)
 
     thisfile = sys.argv[0]
     if 'ipython' in thisfile :
@@ -32,6 +34,7 @@ def plot_hubble_fig( fitter='both', datfilename='data/distances/hubblefig.dat'):
     dm_salt_err = np.sqrt(hubbledat['dm_salt_err']**2 + dmint_salt**2)
     iscp = np.where( hubbledat['survey']=='scp')
     igoods = np.where( hubbledat['survey']=='goods')
+    icandels = np.where( hubbledat['survey']=='candels')
     fig = plotsetup.halfpaperfig( )
     pl.clf()
     if fitter.lower()=='both':
@@ -47,12 +50,14 @@ def plot_hubble_fig( fitter='both', datfilename='data/distances/hubblefig.dat'):
     if fitter.lower()[:5] in ['both','mlcs'] :
         ax1.errorbar( z[igoods], dm_mlcs[igoods], dm_mlcs_err[igoods], ls=' ', marker='s', capsize=0, color=cp.lightgrey, ecolor=cp.darkgrey )
         ax1.errorbar( z[iscp], dm_mlcs[iscp], dm_mlcs_err[iscp], ls=' ', marker='o', capsize=0, color=cp.lightgrey, ecolor=cp.darkgrey )
+        ax1.errorbar( z[icandels], dm_mlcs[icandels], dm_mlcs_err[icandels], ls=' ', marker='^', capsize=0, color=cp.lightgrey, ecolor=cp.darkgrey )
         ax1.errorbar( zTomas, dmTomas_mlcs, dmerrTomas_mlcs, zerrTomas, marker='D',
                       color=cp.teal, capsize=0, ls=' ')
 
     if fitter.lower()[:5] in ['both','salt'] :
         ax2.errorbar( z[igoods], dm_salt[igoods], dm_salt_err[igoods], ls=' ', marker='s', capsize=0, color=cp.lightgrey, ecolor=cp.darkgrey )
         ax2.errorbar( z[iscp], dm_salt[iscp], dm_salt_err[iscp], ls=' ', marker='o', capsize=0, color=cp.lightgrey, ecolor=cp.darkgrey )
+        ax2.errorbar( z[icandels], dm_salt[icandels], dm_salt_err[icandels], ls=' ', marker='^', capsize=0, color=cp.lightgrey, ecolor=cp.darkgrey )
         ax2.errorbar( zTomas, dmTomas_salt, dmerrTomas_salt, zerrTomas, marker='D',
                       color=cp.teal, capsize=0, ls=' ' )    #ax.text( 0.05,0.95, 'Riess et al. 2007', ha='left', va='top', color=cp.black, fontsize='small' , transform=ax.transAxes )
 
@@ -71,6 +76,15 @@ def plot_hubble_fig( fitter='both', datfilename='data/distances/hubblefig.dat'):
     lineparam0 = np.array([1,45])
     fit_mlcs, cov_mlcs = scopt.curve_fit( line, z, dm_mlcs, lineparam0, dm_mlcs_err)
     fit_salt, cov_salt = scopt.curve_fit( line, z, dm_salt, lineparam0, dm_salt_err)
+
+    if showlcdm :
+        def lcdm( x, H0 ):
+            return cosmo.mu( x, H0, Om=0.18, Ode=0.82, w0=-0.9 )
+        lcdmparam = np.array([70])
+        fit_lcdm_mlcs, cov_lcdm_mlcs = scopt.curve_fit( lcdm, z, dm_mlcs, lcdmparam, dm_mlcs_err )
+        fit_lcdm_salt, cov_lcdm_salt = scopt.curve_fit( lcdm, z, dm_salt, lcdmparam, dm_salt_err )
+        H0mlcs = fit_lcdm_mlcs[0]
+        H0salt = fit_lcdm_salt[0]
 
     for ax,fittername,fit,cov,dmTom,dmerrTom,dmint,color in zip(
             [ax1,ax2],['MLCS2k2','SALT2'],
@@ -114,6 +128,15 @@ def plot_hubble_fig( fitter='both', datfilename='data/distances/hubblefig.dat'):
         ax.plot(  [1.27,1.3457], [43.95,dmTom+deltam_mu/2.5],
                   ls='-', lw=0.5, color=color )
 
+        if showlcdm :
+            zlcdm = np.arange(1.0, 1.6, 0.01)
+            if fittername=='MLCS2k2': H0fit=H0mlcs
+            else : H0fit=H0salt
+            mumid = cosmo.mu( zlcdm, H0=H0fit, Om=0.18, Ode=0.82, w0=-0.9 )
+            ax.plot( zlcdm, mumid, ls='--', marker=' ', lw=0.8, color='r')
+            print('H0(%s)=%.2f'%(fittername,H0fit))
+
+
         if fitter=='both':
             ax.text( 0.04,0.92, fit_string ,ha='left', va='top',
                      color=color, transform=ax.transAxes, fontsize='small' )
@@ -133,7 +156,7 @@ def plot_hubble_fig( fitter='both', datfilename='data/distances/hubblefig.dat'):
     #ax.text( 0.05,0.9, 'Suzuki et al. 2012', ha='left', va='top', color=cp.green, fontsize='small', transform=ax.transAxes )
 
 
-    ax1.set_xlim( 1.12, 1.44 )
+    ax1.set_xlim( 1.12, 1.58 )
     ax1.set_ylim( 43.51, 45.99 )
     fig.subplots_adjust( left=0.15, bottom=0.13, right=0.95, top=0.95, hspace=0)
     if fitter!='both':

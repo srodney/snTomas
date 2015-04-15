@@ -11,6 +11,11 @@ def mkLensingTestFig( show2snfits=False, showlegend=False, presfig=False ):
     import os
     import sys
 
+    muSNmlcs = 2.03
+    muSNmlcserr = 0.29
+    muSNsalt = 1.99
+    muSNsalterr = 0.38
+
     if presfig :
         fig = plotsetup.presfig( figsize=[12,8])
         labelvalues=True
@@ -23,9 +28,9 @@ def mkLensingTestFig( show2snfits=False, showlegend=False, presfig=False ):
         ms=8
         pl.clf()
         if showlegend:
-            ax1 = pl.axes( [0.01,0.14,0.7,0.84] )
+            ax1 = pl.axes( [0.01,0.14,0.68,0.84] )
         else:
-            ax1 = pl.axes( [0.01,0.14,0.7,0.84] )
+            ax1 = pl.axes( [0.01,0.14,0.68,0.84] )
 
 
     thisfile = sys.argv[0]
@@ -66,6 +71,7 @@ def mkLensingTestFig( show2snfits=False, showlegend=False, presfig=False ):
                              marker=marker, mfc=mfc, mec=color, ms=ms,
                              capsize=1, color=color, zorder=10,
                              label='_nolegend_' )
+        print( "%s discrepancy = %.2f sigma"%(model,(med-muSNmlcs)/np.sqrt(errminus**2+muSNmlcserr**2)))
         if labelvalues:
             label = '%s: $%.2f^{%+.2f}_{%+.2f}$'%( model, med, errplus, errminus )
             xlabel=1.35
@@ -79,7 +85,7 @@ def mkLensingTestFig( show2snfits=False, showlegend=False, presfig=False ):
                   color=color, transform=ax1.transAxes)
     fig.text( 0.98, 0.75, 'Parametric', ha='right', va='center', size='large',
               color='k', transform=fig.transFigure, rotation=-90)
-    fig.text( 0.98, 0.42, 'Free-Form', ha='right', va='center',size='large',
+    fig.text( 0.98, 0.34, 'Free-Form', ha='right', va='center',size='large',
               color='g', transform=fig.transFigure, rotation=-90)
 
     ax1.spines['right'].set_visible(False)
@@ -92,8 +98,8 @@ def mkLensingTestFig( show2snfits=False, showlegend=False, presfig=False ):
     iff = np.where(lensingdat['parametric']==0)[0]
     np.median(lensingdat['med'])
     for muSN, muSNerr, ymin, ymax, color, textcolor, ls, fitter in zip(
-            [1.81,1.79,np.median(lensingdat['med'][ipar]),np.median(lensingdat['med'][iff])],
-            [0.26,0.34,np.std(lensingdat['med'][ipar]),np.std(lensingdat['med'][iff])],
+            [muSNmlcs,muSNsalt,np.median(lensingdat['med'][ipar]),np.median(lensingdat['med'][iff])],
+            [muSNmlcserr,muSNsalterr,np.std(lensingdat['med'][ipar]),np.std(lensingdat['med'][iff])],
             [0.,0.,0.4,0.],
             [1.,1.,1.,0.4],
             [cp.lightblue,cp.darkred,cp.lightgrey,cp.darkgreen],
@@ -101,16 +107,19 @@ def mkLensingTestFig( show2snfits=False, showlegend=False, presfig=False ):
             ['-','-','--','--'],
             ['MLCS2k2','SALT2','Parametric','Free-Form'] ):
         if not show2snfits :
-            if fitter=='MLCS2k2': continue
+            if fitter=='SALT2': continue
         if not ls=='--':
-            ax1.axvline( muSN, ls=ls, color=color, lw=2, ymin=ymin, ymax=ymax )
+            ax1.axvline( muSN, ls=ls, color=textcolor, lw=2, ymin=ymin, ymax=ymax )
             ax1.axvspan( muSN-muSNerr, muSN+muSNerr, ymin=ymin, ymax=ymax,
                          color=color, alpha=0.3,zorder=-100 )
         #ax1.text( muSN-0.03,  ymax*ytop+0.05, fitter, color=textcolor,
         #          ha='center', va='bottom' )
         print( "%s : mu=%.2f +- %.2f"%(fitter,muSN,muSNerr))
     ax1.text( 1.75, 2*ytop/3, 'SN HFF14tom', rotation=90,
-              ha='right', va='center', color=cp.darkred )
+              ha='right', va='center', color=cp.darkblue )
+
+    ax1.axvline( np.mean(lensingdat['med']), ls='--', color='0.5', lw=1 )
+    print( "All models : mu=%.2f +- %.2f"%(np.mean(lensingdat['med']),np.std(lensingdat['med'])))
 
     if showlegend:
         if showlegend=='top':
