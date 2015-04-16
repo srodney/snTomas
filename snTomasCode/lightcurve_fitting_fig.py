@@ -46,7 +46,7 @@ def plot_light_curve_fit( fitter='mlcs2k2', plotmags=True,
     if showblue:
         bandlist = ['B','V','I','Y','J','N','H']
     else:
-        bandlist = ['I','Y','J','N','H']
+        bandlist = ['V','I','Y','J','N','H']
     for fitter in fitterlist :
         axdict = {
             'B':fig.add_subplot(gs[rowdict[fitter],0]),

@@ -33,7 +33,6 @@ pdf: $(PAPER).tex
 	bibtex $(PAPER); \
 	pdflatex $(PAPER); \
 	pdflatex $(PAPER); \
-	rm $(PAPER)-options.tex; \
 	open $(PAPER).pdf
 
 #quick update (single compile)
