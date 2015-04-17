@@ -227,18 +227,25 @@ a Bayesian photometric redshift estimator \citep{Benitez:2000}.
 %The best-fit SED template match is shown in Figure~\ref{fig:HostSED}.
 From the {\it BPZ} analysis, we found the host to be most likely an
 actively star-forming galaxy at a redshift of
-$z=1.5\pm0.2$.  \change{This photo-z was subsequently supported by a
-spectroscopic redshift of $z=1.3457\pm0.0001$, based on emission lines
-consistent with \textcolor{red}{??? the [OII] $\lambda\lambda$ 3726-3729 \AA\ doublet.
-???}}  Another nearby bright galaxy to the East of the SN has a
-spectroscopic redshift of $z=1.742$.  This redshift was determined
-from a spectrum taken with the G141 grism of the HST WFC3-IR camera,
-collected as part of the Grism Lens Amplified Survey from Space
-(GLASS, PI:Treu, PID:13459, \citealt{Treu:2015}). As we will see in
-Sections~\ref{sec:Spectroscopy}
-and \ref{sec:PhotometricClassification}, the SN data are \change{consistent
-with $z=1.3457$,} meaning that the latter galaxy is a background object and
-therefore has no impact on the SN magnification.
+$z=1.5\pm0.2$.  \change{This photo-z was subsequently refined to a
+spectroscopic redshift of $z=1.3457\pm0.0001$, based on optical
+spectroscopy of the host (Mahler et al. in prep.) that shows two
+significant ($>10\sigma$) emission lines at 8740.2 and 8746.7
+Angstroms, consistent with the [OII] $\lambda\lambda$ 3726-3729 \AA\
+doublet.}  
+
+The next nearest galaxy detected in HST imaging is \change{2.2\arcsec
+northeast of the SN position}. It has a redshift of $z=1.742$
+determined from a spectrum taken with the G141 grism of the HST
+WFC3-IR camera, collected as part of the Grism Lens Amplified Survey
+from Space (GLASS, PI:Treu, PID:13459, \citealt{Treu:2015}).  As we
+will see in Sections~\ref{sec:Spectroscopy}
+and \ref{sec:PhotometricClassification}, both the spectroscopic and
+photometric data from the SN itself are \change{consistent with the
+redshift of the fainter galaxy at $z=1.3457$, and
+incompatible with $z=1.742$ from this brighter galaxy.}  This means
+that the latter galaxy is a background object and therefore has no
+impact on the SN magnification.
 
 Upon discovery, HST target-of-opportunity observations were triggered
 from the FrontierSN program (PI:Rodney, HST-PID:13386), which aims to
@@ -280,19 +287,18 @@ imaging data.
 Redshift and age determination from spectral template matching to the
 the SN \tomas\ maximum light spectrum.  The y axis plots flux in
 arbitrary units, and the x axis marks wavelength in \AA\ with the
-observer-frame on the bottom and rest-frame on the top.
-The \tomas\ spectrum observed with the
-HST ACS G800L grism is shown in black, overlaid with model fits
-derived from a library of Type Ia templates that have extended
-rest-frame UV coverage.  {\it Top}: The best match is at $z=1.31$ with
-age=$+3$ days, from the normal Type Ia SN 2012cg template when using a
-smooth 3rd-order polynomial to warp the shape of the template
-pseudo-continuum.  When the templates are not warped, an acceptable
-fit can be found with a normal Type Ia at $z=1.31$ (middle) or at
-$z\sim1$ (bottom), although the latter is inconsistent with the host
-galaxy redshift prior and the light curve. No \CCSN\ templates can
-provide a statistically acceptable fit at any redshift, within the age
-constraints imposed by the light curve.}
+observer-frame on the bottom and rest-frame on the top.  The \tomas\
+spectrum observed with the HST ACS G800L grism is shown in black,
+overlaid with model fits derived from a library of Type Ia templates
+that have extended rest-frame UV coverage.  \changeG{The top two panels show
+the best matching templates when using a smooth 3rd-order polynomial
+to warp the shape of the template pseudo-continuum, with the redshift
+fixed at z=1.3457 and then allowed to float as a free parameter.  The
+lower three panels show matches found when the templates are not
+warped, both with and without fixing the redshift.  The bottom panel
+shows the best match in this set, although at $z=0.98$ it is
+inconsistent with the host galaxy redshift prior and the light curve.}
+}
 \end{center}
 \end{figure}
 
@@ -395,43 +401,50 @@ well-observed spectral time series that extend to rest-frame UV
 wavelengths (e.g. SN 2011fe and 2014J).  We first use an approach
 similar to the SNID algorithm: warping the pseudo-continuum of each
 template spectrum by dividing out a 3$^{\rm rd}$-order polynomial to
-match the observed SED of SN \tomas.  \change{With the redshift fixed
-at $z=1.3457$ we find the best fit is from the normal Type Ia SN
-2014J, with a $\chi^2$ per degree of freedom $\nu$ of
-$\chi^2/\nu=51.8/87$ shown in the top panel of
+match the observed SED of SN \tomas.  \changeG{This approach will find
+templates that have similar abundances and photospheric
+velocities. With the redshift fixed at $z=1.3457$ we find the best fit
+is from the normal Type Ia SN 2014J, with a $\chi^2$ per degree of
+freedom $\nu$ of $\chi^2/\nu=121.8/89$ shown in the top panel of
 Figure~\ref{fig:SpecFit}.  Allowing the redshift as an additional free
 parameter, we still find results that are consistent with the SNID
 fits and $<2\sigma$ from the host galaxy redshift: $z=1.31\pm0.02$ and
 a phase of $0\pm3$ rest-frame days. The best-fitting spectral template
 in this case is the normal Type Ia SN 2012cg at $z=1.31$ with
-$\chi^2/\nu=42.1/87$.}
+$\chi^2/\nu=98.5/88$ (second panel of Figure~\ref{fig:SpecFit}).}
 
+\changeG{
 Next, we repeat the fitting, but without any warping of the templates
 to account for differences in the continuum shape.  In this iteration
 we only allow each template SED to be scaled in flux coherently at all
-wavelengths.  As shown in Figure~\ref{fig:SpecFit}, we again find that
-when the \change{redshift is allowed as a free parameter the \tomas\
-SED is best matched by a normal Type Ia SN (SN 2011fe) at redshift
-$z=1.31$ with $\chi^2/\nu=102.9/90$.  Fixing the redshift to the
-redshift $z=1.3457$ of the host, we also find the best match is from
-SN 2011fe, with $\chi^2/\nu=133.7/91$. }
+wavelengths, so the fits are more sensitive to the overall color of
+the SED. Fixing the redshift to $z=1.3457$, we find the best match is
+from the normal Type Ia SN 2011fe, though the fit is quite poor, with
+$\chi^2/\nu=313.2/91$ (third panel of Figure~\ref{fig:SpecFit}).  When
+the redshift is allowed as a free parameter the \tomas\ SED is still
+matched best by a SN 2011fe template, now at redshift $z=1.31$ with
+$\chi^2/\nu=240.8/90$ (fourth panel of Figure~\ref{fig:SpecFit}).  }
 
-Without the continuum warping, an alternative
-fit also arises: the fast-declining (91bg-like) Type Ia SN 2011iv at
+Without the continuum warping, an alternative fit also arises: the
+fast-declining (91bg-like) Type Ia SN 2011iv at
 $z=0.98\pm0.01$. Formally, this match provides a slightly better fit
-to the unwarped \tomas\ spectrum, although the fit is notably poor at
-$\sim8700$\AA\ where the most significant absorption feature is
-found. Furthermore, a redshift $z\sim1$ is at odds with the host
-galaxy redshift ($z=1.3457$), and we will see in the following section
-that the photometric data is also incompatible with a Type Ia SN at
-$z\sim1.0$.
+to the unwarped \tomas\ spectrum \changeG{($\chi^2/\nu=220.6/90$,
+bottom panel of Figure~\ref{fig:SpecFit}),} although the fit is
+notably poorer at $\sim8700$\AA\ where the most significant absorption
+feature is found. Furthermore, a redshift $z\sim1$ is at odds with the
+spectroscopic redshift of the nearest galaxy ($z=1.3457$), and we will
+see in the following section that the photometric data is also
+incompatible with a Type Ia SN at $z\sim1.0$.
 
 Setting aside the $z\sim1$ solution, all other template matches
 provide a consistent redshift constraint of $z=1.31\pm0.02$,
 regardless of whether the templates are warped to match the SN \tomas\
 continuum shape.  The inferred age from these fits is $0\pm3$
 rest-frame days from peak brightness, which is also consistent with
-the observed light curve.
+the observed light curve.  \changeG{Taken together with the host galaxy
+spectroscopic redshift, these fits suggest that SN \tomas\ is a normal
+Type Ia SN at $z=1.3457$ with an SED color close to SN 2011fe, but
+spectral absorption features similar to SN 2014J.}
 
 
 \section{Photometric Classification}
@@ -1424,9 +1437,8 @@ Universities for Research in Astronomy, Inc. under NASA contract NAS
 Space Telescopes (MAST).
 
 Financial support for this work was provided to SAR by NASA through grants
-HST-HF-51312 and HST-GO-13386 from the Space Telescope
-Science Institute, which is operated by Associated Universities for
-Research in Astronomy, Inc., under NASA contract NAS 5-26555.
+HST-HF-51312 and HST-GO-13386 from STScI, which is operated by Associated Universities for
+Research in Astronomy, Inc. (AURA), under NASA contract NAS 5-26555.
 
 AM acknowledge the financial support of the Brazilian funding agency
 FAPESP (Post-doc fellowship - process number 2014/11806-9)
@@ -1446,6 +1458,9 @@ HST-GO-13386.13-A. The research leading to these results has received
 funding from the People Programme (Marie Curie Actions) of the European
 Union's Seventh Framework Programme (FP7/2007-­2013) under REA grant
 agreement number 627288.
+
+A.Z. acknowledges financial support from NASA through grant
+HST-HF-51334.01-A awarded by STScI and operated by AURA.
 
 {\it Facilities:} \facility{HST (WFC3)}
 \smallskip
