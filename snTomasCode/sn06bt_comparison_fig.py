@@ -23,7 +23,7 @@ def getdata():
 
     # simulate a normal SN Ia
     snIa = sncosmo.Model( 'salt2' )
-    snIa.set(c=-0.15)
+    snIa.set(c=-0.13)
     snIa.set(z=0.001)
     trest=[]
     mag = []
@@ -135,7 +135,7 @@ def colorfig( **plotargs ):
     pl.ylabel('B-r',rotation=-90, labelpad=10)
     ax4.set_ylim(-0.14,1.09)
     ax4.text(5, 0.8,'SN 2006bt',rotation=45, color='darkorange')
-    ax4.text(6.8, 0.37,'\\noindent normal Ia\\\\ $c=-0.12$',rotation=40, color='b', ha='left')
+    ax4.text(6.8, 0.37,'\\noindent normal Ia\\\\ $c=-0.13$',rotation=40, color='b', ha='left')
 
     fig.subplots_adjust(left=0.15,right=0.87,bottom=0.12,top=0.92,hspace=0,wspace=0)
     suplabel( 'x', 'Rest-frame time (days)', labelpad=8, ha='center', va='bottom')
