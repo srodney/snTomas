@@ -173,13 +173,12 @@ show F814W imaging of the immediate vicinity of SN \tomas,
 approximately 40\arcsec\ from the center of the cluster. The top panel
 shows the template image, combining all data prior to the SN
 appearance.  Labeled ellipses mark the nearest galaxies and their
-redshift constraints: a photometric redshift for the most likely host
-galaxy is marked in blue, and the spectroscopic redshift for a
-background galaxy is given in yellow. The bottom panel is constructed
-from all HFF F814W imaging taken while the SN was detectable, and
-marks the SN location with an arrow.  (Left panel image credit: NASA,
-ESA, and J. Lotz, M. Mountain, A. Koekemoer, and the HFF Team (STScI))
-}
+\changeG{spectroscopic} redshift constraints, with the most likely host
+galaxy marked in blue, and a background galaxy in yellow. The bottom
+panel is constructed from all HFF F814W imaging taken while the SN was
+detectable, and marks the SN location with an arrow.  (Left panel
+image credit: NASA, ESA, and J. Lotz, M. Mountain, A. Koekemoer, and
+the HFF Team (STScI)) }
 \end{center}
 \end{figure*}
 
@@ -404,14 +403,15 @@ template spectrum by dividing out a 3$^{\rm rd}$-order polynomial to
 match the observed SED of SN \tomas.  \changeG{This approach will find
 templates that have similar abundances and photospheric
 velocities. With the redshift fixed at $z=1.3457$ we find the best fit
-is from the normal Type Ia SN 2014J, with a $\chi^2$ per degree of
-freedom $\nu$ of $\chi^2/\nu=121.8/89$ shown in the top panel of
-Figure~\ref{fig:SpecFit}.  Allowing the redshift as an additional free
-parameter, we still find results that are consistent with the SNID
-fits and $<2\sigma$ from the host galaxy redshift: $z=1.31\pm0.02$ and
-a phase of $0\pm3$ rest-frame days. The best-fitting spectral template
-in this case is the normal Type Ia SN 2012cg at $z=1.31$ with
-$\chi^2/\nu=98.5/88$ (second panel of Figure~\ref{fig:SpecFit}).}
+is a spectrum from the normal Type Ia SN 2014J \citep{Foley:2014},
+with a $\chi^2$ per degree of freedom $\nu$ of $\chi^2/\nu=121.8/89$
+shown in the top panel of Figure~\ref{fig:SpecFit}.  Allowing the
+redshift as an additional free parameter, we still find results that
+are consistent with the SNID fits and $<2\sigma$ from the host galaxy
+redshift: $z=1.31\pm0.02$ and a phase of $0\pm3$ rest-frame days. The
+best-fitting spectral template in this case is the normal Type Ia SN
+2012cg \citep{Amanullah:2015} at $z=1.31$ with $\chi^2/\nu=98.5/88$
+(second panel of Figure~\ref{fig:SpecFit}).}
 
 \changeG{
 Next, we repeat the fitting, but without any warping of the templates
@@ -419,14 +419,14 @@ to account for differences in the continuum shape.  In this iteration
 we only allow each template SED to be scaled in flux coherently at all
 wavelengths, so the fits are more sensitive to the overall color of
 the SED. Fixing the redshift to $z=1.3457$, we find the best match is
-from the normal Type Ia SN 2011fe, though the fit is quite poor, with
+from the normal Type Ia SN 2011fe \citep{Mazzali:2014}, though the fit is quite poor, with
 $\chi^2/\nu=313.2/91$ (third panel of Figure~\ref{fig:SpecFit}).  When
 the redshift is allowed as a free parameter the \tomas\ SED is still
 matched best by a SN 2011fe template, now at redshift $z=1.31$ with
 $\chi^2/\nu=240.8/90$ (fourth panel of Figure~\ref{fig:SpecFit}).  }
 
 Without the continuum warping, an alternative fit also arises: the
-fast-declining (91bg-like) Type Ia SN 2011iv at
+fast-declining (91bg-like) Type Ia SN 2011iv \citep{Foley:2012b} at
 $z=0.98\pm0.01$. Formally, this match provides a slightly better fit
 to the unwarped \tomas\ spectrum \changeG{($\chi^2/\nu=220.6/90$,
 bottom panel of Figure~\ref{fig:SpecFit}),} although the fit is
@@ -554,15 +554,23 @@ rest-frame days of the epoch of peak brightness -- also consistent
 with our spectroscopic analysis.}
 
 
-\section{Light Curve Fitting}
-\label{sec:LightCurveFitting}
+\section{Distance Modulus and Magnification}
+\label{sec:DistanceAndMagnification}
 
-With the type and redshift securely defined as a normal
-Type Ia SN at $z=1.3457$, we now turn to fitting the light curve with
-Type Ia templates to measure the distance modulus.  Here we use two
-independent light curve fitters: the SALT2 model described
-above and the MLCS2k2 model \citep{Jha:2007}.   
-
+With the type and redshift securely defined as a normal Type Ia SN at
+$z=1.3457$, we now turn to fitting the light curve with Type Ia
+templates to measure the distance modulus \changeG{ and then derive
+the gravitational lensing magnification.  In this process, we would
+like to avoid introducing systematic uncertainties inherent to any
+assumed cosmological model \citep[e.g.][]{Nordin:2014}.  To that end,
+we follow \citealt{Patel:2014} and define the magnification by
+comparing the measured distance modulus of SN \tomas\ against an
+average distance modulus derived from a ``control sample'' of unlensed
+Type Ia SNe at similar redshift.  This allows us to make only the
+minimal assumption that the redshift-distance relationship for Type Ia
+SN is smooth and approximately linear over a small redshift span,
+which should be true for any plausible cosmological model.  
+}
 
 \begin{figure*}
 \begin{center}
@@ -584,8 +592,17 @@ the time in the rest frame relative to the epoch of peak brightness.
 \end{center}
 \end{figure*}
 
-With both fitters we find light curve shape and color parameters that
-are fully consistent with a normal Type Ia SN.  For SALT2, with the
+
+\subsection{Light Curve Fitting}
+\label{sec:LightCurveFitting}
+
+\changeG{
+As in \citealt{Patel:2014}, we derive a distance modulus for
+SN \tomas\ and all SNe in our control sample using two independent
+light curve fitters: the SALT2 model described above and the MLCS2k2
+model \citep{Jha:2007}.  }  With both fitters we find light curve
+shape and color parameters for \tomas\ that are fully consistent with
+a normal Type Ia SN.  For SALT2, with the
 \change{redshift fixed at $z=1.3457$, we find a light curve shape
 parameter of $x_1=0.135\pm0.199$ and a color parameter of
 $c=-0.127\pm0.025$, yielding a $\chi^2$ value of 45.0 for 36 degrees
@@ -593,17 +610,15 @@ of freedom, $\nu$.  With the MLCS2k2 fitter the best-fit shape
 parameter is $\Delta=-0.082\pm0.070$ and the color term is
 $A_{\rm V}=0.011\pm0.025$, giving $\chi^2/\nu=22.8/36$.}
 
-\subsection{Distance Modulus}
-\label{sec:DistanceModulus}
-
-As in \citealt{Patel:2014}, we derive a distance modulus (dm)\footnote{We use 'dm' to
-indicate the distance modulus to avoid confusion, reserving the symbol
-$\mu$ to refer to the lensing magnification. This 'dm' is a standard
-distance modulus, defined as ${\rm dm}=5\log_{10}d_L+25$, where $d_L$
-is the luminosity distance in Mpc.} while ignoring the
-effects of gravitational lensing, so that we can later use it to
-derive a direct measurement of the magnification.  \change{The MLCS2k2 fitter returns $\rm{dm}_{\rm MLCS2k2}$ directly, as it is defined as one of the free parameters in the model. To derive dm from} the SALT2 fit
-we use
+\changeG{
+ The MLCS2k2 fitter returns a distance
+modulus\footnote{We use 'dm' to indicate the distance modulus to avoid
+confusion, reserving the symbol $\mu$ to refer to the lensing
+magnification. This 'dm' is a standard distance modulus, defined as
+${\rm dm}=5\log_{10}d_L+25$, where $d_L$ is the luminosity distance in
+Mpc.}  $\rm{dm}_{\rm MLCS2k2}$ directly, as it is defined to be one of
+the free parameters in the model.} To derive dm from the SALT2 fit, we
+use
 
 \begin{equation} \label{eqn:dmSALT2}
  {\rm dm}_{\rm SALT2} = m_B^* - M + \alpha(s-1) - \beta C.
@@ -632,7 +647,6 @@ in \citealt{Patel:2014}.  This correction was derived by applying both
 fitters to a sample of Type Ia SNe from the SDSS
 survey \citep{Holtzman:2008,Kessler:2009b}, with the extinction law
 $R_V$ fixed at 1.9.
-
 
 The total uncertainty in the distance modulus is  
 
@@ -690,13 +704,13 @@ redshift ($z=1.3457$).  In addition to modifying the distance modulus
 uncertainty for SN \tomas, we also add $\sigma_{\rm int}=0.08$ mag in
 quadrature to the uncertainty for every SN in the control sample. Note
 however that the uncertainty on the control sample value at $z=1.3457$
-is only 0.06 mag, smaller than the intrinsic dispersion because it
-reflects only our measurement error on the mean distance modulus of
-the population.  The distance moduli derived from the SALT2 and
-MLCS2k2 light curve fitters are fully consistent within the
-uncertainties. 
+is only 0.06 mag, smaller than the intrinsic dispersion \changeG{of
+any single SN} because it reflects our measurement error on the mean
+distance modulus of the population.  The distance moduli derived from
+the SALT2 and MLCS2k2 light curve fitters are fully consistent within
+the uncertainties.
 
-\subsection{Host Galaxy Mass Correction}
+\subsubsection{Host Galaxy Mass Correction}
 \label{sec:HostGalaxyMassCorrection}
 
 It is now an accepted practice in cosmological analyses using Type Ia
@@ -722,24 +736,13 @@ much less common at $z>1$ \change{\citep[see
 e.g.][]{Rigault:2013,Childress:2014b}.}  Indeed, when the size of the
 mass step correction is allowed to vary with redshift, there is no
 significant evidence that a non-zero mass step is required at
-$z>1$ \citep{Rigault:2013,Shafer:2014,Betoule:2014}.  Given the
+$z>1$ \citep{Suzuki:2012,Shafer:2014,Betoule:2014}.  Given the
 absence of a clear physical model and the lack of empirical support
 for a high-$z$ mass step, we do not apply any correction to SN \tomas\
 or the control sample.
 
-\subsection{Magnification}
-\label{sec:Magnification}
-
-To measure the lensing magnification, we would like to avoid
-introducing systematic uncertainties inherent to any assumed
-cosmological model \citep[e.g.][]{Nordin:2014}.  To that end, we
-follow \citealt{Patel:2014} and define the magnification by comparing
-the measured distance modulus of SN \tomas\ against an average
-distance modulus derived from a ``control sample'' of unlensed Type Ia
-SN at similar redshift.  This allows us to make only the minimal
-assumption that the redshift-distance relationship for Type Ia SN is
-smooth and approximately linear over a small redshift span, which
-should be true for any plausible cosmological model.
+\subsection{Control Sample Comparison}
+\label{sec:ControlSampleComparison}
 
 The unlensed sample comprises \change{22 spectroscopically confirmed Type Ia
 SNe in the range $1.14\leq z \leq1.55$ from three HST surveys: 11 from GOODS\footnote{GOODS: the Great Observatories Origins Deep Survey, PI:Giavalisco, HST-PID:9425,9583} \citep{Riess:2007}, 7 from SCP\footnote{SCP: the Supernova Cosmology Project, PI:Perlmutter} \citep{Suzuki:2012}, and 4 from CANDELS\footnote{CANDELS: the Cosmic Assembly Near-infrared Deep Extragalactic Legacy Survey, PI:Faber \&\ Ferguson} \citep{Rodney:2012,Rodney:2014}.}  Using the SALT2 and MLCS2k2
@@ -806,7 +809,7 @@ redshifts for lensed background galaxies.
 \caption{ 
 Comparison of the observed lensing magnification to predictions from
 lens models. The vertical blue line shows the constraints from
-SN \tomas\ derived in Section~\ref{sec:Magnification} using the
+SN \tomas\ derived in Section~\ref{sec:DistanceAndMagnification} using the
 MLCS2k2 fitter, with a shaded region marking the total
 uncertainty. Markers with horizontal error bars show the median
 magnification and 68\%\ confidence region from each of the 14 lensing
@@ -837,7 +840,7 @@ references.
 
 In Figure~\ref{fig:lensingtest} the model predictions are plotted
 alongside the observed magnification of SN \tomas, derived in
-Section~\ref{sec:Magnification}.  This comparison shows that these 14
+Section~\ref{sec:DistanceAndMagnification}.  This comparison shows that these 14
 models are largely consistent with each other. Naively treating each
 model as an independent prediction for the magnification (and ignoring
 their quoted uncertainties), one would get a mean for the full sample
@@ -1070,7 +1073,7 @@ variation of these parameters must be accounted for when using cluster
 mass models for cosmological tests \citep{Zitrin:2014b}. 
 \citep{Bayliss:2015} demonstrated that
 changing the cosmological parameter within the range of current
-acceptable cosmologies \citep[e.g.][]{Hinshaw:2013,Planck:2015},
+acceptable cosmologies \citep[e.g.][]{Hinshaw:2013,Planck-Collaboration:2015},
 introduces a magnification uncertainty that is comparable in magnitude
 to that of the statistical uncertainties.  This leads to the
 conclusion that the lens modeling uncertainties presented here are
@@ -1122,7 +1125,7 @@ change in the inferred magnifications or in the suggestion of a small
 systematic bias.}
 
 
-\subsection{Foreground Dust}
+\subsection{Foreground Dust and SN Color}
 \label{sec:ForegroundDust}
 
 All SN sight-lines must intersect some amount of foreground dust from
@@ -1183,6 +1186,21 @@ this can have a measurable impact on precise cosmological constraints,
 it is far less than the 0.23 mag difference between the observed
 magnification of \tomas\ and the mean of the model predictions.  
 
+\changeG{
+Although the very blue color of SN \tomas\ is helpful to rule out dust
+as a possible explanation for the observed small systematic bias, it
+is possible that this very blue color is itself leading to a bias in
+the distance measurement.  \citet{Scolnic:2014b} measured a small bias
+in the SALT2 fitter for Type Ia SNe that have a color parameter
+derived from the light curve fit $c<-0.1$ (see, e.g., their Figure 10
+and Section 5.1). For \tomas\ we have measured $c=-0.13$, which would
+correspond to a bias of roughly $+0.05$ mag in the SALT2 distance
+measurement.  If we were to apply a $-0.05$ mag correction to the
+distance modulus from the SALT2 fit, then this would increase the
+inferred magnification to $\mu_{\rm SALT2}=2.08\pm0.36$.  This would
+still be consistent with the mild tension apparent from the MLCS2k2
+fit, though with a decrease in significance. 
+}
 
 \subsection{Misclassification}
 \label{sec:Misclassification}
@@ -1447,7 +1465,7 @@ Support for this research at Rutgers University was provided in part
 by NSF CAREER award AST-0847157 to SWJ.  The Dark Cosmology Centre is
 supported by the Danish National Research Foundation.
 
-J.M.D acknowledges support of the consolider project CAD2010-00064 and
+J.M.D acknowledges support of the consolider project CSD2010-00064 and
 AYA2012-39475-C02-01 funded by the Ministerio de Economia y
 Competitividad.
 

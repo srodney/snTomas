@@ -5,7 +5,8 @@
 *blg
 *out
 *aux
-
+*.idea
+*pynb
 *pyc
 
 # bibliography files:
@@ -19,3 +20,13 @@ HUBBLEFIG
 HSTACS_IA*
 HIGHZ_IA*
 FOREGROUND_GALAXY
+FIG/system3.key
+FIG/system3.jpg
+FIG/system3.pdf
+LCFIT.v1
+LENSING
+SPECTRUM
+DETECTION_IMAGE
+*OLD
+test*
+*tar

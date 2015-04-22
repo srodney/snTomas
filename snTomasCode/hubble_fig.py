@@ -1,7 +1,7 @@
 def plot_hubble_fig( fitter='both', showlcdm=False,
-                     zsn=1.31,
+                     zsn=1.3457, presfig=False,
                      datfilename='data/distances/z135/hubblefig.dat'):
-    from pytools import plotsetup, colorpalette as cp
+    from pytools import plotsetup, colorpalette as cp, cosmo
     from astropy.io import ascii
     import numpy as np
     from scipy import optimize as scopt
@@ -10,7 +10,11 @@ def plot_hubble_fig( fitter='both', showlcdm=False,
     import os
     import sys
 
-    from pytools import cosmo
+    if presfig :
+        fig = plotsetup.presfig( )
+    else :
+        fig = plotsetup.halfpaperfig( )
+
 
     dmint_mlcs=0.08 # intrinsic scatter in SNIa luminosities for MLCS2k2 (Jha:2007)
     dmint_salt=0.08 # intrinsic scatter in SNIa luminosities for SALT2 (Conley:2011)
@@ -46,7 +50,6 @@ def plot_hubble_fig( fitter='both', showlcdm=False,
     iscp = np.where( hubbledat['survey']=='scp')
     igoods = np.where( hubbledat['survey']=='goods')
     icandels = np.where( hubbledat['survey']=='candels')
-    fig = plotsetup.halfpaperfig( )
     pl.clf()
     if fitter.lower()=='both':
         ax1 = fig.add_subplot(2,1,1)
@@ -63,14 +66,14 @@ def plot_hubble_fig( fitter='both', showlcdm=False,
         ax1.errorbar( z[iscp], dm_mlcs[iscp], dm_mlcs_err[iscp], ls=' ', marker='o', capsize=0, color=cp.lightgrey, ecolor=cp.darkgrey )
         ax1.errorbar( z[icandels], dm_mlcs[icandels], dm_mlcs_err[icandels], ls=' ', marker='^', capsize=0, color=cp.lightgrey, ecolor=cp.darkgrey )
         ax1.errorbar( zTomas, dmTomas_mlcs, dmerrTomas_mlcs, zerrTomas, marker='D',
-                      color=cp.teal, capsize=0, ls=' ')
+                      color=cp.lightblue, capsize=0, ls=' ')
 
     if fitter.lower()[:5] in ['both','salt'] :
         ax2.errorbar( z[igoods], dm_salt[igoods], dm_salt_err[igoods], ls=' ', marker='s', capsize=0, color=cp.lightgrey, ecolor=cp.darkgrey )
         ax2.errorbar( z[iscp], dm_salt[iscp], dm_salt_err[iscp], ls=' ', marker='o', capsize=0, color=cp.lightgrey, ecolor=cp.darkgrey )
         ax2.errorbar( z[icandels], dm_salt[icandels], dm_salt_err[icandels], ls=' ', marker='^', capsize=0, color=cp.lightgrey, ecolor=cp.darkgrey )
         ax2.errorbar( zTomas, dmTomas_salt, dmerrTomas_salt, zerrTomas, marker='D',
-                      color=cp.teal, capsize=0, ls=' ' )    #ax.text( 0.05,0.95, 'Riess et al. 2007', ha='left', va='top', color=cp.black, fontsize='small' , transform=ax.transAxes )
+                      color=cp.lightred, capsize=0, ls=' ' )    #ax.text( 0.05,0.95, 'Riess et al. 2007', ha='left', va='top', color=cp.black, fontsize='small' , transform=ax.transAxes )
 
     # ax1.set_xlabel( "Redshift")
     ax2.set_xlabel( "Redshift")
@@ -136,7 +139,7 @@ def plot_hubble_fig( fitter='both', showlcdm=False,
 
         ax.plot( [zTomas,zTomas], [dmTom+dmerrTom,intercept],
                  ls=':', color=color )
-        ax.plot(  [1.27,zTomas], [43.95,dmTom+deltam_mu/2.5],
+        ax.plot(  [1.27,zTomas], [43.95,dmTom],#+deltam_mu/3],
                   ls='-', lw=0.5, color=color )
 
         if showlcdm :
@@ -154,11 +157,15 @@ def plot_hubble_fig( fitter='both', showlcdm=False,
             ax.set_ylabel( "%s Dist. Mod."%fittername)
             ax.text( 1.20,43.75, mu_string, color=color, fontsize='small')
         else :
-            ax.text( 0.04, 0.92, 'Unlensed SNIa', color='0.3', fontsize='small',
+            ax.text( 0.04, 0.92, 'Unlensed SNIa', color='0.3',
+                     fontsize=('large' if presfig else 'small'),
                      ha='left', va='top',transform=ax.transAxes )
-            ax.text( 1.36, 44.05, 'SN Tomas', color=cp.teal,fontsize='small',
+            ax.text( 1.36, 44.05, 'SN Tomas', color=cp.teal,
+                     fontsize=('large' if presfig else 'small'),
                      ha='left', va='bottom')
-            ax.text( 1.16,43.65, mu_string, color=color, fontsize='small')
+            ax.text( 1.16,43.65, mu_string, color=color,
+                     fontsize=('large' if presfig else 'small'))
+
 
 
     # muTomas, muerrTomas = 44.1385, 0.0753
