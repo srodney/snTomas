@@ -33,27 +33,29 @@ is \change{$0.77\pm0.15$} magnitudes brighter than unlensed Type Ia
 SNe at similar redshift, implying a lensing magnification
 of \change{$\mu_{\rm obs}=2.03\pm0.29$}.  We compare this direct
 measurement of the magnification against predicted magnifications
-from 14 lens models, representing a broad range of
-methodologies and incorporating a variety of strong- and weak-lensing
-constraints.  The models are collectively fairly accurate: 6 of the
-models deliver median magnifications that are consistent with the
-measured $\mu$ to within the 1$\sigma$ uncertainties.  However, the
-models are systematically biased to higher values: \change{all but
-one} of the tested models yield a median magnification higher than the
-observed $\mu$, and \change{6 of the models are $\geq1.5\sigma$}
-above the measured magnification.  We evaluate possible causes for
-this mild bias, considering both modeling errors and
-misinterpretation of the SN data. Although we find no single
-explanation that can resolve this, we \change{ highlight several ways
-that lens models can deliver more realistic uncertainties, such as
-incorporating errors from assumed cosmological parameters and allowing
-greater flexibility in the form of the cluster mass distribution.  A
-more robust evaluation of systematic biases could be achieved with
-further cooperative lens model comparisons using a larger sample of
-lensed Type Ia SNe and cluster lensing simulations.}
+from \changeR{15 lens models developed by 8 independent groups},
+representing a broad range of methodologies and incorporating a
+variety of strong- and weak-lensing constraints.  The models are
+collectively fairly accurate: 8 of the models deliver median
+magnifications that are consistent with the measured $\mu$ to within
+the 1$\sigma$ uncertainties.  \changeR{However, the models exhibit a
+subtle systematic bias: all of the models that disagree with the SN by
+more than $1\sigma$ are {\it higher} than the measured value}
+and \change{6 of these models are $\geq1.5\sigma$} above the measured
+magnification.  We evaluate possible causes for this mild
+bias, \changeR{and reject explanations that invoke modeling errors or
+misinterpretation of the SN data. We conclude that -- at least for
+this single line of sight -- the most accurate models are those with
+(1) stringent quality cuts for strong-lensing constraints and (2)
+relatively flexible model design}. \change{A more robust evaluation of
+systematic biases could be achieved with further cooperative lens
+model comparisons using a larger sample of lensed Type Ia SNe as well
+as cluster lensing simulations.}
 \end{abstract}
 
-\keywords{ supernovae: general, supernovae: individual: HFF14Tom, galaxies: clusters: general, galaxies: clusters: individual: Abell 2744, gravitational lensing: strong, gravitational lensing: weak  }
+\keywords{ supernovae: general, supernovae: individual: HFF14Tom, 
+galaxies: clusters: general, galaxies: clusters: individual: Abell 2744, 
+gravitational lensing: strong, gravitational lensing: weak  }
 
 \section{Introduction}
 \label{sec:Introduction}
@@ -773,7 +775,10 @@ from the GOODS program are plotted as squares, those from the SCP
 survey are shown as circles, and the CANDELS objects are triangles.
 The distance modulus for each SN is derived from light curve fits
 using the MLCS2k2 fitter (top panel) and the SALT2 fitter (bottom
-panel).
+panel).  \changeR{Grey lines with shading show a linear fit to the
+unlensed control sample is shown, anchored at the redshift of
+SN \tomas, with fit parameters given at the top.  The derived
+magnification is reported at the bottom of each panel.}
 \label{fig:MagnificationMeasurement} }
 \end{center}
 \end{figure}
@@ -789,19 +794,24 @@ Before the Frontier Fields observations began, the Space Telescope
 Science Institute (STScI) issued a call for lens modeling teams to
 generate mass models of all 6 Frontier Field clusters, using a shared
 collection of all imaging and spectroscopic data available at the
-time.  In response to this opportunity, five teams generated eight
+time.  In response to this opportunity, five teams generated seven
 models for Abell 2744.  These models necessarily relied on
 pre-HFF data, and were required to be complete before the HFF program
 began, in order to enable the estimation of magnifications for any new
 lensed background sources revealed by the HFF imaging. An interactive
 web tool was created by D. Coe and hosted at STScI, to extract
 magnification estimates and uncertainties from each model for any
-given redshift and position.  In this work we also consider three
-additional models that were created later, taking advantage of new
+given redshift and position.  In this work we also consider 8
+additional models that were created later.  \changeR{Some of these are
+updates of the original models produced in response to the lens
+modeling call,  and some of them include new
 multiply-imaged galaxies discovered in the HFF imaging as well as new
-redshifts for lensed background galaxies.
+redshifts for lensed background galaxies.  Magnifications derived from
+several of these later models are also available on the interactive
+web tool hosted by STScI.  The full list of models and details on
+their construction are given in Table~\ref{tab:LensModels}.}
 
-\input{TABLE/magnifications}
+\input{TABLE/magnifications2}
 
 \begin{figure}
 \begin{center}
@@ -812,31 +822,33 @@ lens models. The vertical blue line shows the constraints from
 SN \tomas\ derived in Section~\ref{sec:DistanceAndMagnification} using the
 MLCS2k2 fitter, with a shaded region marking the total
 uncertainty. Markers with horizontal error bars show the median
-magnification and 68\%\ confidence region from each of the 14 lensing
+magnification and 68\%\ confidence region from each of the 15 lensing
 models.  Circles indicate models that use only strong-lensing
 constraints, while diamonds denote those that also incorporate
 weak-lensing measurements.  Models shown with open markers were
 constructed using only data available before the start of the Frontier
 Fields observations.  Filled markers indicate models that use
 additional input constraints, including new multiply imaged systems
-and redshifts.  The eight models shown in black at the top are from
+and redshifts.  Points with magenta outline indicate ``unblind''
+models, which were generated after the magnification of the SN was
+known. The eight models shown in black at the top are from
 the ``parametric'' family, and the six in green at the bottom are
 ``free-form.''  The grey dashed line marks the unweighted mean for the
-set of all models, at $\mu=2.53$.
+set of all models, at $\mu=2.5$.
 \label{fig:lensingtest} }
 \end{center}
 \end{figure}
 
-Table~\ref{tab:PredictedMagnifications} lists the 14 models,
-giving for each one the predicted magnification and uncertainty for a
-source at \change{$z=1.3457$} and at the position of \tomas.  These models
-represent a broad sampling of the techniques and assumptions that can
-be applied to the modeling of mass distributions in galaxy clusters. A
-rigorous comparison of these disparate lens modeling techniques is
-beyond the scope of this work. Table~\ref{tab:PredictedMagnifications}
-includes a brief description of each model, but for a complete
-discussion of the methodology the reader is referred to the listed
-references.
+\changeR{
+Table~\ref{tab:PredictedMagnifications} gives each model's predicted}
+magnification and uncertainty for a source at \change{$z=1.3457$} and
+at the position of \tomas.  These models represent a broad sampling of
+the techniques and assumptions that can be applied to the modeling of
+mass distributions in galaxy clusters. A rigorous comparison of these
+disparate lens modeling techniques is beyond the scope of this
+work. Table~\ref{tab:PredictedMagnifications} includes a brief
+description of each model, but for a complete discussion of the
+methodology the reader is referred to the listed references.
 
 In Figure~\ref{fig:lensingtest} the model predictions are plotted
 alongside the observed magnification of SN \tomas, derived in
@@ -844,8 +856,8 @@ Section~\ref{sec:DistanceAndMagnification}.  This comparison shows that these 14
 models are largely consistent with each other. Naively treating each
 model as an independent prediction for the magnification (and ignoring
 their quoted uncertainties), one would get a mean for the full sample
-of \change{$\mu=2.53\pm0.38$.  This is separated from the observed SN
-magnification by $\delta\mu/\mu=25\%$, which is just over a
+of \change{$\mu=2.5\pm0.4$.  This is separated from the observed SN
+magnification by $\delta\mu/\mu=23\%$, which is approximately a
 1$\sigma$ difference.}
 
 The models shown in Figure~\ref{fig:lensingtest} are separated along
@@ -854,7 +866,7 @@ parametric}\footnote{Although this nomenclature is becoming standard
 in the literature, it is somewhat misleading, as the pixels or grid
 cells in free-form models are effectively parameters as well. Perhaps
 ``simply-parameterized'' would be more accurate, though we adopt the
-more common usage here.}  models on top and six {\it free-form} models
+more common usage here.}  models on top and seven {\it free-form} models
 on the bottom.  Broadly speaking, the parametric models use
 parameterized density distributions to describe the arrangement of
 mass within the cluster, typically associating massive dark matter
@@ -874,53 +886,261 @@ iterated \citep[e.g.][]{Liesenborgs:2006,Merten:2009}.
 In general, free-form methods tend to explore the model parameter
 space more fully than parametric methods.  This is reflected in the
 size of the error-bars in Figure~\ref{fig:lensingtest}.  For example,
-the Williams model (using GRALE), which has the largest, and possibly the
-most realistic uncertainties is able to account for mass sheet
-degeneracy by introducing a free parameter in the reconstruction that
-represents an arbitrarily scaled mass sheet, with normalization to
-be chosen by the genetic algorithm.  More complex degeneracies are
-also accounted for in this model through the use of basis
+the Williams model (using GRALE), which has the largest uncertainties
+is able to account for mass sheet degeneracy by introducing a free
+parameter in the reconstruction that represents an arbitrarily scaled
+mass sheet, with normalization to be chosen by the genetic algorithm.
+More complex degeneracies are also accounted for in this model through
+the use of basis
 functions \citep{Liesenborgs:2006,Liesenborgs:2007,Mohammed:2014}
 
 Figure~\ref{fig:lensingtest} also separates the models based on the
 scope of input data constraints used.  Ten of the models rely only on
 strong-lensing constraints (plotted as circles), while the other four
 also use weak-lensing measurements (diamonds).  Nine of the models
-were constructed using only pre-HFF data (open symbols), while five
-others added new multiply-imaged systems and redshifts.
+were constructed using only pre-HFF data (open symbols), while six
+others added new multiply-imaged systems and redshifts (filled symbols).
+For twelve of these models the SN magnification qualifies as a true
+``blind test'', as they were completed before the SN \tomas\
+magnification measurement was known.  The remaining three models
+(Bradac-v2, Lam-v2, and Diego) are technically not blind, although
+none of these modelers used the SN magnification as a constraint, and
+the modelers did not have access to the final SN magnification value
+when constructing their model. 
 
 In spite of the great variety in input data and methodology, these
 lens models overall are delivering consistent and fairly accurate
-estimates of the magnification.  Six of the tested models
-(CATSv1, GLAFIC, Zitrin-NFW, Bradac(v2), Merten, Diego) report a median
-value that falls within the 1$\sigma$ uncertainty range of the
-measured magnification, and two of the free-form models (Williams,
-Diego) report uncertainties that overlap the central $\mu$ as measured
-from both of the SN light curve fitters.  Furthermore, the scatter
-amongst models provides a reasonable estimate of the magnification
-uncertainty.
+estimates of the magnification.  Seven of the tested models (CATS(v1),
+GLAFIC, Zitrin-NFW, Merten, Bradac(v2), Lam(v2), Diego) report a
+median value that falls within the 1$\sigma$ uncertainty range of the
+measured magnification, and three of the free-form models (Williams,
+Lam(v2), Diego) report uncertainties that overlap the central $\mu$ as
+measured from both of the SN light curve fitters.  Furthermore, the
+scatter amongst models provides a reasonable estimate of the
+magnification uncertainty.
 
 This is largely in agreement with the results
 of \citetalias{Patel:2014} and \citet{Nordin:2014}.  The fact that the
-model predictions are collectively within $2\sigma$ of the observed
+model predictions are collectively within $1\sigma$ of the observed
 magnification is especially encouraging for these Abell 2744
 models. This is a merging cluster with a complex mass distribution,
-and most of the models we are evaluating are preliminary products,
+and many of the models we are evaluating are preliminary products,
 generated quickly and without access to the rich data from the
 Frontier Fields program.
 
 However, beyond this first-order agreement, there is a small
-systematic bias apparent. All of the lens models \change{except one}
+systematic bias apparent. All but two of the lens models
 return median magnifications that are {\it higher} than the observed
 value, and \change{six of the models are discrepant by more than $1.5\sigma$.}
 It is important to emphasize that SN \tomas\ only samples a single
-sight-line through the cluster, so any conclusions to be drawn from
-this analysis are necessarily limited.  Nevertheless, a systematic
-shift common to all models is surprising, given the wide range of
+line of sight through the cluster, and this bias to higher
+magnifications is minor.  Nevertheless, a systematic
+shift of this nature is surprising, given the wide range of
 modeling strategies, input data, and physical assumptions represented
 by this set of models.  In the following subsections we examine
 possible explanations for this small but \change{nearly} universal
 bias.
+
+
+\subsection{Possible Errors in Supernova Interpretation}
+\label{sec:SupernovaErrors}
+
+\changeR{Before examining the lens models or the cluster, let us first
+consider whether we might have misinterpreted the data on the SN
+itself.}
+
+\subsubsection{Redshift Error}
+\label{sec:RedshiftError}
+
+If the redshift of the SN derived in Section~\ref{sec:Spectroscopy}
+were incorrect, then one would derive a different value for the
+magnification, both from the SN measurement and the lens model
+predictions.  Conceivably, this could resolve the tension between the
+measurement and the models.  It is often the case in SN surveys that
+redshifts are assigned based on a host galaxy association, typically
+inferred from the projected separation between the SN and nearby
+galaxies.  In this case the redshift \change{is strongly supported} by
+evidence from the SN
+itself: we find a consistent redshift from both the SN spectrum
+(Section~\ref{sec:SpecRedshift}) and the light curve
+Section~\ref{sec:PhotometricClassification}, which are both within the
+$1\sigma$ range of the photometric redshift for the nearest detected
+galaxy: $z=1.5\pm0.2$. This appears to be a solid and self-consistent
+picture, so the evidence strongly disfavors any redshift that is
+significantly different from $z=1.35$.
+
+We have adopted the \change{most precise redshift of $z=1.3457$ from
+the host galaxy as our baseline for the magnification comparison.  If
+instead we adopt the spectroscopic redshift from the SN itself
+($z=1.31$; Section~\ref{sec:SpecRedshift}) then we find no significant
+change in the inferred magnifications or in the suggestion of a small
+systematic bias.}
+
+
+\subsubsection{Foreground Dust and SN Color}
+\label{sec:ForegroundDust}
+
+All SN sight-lines must intersect some amount of foreground dust from
+the immediate circumstellar environment, the host galaxy, and the
+intergalactic medium (IGM). In the case of SN \tomas\ one might posit
+some dust extinction from the intra-cluster medium (ICM) of Abell
+2744, although measurements of rich clusters suggest that the ICM has
+only a negligible dust
+content \citep{Maoz:1995,Stickel:2002,Bai:2007}.  When fitting
+the \tomas\ light curve we account for dust by including corrections
+that modify the inferred luminosity distance based on the SN color.
+If after applying these dust corrections we are still {\it
+underestimating} the effect of dust along this sight-line, then the SN
+would appear more dim, the inferred distance modulus would be higher,
+and the measured magnification would be reduced -- consistent with the
+discrepancy we observe.
+
+In Section~\ref{sec:LightCurveFitting} we found that SN \tomas\ is on
+the blue end of the normal range of Type Ia SN colors.  With the SALT2
+fitter we measured a color parameter $c=-0.127\pm0.025$, and with
+MLCS2k2 we found the host galaxy dust extinction to be $A_{\rm
+V}=0.011\pm0.025$ magnitudes.  These colors are tightly constrained,
+as we are fitting to photometry that covers a rest-frame wavelength
+range from $\sim3500-7000$\AA\ and extends to $\sim$30 days past
+maximum brightness.  This leaves little room for the luminosity
+measurement to be biased by dust, as the dimming of \tomas\ would also
+necessarily be accompanied by some degree of reddening. 
+
+Nevertheless, one might suppose that a bias could be introduced if we
+have adopted incorrect values for the color correction parameter
+$\beta$ or extinction law $R_V$ in the SALT2 and MLCS2k2 fits,
+respectively.  The appropriate value to use for this color correction
+and how it affects inferences about the intrinsic scatter in Type Ia
+SN luminosities is a complex question that is beyond the scope of this
+work \citep[see
+e.g.][]{Marriner:2011,Chotard:2011,Kessler:2013,Scolnic:2014a}.
+However, we can already rule this out as a solution for the
+magnification discrepancy.  Our error on the \tomas\ distance modulus
+already includes an uncertainty in the extinction law and a related
+error to account for the intrinsic luminosity scatter. These are well
+vetted parameters, based on observations of $\sim500$ SNe extending
+to $z\sim1.5$ \citep{Sullivan:2011}.  Furthermore, there is no reason
+to propose that SN \tomas\ is uniquely affected by a peculiar type of
+dust.  Thus, any change in the color correction applied to SN \tomas\
+would require the same adjustment to be applied to the unlensed SNe at
+similar redshift that make up our comparison sample, largely negating
+the effect on the inferred magnification. 
+
+The traditional color corrections as formalized in SN light curve
+fitters are designed to account for a dust component that lies in the
+rest frame of the SN.  The inferred luminosity of a SN can also be
+affected by the presence of foreground dust with a different redshift
+and possibly a different reddening law \citep{Menard:2010b}.  However,
+the magnitude of such a bias is insufficient to account for the
+observed discrepancy, \citet{Menard:2010a} estimate the opacity of the
+universe as $\langle A_{V}\rangle\sim0.03$ mag up to $z=0.5$.  While
+this can have a measurable impact on precise cosmological constraints,
+it is far less than the 0.23 mag difference between the observed
+magnification of \tomas\ and the mean of the model predictions.  
+
+\changeG{
+Although the very blue color of SN \tomas\ is helpful to rule out dust
+as a possible explanation for the observed small systematic bias, it
+is possible that this very blue color is itself leading to a bias in
+the distance measurement.  \citet{Scolnic:2014b} measured a small bias
+in the SALT2 fitter for Type Ia SNe that have a color parameter
+derived from the light curve fit $c<-0.1$ (see, e.g., their Figure 10
+and Section 5.1). For \tomas\ we have measured $c=-0.13$, which would
+correspond to a bias of roughly $+0.05$ mag in the SALT2 distance
+measurement.  If we were to apply a $-0.05$ mag correction to the
+distance modulus from the SALT2 fit, then this would increase the
+inferred magnification to $\mu_{\rm SALT2}=2.08\pm0.36$.  This would
+still be consistent with the mild tension apparent from the MLCS2k2
+fit, though with a decrease in significance. 
+}
+
+\subsubsection{Misclassification}
+\label{sec:Misclassification}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=\columnwidth]{FIG/snTomas_sn06bt_colorcurves}
+\caption{ 
+Comparing \tomas\ observations to the color curves of SN 2006bt and a
+normal Type Ia SN model. Grey points show the observed colors of
+SN \tomas, k-corrected to rest-frame UBVr bands. Solid orange lines
+show the observed color curves for the peculiar Type Ia SN
+2006bt. Dashed blue lines show the color curves for a normal Type Ia
+SN, derived from the SALT2 model with a color parameter $c=-0.13$, set
+to match the best-fit color for SN \tomas.
+\label{fig:colorcomparison} }
+\end{center}
+\end{figure}
+
+Is it possible that \tomas\ is an example of a peculiar stellar
+explosion that does not follow the relationship between light curve
+shape and luminosity observed in normal Type Ia SNe?  In
+Sections~\ref{sec:SNID} and \ref{sec:PhotometricClassification} we
+classified SN \tomas\ as a normal Type Ia SN based on both the
+spectroscopic and photometric evidence.  This rules out the
+possibility that \tomas\ belongs to a different class of normal SN
+explosions (Type Ib, Ic, or II). In
+Section \ref{sec:LightCurveFitting} we fit the \tomas\ light curve to
+determine a luminosity distance and found that the light curve shape
+and color are consistent with a Type Ia SN of average light curve
+width, with minimal dust extinction.  This excludes the possibility
+that \tomas\ is one of the sub-class of faint and fast-declining Type
+Ia SNe like SN 1991bg.
+
+One remaining possibility is that \tomas\ could be part of a rare
+sub-category of peculiar Type Ia SNe that masquerade as their normal
+cousins, epitomized by the prototype SN 2006bt \citep{Foley:2010}.
+These objects appear to have a normal Type Ia light curve shape,
+except for the absence of a secondary maximum or ``shoulder'' in
+near-IR bands.  The reddest filter available for the \tomas\ light
+curve is F160W, which has an effective rest-frame wavelength of
+6623\AA\ at $z=1.31$, making it close to the rest-frame {\it r} band.
+Although the near-IR shoulder is more prominent in the rest-frame {\it
+i} band, we can see in Figure~\ref{fig:LightCurveFits} that the F160W
+light curve may suggest a weak or delayed near-IR shoulder.  The
+second-to-last observation in F160W is $\sim1\sigma$ lower than
+predicted by the best-fit SALT2 and MLCS2k2 models. This is tenuous
+evidence, but it would be consistent with a 2006bt-like light curve.
+
+In this case, however, the color of SN \tomas\ can rule out a
+classification as a 2006bt-like object.  All members of this peculiar
+sub-class exhibit very red colors across all optical and near-IR
+bands, consistent with a very cool photosphere \citep{Foley:2010}.
+Figure~\ref{fig:colorcomparison} shows that \tomas\ is bluer than the
+SN 2006bt prototype by at least 0.25 magnitudes in every color. The
+observed \tomas\ colors are fully consistent with a normal, blue
+Type Ia SN (the SALT2 model is shown).
+
+
+\begin{figure*}
+\begin{center}
+\includegraphics[width=\textwidth]{FIG/tension}
+\caption{ \label{fig:Nspecz}
+\changeR{
+The model tension as a function of strong-lensing constraints. The y
+axis in both panels marks the number of standard deviations in
+discrepancy between the measured SN magnification and the prediction
+from each lens model. The left panel plots this tension against the
+total number of multiply imaged systems used, and the right panel
+plots the fraction of
+multiply-imaged systems that have a spectroscopic redshift
+constraint.  Marker shapes and colors are the same as in
+Figure~\ref{fig:LensingTest}.}
+}
+\end{center}
+\end{figure*}
+
+
+\subsection{Possible Error in Lens Model Construction}
+\label{sec:LensModelErrors}
+
+\changeR{Having now ruled out misinterpetations of the SN
+data, we are left to seek an explanation for the small systematic bias
+by scrutinizing the lens models.  TODO: note that 
+the most successful models are those that use a
+stringent criteria for strong lensing constraints, which results in a
+larger fraction that have spectroscopic redshifts. 
+}
 
 \subsection{Nearby Cluster Member Galaxy}
 \label{sec:NearbyClusterMemberGalaxy}
@@ -1098,167 +1318,6 @@ in the uncertainties (the most drastic change seen in the analysis
 of \citep{Bayliss:2015}) would still leave the most extreme outlier
 (CATS(v2)) discrepant by $2.9\sigma$.  }
 
-\subsection{Redshift Error}
-\label{sec:RedshiftError}
-
-If the redshift of the SN derived in Section~\ref{sec:Spectroscopy}
-were incorrect, then one would derive a different value for the
-magnification, both from the SN measurement and the lens model
-predictions.  Conceivably, this could resolve the tension between the
-measurement and the models.  It is often the case in SN surveys that
-redshifts are assigned based on a host galaxy association, typically
-inferred from the projected separation between the SN and nearby
-galaxies.  In this case the redshift evidence \change{is strongly supported} with evidence from the SN
-itself: we find a consistent redshift from both the SN spectrum
-(Section~\ref{sec:SpecRedshift}) and the light curve
-Section~\ref{sec:PhotometricClassification}, which are both within the
-$1\sigma$ range of the photometric redshift for the nearest detected
-galaxy: $z=1.5\pm0.2$. This appears to be a solid and self-consistent
-picture, so the evidence strongly disfavors any redshift that is
-significantly different from $z=1.35$.
-
-We have adopted the \change{most precise redshift of $z=1.3457$ from
-the host galaxy as our baseline for the magnification comparison.  If
-instead we adopt the spectroscopic redshift from the SN itself
-($z=1.31$; Section~\ref{sec:SpecRedshift}) then we find no significant
-change in the inferred magnifications or in the suggestion of a small
-systematic bias.}
-
-
-\subsection{Foreground Dust and SN Color}
-\label{sec:ForegroundDust}
-
-All SN sight-lines must intersect some amount of foreground dust from
-the immediate circumstellar environment, the host galaxy, and the
-intergalactic medium (IGM). In the case of SN \tomas\ one might posit
-some dust extinction from the intra-cluster medium (ICM) of Abell
-2744, although measurements of rich clusters suggest that the ICM has
-only a negligible dust
-content \citep{Maoz:1995,Stickel:2002,Bai:2007}.  When fitting
-the \tomas\ light curve we account for dust by including corrections
-that modify the inferred luminosity distance based on the SN color.
-If after applying these dust corrections we are still {\it
-underestimating} the effect of dust along this sight-line, then the SN
-would appear more dim, the inferred distance modulus would be higher,
-and the measured magnification would be reduced -- consistent with the
-discrepancy we observe.
-
-In Section~\ref{sec:LightCurveFitting} we found that SN \tomas\ is on
-the blue end of the normal range of Type Ia SN colors.  With the SALT2
-fitter we measured a color parameter $c=-0.127\pm0.025$, and with
-MLCS2k2 we found the host galaxy dust extinction to be $A_{\rm
-V}=0.011\pm0.025$ magnitudes.  These colors are tightly constrained,
-as we are fitting to photometry that covers a rest-frame wavelength
-range from $\sim3500-7000$\AA\ and extends to $\sim$30 days past
-maximum brightness.  This leaves little room for the luminosity
-measurement to be biased by dust, as the dimming of \tomas\ would also
-necessarily be accompanied by some degree of reddening. 
-
-Nevertheless, one might suppose that a bias could be introduced if we
-have adopted incorrect values for the color correction parameter
-$\beta$ or extinction law $R_V$ in the SALT2 and MLCS2k2 fits,
-respectively.  The appropriate value to use for this color correction
-and how it affects inferences about the intrinsic scatter in Type Ia
-SN luminosities is a complex question that is beyond the scope of this
-work \citep[see
-e.g.][]{Marriner:2011,Chotard:2011,Kessler:2013,Scolnic:2014a}.
-However, we can already rule this out as a solution for the
-magnification discrepancy.  Our error on the \tomas\ distance modulus
-already includes an uncertainty in the extinction law and a related
-error to account for the intrinsic luminosity scatter. These are well
-vetted parameters, based on observations of $\sim500$ SNe extending
-to $z\sim1.5$ \citep{Sullivan:2011}.  Furthermore, there is no reason
-to propose that SN \tomas\ is uniquely affected by a peculiar type of
-dust.  Thus, any change in the color correction applied to SN \tomas\
-would require the same adjustment to be applied to the unlensed SNe at
-similar redshift that make up our comparison sample, largely negating
-the effect on the inferred magnification. 
-
-The traditional color corrections as formalized in SN light curve
-fitters are designed to account for a dust component that lies in the
-rest frame of the SN.  The inferred luminosity of a SN can also be
-affected by the presence of foreground dust with a different redshift
-and possibly a different reddening law \citep{Menard:2010b}.  However,
-the magnitude of such a bias is insufficient to account for the
-observed discrepancy, \citet{Menard:2010a} estimate the opacity of the
-universe as $\langle A_{V}\rangle\sim0.03$ mag up to $z=0.5$.  While
-this can have a measurable impact on precise cosmological constraints,
-it is far less than the 0.23 mag difference between the observed
-magnification of \tomas\ and the mean of the model predictions.  
-
-\changeG{
-Although the very blue color of SN \tomas\ is helpful to rule out dust
-as a possible explanation for the observed small systematic bias, it
-is possible that this very blue color is itself leading to a bias in
-the distance measurement.  \citet{Scolnic:2014b} measured a small bias
-in the SALT2 fitter for Type Ia SNe that have a color parameter
-derived from the light curve fit $c<-0.1$ (see, e.g., their Figure 10
-and Section 5.1). For \tomas\ we have measured $c=-0.13$, which would
-correspond to a bias of roughly $+0.05$ mag in the SALT2 distance
-measurement.  If we were to apply a $-0.05$ mag correction to the
-distance modulus from the SALT2 fit, then this would increase the
-inferred magnification to $\mu_{\rm SALT2}=2.08\pm0.36$.  This would
-still be consistent with the mild tension apparent from the MLCS2k2
-fit, though with a decrease in significance. 
-}
-
-\subsection{Misclassification}
-\label{sec:Misclassification}
-
-\begin{figure}
-\begin{center}
-\includegraphics[width=\columnwidth]{FIG/snTomas_sn06bt_colorcurves}
-\caption{ 
-Comparing \tomas\ observations to the color curves of SN 2006bt and a
-normal Type Ia SN model. Grey points show the observed colors of
-SN \tomas, k-corrected to rest-frame UBVr bands. Solid orange lines
-show the observed color curves for the peculiar Type Ia SN
-2006bt. Dashed blue lines show the color curves for a normal Type Ia
-SN, derived from the SALT2 model with a color parameter $c=-0.13$, set
-to match the best-fit color for SN \tomas.
-\label{fig:colorcomparison} }
-\end{center}
-\end{figure}
-
-Is it possible that \tomas\ is an example of a peculiar stellar
-explosion that does not follow the relationship between light curve
-shape and luminosity observed in normal Type Ia SNe?  In
-Sections~\ref{sec:SNID} and \ref{sec:PhotometricClassification} we
-classified SN \tomas\ as a normal Type Ia SN based on both the
-spectroscopic and photometric evidence.  This rules out the
-possibility that \tomas\ belongs to a different class of normal SN
-explosions (Type Ib, Ic, or II). In
-Section \ref{sec:LightCurveFitting} we fit the \tomas\ light curve to
-determine a luminosity distance and found that the light curve shape
-and color are consistent with a Type Ia SN of average light curve
-width, with minimal dust extinction.  This excludes the possibility
-that \tomas\ is one of the sub-class of faint and fast-declining Type
-Ia SNe like SN 1991bg.
-
-One remaining possibility is that \tomas\ could be part of a rare
-sub-category of peculiar Type Ia SNe that masquerade as their normal
-cousins, epitomized by the prototype SN 2006bt \citep{Foley:2010}.
-These objects appear to have a normal Type Ia light curve shape,
-except for the absence of a secondary maximum or ``shoulder'' in
-near-IR bands.  The reddest filter available for the \tomas\ light
-curve is F160W, which has an effective rest-frame wavelength of
-6623\AA\ at $z=1.31$, making it close to the rest-frame {\it r} band.
-Although the near-IR shoulder is more prominent in the rest-frame {\it
-i} band, we can see in Figure~\ref{fig:LightCurveFits} that the F160W
-light curve may suggest a weak or delayed near-IR shoulder.  The
-second-to-last observation in F160W is $\sim1\sigma$ lower than
-predicted by the best-fit SALT2 and MLCS2k2 models. This is tenuous
-evidence, but it would be consistent with a 2006bt-like light curve.
-
-
-In this case, however, the color of SN \tomas\ can rule out a
-classification as a 2006bt-like object.  All members of this peculiar
-sub-class exhibit very red colors across all optical and near-IR
-bands, consistent with a very cool photosphere \citep{Foley:2010}.
-Figure~\ref{fig:colorcomparison} shows that \tomas\ is bluer than the
-SN 2006bt prototype by at least 0.25 magnitudes in every color. The
-observed \tomas\ colors are fully consistent with a normal, blue
-Type Ia SN (the SALT2 model is shown).
 
 
 \section{Summary and Conclusions}
@@ -1486,5 +1545,6 @@ HST-HF-51334.01-A awarded by STScI and operated by AURA.
 \bibliographystyle{apj}
 \bibliography{bibdesk}
 
+%\input{TABLE/magnifications}
 \end{document}
 

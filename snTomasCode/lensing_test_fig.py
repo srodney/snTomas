@@ -3,7 +3,8 @@
 # The lensing comparison figure
 import numpy as np
 
-def mkLensingTestFig( show2snfits=False, showlegend=False, presfig=False ):
+def mkLensingTestFig( show2snfits=False, showlegend=False, presfig=False,
+                      labelvalues=False ):
     from matplotlib import pyplot as pl
     from matplotlib.patches import FancyArrowPatch
     from pytools import plotsetup, colorpalette as cp
@@ -17,13 +18,11 @@ def mkLensingTestFig( show2snfits=False, showlegend=False, presfig=False ):
     muSNsalterr = 0.38
 
     if presfig :
-        fig = plotsetup.presfig( figsize=[12,8])
-        labelvalues=True
+        fig = plotsetup.presfig( figsize=[8,12])
         pl.clf()
         ax1 = pl.axes( [0.01,0.14,0.67,0.83] )
         ms=15
     else :
-        labelvalues=False
         fig = plotsetup.fullpaperfig( figsize=[4,5])
         ms=8
         pl.clf()
@@ -57,6 +56,12 @@ def mkLensingTestFig( show2snfits=False, showlegend=False, presfig=False ):
             marker='D'
         else:
             marker='o'
+        if row['postSN']:
+            mec='magenta'
+            mew=ms/7.
+        else :
+            mec=color
+            mew=ms/8.
 
         #ax1.plot( best, y, marker='x', ms=ms, color=color,
         #          zorder=100, label='_nolegend_' )
@@ -64,13 +69,14 @@ def mkLensingTestFig( show2snfits=False, showlegend=False, presfig=False ):
             # make an arrow for the really long williams error
             errplus = 3.6-med
             ax1.errorbar( med, y, yerr=None, xerr=[[0],[errplus]],
-                          marker=None, capsize=0.6*ms, color=color,
-                          xlolims=[True], zorder=10, label='_nolegend_' )
+                          marker=None, capsize=0.6*ms, color=color, mec=mec,
+                          ms=ms, mew=mew, xlolims=[True], zorder=10,
+                          label='_nolegend_' )
         ax1.errorbar( med, y, yerr=None,
-                             xerr=[[abs(errminus)],[errplus]],
-                             marker=marker, mfc=mfc, mec=color, ms=ms,
-                             capsize=1, color=color, zorder=10,
-                             label='_nolegend_' )
+                      xerr=[[abs(errminus)],[errplus]],
+                      marker=marker, mfc=mfc, mec=mec, mew=mew, ms=ms,
+                      capsize=1, color=color, zorder=10,
+                      label='_nolegend_' )
         print( "%s discrepancy = %.2f sigma"%(model,(med-muSNmlcs)/np.sqrt(errminus**2+muSNmlcserr**2)))
         if labelvalues:
             label = '%s: $%.2f^{%+.2f}_{%+.2f}$'%( model, med, errplus, errminus )
@@ -125,17 +131,19 @@ def mkLensingTestFig( show2snfits=False, showlegend=False, presfig=False ):
         if showlegend=='top':
             axleg = pl.axes([0.5,0.87,0.3,0.1], frameon=True )
         else :
-            axleg = pl.axes([0.68,0.02,0.29,0.11], frameon=True )
+            axleg = pl.axes([0.68,0.02,0.29,0.14], frameon=True )
 
-        SLpre    = axleg.plot(0,1,marker='o',mfc='w',mec='0.5',ls=' ',ms=ms,label='strong')
-        SLWLpre  = axleg.plot(0,0,marker='D',mfc='w',mec='0.5',ls=' ',ms=ms,label='str+wk')
-        SLpost   = axleg.plot(1,1,marker='o',mfc='k',mec='0.5',ls=' ',ms=ms,label='strong')
-        SLWLpost = axleg.plot(1,0,marker='D',mfc='k',mec='0.5',ls=' ',ms=ms,label='str+wk')
-        axleg.text( -0.5, 1.5, 'pre/post-HFF', ha='left',va='bottom' )
-        axleg.text( 1.5, 1.0, 'strong', va='center' )
-        axleg.text( 1.5, 0.0, 'str+wk', va='center' )
+        SLpre    = axleg.plot(0,2,marker='o',mfc='w',mec='0.5',ls=' ',ms=ms,label='strong')
+        SLWLpre  = axleg.plot(0,1,marker='D',mfc='w',mec='0.5',ls=' ',ms=ms,label='str+wk')
+        SLpost   = axleg.plot(1,2,marker='o',mfc='k',mec='0.5',ls=' ',ms=ms,label='strong')
+        SLWLpost = axleg.plot(1,1,marker='D',mfc='k',mec='0.5',ls=' ',ms=ms,label='str+wk')
+        unblind  = axleg.plot(0.5,0,marker='s',mfc='w',mec='magenta',ls=' ',ms=ms,label='unblind')
+        axleg.text( -0.5, 2.5, 'pre/post-HFF', ha='left',va='bottom' )
+        axleg.text( 1.5, 2.0, 'strong', va='center' )
+        axleg.text( 1.5, 1.0, 'str+wk', va='center' )
+        axleg.text( 1.5, 0.0, 'unblind', va='center' )
         axleg.set_xlim(-0.7,3.4)
-        axleg.set_ylim(-0.6,2.7)
+        axleg.set_ylim(-0.6,3.7)
         axleg.xaxis.set_ticks([])
         axleg.yaxis.set_ticks([])
 
@@ -147,3 +155,78 @@ def mkLensingTestFig( show2snfits=False, showlegend=False, presfig=False ):
     ax1.xaxis.set_ticks_position('bottom')
     ax1.set_xlabel(r'Lensing Magnification, $\mu$')
     pl.draw()
+
+
+def mkTensionFig(presfig=False):
+    from matplotlib import ticker,pyplot as pl, rcParams
+    from pytools import plotsetup
+    from astropy.io import ascii
+
+    muSNmlcs = 2.03
+    muSNmlcserr = 0.29
+    muSNsalt = 1.99
+    muSNsalterr = 0.38
+
+    lensdatfile = 'snTomasCode/data/lensing/lensing_medians.dat'
+    lensingdat = ascii.read( lensdatfile, format='commented_header',
+                             header_start=-1, data_start=0 )
+
+    if presfig :
+        fig = plotsetup.presfig( wide=True )
+        fig.subplots_adjust( wspace=0, bottom=0.17, left=0.1, right=0.95, top=0.95)
+        ms=15
+        rcParams['axes.labelsize']=26
+    else :
+        fig = plotsetup.fullpaperfig()
+        fig.subplots_adjust( wspace=0, bottom=0.17, left=0.08, right=0.95, top=0.95)
+        ms=8
+    fig.clf()
+    ax1 = pl.subplot(1,2,1)
+    ax2 = pl.subplot(1,2,2, sharey=ax1)
+
+    for row in lensingdat:
+        color = row['parametric'] and 'k' or 'g'
+        mfc = row['postFF'] and color or 'w'
+        model = row['model']
+        best = row['best']
+        med = row['med']
+        errplus = row['med+']-med
+        errminus = row['med-']-med
+        if row['strong+weak']:
+            marker='D'
+        else:
+            marker='o'
+        if row['postSN']:
+            mec='magenta'
+            mew=ms/7.
+        else :
+            mec=color
+            mew=ms/8.
+        specfrac = row['nzSpec']/float(row['nSys'])
+        nsys = row['nSys']
+        tension = (med-muSNmlcs)/np.sqrt(errminus**2+muSNmlcserr**2)
+
+        ax1.plot( nsys, tension, ls=' ', alpha=0.8,
+                 marker=marker, mfc=mfc, mec=mec, mew=mew, ms=ms,
+                 color=color )
+        ax2.plot( specfrac, tension, ls=' ', alpha=0.8,
+                 marker=marker, mfc=mfc, mec=mec, mew=mew, ms=ms,
+                 color=color )
+    ax1.axhline(0,ls='--',color='0.5')
+    ax2.axhline(0,ls='--',color='0.5')
+    ax1.set_ylabel('Tension with SN ($\sigma$)')
+    ax1.set_xlabel('\# multiply imaged systems')
+    ax2.set_xlabel('Fraction with spec-z')
+    ax1.set_ylim(-0.9,5.1)
+    ax1.set_xlim(1,55)
+    ax2.set_xlim(0.01,0.65)
+    ax1.yaxis.set_major_locator( ticker.MultipleLocator( 1 ) )
+    ax1.yaxis.set_minor_locator( ticker.MultipleLocator( 0.25 ) )
+    ax1.xaxis.set_major_locator( ticker.MultipleLocator( 10 ) )
+    ax1.xaxis.set_minor_locator( ticker.MultipleLocator( 2 ) )
+    ax2.xaxis.set_major_locator( ticker.MultipleLocator( 0.2 ) )
+    ax2.xaxis.set_minor_locator( ticker.MultipleLocator( 0.05 ) )
+    pl.setp(ax2.get_yticklabels(), visible=False)
+
+    pl.draw()
+
