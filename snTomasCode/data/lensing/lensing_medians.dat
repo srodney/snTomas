@@ -20,7 +20,7 @@
 # model         best  med   med-  med+   postFF  parametric  strong+weak  postSN nSys  nIm   nzSpec nzPhot
 CATS(v1)        2.28  2.29  2.25  2.34     0          1           0         0    17     60     2     14
 CATS(v1sw)     -1.0   2.62  2.44  2.80     0          1           1         0    17     60     2     14
-CATS(v2)       -1.0   3.42  3.27  3.58     1          1           0         0    50    151     4     0 
+CATS(v2)       -1.0   3.42  3.27  3.58     1          1           0         0    50    151     4     1 
 GLAFIC          2.34  2.29  2.19  2.37     1          1           0         0    24     67     3     12
 Sharon(v1)      2.56  2.60  2.44  2.78     0          1           0         0    17     60     2     14
 Sharon(v2)      2.74  2.59  2.42  2.85     0          1           0         0    15     47     3     11
