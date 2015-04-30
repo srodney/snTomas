@@ -45,12 +45,12 @@ and \change{6 of these models are $\geq1.5\sigma$} above the measured
 magnification.  We evaluate possible causes for this mild
 bias, \changeR{and reject explanations that invoke modeling errors or
 misinterpretation of the SN data. We conclude that -- at least for
-this single line of sight -- the most accurate models are those with
-(1) stringent quality cuts for strong-lensing constraints and (2)
-relatively flexible model design}. \change{A more robust evaluation of
-systematic biases could be achieved with further cooperative lens
-model comparisons using a larger sample of lensed Type Ia SNe as well
-as cluster lensing simulations.}
+this cluster and this line of sight -- the most accurate models are
+those that employ stringent quality cuts for strong-lensing
+constraints.} \change{A more robust evaluation of systematic biases
+could be achieved with further cooperative lens model comparisons
+using a larger sample of lensed Type Ia SNe as well as cluster lensing
+simulations.}
 \end{abstract}
 
 \keywords{ supernovae: general, supernovae: individual: HFF14Tom, 
@@ -835,66 +835,64 @@ known. The eight models shown in black at the top are from
 the ``parametric'' family, and the six in green at the bottom are
 ``free-form.''  The grey dashed line marks the unweighted mean for the
 set of all models, at $\mu=2.5$.
-\label{fig:lensingtest} }
+\label{fig:LensingTest} }
 \end{center}
 \end{figure}
 
-\changeR{
-Table~\ref{tab:PredictedMagnifications} gives each model's predicted}
+Table~\ref{tab:PredictedMagnifications} gives each model's predicted
 magnification and uncertainty for a source at \change{$z=1.3457$} and
 at the position of \tomas.  These models represent a broad sampling of
 the techniques and assumptions that can be applied to the modeling of
-mass distributions in galaxy clusters. A rigorous comparison of these
+mass distributions in galaxy clusters.  The first eight models in this
+table are so-called {\it parametric}\footnote{Although this
+nomenclature is becoming standard in the literature, it is somewhat
+misleading, as the pixels or grid cells in free-form models are
+effectively parameters as well. Perhaps ``simply-parameterized'' would
+be more accurate, though we adopt the more common usage here.}
+models, and the bottom seven are {\it free-form} models.  Broadly
+speaking, the parametric models use parameterized density
+distributions to describe the arrangement of mass within the cluster,
+typically associating massive dark matter halos with the positions of
+bright cluster member galaxies. Therefore, parametric models rely (to
+varying degrees) on the assumption that the cluster's dark matter can
+be described by analytic forms such as NFW halos \citep{Navarro:1997},
+or pseudo isothermal elliptical mass
+distributions \citep[PIEMD][]{Kassiola:1993}.  Free-form models divide
+the cluster into a grid, generally using a multi-scale grid to get
+better sampling in denser regions. Each grid cell is assigned a mass
+or a potential, and then the mass values are iteratively refined to
+match the observed lensing constraints. In some cases an adaptive grid
+is used so that the grid spacing itself can also be modified as the
+model is iterated \citep[e.g.][]{Liesenborgs:2006,Merten:2009}.  
+A more rigorous comparison of these
 disparate lens modeling techniques is beyond the scope of this
-work. Table~\ref{tab:PredictedMagnifications} includes a brief
-description of each model, but for a complete discussion of the
-methodology the reader is referred to the listed references.
+work.  For a complete discussion of each model's
+methodology, the reader is directed to the listed references.
 
-In Figure~\ref{fig:lensingtest} the model predictions are plotted
+
+In Figure~\ref{fig:LensingTest} the model predictions are plotted
 alongside the observed magnification of SN \tomas, derived in
-Section~\ref{sec:DistanceAndMagnification}.  This comparison shows that these 14
-models are largely consistent with each other. Naively treating each
-model as an independent prediction for the magnification (and ignoring
-their quoted uncertainties), one would get a mean for the full sample
-of \change{$\mu=2.5\pm0.4$.  This is separated from the observed SN
-magnification by $\delta\mu/\mu=23\%$, which is approximately a
-1$\sigma$ difference.}
-
-The models shown in Figure~\ref{fig:lensingtest} are separated along
-the $y$ direction into two broad classes, with eight so-called {\it
-parametric}\footnote{Although this nomenclature is becoming standard
-in the literature, it is somewhat misleading, as the pixels or grid
-cells in free-form models are effectively parameters as well. Perhaps
-``simply-parameterized'' would be more accurate, though we adopt the
-more common usage here.}  models on top and seven {\it free-form} models
-on the bottom.  Broadly speaking, the parametric models use
-parameterized density distributions to describe the arrangement of
-mass within the cluster, typically associating massive dark matter
-halos with the positions of bright cluster member galaxies. Therefore,
-parametric models rely (to varying degrees) on the assumption that the
-cluster's dark matter can be described by analytic forms such as NFW
-halos \citep{Navarro:1997}, or pseudo isothermal elliptical mass
-distributions \citep{Kassiola:1993}.  Free-form models divide the
-cluster into a grid, generally using a
-multi-scale grid to get better sampling in denser regions. Each grid cell
-is assigned a mass or a potential, and then the mass values are
-iteratively refined to match the observed lensing
-constraints. In some cases an adaptive grid is used so
-that the grid spacing itself can also be modified as the model is
-iterated \citep[e.g.][]{Liesenborgs:2006,Merten:2009}.
+Section~\ref{sec:DistanceAndMagnification}.  To first order, this
+comparison shows that these 15 models are largely consistent with each
+other and with the observed magnification of SN \tomas. Naively
+treating each model as an independent prediction for the magnification
+(and ignoring their quoted uncertainties), one would get a mean for
+the full sample of \change{$\mu=2.5\pm0.4$.  This is separated from
+the observed SN magnification by $\delta\mu/\mu=23\%$, which is
+approximately a 1$\sigma$ difference.}
 
 In general, free-form methods tend to explore the model parameter
 space more fully than parametric methods.  This is reflected in the
-size of the error-bars in Figure~\ref{fig:lensingtest}.  For example,
-the Williams model (using GRALE), which has the largest uncertainties
-is able to account for mass sheet degeneracy by introducing a free
-parameter in the reconstruction that represents an arbitrarily scaled
-mass sheet, with normalization to be chosen by the genetic algorithm.
-More complex degeneracies are also accounted for in this model through
-the use of basis
+size of the error-bars in Figure~\ref{fig:LensingTest}.  For example,
+the Williams model (using GRALE) has the largest uncertainties, in
+part because it accounts for mass sheet degeneracy by introducing a
+free parameter in the reconstruction that represents an arbitrarily
+scaled mass sheet, with normalization to be chosen by the genetic
+algorithm.  More complex degeneracies are also accounted for in this
+model through the use of basis
 functions \citep{Liesenborgs:2006,Liesenborgs:2007,Mohammed:2014}
 
-Figure~\ref{fig:lensingtest} also separates the models based on the
+Figure~\ref{fig:LensingTest} also separates the models based on the
 scope of input data constraints used.  Ten of the models rely only on
 strong-lensing constraints (plotted as circles), while the other four
 also use weak-lensing measurements (diamonds).  Nine of the models
@@ -939,15 +937,14 @@ shift of this nature is surprising, given the wide range of
 modeling strategies, input data, and physical assumptions represented
 by this set of models.  In the following subsections we examine
 possible explanations for this small but \change{nearly} universal
-bias.
+bias.  \changeR{We first consider whether a misinterpretation of the data on the SN
+itself can account for the observed systematic bias, and then 
+ examine the lens models.}
 
 
-\subsection{Possible Errors in Supernova Interpretation}
-\label{sec:SupernovaErrors}
 
-\changeR{Before examining the lens models or the cluster, let us first
-consider whether we might have misinterpreted the data on the SN
-itself.}
+\subsection{Possible Errors in Supernova Analysis}
+\label{sec:SupernovaError}
 
 \subsubsection{Redshift Error}
 \label{sec:RedshiftError}
@@ -1112,6 +1109,107 @@ observed \tomas\ colors are fully consistent with a normal, blue
 Type Ia SN (the SALT2 model is shown).
 
 
+
+\subsection{Possible Errors in Lens Modeling}
+\label{sec:LensModelComparison}
+
+\changeR{
+Having now ruled out misinterpetations of the SN data, we are left to
+seek an explanation for the mild tension by scrutinizing the lens
+models.  Here we evaluate four possible sources for a systematic bias to
+appear in the lens models.
+}
+
+\subsubsection{Cosmic Weak Lensing}
+\changeR{ 
+In addition to the dominant gravitational lensing from the foreground
+cluster, a distant source like SN \tomas\ will also be subject to the
+cumulative weak lensing effects due to uncorrelated large scale
+structure along the line of sight, sometimes called ``Cosmic Weak
+Lensing'' \citep[CWL;][]{Wong:2011,Host:2012,Bayliss:2014,McCully:2014,DAloisio:2014}.
+This CWL effect is most important for very high redshift sources
+($z>5$), which have a much longer path length over which to encounter
+large scale structure and for highly magnified sources very near to
+the cluster lensing critical curve (because CWL can perturb the
+position of the critical curve).  For SN \tomas\ at the modest
+redshift of $z=1.35$ and far from the critical curve, CWL should
+increase the scatter in the lensing magnification at a level much less
+than 10\% \citep{DAloisio:2014}.  The CWL effect is therefore unable
+to account for the observed discrepancy of $\sim23$\% by
+itself.
+} 
+
+\subsubsection{Nearby Cluster Member}
+\changeR{
+A component of the Abell 2744 lens that is particularly relevant to SN \tomas\ is the cluster member
+galaxy that lies just 5\farcs8 north of the SN position (see
+Figure~\ref{fig:DiscoveryImage}).  If the mass-to-light ratio or the
+profile of the dark matter halo for this galaxy were significantly
+different from other cluster member galaxies, then its
+proximity to the SN sight-line might drive a bias in the magnification.
+We tested this hypothesis using the CATS(v2) model by allowing the mass
+of the nearby cluster member galaxy to vary as a free parameter in the
+model. We found that the change in the SN \tomas\ magnification
+prediction was less than $\Delta\mu=0.1$.  This additional dispersion
+is already included in the uncertainties quoted for that model in
+Table~\ref{tab:PredictedMagnifications} and
+Figure~\ref{fig:LensingTest}.  Furthermore, an erroneous M/L
+value for the nearby cluster member galaxy could not explain the
+systematic shift of all lens models, because some do not incorporate
+cluster member galaxies into their constraints at all (the free-form
+Bradac, Williams and Merten models).
+}
+
+\subsubsection{Cosmological Parameter Uncertainty}
+\changeR{
+Most lens models make a
+fixed assumption for the values of cosmological parameters in a
+standard \LCDM\ cosmology (typically: \Om=0.3,\OL=0.7,\Ho=70 km
+s$^{-1}$ Mpc$^{-1}$). This can introduce a systematic magnification
+error that is comparable in magnitude to that of the statistical
+uncertainties \citep{Zitrin:2014b,Bayliss:2015}.  
+Incorporating this
+cosmological parameter uncertainty would increase the model magnification errors typically by 1-10\%. 
+This would reduce the tension between models and observation, but would not
+resolve the overall systematic shift.  Even a factor of 2.5 increase
+in the uncertainties (the most drastic change seen in the analysis
+of \citet{Bayliss:2015}) would still leave the most extreme outlier
+(CATS(v2)) discrepant by $2.9\sigma$. 
+}
+
+\subsubsection{Misidentification of a multiple image}
+
+\changeR{
+\citet{Jauzac:2014c} proposed a correction
+for the location of image 3.3, the third component of a triply-imaged
+galaxy \citep{Merten:2011} at $z=3.98\pm0.02$ \citep{Johnson:2014}.
+This possibly specious multiple image is only $\sim$10\arcsec\ from
+the SN \tomas\ position, meaning a change in its location could have a
+large impact on the predicted magnification for
+SN \tomas\ \citep[see][for a quantitative discussion of this
+effect]{Johnson:2014}.  However, \citet{Jauzac:2014c} also evaluated a
+version of the CATS(v2) model in which this single source is left in
+the original position and found that the location of image 3.3 does
+not significantly affect the predicted magnifications.  Furthermore,
+dividing our 15 models into those using the original location vs those
+that adopt the new position, we find that both groups include models
+that are within 1$\sigma$ of the observed $\mu$ as well as
+significantly discrepant points.
+}
+
+
+\subsection{Quantity and Quality of Lensing Constraints}
+\label{sec:LensModelComparison}
+
+\changeR{
+None of the possibilities described above can completely account for
+the mild tension between the observed and predicted magnifications.
+However, in lieu of a physical explanation, we can simply take a
+pragmatic approach and seek to identify any shared characteristics of
+the most accurate models.  In this way SN \tomas\ may serve as a guide
+for optimizing future lens models for magnification predictions.  }
+
+
 \begin{figure*}
 \begin{center}
 \includegraphics[width=\textwidth]{FIG/tension}
@@ -1130,194 +1228,40 @@ Figure~\ref{fig:LensingTest}.}
 \end{center}
 \end{figure*}
 
-
-\subsection{Possible Error in Lens Model Construction}
-\label{sec:LensModelErrors}
-
-\changeR{Having now ruled out misinterpetations of the SN
-data, we are left to seek an explanation for the small systematic bias
-by scrutinizing the lens models.  TODO: note that 
-the most successful models are those that use a
-stringent criteria for strong lensing constraints, which results in a
-larger fraction that have spectroscopic redshifts. 
+\changeR{
+As can be seen in Table~\ref{tab:LensModels} and
+Figure~\ref{fig:LensingTest}, among the 7 models that yield
+magnifications discrepant by more than 1$\sigma$ we find a variety of
+methodologies (both parametric and free-form) and a mix of lensing
+constraints (both strong-lensing only and strong+weak).  The left
+panel of Figure~\ref{fig:Nspecz} shows that this subset of 7 also
+includes a wide range in the number of multiply-imaged galaxies used
+as strong-lensing constraints (from $\sim$10 to 50).  Given that the
+discrepancy persists across all of these categories, none of them can
+provide a satisfactory explanation for the small observed bias.
 }
 
-\subsection{Nearby Cluster Member Galaxy}
-\label{sec:NearbyClusterMemberGalaxy}
-
-The line of sight to SN \tomas\ is 5\farcs8 from a bright cluster
-member galaxy, due North of the SN position (see
-Figure~\ref{fig:DiscoveryImage}).  If the mass-to-light ratio (M/L)
-for this galaxy were significantly different from the M/L for other
-cluster member galaxies, then its proximity to the SN sight-line could
-introduce a bias in the magnification.  This bias might be
-particularly acute for models that hew more closely to a
-simple ``light traces mass'' assumption, such as the Sharon, CATS,
-GLAFIC and Zitrin-LTM models.
-
-We tested this hypothesis using the CATS(v2) model by allowing the mass
-of the nearby cluster member galaxy to vary as a free parameter in the
-model. We found that the change in the SN \tomas\ magnification
-prediction was less than $\Delta\mu=0.1$.  This additional dispersion
-is already included in the uncertainties quoted for that model in
-Table~\ref{tab:PredictedMagnifications} and
-Figure~\ref{fig:lensingtest}.  Furthermore, an erroneous M/L
-value for the nearby cluster member galaxy could not explain the
-systematic shift of all lens models, because some do not incorporate
-cluster member galaxies into their constraints at all (the free-form
-Bradac, Williams and Merten models).
-
-\subsection{Sparse Strong Lensing Constraints}
-\label{sec:SparseStrongLensingConstraints}
-
-\begin{figure}
-\begin{center}
-\includegraphics[width=\columnwidth]{FIG/system3.png}
-\caption{ 
-The disputed component of the multiply-imaged galaxy System 3. The
-original position, as given in \citet{Merten:2011} is marked with a
-dashed magenta circle labeled 3.3. The solid magenta circle
-labeled \33p\ shows the revised location as proposed
-in \citet{Jauzac:2014c}.  Both positions are $\sim$10\arcsec\ from the
-SN location.  The inset panel shows the other two components of this
-multiply-imaged system, 3.1 and 3.2 (on the same scale as the main
-panel), which are located north-east of the cluster center, and have a
-secure spectroscopic redshift of $z=3.98\pm0.02$ \citep{Johnson:2014}.
-\label{fig:system3} }
-\end{center}
-\end{figure}
-
-At the outset of the HFF survey, only 33 multiply-imaged galaxies
-behind Abell 2744 were known.  One might expect that the addition of
-new lensing constraints from the HFF data would improve the model
-constraints and reduce the tension between the predicted and observed
-magnification.  However, for two of the most recent models (CATSv2,
-Lam; \citealt{Jauzac:2014c,Lam:2014}) that include new strong-lensing
-constraints, the predicted magnification is still significantly higher
-than the observed value.  Again the CATS model family provides a
-useful case study.  The CATS(v2) model \citep[from][]{Jauzac:2014c}
-shares the same lens modeling software (LensTool), and the same
-primary methodology as the earlier CATS models, though with two key
-differences: (1) the CATS(v2) model changes the location of a
-multiply-imaged system near the SN \tomas\ position; and (2) the model
-incorporates 33 new multiply imaged galaxies.  These improvements
-should in principle make the CATS(v2) model magnification estimates
-more accurate, though we in fact see the opposite result: the
-CATS(v2) model predicts a $\mu$ that is higher than the measured
-value by $4.3\sigma$, and higher than either of the previous two
-versions of the CATS models.
-
-The change in location proposed by \citet{Jauzac:2014c} is for image
-3.3, the third component of a triply-imaged
-galaxy \citep{Merten:2011}, shown in Figure~\ref{fig:system3}.  Images
-3.1 and 3.2 of this system have a secure spectroscopic redshift of
-$z=3.98\pm0.02$ \citep{Johnson:2014}. \citet{Jauzac:2014c} found that
-reassigning this multiple image to a source roughly 8\arcsec\ to the
-south results in a tighter model reconstruction for the locations of
-other multiply-imaged systems in the vicinity \citep[though][argue
-against the reassignment based on the colors of the two sources in
-question]{Lam:2014}.  Given the large discrepancy between the
-CATS(v2) model and the SN measurement, one might question whether
-this change in the position of image 3.3 is driving the increase in
-the predicted $\mu$ for SN \tomas. However, \citet{Jauzac:2014c} also
-examined a version of the CATS(v2) model where this single source
-is left in the original position, and find that it does not
-significantly affect the predicted magnification.
-
-Furthermore, the shift to higher magnifications is not unique to the
-SN \tomas\ position.  \citet{Jauzac:2014c} noted that their updated
-mass model of Abell 2744 results in a systematic increase in the
-magnification values across the cluster field. Examining a sample of
-$\sim$30 multiple images, \citeauthor{Jauzac:2014c} found that the
-magnifications increased by a factor of $\sim1.5$ relative to pre-HFF
-models.  Although the single sight-line to SN \tomas\ can
-only provide a very limited test of the model,
-the $4.1\sigma$ discrepancy is at least a strong suggestion
-that even with a large number of high-quality strong-lensing
-constraints it is still possible to generate magnification
-maps that are susceptible to systematic biases.
-
-\subsection{Mass Profile Extrapolation}
-\label{sec:MassProfileExtrapolation}
-
-Eight of the mass models evaluated here are constrained only using
-strong-lensing features such as multiply-imaged background galaxies
-and highly magnified arcs.  There are now $\sim$150 known lensed
-images behind Abell 2744 \citep{Jauzac:2014c}, but SN \tomas\ is
-located several arcseconds outside the core region of the cluster
-where these multiply-imaged galaxies are found.  Therefore these eight
-``strong-lensing only'' models must necessarily rely on extrapolations
-to provide a prediction for the SN \tomas\ magnification.  Let us
-suppose that the true cluster density profile for Abell 2744 happens
-to have a sharp drop right at the edge of this core strong-lensing
-region. In that case these eight models might well overestimate the
-mass interior to the \tomas\ position, and thus systematically
-overestimate the magnification.
-
-The other three models in our comparison set also use the strong
-lensing constraints from the core region, but additionally utilize
-weak lensing measurements to provide additional constraints on the
-mass distribution farther from the cluster core.  The signal from weak
-lensing relies on a large sample of background galaxies, so this
-constraint operates principally at separations more than 1\arcmin\
-from the cluster core.  At a projected separation of $\sim40\arcsec$,
-SN \tomas\ falls in between the strong- and weak-lensing regimes, and
-one would expect that models incorporating both of those constraints
-would be less susceptible to the possible systematic bias of
-a sharply steepening mass profile.  The lowest magnification estimate
-in our sample (from the Merten model) is among this sub-sample.
-However, we find that collectively these three strong+weak models
-(shown as diamonds in Figure~\ref{fig:lensingtest}) exhibit the same
-propensity to overestimate the magnification along this line of sight.
-Thus, a sudden change in the mass profile outside the strong lensing
-region is not a likely explanation for this small systematic bias.
-
-With two versions of the CATS model, we also have a more direct test
-of the effect of introducing weak lensing constraints.  The initial
-CATS(v1) model uses only strong-lensing constraints, and gives
-$\mu=2.29^{+0.05}_{-0.04}$, slightly higher than the measured value.
-A second iteration of this model, labeled here as CATS(v1sw), used the
-same strong-lensing features, but added in weak lensing constraints.
-The revised magnification of $\mu=2.62\pm0.18$ is further from the
-measured value, which serves to reinforce the conclusion that adding
-weak lensing constraints cannot, by itself, resolve this bias.
+\changeR{
+However, the right panel of Figure~\ref{fig:Nspecz} shows that 3 of
+the most successful lens models (Bradac(v2), Lam(v2), Diego) do share
+a common quality: they all use a set of multiply-imaged galaxies for
+which a large fraction have spectroscopic redshifts.  In practice,
+this means that the strong-lensing constraints in these models are
+defined more stringently than other models. Some other models may use
+a larger set of strong-lensing features, but the dearth of
+spectroscopic constraints means that it is more likely that some of
+those multiply-imaged galaxies are assigned with incorrect redshifts.
+}
 
 
-\subsection{Cosmological Uncertainty}
-
-All of the models presented here use a fixed assumption for the
-parameters of a standard \LCDM\ cosmology (typically: \Om=0.3,\OL=0.7,\Ho=70 km
-s$^{-1}$ Mpc$^{-1}$).  The parameter values selected for this fiducial
-cosmology do have an impact on the inferred magnifications, and
-variation of these parameters must be accounted for when using cluster
-mass models for cosmological tests \citep{Zitrin:2014b}. 
-\citep{Bayliss:2015} demonstrated that
-changing the cosmological parameter within the range of current
-acceptable cosmologies \citep[e.g.][]{Hinshaw:2013,Planck-Collaboration:2015},
-introduces a magnification uncertainty that is comparable in magnitude
-to that of the statistical uncertainties.  This leads to the
-conclusion that the lens modeling uncertainties presented here are
-underestimated, and should be significantly increased. 
-
-\change{
-We have used the Sharon(v2) model to provide a quantitative example of
-how the magnification errors are affected by inclusion of this
-cosmological parameter uncertainty.  Following \citealt{Bayliss:2015},
-we propagate cosmological parameter variations into the magnification
-uncertainties, and find that the 68\%\ confidence range for the
-magnification at $z=1.3457$ increases from [2.63,2.83] to [2.42,2.85].
-The best-fit magnification value of $mu=2.74$ and the median value of
-$mu=2.59$ remain the same. For this model only,
-Table~\ref{tab:PredictedMagnifications} includes this cosmological
-uncertainty. In this case, the Sharon(v2) model moves from being discrepant at
-the $2.5\sigma$ level to a $1.7\sigma$ tension.  Incorporating this
-cosmological parameter uncertainty in the other models would similarly
-reduce the tension between models and observation, but would not
-resolve the overall systematic shift.  Even a factor of 2.5 increase
-in the uncertainties (the most drastic change seen in the analysis
-of \citep{Bayliss:2015}) would still leave the most extreme outlier
-(CATS(v2)) discrepant by $2.9\sigma$.  }
-
+\changeR{
+This comparison suggests that to get accurate magnifications, lens
+models should employ a strict vetting of the strong-lensing
+constraints.  Multiply-imaged systems should ideally have
+spectroscopic redshifts, or at least very well constrained photometric
+redshifts.  The {\it quantity} of strong-lensing constraints is not as
+important as their {\it quality}.
+}
 
 
 \section{Summary and Conclusions}
@@ -1344,103 +1288,95 @@ SALT2}=1.99\pm0.38$.  $\mu_{\rm MLCS2k2}=2.03\pm0.29$, from the two
 light curve fitters.
 
 \change{
-Taking advantage of the availability of 14 well-constrained lens
+Taking advantage of the availability of 15 well-constrained lens
 models for the Abell 2744 cluster, we have used SN \tomas\ to ask how
 accurately these lens models can predict the magnification along this
 line of sight.  We find that these models are consistent, and fairly
-accurate, collectively predicting $\mu=2.53\pm0.38$.  This is
-encouraging, and reinforces the quality and value of these public lens
-models for studying magnified background objects.  However, we note
-that all but one of the tested models provides a median magnification
-value that is larger than we observe.  This may be an indication that
-there is a small systematic bias inherent to this cluster or
-sight-line.
-}
+accurate, collectively predicting $\mu=2.5\pm0.4$, within 1$\sigma$ of
+the measured value.  This is encouraging, and reinforces the quality
+and value of these public lens models for studying magnified
+background objects.  However, we note that all but two of the tested
+models provide a median magnification prediction that is larger than
+the measurement from the SN, and all the models with significant
+discrepancy are too high.  This may be an indication that there is a
+small systematic bias at work.  }
 
 We have speculated on what could be the origin for such a systematic bias,
-evaluating seven possible causes: 
+first considering and rejecting three possible explanations that presume an error in the
+interpretation of the available SN data. 
 
 \begin{enumerate}
-\item The close proximity of a cluster member galaxy is leading to a
-biased magnification, because that galaxy's M/L is atypical.
-\item The models are limited by a scarcity of strong lensing constraints
-\item Model uncertainties are underestimated, by not accounting for 
-       uncertainties in cosmological parameters.
-\item The cluster mass profile exhibits a sudden change outside of the core
-strong-lensing region, where we lack multiply-imaged background
-sources to constrain it.
-\item The redshift assigned to SN \tomas\ is in error.
-\item SN \tomas\ is dimmed by foreground dust.
-\item SN \tomas\ is not a normal Type Ia SN.
-\end{enumerate}
-
-\noindent The first four of these take on the discrepancy from 
-the lens modeling side, but none are completely satisfactory. For each
-of these scenarios, we would expect that certain subsets of the
-available lens models would be less sensitive to the proposed
-systematic bias.  However, the small discrepancy between the predicted
-and observed lensing magnification is persistent when we bifurcate the
-sample of lens models according to methodology (parametric
-vs. free-form), number of strong-lensing constraints (pre- vs
-post-HFF), and scope of lensing constraints (strong-lensing only
-vs. strong+weak). Thus, comparison of the available models does not
-provide any definitive explanation for this magnification tension.
-
-At least for this particular sight-line, the free-form models perform
-better in the sense that the mean and standard error for this subset
-($2.37\pm0.35$) is closer to the measured value ($2.03\pm0.29$) than
-is the parametric set ($2.59 +- 0.37$).  These free-form models also
-deliver more realistic uncertainties (with the exception of the
-Bradac(v2) model -- see \citet{Wang:2015} for further discussion of
-the changes made from v1 to v2 of that model). \change{The free-form
-model family also includes the only model that predicts a
-magnification lower than the observed value (Diego).}  This may
-indicate that the free-form approach in general is more successful in
-capturing the uncertainty from biases inherent to the mass modeling
-exercise, such as the mass sheet degeneracy and more complex
-``approximate invariances'' \citep{Liesenborgs:2012,Schneider:2014}.
-It may also be the case that the greater flexibility of the free-form
-models makes them better suited for predicting magnifications of
-sources that fall outside the strong-lensing region -- such as
-SN \tomas.
-
-The last three possible explanations presume an error in the
-interpretation of the available SN data.  We reject the possibility
-that a redshift error is the primary cause of the discrepancy, as the
-redshift evidence is well supported by multiple lines of evidence from
-both the SN and the presumed host galaxy. Changing the redshift within
-the constraints of these complementary observations does not resolve
-the tension. We also find it implausible that there is sufficient dust
-in the cluster or elsewhere along the line of sight to account for the
-magnification discrepancy.  A dust-induced bias is also disfavored by
-the very blue color of SN \tomas.
-
-Finally, we have considered whether the SN could be
-mis-classified. Once again the combination of spectroscopic and
+\item Redshift: We reject the possibility that a redshift error is the primary cause
+of the discrepancy, as the redshift evidence is well supported by
+multiple lines of evidence from both the SN and the presumed host
+galaxy. Changing the redshift within the constraints of these
+complementary observations does not resolve the tension. 
+\item Dust: We find
+it implausible that there is sufficient dust in the cluster or
+elsewhere along the line of sight to account for the magnification
+discrepancy.  A dust-induced bias is also disfavored by the very blue
+color of SN \tomas. SN \tomas\ is dimmed by foreground dust.
+\item Misclassification: The combination of spectroscopic and
 photometric evidence strongly supports our classification of
 SN \tomas\ as a normal Type Ia SN.  The most plausible
 mis-classification would be that the object is a peculiar Type Ia of
 the SN 2006bt-like sub-class.  Although the light curve shape could
 allow this possibility, the blue color of \tomas\ can once again
 reject this alternative. 
+\end{enumerate}
 
+\noindent 
+
+\changeR{
+Turning to the lens models, we have considered 4 ways in which a bias
+might be introduced into the lens models:
+}
+
+\begin{enumerate}
+\item Cosmic weak lensing 
+\item Peculiar mass for a nearby cluster member
+\item Cosmological parameter uncertainty
+\item Misidentification of a multiple image
+\end{enumerate}
+
+\noindent
+\changeR{
+Although each of these could plausibly introduce a small systematic
+bias, we find that none are likely to be significant enough
+to completely resolve the tension between models and observations.
+}
+
+\changeR{
+Finally, we have examined whether there is a simple prescription for
+the kind of strong lensing constraints that are most likely to deliver
+an accurate magnification prediction for this sight-line. 
+ We find
+that the number of multiply imaged systems used is not in itself
+predictive of model accuracy.  Rather, it is the fraction of multiply
+imaged systems that have spectroscopic redshifts that is most
+correlated with model accuracy.  A reasonable interpretation 
+-- at least for this cluster and this particular set of models -- is
+that the spectroscopic redshift fraction serves as an effective proxy
+for the ``quality'' of the strong lensing constraints. This quality of
+the input data appears to be a key ingredient for deriving accurate
+magnifications outside the strong-lensing regime.  }
 
 We have evaluated here only a single object behind a single cluster,
-with a minor tension between the observed magnification and most
+with a minor tension between the observed magnification and the model
 predictions.  This is not in and of itself a cause for alarm.
 Previous analyses of lensed \SNIa\ found no significant discrepancy
 between the observed \SNIa\ magnifications and the predictions from
 lens models (\citetalias{Patel:2014}; \citealt{Nordin:2014}), albeit
 with a much smaller set of lens models being tested.  The observed
-systematic bias for \tomas\ is small, and many of the lens models
-being evaluated are preliminary models that have not been updated to
-include all of the HFF data.  Future revisions of the lens models for
-Abell 2744 could either incorporate the observed magnification
-of \tomas\ as a new model constraint, or can revisit this test to
-evaluate whether the bias persists.
+systematic bias for \tomas\ is small, and many of the lens models that
+deviate from the measured magnification are preliminary models that
+have not been updated to include all of the HFF data.  Future
+revisions of the lens models for Abell 2744 could either incorporate
+the observed magnification of \tomas\ as a new model constraint, or
+can revisit this test to evaluate whether the bias persists.
 
 A promising avenue for exploring the origins of systematic biases in
-cluster lens models is through the use of simulated data.  One can
+cluster lens models is through the use of simulated lensing data.  One can
 start with very deep high-resolution multi-band imaging on an unlensed
 field that has a fairly complete spectroscopic redshift catalog, such
 as the Hubble Ultra Deep Field.  Then a simulated galaxy cluster is
@@ -1499,12 +1435,13 @@ substantial efforts to make the HFF program successful.  In
 particular, thanks are due to Matt Mountain for the allocation of
 discretionary orbits for the HFF program; to Jennifer Lotz, Norman
 Grogin and Patricia Royle for accommodations in strategy and
-implementation to make the FrontierSN program possible; and to Dan Coe
-for curating the excellent and accessible lens model comparison tools.
-We also thank the CLASH team, led by Marc Postman, for observations,
-catalogs, and high level science products that were of significant
-value for this analysis.  Thanks to Jonatan Selsing for helpful
-comments on the manuscript. 
+implementation to make the FrontierSN program possible; to Anton
+Koekemoer for HFF data processing support; and to Dan Coe for curating the
+excellent and accessible lens model comparison tools.  We also thank
+the CLASH team, led by Marc Postman, for observations, catalogs, and
+high level science products that were of significant value for this
+analysis.  Thanks to Jonatan Selsing for helpful comments on the
+manuscript.
 
 This work utilizes gravitational lensing models produced by modeling
 teams that were funded as part of the HST Frontier Fields program

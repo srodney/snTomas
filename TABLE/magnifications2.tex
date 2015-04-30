@@ -11,15 +11,15 @@ CATS(v1)       & 50 & 151 & 4 & 0  &  HFF; \citealt{Richard:2014} &  CATS\tablen
 CATS(v1sw)     & 24 &  67 & 3 & 12 &  \citealt{Richard:2014} &  CATS team LENSTOOL parametric model with both strong and weak lensing constraints.\\
 CATS(v2)       & 17 &  60 & 2 & 14 &  \citealt{Jauzac:2014c} & Updated version of the CATSv1 model, adds 33 new multiply-imaged galaxies, for a total of 159 individual lensed images.\\
 GLAFIC         & 15 &  47 & 3 & 11 &  \citealt{Ishigaki:2015} & Parametric strong-lensing model using v1.0 of the {\tt GLAFIC} code.\tablenotemark{h} \\
-Zitrin-NFW     & 10 &  44 & 2 & 0  &  HFF; \citealt{Zitrin:2013a} &  Parametric strong-lensing model using PIEMD\tablenotemark{i} profiles for galaxies and NFW\tablenotemark{j} profiles for dark matter halos.\\
+Zitrin-NFW     & 10 &  44 & 2 & 0  &  HFF; \citealt{Zitrin:2013a} &  Parametric strong-lensing model using PIEMD profiles for galaxies and NFW profiles for dark matter halos.\\
 Zitrin-LTM     & 10 &  44 & 2 & 0  &  HFF; \citealt{Zitrin:2009a} & Parametric strong-lensing model, adopts the Light-Traces-Mass assumption for both the luminous and dark matter.\\
-Bradac(v1)     & 16 &  56 & 2 & 14 &  HFF; \citealt{Bradac:2009} & {\tt SWUnited}\tablenotemark{k} : Free-form, strong+weak-lensing based model. Errors from bootstrap resampling only weak-lensing constraints.\\
+Bradac(v1)     & 16 &  56 & 2 & 14 &  HFF; \citealt{Bradac:2009} & {\tt SWUnited}\tablenotemark{i} : Free-form, strong+weak-lensing based model. Errors from bootstrap resampling only weak-lensing constraints.\\
 Bradac(v2)     & 10 &  40 & 2 & 8  &  \citealt{Wang:2015} & Updated version of the {\tt SWUnited} model with new strong-lensing constraints from HFF imaging. Errors from bootstrap resampling only strong-lensing constraints.\\
-Williams       & 16 &  56 & 2 & 14 &  HFF & {\tt GRALE}\tablenotemark{l} : Free-form strong-lensing model using a genetic algorithm.  \\
-Merten         & 25 &  72 & 7 & 18 &  HFF; \citealt{Merten:2011} &  {\tt SaWLENS},\tablenotemark{m} Grid-based free-form strong+weak lensing based model using adaptive mesh refinement.\\
-Lam(v1)        & 21 &  65 & 4 & 17 &  \citealt{Lam:2014} & {\tt WSLAP+}\tablenotemark{n} : Free-form strong-lensing model using a grid-based method, supplemented by deflections fixed to cluster member galaxies.\\
-Lam(v2)        & 10 &  32 & 5 & 5  &  \citealt{Lam:2014} & Updated version of the {\tt WSLAP+} model, using more selective strong-lensing constraints and GALFIT\tablenotemark{o} models for galaxy mass.\\
-Diego$^{\rm p}$ & 15 &  48 & 4 & 11  & \citealt{Diego:2014b} & Alternative implementation of the {\tt WSLAP+} model, using a different set of strong-lensing constraints and redshifts.
+Williams       & 16 &  56 & 2 & 14 &  HFF & {\tt GRALE}\tablenotemark{j} : Free-form strong-lensing model using a genetic algorithm.  \\
+Merten         & 25 &  72 & 7 & 18 &  HFF; \citealt{Merten:2011} &  {\tt SaWLENS},\tablenotemark{k} Grid-based free-form strong+weak lensing based model using adaptive mesh refinement.\\
+Lam(v1)        & 21 &  65 & 4 & 17 &  \citealt{Lam:2014} & {\tt WSLAP+}\tablenotemark{l} : Free-form strong-lensing model using a grid-based method, supplemented by deflections fixed to cluster member galaxies.\\
+Lam(v2)        & 10 &  32 & 5 & 5  &  \citealt{Lam:2014} & Updated version of the {\tt WSLAP+} model, using more selective strong-lensing constraints and GALFIT\tablenotemark{m} models for galaxy mass.\\
+Diego\tablenotemark{n} & 15 &  48 & 4 & 11  & \citealt{Diego:2014b} & Alternative implementation of the {\tt WSLAP+} model, using a different set of strong-lensing constraints and redshifts.
 \enddata
 \tablenotetext{a}{Number of multiply imaged systems used as strong-lensing constraints.}
 \tablenotetext{b}{Total number of multiple images used.}
@@ -38,14 +38,12 @@ are available at
 \tablenotetext{f}{{\tt LENSTOOL} : \citealt{Jullo:2007}; \url{http://projects.lam.fr/repos/lenstool/wiki}}
 \tablenotetext{g}{{\tt CATS} : Clusters As TelescopeS lens modeling team. PI's: J.-P. Kneib \&\ P. Natarajan}
 \tablenotetext{h}{{\tt GLAFIC} : \citealt{Oguri:2010}; \url{http://www.slac.stanford.edu/~oguri/glafic/}}
-\tablenotetext{i}{PIEMD: Pseudo Isothermal Elliptical Mass Distrubition}
-\tablenotetext{j}{NFW : Navarro-Frenk-White mass density profile \citep{Navarro:1997}.}
-\tablenotetext{k}{{\tt SWunited} : Strong and Weak lensing United; \citealt{Bradac:2005}}
-\tablenotetext{l}{{\tt GRALE} : GRAvitational LEnsing; \citealt{Liesenborgs:2006,Liesenborgs:2007,Mohammed:2014}}
-\tablenotetext{m}{{\tt SaWLENS} : \citealt{Merten:2009}; Strong and Weak LENSing analysis code. \url{http://www.julianmerten.net/codes.html}}
-\tablenotetext{n}{{\tt WSLAP+} : \citealt{Sendra:2014}; Weak and Strong Lensing Analysis Package plus member galaxies (Note: no weak-lensing constraints used for Abell 2744)}
-\tablenotetext{o}{{\tt GALFIT} : Two-dimensional galaxy fitting algorithm \citep{Peng:2002}}
-\tablenotetext{p}{Abell 2744 model available at \url{http://www.ifca.unican.es/users/jdiego/LensExplorer}. 
+\tablenotetext{i}{{\tt SWunited} : Strong and Weak lensing United; \citealt{Bradac:2005}}
+\tablenotetext{j}{{\tt GRALE} : GRAvitational LEnsing; \citealt{Liesenborgs:2006,Liesenborgs:2007,Mohammed:2014}}
+\tablenotetext{k}{{\tt SaWLENS} : \citealt{Merten:2009}; Strong and Weak LENSing analysis code. \url{http://www.julianmerten.net/codes.html}}
+\tablenotetext{l}{{\tt WSLAP+} : \citealt{Sendra:2014}; Weak and Strong Lensing Analysis Package plus member galaxies (Note: no weak-lensing constraints used for Abell 2744)}
+\tablenotetext{m}{{\tt GALFIT} : Two-dimensional galaxy fitting algorithm \citep{Peng:2002}}
+\tablenotetext{n}{Abell 2744 model available at \url{http://www.ifca.unican.es/users/jdiego/LensExplorer}. 
 No uncertainty estimates were available for the Diego implementation of the {\tt WSLAP+} model, so we adopt the uncertainties from the closely related Lam model.
 }
 \end{deluxetable*}
