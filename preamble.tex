@@ -49,16 +49,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ifchangetext
   % Changed text is highlighted in bold, blue font 
-  \newcommand{\change}[1]{{\bf \textcolor{blue}{#1}}}
-  \newcommand{\changeB}[1]{{\bf \textcolor{blue}{#1}}}
-  \newcommand{\changeG}[1]{{\bf \textcolor{ForestGreen}{#1}}}
-  \newcommand{\changeR}[1]{{\bf \textcolor{red}{#1}}}
+  \newcommand{\change}[1]{{ \textcolor{blue}{#1}}}
+  \newcommand{\changeB}[1]{{ \textcolor{blue}{#1}}}
+  \newcommand{\changeG}[1]{{ \textcolor{ForestGreen}{#1}}}
+  \newcommand{\changeR}[1]{{ \textcolor{red}{#1}}}
+  \newcommand{\changeP}[1]{{ \textcolor{DarkOrchid}{#1}}}
 \else
   % Changed text is indistinguishable
   \newcommand{\change}[1]{#1}
   \newcommand{\changeB}[1]{#1}
   \newcommand{\changeG}[1]{#1}
   \newcommand{\changeR}[1]{#1}
+  \newcommand{\changeP}[1]{#1}
 \fi
 
 

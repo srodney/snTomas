@@ -43,11 +43,12 @@ subtle systematic bias: all of the models that disagree with the SN by
 more than $1\sigma$ are {\it higher} than the measured value}
 and \change{6 of these models are $\geq1.5\sigma$} above the measured
 magnification.  We evaluate possible causes for this mild
-bias, \changeR{and reject explanations that invoke modeling errors or
-misinterpretation of the SN data. We conclude that -- at least for
-this cluster and this line of sight -- the most accurate models are
-those that employ stringent quality cuts for strong-lensing
-constraints.} \change{A more robust evaluation of systematic biases
+bias, \changeR{and reject explanations that
+invoke} \changeP{misinterpretation of the SN data or errors in the
+definition of the lens models}. \changeR{We conclude that -- at least for this
+cluster and this line of sight -- the most accurate models are those
+that employ stringent quality cuts for strong-lensing
+constraints.} \change{ A more robust evaluation of systematic biases
 could be achieved with further cooperative lens model comparisons
 using a larger sample of lensed Type Ia SNe as well as cluster lensing
 simulations.}
@@ -1250,24 +1251,34 @@ provide a satisfactory explanation for the small observed bias.
 \changeR{
 However, the right panel of Figure~\ref{fig:Nspecz} shows that 3 of
 the most successful lens models (Bradac(v2), Lam(v2), Diego) do share
-a common quality: they all use a set of multiply-imaged galaxies for
-which a large fraction have spectroscopic redshifts.  In practice,
+a common characteristic: they all use a set of multiply-imaged galaxies for
+which a large fraction have spectroscopic redshifts. In practice,
 this means that the strong-lensing constraints in these models are
-defined more stringently than other models. Some other models may use
+defined more stringently. Other models use
 a larger set of strong-lensing features, but the dearth of
 spectroscopic constraints means that it is more likely that some of
 those multiply-imaged galaxies are assigned with incorrect redshifts.
 }
-
 
 \changeR{
 This comparison suggests that to get accurate magnifications, lens
 models should employ a strict vetting of the strong-lensing
 constraints.  Multiply-imaged systems should ideally have
 spectroscopic redshifts, or at least very well constrained photometric
-redshifts.  The {\it quantity} of strong-lensing constraints is not as
-important as their {\it quality}.
-}
+redshifts.}
+\changeP{The {\it quality} of strong-lensing constraints is perhaps just as
+important as the {\it quantity}.}
+
+
+\changeP{
+It is relevant to note that the three models highlighted for their
+accuracy here (Bradac(v2), Lam(v2), Diego) also happen to be the three
+models that are not truly ``blind,'' in that the modelers were aware
+of preliminary analysis of the SN magnification.  However, none of
+these models used the SN magnification as an input constraint, none
+were tuned to match the SN magnification, and the modelers did not
+have a final measurement of the SN magnification at the time their
+models were generated.}
 
 
 \section{Summary and Conclusions}
@@ -1280,10 +1291,9 @@ lensing.  The discovery of SN \tomas\ in the HFF imaging of Abell 2744
 offers the first chance to apply this test on a cluster with multiple
 publicly-available lens models.  We have found that the spectrum and
 light curve of SN \tomas\ are well matched by templates of a normal
-Type Ia SN at $z=1.3457$.  Using the two most prevalent \SNIa\
-light curve fitters, SALT2 and MLCS2k2, we get a consistent
-measurement of the distance modulus
-(Table~\ref{tab:MeasuredMagnification}).  Using a
+Type Ia SN at $z=1.3457$.  Using the two most prevalent \SNIa\ light
+curve fitters, SALT2 and MLCS2k2, we get a consistent measurement of
+the distance modulus (Table~\ref{tab:MeasuredMagnification}).  Using a
 cosmology-independent comparison against a sample of unlensed \SNeIa\
 at similar redshifts, we find that SN \tomas\ is $\sim0.7$ magnitudes
 brighter than the field sample would predict.  Attributing this

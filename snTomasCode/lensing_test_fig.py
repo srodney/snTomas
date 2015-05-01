@@ -203,6 +203,9 @@ def mkTensionFig(presfig=False, showlegend=True):
             mec=color
             mew=ms/8.
         specfrac = row['nzSpec']/float(row['nSys'])
+
+        nim = row['nIm']/float(row['nSys'])
+
         nsys = row['nSys']
         tension = (med-muSNmlcs)/np.sqrt(errminus**2+muSNmlcserr**2)
 
