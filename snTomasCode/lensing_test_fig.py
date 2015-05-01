@@ -157,7 +157,7 @@ def mkLensingTestFig( show2snfits=False, showlegend=False, presfig=False,
     pl.draw()
 
 
-def mkTensionFig(presfig=False):
+def mkTensionFig(presfig=False, showlegend=True):
     from matplotlib import ticker,pyplot as pl, rcParams
     from pytools import plotsetup
     from astropy.io import ascii
@@ -226,7 +226,23 @@ def mkTensionFig(presfig=False):
     ax1.xaxis.set_minor_locator( ticker.MultipleLocator( 2 ) )
     ax2.xaxis.set_major_locator( ticker.MultipleLocator( 0.2 ) )
     ax2.xaxis.set_minor_locator( ticker.MultipleLocator( 0.05 ) )
-    pl.setp(ax2.get_yticklabels(), visible=False)
+    ax2.yaxis.set_ticks_position('right')
+    # pl.setp(ax2.get_yticklabels(), visible=False)
 
+    if showlegend:
+        axleg = pl.axes([0.75,0.68,0.18,0.22], frameon=True )
+        SLpre    = axleg.plot(0,2,marker='o',mfc='w',mec='0.5',ls=' ',ms=ms,label='strong')
+        SLWLpre  = axleg.plot(0,1,marker='D',mfc='w',mec='0.5',ls=' ',ms=ms,label='str+wk')
+        SLpost   = axleg.plot(1,2,marker='o',mfc='k',mec='0.5',ls=' ',ms=ms,label='strong')
+        SLWLpost = axleg.plot(1,1,marker='D',mfc='k',mec='0.5',ls=' ',ms=ms,label='str+wk')
+        unblind  = axleg.plot(0.5,0,marker='s',mfc='w',mec='magenta',ls=' ',ms=ms,label='unblind')
+        axleg.text( -0.5, 2.5, 'pre/post-HFF', ha='left',va='bottom' )
+        axleg.text( 1.5, 2.0, 'strong', va='center' )
+        axleg.text( 1.5, 1.0, 'str+wk', va='center' )
+        axleg.text( 1.5, 0.0, 'unblind', va='center' )
+        axleg.set_xlim(-0.8,3.8)
+        axleg.set_ylim(-0.6,3.7)
+        axleg.xaxis.set_ticks([])
+        axleg.yaxis.set_ticks([])
     pl.draw()
 
