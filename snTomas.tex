@@ -70,7 +70,7 @@ distant \citep[e.g.][]{Franx:1997,Ellis:2001,Hu:2002,Kneib:2004,Richard:2006,Ric
 Background galaxies are also {\it spatially} magnified, allowing for
 studies of the internal structure of galaxies in the early universe
 with resolutions of $\sim$100
-pc \citep[e.g.]{Stark:2008,Jones:2010,Yuan:2011,Livermore:2015}.
+pc \citep[e.g.][]{Stark:2008,Jones:2010,Yuan:2011,Livermore:2015}.
 
 
 Gravitational lensing can also provide a powerful window onto the {\it
@@ -883,14 +883,19 @@ approximately a 1$\sigma$ difference.}
 
 In general, free-form methods tend to explore the model parameter
 space more fully than parametric methods.  This is reflected in the
-size of the error-bars in Figure~\ref{fig:LensingTest}.  For example,
-the Williams model (using GRALE) has the largest uncertainties, in
-part because it accounts for mass sheet degeneracy by introducing a
-free parameter in the reconstruction that represents an arbitrarily
-scaled mass sheet, with normalization to be chosen by the genetic
-algorithm.  More complex degeneracies are also accounted for in this
-model through the use of basis
-functions \citep{Liesenborgs:2006,Liesenborgs:2007,Mohammed:2014}
+size of the error-bars in Figure~\ref{fig:LensingTest}.  The Williams
+model (using GRALE) has the largest uncertainties, \changeR{with a
+68\% confidence range that encompasses the median magnification values
+returned by all other models.  This is possibly the most complete
+uncertainty estimate as it includes many systematic error sources
+that are not incorporated into most other models. For example, this
+implementation of GRALE} accounts for mass sheet degeneracy by
+introducing a free parameter in the reconstruction that represents an
+arbitrarily scaled mass sheet, with normalization to be chosen by the
+genetic algorithm.  More complex degeneracies are also accounted for
+in this model through the use of basis
+functions \citep{Liesenborgs:2006,Liesenborgs:2007,Mohammed:2014}. 
+
 
 Figure~\ref{fig:LensingTest} also separates the models based on the
 scope of input data constraints used.  Ten of the models rely only on
@@ -1376,23 +1381,26 @@ the observed magnification of \tomas\ as a new model constraint, or
 can revisit this test to evaluate whether the bias persists.
 
 A promising avenue for exploring the origins of systematic biases in
-cluster lens models is through the use of simulated lensing data.  One can
-start with very deep high-resolution multi-band imaging on an unlensed
-field that has a fairly complete spectroscopic redshift catalog, such
-as the Hubble Ultra Deep Field.  Then a simulated galaxy cluster is
-placed in the field, and the background galaxies are distorted into
-arcs and multiple images using a well-defined lensing prescription.
-The artificially lensed images can then be distributed to lens
-modeling teams who attempt to reconstruct the (known) mass profile of
-the simulated cluster.  This exercise has recently been pursued with a
-set of synthetic clusters similar to those observed in the HFF program
-(Meneghetti et al. in prep).  Preliminary analysis of this simulation
-comparison suggests that magnifications tend to be
+cluster lens models is through the use of simulated lensing data.  One
+can start with very deep high-resolution multi-band imaging on an
+unlensed field that has a fairly complete spectroscopic redshift
+catalog, such as the Hubble Ultra Deep Field.  Then a simulated galaxy
+cluster is placed in the field, and the background galaxies are
+distorted into arcs and multiple images using a well-defined lensing
+prescription.  The artificially lensed images can then be distributed
+to lens modeling teams who attempt to reconstruct the (known) mass
+profile of the simulated cluster.  This exercise has recently been
+pursued with a set of synthetic clusters similar to those observed in
+the HFF program (Meneghetti et al. in prep).  Preliminary analysis of
+this simulation comparison suggests that magnifications tend to be
 overestimated for sources that lie outside the strong-lensing region
-along the minor axis direction of an elongated cluster.  Our analysis
-of SN \tomas\ here indicates that such simulation efforts will be an
-important step for moving toward precision science with cluster-lensed
-sources. 
+along the minor axis direction of \changeR{simulated clusters that are
+very elongated, similar to Abell 2744. This finding would be
+consistent with a recent lens model comparison on 25 real clusters
+from the CLASH program \citep{Zitrin:2015}.} Our analysis of
+SN \tomas\ here indicates that such simulation efforts \changeR{and
+head-to-head lens model comparisons} will be an important step for
+moving toward precision science with cluster-lensed sources.
 
 Increasing the sample of SNe behind clusters like those in
 the HFF program -- with rich lensing constraints and deep imaging -- 
@@ -1450,31 +1458,26 @@ Universities for Research in Astronomy, Inc. under NASA contract NAS
 5-26555. The lens models were obtained from the Mikulski Archive for
 Space Telescopes (MAST).
 
-Financial support for this work was provided to SAR by NASA through grants
-HST-HF-51312 and HST-GO-13386 from STScI, which is operated by Associated Universities for
-Research in Astronomy, Inc. (AURA), under NASA contract NAS 5-26555.
-
-AM acknowledge the financial support of the Brazilian funding agency
-FAPESP (Post-doc fellowship - process number 2014/11806-9)
-
-Support for this research at Rutgers University was provided in part
-by NSF CAREER award AST-0847157 to SWJ.  The Dark Cosmology Centre is
-supported by the Danish National Research Foundation.
-
-J.M.D acknowledges support of the consolider project CSD2010-00064 and
-AYA2012-39475-C02-01 funded by the Ministerio de Economia y
-Competitividad.
-
-J.M. contributed to this research from the Jet Propulsion Laboratory,
-California Institute of Technology, under a contract with NASA and
-acknowledges support from NASA Grants HST-GO-13343.05-A and
-HST-GO-13386.13-A. The research leading to these results has received
-funding from the People Programme (Marie Curie Actions) of the European
-Union's Seventh Framework Programme (FP7/2007-­2013) under REA grant
-agreement number 627288.
-
-A.Z. acknowledges financial support from NASA through grant
-HST-HF-51334.01-A awarded by STScI and operated by AURA.
+Financial support for this work was provided to S.A.R. by NASA through
+grants HST-HF-51312 and HST-GO-13386 from STScI, which is operated by
+Associated Universities for Research in Astronomy, Inc. (AURA), under
+NASA contract NAS 5-26555. A.M. acknowledge the financial support of
+the Brazilian funding agency FAPESP (Post-doc fellowship - process
+number 2014/11806-9). Support for this research at Rutgers University
+was provided in part by NSF CAREER award AST-0847157 to SWJ.  The Dark
+Cosmology Centre is supported by the Danish National Research
+Foundation. J.M.D acknowledges support of the consolider project
+CSD2010-00064 and AYA2012-39475-C02-01 funded by the Ministerio de
+Economia y Competitividad. J.M. contributed to this research from the
+Jet Propulsion Laboratory, California Institute of Technology, under a
+contract with NASA and acknowledges support from NASA Grants
+HST-GO-13343.05-A and HST-GO-13386.13-A. The research leading to these
+results has received funding from the People Programme (Marie Curie
+Actions) of the European Union's Seventh Framework Programme
+(FP7/2007-­2013) under REA grant agreement number
+627288. A.Z. acknowledges financial support from NASA through grant
+HST-HF-51334.01-A awarded by STScI and operated by AURA. LLRW
+acknowledges the support of the Minnesota Supercomputing Institute.
 
 {\it Facilities:} \facility{HST (WFC3)}
 \smallskip
