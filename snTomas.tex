@@ -104,19 +104,19 @@ instead of using strong-lensing clusters to study distant SNe, we can
 use the SNe as tools for examining the lenses \citep{Riehm:2011}.  The
 most valuable transients for testing and improving cluster lens models
 would be {\it strongly lensed} SNe that are resolved into multiple
-images \citep{Holz:2001,Oguri:2003}.  Transients that are lensed into
+images\ \citep{Holz:2001,Oguri:2003}.  Transients that are lensed into
 multiple images can also become cosmological tools, as the measurement
 of time delays between the images can provide cosmographic information
 to constrain the Hubble parameter \citep{Refsdal:1964} and other
 cosmological parameters \citep{Linder:2011}.  We have recently
-observed the first example of a multiply-imaged
-SN \citep{Kelly:2015}, and expect to detect the reappearance of this
-object (called ``SN Refsdal'') within 5 years, delivering a precise
-test of lens model predictions \citep{Oguri:2015,Sharon:2015,Diego:2015}.
-Although detections of such objects are currently very
-unlikely \citep{Li:2012}, they will become much more common in the
-next decade \citep{Coe:2009,Dobke:2009}, and may be developed into an
-important new cosmological tool.
+observed the first example of a multiply-imaged SN \citep{Kelly:2015},
+and expect to detect the reappearance of this object (called ``SN
+Refsdal'') \change{within the next
+year} \citep{Oguri:2015,Sharon:2015,Diego:2015}, delivering a precise
+test of lens model predictions.  Although detections of such objects
+are currently very unlikely \citep{Li:2012}, they will become much
+more common in the next decade \citep{Coe:2009,Dobke:2009}, and may be
+developed into an important new cosmological tool.
 
 
 In addition to time delays from multiply-imaged SNe, we can also
@@ -141,7 +141,7 @@ weak-lensing constraints are unavailable.
 
 One of the key values in observing standard candles behind
 gravitational lenses is in addressing the problem of the
-mass-sheet degeneracy \citep{Falco:1985,Bradac:2004}.  This
+mass-sheet degeneracy \citep{Falco:1985,Schneider:1995}.  This
 degeneracy arises because one can introduce into a lens model an
 unassociated sheet of uniform mass in front of or behind the
 lens, without disturbing the primary observable quantities.  For
@@ -150,11 +150,11 @@ and then transform the surface mass density to
 $\kappa^{\prime}=(1-\lambda)\kappa+\lambda$ for any arbitrary value
 $\lambda$.  Both the $\kappa$ and $\kappa^{\prime}$ models will
 produce exactly the same values for all positional and shear
-constraints from strong and weak lensing.  When lensed background
+constraints from strong and weak lensing \citep{Seitz:1997}.  When lensed background
 sources are available across a wide range of redshifts (as is the case
 for the Abell 2744 cluster discussed here), it should in principle be
 possible to account for the simplest form of a single mass sheet
-within that redshift range.  However, there are more complex versions
+within that redshift range \citep{Bradac:2004}.  However, there are more complex versions
 of positional constraint
 degeneracies \citep{Schneider:2014,Liesenborgs:2012}.  Such
 degeneracies do not extend to the {\it absolute} magnification of a
@@ -207,7 +207,7 @@ with the Advanced Camera for Surveys (ACS) in the F606W and F814W
 bands (V and i), collected on UT 2014 May 15 as part of the Hubble
 Frontier Fields (HFF) survey (PI:J.Lotz,
 HST-PID:13495).\footnote{\url{http://www.stsci.edu/hst/campaigns/frontier-fields}}
-The HFF program is a 3-year director's discretionary initiative that
+The HFF program is a 3-year Director's discretionary initiative that
 is collecting 140 orbits of HST imaging (roughly 340 ksec) on six
 massive galaxy clusters, plus 6 accompanying parallel fields.  Each
 field is observed in 3 optical bands (ACS F435W, F606W and F814W) and
@@ -396,16 +396,17 @@ the SN light curve (see Section~\ref{sec:PhotometricClassification}).
 
 From the preceding analysis, we conclude that \tomas\ is a Type Ia SN
 at $z\approx1.35$.  At this redshift, the absorption at $\sim$8700\AA\
-corresponds to the blended \ion{Ca}{2} H\&K features.
-This \ion{Ca}{2} absorption is commonly seen in Type Ia SN spectra
+corresponds to the blended \ion{Ca}{2} H\&K \change{and \ion{Si}{2} $\lambda$3858} features.
+\change{Generally referred to as the Ca H\&K feature, this} absorption is commonly seen in Type Ia SN spectra
 near maximum light, although it is also prominent in the spectra of
 Type Ib and Ic core collapse SNe (\CCSNe).  The red color of
 the \tomas\ SED is qualitatively consistent with a redshift of $z>1$
 -- although this information was not used by {\tt SNID} for the
-template matching.  As we will see in Section~\ref{sec:PhotometricClassification},
-this spectral classification of SN \tomas\ is reinforced by the
-photometric information, which also supports classification as a Type
-Ia SN at $z\approx1.35$.
+template matching.  As we will see in
+Section~\ref{sec:PhotometricClassification}, this spectral
+classification of SN \tomas\ is reinforced by the photometric
+information, which also supports classification as a Type Ia SN at
+$z\approx1.35$.
 
 
 \subsection{Spectral Fitting with UV Type Ia Templates}
@@ -424,9 +425,13 @@ templates that have similar abundances and photospheric
 velocities. With the redshift fixed at $z=1.3457$ we find the best fit
 is a spectrum from the normal Type Ia SN 2014J \citep{Foley:2014},
 with a $\chi^2$ per degree of freedom $\nu$ of $\chi^2/\nu=121.8/89$
-shown in the top panel of Figure~\ref{fig:SpecFit}.  Allowing the
-redshift as an additional free parameter, we still find results that
-are consistent with the SNID fits and $<2\sigma$ from the host galaxy
+shown in the top panel of Figure~\ref{fig:SpecFit}. \change{The excess
+variance in this fit may be attributed to the intrinsic variation of
+Type Ia SN spectra, which is more prominent at UV
+wavelengths \citep[e.g.][]{Foley:2008b,Wang:2012} and is not fully
+represented in the available template library.}  Allowing the redshift
+as an additional free parameter, we still find results that are
+consistent with the SNID fits and $<2\sigma$ from the host galaxy
 redshift: $z=1.31\pm0.02$ and a phase of $0\pm3$ rest-frame days. The
 best-fitting spectral template in this case is the normal Type Ia SN
 2012cg \citep{Amanullah:2015} at $z=1.31$ with $\chi^2/\nu=98.5/88$
@@ -579,17 +584,20 @@ with our spectroscopic analysis.
 
 With the type and redshift securely defined as a normal Type Ia SN at
 $z=1.3457$, we now turn to fitting the light curve with Type Ia
-templates to measure the distance modulus  and then derive
-the gravitational lensing magnification.  In this process, we would
-like to avoid introducing systematic uncertainties inherent to any
-assumed cosmological model \citep[e.g.][]{Nordin:2014}.  To that end,
-we follow \citealt{Patel:2014} and define the magnification by
-comparing the measured distance modulus of SN \tomas\ against an
-average distance modulus derived from a ``control sample'' of unlensed
-Type Ia SNe at similar redshift.  This allows us to make only the
-minimal assumption that the redshift-distance relationship for Type Ia
-SN is smooth and approximately linear over a small redshift span,
-which should be true for any plausible cosmological model.  
+templates to measure the distance
+modulus \change{(\S\ref{sec:LightCurveFitting})} and then derive the
+gravitational lensing
+magnification \change{(\S\ref{sec:ControlSampleComparison})}.  In this
+process, we would like to avoid introducing systematic uncertainties
+inherent to any assumed cosmological model.  To that end, \change{in
+section \ref{sec:ControlSampleComparison}} we
+follow \citealt{Patel:2014} and define the magnification by comparing
+the measured distance modulus of SN \tomas\ against an average
+distance modulus derived from a ``control sample'' of unlensed Type Ia
+SNe at similar redshift. This allows us to make only the minimal
+assumption that the redshift-distance relationship for Type Ia SN is
+smooth and approximately linear over a small redshift span, which
+should be true for any plausible cosmological model.
 
 
 \begin{figure*}
@@ -765,7 +773,7 @@ or the control sample.
 \label{sec:ControlSampleComparison}
 
 The unlensed sample comprises 22 spectroscopically confirmed Type Ia
-SNe in the range $1.14\leq z \leq1.55$ from three HST surveys: 11 from GOODS\footnote{GOODS: the Great Observatories Origins Deep Survey, PI:Giavalisco, HST-PID:9425,9583} \citep{Riess:2007}, 7 from SCP\footnote{SCP: the Supernova Cosmology Project, PI:Perlmutter} \citep{Suzuki:2012}, and 4 from CANDELS\footnote{CANDELS: the Cosmic Assembly Near-infrared Deep Extragalactic Legacy Survey, PI:Faber \&\ Ferguson} \citep{Rodney:2012,Rodney:2014}.  Using the SALT2 and MLCS2k2
+SNe in the range $1.1<z<1.6$ from three HST surveys: 11 from the GOODS Higher-$z$ SN search\footnote{GOODS: the Great Observatories Origins Deep Survey, PI:Giavalisco, HST-PID:9425,9583} \citep{Strolger:2004,Riess:2007}, 7 from SCP\footnote{SCP: the Supernova Cosmology Project, PI:Perlmutter} \citep{Suzuki:2012}, and 4 from CANDELS\footnote{CANDELS: the Cosmic Assembly Near-infrared Deep Extragalactic Legacy Survey, PI:Faber \&\ Ferguson} \citep{Rodney:2012,Rodney:2014}.  Using the SALT2 and MLCS2k2
 fitters as described above, we get distance modulus measures for every
 object in this control sample.  We then fit a linear relationship for
 distance modulus vs. redshift, and derive a prediction for the
@@ -802,11 +810,12 @@ magnification is reported at the bottom of each panel.
 \end{figure}
 
 
-\section{Discussion}
-\label{sec:Discussion}
+%\section{Discussion}
+%\label{sec:Discussion}
 
-%\subsection{Comparison to Model Predictions}
-%\label{sec:ComparisonToModelPredictions}
+\section{Comparison to Model Predictions}
+\label{sec:Discussion}
+\label{sec:ComparisonToModelPredictions}
 
 Before the Frontier Fields observations began, the Space Telescope
 Science Institute (STScI) issued a call for lens modeling teams to
@@ -837,37 +846,45 @@ their construction are given in Table~\ref{tab:LensModels}.
 \caption{ 
 Comparison of the observed lensing magnification to predictions from
 lens models. The vertical blue line shows the constraints from
-SN \tomas\ derived in Section~\ref{sec:DistanceAndMagnification} using the
-MLCS2k2 fitter, with a shaded region marking the total
+SN \tomas\ derived in Section~\ref{sec:DistanceAndMagnification} using
+the MLCS2k2 fitter, with a shaded region marking the total
 uncertainty. Markers with horizontal error bars show the median
 magnification and 68\%\ confidence region from each of the 15 lensing
 models.  Circles indicate models that use only strong-lensing
 constraints, while diamonds denote those that also incorporate
-weak-lensing measurements.  Models shown with open markers were
-constructed using only data available before the start of the Frontier
-Fields observations.  Filled markers indicate models that use
-additional input constraints, including new multiply imaged systems
-and redshifts.  Points with magenta outline indicate ``unblind''
-models, which were generated after the magnification of the SN was
-known. The eight models shown in black at the top are from
-the ``parametric'' family, and the six in green at the bottom are
-``free-form.''  The grey dashed line marks the unweighted mean for the
-set of all models, at $\mu=2.5$.
-\label{fig:LensingTest} }
+weak-lensing measurements.  \change{Models using a ``free-form''
+approach are shown as open markers, while those in the ``parametric''
+family are given filled markers.  The top half, with points in black, shows the nine
+models that were constructed using only data available before the
+start of the Frontier Fields observations. A black dashed line marks the
+unweighted mean for these models, at $\mu=2.6$.
+The lower six models in
+green used additional input constraints, including new multiply imaged
+systems and redshifts.  The final two points, with square orange
+outlines, are the ``unblind'' models that were generated after the
+magnification of the SN was known.  
+The green dashed line marks the
+unweighted mean for these six models, at $\mu=2.3$.
+\label{fig:LensingTest} }}
 \end{center}
 \end{figure}
 
 Table~\ref{tab:PredictedMagnifications} gives each model's predicted
-magnification and uncertainty for a source at $z=1.3457$ and
-at the position of \tomas.  These models represent a broad sampling of
-the techniques and assumptions that can be applied to the modeling of
-mass distributions in galaxy clusters.  The first eight models in this
-table are so-called {\it parametric}\footnote{Although this
+magnification and uncertainty for a source at $z=1.3457$ and at the
+position of \tomas.  These models represent a broad sampling of the
+techniques and assumptions that can be applied to the modeling of mass
+distributions in galaxy clusters. 
+\change{We discuss some of the modeling choices here, but
+a more rigorous comparison of these disparate lens modeling techniques
+is beyond the scope of this work. For a complete discussion of each
+model's methodology the reader is directed to the listed references.}
+
+ Eight of these are so-called {\it parametric}\footnote{Although this
 nomenclature is becoming standard in the literature, it is somewhat
 misleading, as the pixels or grid cells in free-form models are
 effectively parameters as well. Perhaps ``simply-parameterized'' would
 be more accurate, though we adopt the more common usage here.}
-models, and the bottom seven are {\it free-form} models.  Broadly
+models, and the remining seven are {\it free-form} models.  Broadly
 speaking, the parametric models use parameterized density
 distributions to describe the arrangement of mass within the cluster,
 typically associating massive dark matter halos with the positions of
@@ -875,45 +892,30 @@ bright cluster member galaxies. Therefore, parametric models rely (to
 varying degrees) on the assumption that the cluster's dark matter can
 be described by analytic forms such as NFW halos \citep{Navarro:1997},
 or pseudo isothermal elliptical mass
-distributions \citep[PIEMD][]{Kassiola:1993}.  Free-form models divide
+distributions \citep[PIEMD][]{Kassiola:1993}.
+
+Free-form models divide
 the cluster into a grid, generally using a multi-scale grid to get
 better sampling in denser regions. Each grid cell is assigned a mass
 or a potential, and then the mass values are iteratively refined to
 match the observed lensing constraints. In some cases an adaptive grid
 is used so that the grid spacing itself can also be modified as the
 model is iterated \citep[e.g.][]{Liesenborgs:2006,Merten:2009}.  
-A more rigorous comparison of these
-disparate lens modeling techniques is beyond the scope of this
-work.  For a complete discussion of each model's
-methodology, the reader is directed to the listed references.
-
-
-In Figure~\ref{fig:LensingTest} the model predictions are plotted
-alongside the observed magnification of SN \tomas, derived in
-Section~\ref{sec:DistanceAndMagnification}.  To first order, this
-comparison shows that these 15 models are largely consistent with each
-other and with the observed magnification of SN \tomas. Naively
-treating each model as an independent prediction for the magnification
-(and ignoring their quoted uncertainties), one would get a mean for
-the full sample of $\mu=2.5\pm0.4$.  This is separated from
-the observed SN magnification by $\delta\mu/\mu=23\%$, which is
-approximately a 1$\sigma$ difference.
-
-In general, free-form methods tend to explore the model parameter
-space more fully than parametric methods.  This is reflected in the
-size of the error-bars in Figure~\ref{fig:LensingTest}.  The Williams
+\change{
+In general, free-form methods tend to be more flexible than parametric methods,   
+as reflected by the
+size of the error-bars in Figure~\ref{fig:LensingTest}.
+For example, the Williams
 model (using GRALE) has the largest uncertainties, with a
 68\% confidence range that encompasses the median magnification values
-returned by all other models.  This is possibly the most complete
-uncertainty estimate as it includes many systematic error sources
-that are not incorporated into most other models. For example, this
+returned by all other models.  This is due in part to the 
+ inclusion of many systematic error sources. For example, this
 implementation of GRALE accounts for mass sheet degeneracy by
 introducing a free parameter in the reconstruction that represents an
-arbitrarily scaled mass sheet, with normalization to be chosen by the
-genetic algorithm.  More complex degeneracies are also accounted for
+arbitrarily scaled mass sheet. More complex degeneracies are also accounted for
 in this model through the use of basis
 functions \citep{Liesenborgs:2006,Liesenborgs:2007,Mohammed:2014}. 
-
+}
 
 Figure~\ref{fig:LensingTest} also separates the models based on the
 scope of input data constraints used.  Ten of the models rely only on
@@ -929,41 +931,59 @@ none of these modelers used the SN magnification as a constraint, and
 the modelers did not have access to the final SN magnification value
 when constructing their model. 
 
-In spite of the great variety in input data and methodology, these
-lens models overall are delivering consistent and fairly accurate
-estimates of the magnification.  Seven of the tested models (CATS(v1),
-GLAFIC, Zitrin-NFW, Merten, Bradac(v2), Lam(v2), Diego) report a
-median value that falls within the 1$\sigma$ uncertainty range of the
-measured magnification, and three of the free-form models (Williams,
-Lam(v2), Diego) report uncertainties that overlap the central $\mu$ as
-measured from both of the SN light curve fitters.  Furthermore, the
-scatter amongst models provides a reasonable estimate of the
-magnification uncertainty.
+In Figure~\ref{fig:LensingTest} the model predictions are plotted
+alongside the observed magnification of SN \tomas, derived in
+Section~\ref{sec:DistanceAndMagnification}.  To first order, this
+comparison shows that these 15 models are largely consistent with each
+other and with the observed magnification of SN \tomas. \change{If we
+take the first set of 9 pre-HFF models and naively treat each as an
+independent prediction for the magnification (they are not all
+independent) and if we ignore their quoted uncertainties, we would get
+an unweighted mean for the pre-HFF sample of $\mu_{\rm
+pre}=2.6\pm0.4$.  This is separated from the observed SN magnification
+by $\delta\mu/\mu=28\%$, which is approximately a 1.5$\sigma$
+difference. The addition of deeper imaging and new spectroscopic
+constraints from the HFF program and affiliated efforts should be
+expected to improve the lens models, and in fact we see that it does:
+the mean for the post-HFF sample is $\mu_{\rm post}=2.3\pm0.6$, fully
+consistent with the observed SN magnification.} 
 
 This is largely in agreement with the results
-of \citetalias{Patel:2014} and \citet{Nordin:2014}.  The fact that the
-model predictions are collectively within $1\sigma$ of the observed
-magnification is especially encouraging for these Abell 2744
-models. This is a merging cluster with a complex mass distribution,
-and many of the models we are evaluating are preliminary products,
-generated quickly and without access to the rich data from the
-Frontier Fields program.
+of \citetalias{Patel:2014} and \citet{Nordin:2014}, \change{where
+model predictions were found to be in reasonably good agreement with a
+set of 3 lensed SNe from the CLASH program.  The general agreement
+between the model predictions and the SN measurement} is especially
+encouraging for these Abell 2744 models. This is a merging cluster
+with a complex mass distribution, and \change{the SN is located
+outside of the strong-lensing region where the models are most tightly
+constrained.}
+
+%In spite of the great variety in input data and methodology, these
+%lens models overall are delivering consistent and fairly accurate
+%estimates of the magnification.  Seven of the tested models (CATS(v1),
+%GLAFIC, Merten, Zitrin-NFW, Bradac(v2), Diego, Lam(v2)) report a
+%median value that falls within the 1$\sigma$ uncertainty range of the
+%measured magnification, and three of the models (Williams,
+%Diego, Lam(v2)) report uncertainties that overlap the central $\mu$ as
+%measured from both of the SN light curve fitters.  
 
 However, beyond this first-order agreement, there is a small
-systematic bias apparent. All but two of the lens models
-return median magnifications that are {\it higher} than the observed
-value, and six of the models are discrepant by more than $1.5\sigma$.
-It is important to emphasize that SN \tomas\ only samples a single
-line of sight through the cluster, and this bias to higher
-magnifications is minor.  Nevertheless, a systematic
-shift of this nature is surprising, given the wide range of
-modeling strategies, input data, and physical assumptions represented
-by this set of models.  In the following subsections we examine
-possible explanations for this small but nearly universal
-bias.  We first consider whether a misinterpretation of the data on the SN
-itself can account for the observed systematic bias, and then 
- examine the lens models.
-
+systematic bias apparent. All but two of the lens models return median
+magnifications that are {\it higher} than the observed value, and six
+of the models are discrepant by more than $1.5\sigma$. \change{These
+six discrepant models are all biased to higher magnifications. They
+are found in both the pre-HFF and post-HFF models, in the parametric
+and free-form families, and among the strong-lensing-only and the
+strong+weak subsets.}  It is important to emphasize that SN \tomas\
+only samples a single line of sight through the cluster, and this bias
+to higher magnifications is minor.  Nevertheless, a systematic shift
+of this nature is surprising, given the wide range of modeling
+strategies, input data, and physical assumptions represented by this
+set of models.  In the following subsections we examine possible
+explanations for this small but nearly universal bias.  We first
+consider whether a misinterpretation of the data on the SN itself can
+account for the observed systematic bias, and then examine the lens
+models.
 
 
 \subsection{Possible Errors in Supernova Analysis}
@@ -1133,14 +1153,14 @@ Type Ia SN (the SALT2 model is shown).
 
 
 
-\subsection{Possible Errors in Lens Modeling}
-\label{sec:LensModelComparison}
+\subsection{Possible Errors in Lens Model Inputs}
+\label{sec:LensModelInputs}
 
-Having now ruled out misinterpetations of the SN data, we are left to
-seek an explanation for the mild tension by scrutinizing the lens
-models.  Here we evaluate four possible sources for a systematic bias to
-appear in the lens models.
-
+Having \change{found no evidence for} misinterpetations of the SN
+data, we are left to seek an explanation for the mild tension by
+scrutinizing the lens models.  Here we evaluate four
+possible \change{ways in which the input data or assumptions of these
+lens models could lead to a systematic bias in the magnification.}
 
 \subsubsection{Cosmic Weak Lensing}
 In addition to the dominant gravitational lensing from the foreground
@@ -1194,7 +1214,6 @@ resolve the overall systematic shift.  \change{\citet{Bayliss:2015} find that fo
 
 
 \subsubsection{Misidentification of a multiple image}
-
 \citet{Jauzac:2014c} proposed a correction
 for the location of image 3.3, the third component of a triply-imaged
 galaxy \citep{Merten:2011} at $z=3.98\pm0.02$ \citep{Johnson:2014}.
@@ -1212,15 +1231,20 @@ that are within 1$\sigma$ of the observed $\mu$ as well as
 significantly discrepant points.
 
 
-\subsection{Quantity and Quality of Lensing Constraints}
-\label{sec:LensModelComparison}
+\change{
+\subsection{Best Practices for Magnification Prediction}
+\label{sec:BestPractices}
+}
 
-None of the possibilities described above can completely account for
-the mild tension between the observed and predicted magnifications.
-However, in lieu of a physical explanation, we can simply take a
-pragmatic approach and seek to identify any shared characteristics of
-the most accurate models.  In this way SN \tomas\ may serve as a guide
-for optimizing future lens models for magnification predictions.
+\change{
+None of the possible errors in lens model inputs described above can
+completely account for the mild tension between the observed and
+predicted magnifications.  However, we do have several models that
+agree with the measured SN magnification.  In this section we take a
+simple pragmatic approach and seek to identify any shared
+characteristics of the most accurate models.  In this way SN \tomas\
+may serve as a guide toward optimizing future lens models for
+magnification predictions.  }
 
 
 \begin{figure*}
@@ -1239,27 +1263,42 @@ Figure~\ref{fig:LensingTest}.}
 \end{center}
 \end{figure*}
 
-As can be seen in Table~\ref{tab:LensModels} and
-Figure~\ref{fig:LensingTest}, among the 7 models that yield
-magnifications discrepant by more than 1$\sigma$ we find a variety of
-methodologies (both parametric and free-form) and a mix of lensing
-constraints (both strong-lensing only and strong+weak).  The left
-panel of Figure~\ref{fig:Nspecz} shows that this subset of 7 also
-includes a wide range in the number of multiply-imaged galaxies used
-as strong-lensing constraints (from $\sim$10 to 50).  Given that the
-discrepancy persists across all of these categories, none of them can
-provide a satisfactory explanation for the small observed bias.
 
-However, the right panel of Figure~\ref{fig:Nspecz} shows that 3 of
-the most successful lens models (Bradac(v2), Lam(v2), Diego) do share
-a common characteristic: they all use a set of multiply-imaged galaxies for
-which a large fraction have spectroscopic redshifts. In practice,
-this means that the strong-lensing constraints in these models are
-defined more stringently. Other models use
-a larger set of strong-lensing features, but the dearth of
-spectroscopic constraints means that it is more likely that some of
-those multiply-imaged galaxies are assigned with incorrect redshifts.
+\change{
+\subsubsection{Quantity and Quality of Strong Lensing Constraints}
+\label{sec:QuantityAndQuality}
+}
 
+\change{
+Increasing the number of multiply imaged galaxies used as
+strong-lensing constraints should in principle lead to improvements in
+the accuracy and precision of magnification predictions.  We have
+already seen some suggestion of this from
+Figure~\ref{fig:LensingTest}, which shows that the post-HFF models are
+collectively better than the pre-HFF models at predicting the
+SN \tomas\ magnification.  
+The left panel of Figure~\ref{fig:Nspecz} isolates this variable by
+plotting the tension between each model prediction and the measured SN
+magnification against the number of multiply-imaged galaxies used as
+strong-lensing constraints. There is no clear correlation here, and in
+fact the most significant outlier (CATS(v2)) is actually the one using
+the most multiply-imaged systems.  
+}
+
+\change{
+In the right panel of
+Figure~\ref{fig:Nspecz} we examine an alternative explanation by plotting 
+the model tension against the fraction of strong-lensing constraints that have a spectroscopic redshift. 
+Here we see a suggestion of a trend, and find that two of the most successful lens
+models (Bradac(v2) and Lam(v2)) do share a common characteristic: they
+both use a set of multiply-imaged galaxies for which a large fraction
+have spectroscopic redshifts. In practice, this means that the
+strong-lensing constraints in these models are defined more
+stringently. Other models use a larger set of strong-lensing features,
+but the dearth of spectroscopic constraints means that it is more
+likely that some of those multiply-imaged galaxies are assigned with
+incorrect redshifts.
+}
 
 This comparison suggests that to get accurate magnifications, lens
 models should employ a strict vetting of the strong-lensing
@@ -1269,15 +1308,52 @@ redshifts.
 The {\it quality} of strong-lensing constraints is perhaps just as
 important as the {\it quantity}.
 
-
-It is relevant to note that the three models highlighted for their
-accuracy here (Bradac(v2), Lam(v2), Diego) also happen to be the three
+It is relevant to note that the two models highlighted for their
+accuracy here (Bradac(v2) and Lam(v2)) also happen to be the two
 models that are not truly ``blind,'' in that the modelers were aware
-of preliminary analysis of the SN magnification.  However, none of
-these models used the SN magnification as an input constraint, none
-were tuned to match the SN magnification, and the modelers did not
+of preliminary analysis of the SN magnification.  However, neither of
+these models used the SN magnification as an input constraint, neither
+were consciously tuned to match the SN magnification, and the modelers did not
 have a final measurement of the SN magnification at the time their
 models were generated.
+
+
+%\subsubsection{Source Plane Minimization}
+%
+%A third model that stands out for delivering both an accurate and fairly precise estimate of the magnification 
+%
+%A general tendency towards high model magnification can result when
+%lens models are minimized in the source plane (rather than the image
+%plane).  As the overall magnification of a given model
+%increases, differences in angle between the delensed
+%images of the same source become smaller, corresponding to an overly shallow lensing mass profile. In
+%the limit of only a small number of multiple images that cover a
+%limited range of source redshift, this results in a tendency to force all
+%sources toward the same location in the source plane, thereby
+%maximizing the magnification.
+%
+%Minimizing in the image plane avoids this well known bias but is much
+%more difficult (Broadhurst etal 2005 ApJ 621,53, Zitrin etal 2009,
+%MNRAS 396,1985) as model generated images must be searched for in the
+%image plane near the corresponding observed images.  
+%
+%Alternatively, one may guard against this bias using a modified source plane minimization that is
+%constrained not to generate overly small re-lensed sources  (Sendra etal 2012,MNRAS 437,2642,Diego etal
+%2014).
+%
+%For models that incorporate HFF
+%data, this bias should be reduced, as many
+%multiply images spread over a wide redshift range will lessen the bias
+%towards high magnification. 
+%
+%
+%
+%\subsubsection{Model Flexibility}
+%
+%Let us first define a successful magnification prediction as one whose
+%quoted uncertainties overlap the measured $\mu=2.03$ from the SN.
+%There are three models that meet this criteria: Williams, Diego, and
+%Lam(v2). All of these are free-form models
 
 
 \section{Summary and Conclusions}

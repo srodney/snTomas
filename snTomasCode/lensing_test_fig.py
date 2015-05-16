@@ -45,8 +45,10 @@ def mkLensingTestFig( show2snfits=False, showlegend=False, presfig=False,
     y = ytop
     for row in lensingdat:
         y-=1
-        color = row['parametric'] and 'k' or 'g'
-        mfc = row['postFF'] and color or 'w'
+        # color = row['parametric'] and 'k' or 'g'
+        #mfc = row['postFF'] and color or 'w'
+        color = row['postFF'] and 'g' or 'k'
+        mfc = row['parametric'] and color or 'w'
         model = row['model']
         best = row['best']
         med = row['med']
@@ -56,12 +58,8 @@ def mkLensingTestFig( show2snfits=False, showlegend=False, presfig=False,
             marker='D'
         else:
             marker='o'
-        if row['postSN']:
-            mec='magenta'
-            mew=ms/7.
-        else :
-            mec=color
-            mew=ms/8.
+        mec=color
+        mew=ms/8.
 
         #ax1.plot( best, y, marker='x', ms=ms, color=color,
         #          zorder=100, label='_nolegend_' )
@@ -77,6 +75,11 @@ def mkLensingTestFig( show2snfits=False, showlegend=False, presfig=False,
                       marker=marker, mfc=mfc, mec=mec, mew=mew, ms=ms,
                       capsize=1, color=color, zorder=10,
                       label='_nolegend_' )
+        if row['postSN']:
+            ax1.plot( med, y, marker='s', mfc='w', mec='darkorange',
+                      mew=ms/7, ms=1.3*ms, zorder=-10,
+                      label='_nolegend_' )
+
         print( "%s discrepancy = %.2f sigma"%(model,(med-muSNmlcs)/np.sqrt(errminus**2+muSNmlcserr**2)))
         if labelvalues:
             label = '%s: $%.2f^{%+.2f}_{%+.2f}$'%( model, med, errplus, errminus )
@@ -89,10 +92,12 @@ def mkLensingTestFig( show2snfits=False, showlegend=False, presfig=False,
 
         ax1.text( xlabel, float(y)/ytop, label, ha=ha, va='center',
                   color=color, transform=ax1.transAxes)
-    fig.text( 0.98, 0.75, 'Parametric', ha='right', va='center', size='large',
+    fig.text( 0.98, 0.75, 'Pre-HFF', ha='right', va='center', size='large',
               color='k', transform=fig.transFigure, rotation=-90)
-    fig.text( 0.98, 0.34, 'Free-Form', ha='right', va='center',size='large',
+    fig.text( 0.98, 0.34, 'Post-HFF', ha='right', va='center',size='large',
               color='g', transform=fig.transFigure, rotation=-90)
+    #fig.text( 0.98, 0.26, 'Post-SN', ha='right', va='center',size='large',
+    #          color='g', transform=fig.transFigure, rotation=-90)
 
     ax1.spines['right'].set_visible(False)
     ax1.spines['left'].set_visible(False)
@@ -102,20 +107,25 @@ def mkLensingTestFig( show2snfits=False, showlegend=False, presfig=False,
 
     ipar = np.where(lensingdat['parametric'])[0]
     iff = np.where(lensingdat['parametric']==0)[0]
+
+    ipostFF = np.where(lensingdat['postFF'])[0]
+    ipreFF = np.where(lensingdat['postFF']==0)[0]
+    ipostSN = np.where(lensingdat['postSN'])[0]
+
     np.median(lensingdat['med'])
     for muSN, muSNerr, ymin, ymax, color, textcolor, ls, fitter in zip(
-            [muSNmlcs,muSNsalt,np.median(lensingdat['med'][ipar]),np.median(lensingdat['med'][iff])],
-            [muSNmlcserr,muSNsalterr,np.std(lensingdat['med'][ipar]),np.std(lensingdat['med'][iff])],
+            [muSNmlcs,muSNsalt,np.median(lensingdat['med'][ipreFF]),np.median(lensingdat['med'][ipostFF])],
+            [muSNmlcserr,muSNsalterr,np.std(lensingdat['med'][ipreFF]),np.std(lensingdat['med'][ipostFF])],
             [0.,0.,0.4,0.],
             [1.,1.,1.,0.4],
             [cp.lightblue,cp.darkred,cp.lightgrey,cp.darkgreen],
             [cp.darkblue,cp.darkred,cp.black,cp.darkgreen],
             ['-','-','--','--'],
-            ['MLCS2k2','SALT2','Parametric','Free-Form'] ):
+            ['MLCS2k2','SALT2','Pre-HFF','Post-HFF'] ):
         if not show2snfits :
             if fitter=='SALT2': continue
+        ax1.axvline( muSN, ls=ls, color=textcolor, lw=2, ymin=ymin, ymax=ymax )
         if not ls=='--':
-            ax1.axvline( muSN, ls=ls, color=textcolor, lw=2, ymin=ymin, ymax=ymax )
             ax1.axvspan( muSN-muSNerr, muSN+muSNerr, ymin=ymin, ymax=ymax,
                          color=color, alpha=0.3,zorder=-100 )
         #ax1.text( muSN-0.03,  ymax*ytop+0.05, fitter, color=textcolor,
@@ -124,24 +134,25 @@ def mkLensingTestFig( show2snfits=False, showlegend=False, presfig=False,
     ax1.text( 1.75, 2*ytop/3, 'SN HFF14tom', rotation=90,
               ha='right', va='center', color=cp.darkblue )
 
-    ax1.axvline( np.mean(lensingdat['med']), ls='--', color='0.5', lw=1 )
+    # ax1.axvline( np.mean(lensingdat['med']), ls='--', color='0.5', lw=1 )
     print( "All models : mu=%.2f +- %.2f"%(np.mean(lensingdat['med']),np.std(lensingdat['med'])))
 
     if showlegend:
         if showlegend=='top':
             axleg = pl.axes([0.5,0.87,0.3,0.1], frameon=True )
         else :
-            axleg = pl.axes([0.68,0.02,0.29,0.14], frameon=True )
+            axleg = pl.axes([0.68,0.02,0.3,0.14], frameon=True )
 
         SLpre    = axleg.plot(0,2,marker='o',mfc='w',mec='0.5',ls=' ',ms=ms,label='strong')
         SLWLpre  = axleg.plot(0,1,marker='D',mfc='w',mec='0.5',ls=' ',ms=ms,label='str+wk')
         SLpost   = axleg.plot(1,2,marker='o',mfc='k',mec='0.5',ls=' ',ms=ms,label='strong')
         SLWLpost = axleg.plot(1,1,marker='D',mfc='k',mec='0.5',ls=' ',ms=ms,label='str+wk')
-        unblind  = axleg.plot(0.5,0,marker='s',mfc='w',mec='magenta',ls=' ',ms=ms,label='unblind')
-        axleg.text( -0.5, 2.5, 'pre/post-HFF', ha='left',va='bottom' )
+        unblind  = axleg.plot(0.5,0,marker='s',mfc='w',mec='darkorange',ls=' ',ms=ms,label='unblind')
+        #axleg.text( -0.5, 2.5, 'pre/post-HFF', ha='left',va='bottom' )
+        axleg.text( -0.45, 2.5, 'Fr. \ Par.', ha='left',va='bottom' )
         axleg.text( 1.5, 2.0, 'strong', va='center' )
         axleg.text( 1.5, 1.0, 'str+wk', va='center' )
-        axleg.text( 1.5, 0.0, 'unblind', va='center' )
+        axleg.text( 1.4, 0.0, 'unblind', va='center' )
         axleg.set_xlim(-0.7,3.4)
         axleg.set_ylim(-0.6,3.7)
         axleg.xaxis.set_ticks([])
@@ -185,8 +196,11 @@ def mkTensionFig(presfig=False, showlegend=True):
     ax2 = pl.subplot(1,2,2, sharey=ax1)
 
     for row in lensingdat:
-        color = row['parametric'] and 'k' or 'g'
-        mfc = row['postFF'] and color or 'w'
+        # color = row['parametric'] and 'k' or 'g'
+        #mfc = row['postFF'] and color or 'w'
+        color = row['postFF'] and 'g' or 'k'
+        mfc = row['parametric'] and color or 'w'
+
         model = row['model']
         best = row['best']
         med = row['med']
@@ -196,12 +210,8 @@ def mkTensionFig(presfig=False, showlegend=True):
             marker='D'
         else:
             marker='o'
-        if row['postSN']:
-            mec='magenta'
-            mew=ms/7.
-        else :
-            mec=color
-            mew=ms/8.
+        mec=color
+        mew=ms/8.
         specfrac = row['nzSpec']/float(row['nSys'])
 
         nim = row['nIm']/float(row['nSys'])
@@ -215,6 +225,14 @@ def mkTensionFig(presfig=False, showlegend=True):
         ax2.plot( specfrac, tension, ls=' ', alpha=0.8,
                  marker=marker, mfc=mfc, mec=mec, mew=mew, ms=ms,
                  color=color )
+        if row['postSN']:
+            ax1.plot( nsys, tension, ls=' ', alpha=0.8,
+                      marker='s', mfc='w', mec='darkorange',
+                      mew=ms/7, ms=1.3*ms, zorder=-10, color=color )
+            ax2.plot( specfrac, tension, ls=' ', alpha=0.8,
+                      marker='s', mfc='w', mec='darkorange',
+                      mew=ms/7, ms=1.3*ms, zorder=-10, color=color )
+
     ax1.axhline(0,ls='--',color='0.5')
     ax2.axhline(0,ls='--',color='0.5')
     ax1.set_ylabel('Tension with SN ($\sigma$)')
@@ -238,8 +256,8 @@ def mkTensionFig(presfig=False, showlegend=True):
         SLWLpre  = axleg.plot(0,1,marker='D',mfc='w',mec='0.5',ls=' ',ms=ms,label='str+wk')
         SLpost   = axleg.plot(1,2,marker='o',mfc='k',mec='0.5',ls=' ',ms=ms,label='strong')
         SLWLpost = axleg.plot(1,1,marker='D',mfc='k',mec='0.5',ls=' ',ms=ms,label='str+wk')
-        unblind  = axleg.plot(0.5,0,marker='s',mfc='w',mec='magenta',ls=' ',ms=ms,label='unblind')
-        axleg.text( -0.5, 2.5, 'pre/post-HFF', ha='left',va='bottom' )
+        unblind  = axleg.plot(0.5,0,marker='s',mfc='w',mec='darkorange',ls=' ',ms=ms,label='unblind')
+        axleg.text( -0.5, 2.5, 'Free \ Par.', ha='left',va='bottom' )
         axleg.text( 1.5, 2.0, 'strong', va='center' )
         axleg.text( 1.5, 1.0, 'str+wk', va='center' )
         axleg.text( 1.5, 0.0, 'unblind', va='center' )
