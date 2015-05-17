@@ -20,7 +20,7 @@
 
 
 \begin{abstract}
-\change{Reduced to $<250$ words.}\\
+\changenote{Reduced to $<250$ words.}\\
 SN \tomas\ is a Type Ia Supernova (SN) discovered at
 $z=1.3457\pm0.0001$ behind the galaxy cluster Abell 2744
 ($z=0.308$). This SN 
@@ -143,41 +143,42 @@ same cluster, each providing a new magnification constraint.}
 
 
 One of the key values in observing standard candles behind
-gravitational lenses is in addressing the problem of the
-mass-sheet degeneracy \citep{Falco:1985,Schneider:1995}.  This
-degeneracy arises because one can introduce into a lens model an
-unassociated sheet of uniform mass in front of or behind the
-lens, without disturbing the primary observable quantities.  For
-example, take a lens model with a given surface mass density $\kappa$,
-and then transform the surface mass density to
-$\kappa^{\prime}=(1-\lambda)\kappa+\lambda$ for any arbitrary value
-$\lambda$.  Both the $\kappa$ and $\kappa^{\prime}$ models will
-produce exactly the same values for all positional and shear
-constraints from strong and weak lensing \citep{Seitz:1997}.  When lensed background
-sources are available across a wide range of redshifts (as is the case
-for the Abell 2744 cluster discussed here), it should in principle be
-possible to break this degeneracy \citep{Seitz:1997,Bradac:2004}.  However, there are more complex versions
-of positional constraint
-degeneracies \citep{Schneider:2014,Liesenborgs:2012}.  Such
+gravitational lenses is in addressing the problem of the mass-sheet
+degeneracy \citep{Falco:1985,Schneider:1995}.  This degeneracy arises
+because one can introduce into a lens model an unassociated sheet of
+uniform mass in front of or behind the lens, without disturbing the
+primary observable quantities.  For example, take a lens model with a
+given surface mass density $\kappa$, and then transform the surface
+mass density to $\kappa^{\prime}=(1-\lambda)\kappa+\lambda$ for any
+arbitrary value $\lambda$.  Both the $\kappa$ and $\kappa^{\prime}$
+models will produce exactly the same values for all positional and
+shear constraints from strong and weak lensing \citep{Seitz:1997}.
+When lensed background sources are available across a wide range of
+redshifts (as is the case for the Abell 2744 cluster discussed here),
+it should in principle be possible to break this
+degeneracy \citep{Seitz:1997,Bradac:2004}.  However, there are more
+complex versions of positional constraint
+degeneracies \citep{Liesenborgs:2012,Schneider:2014}.  Such
 degeneracies do not extend to the {\it absolute} magnification of a
-background source's flux and size. \change{In the case of the simple mass sheet degeneracy described above, the magnification scales as $\mu\propto(1-\lambda)^{-2}$ \citep[see e.g.][]{Bartelmann:2010}.} Therefore, an absolute measurement
-of magnification from a standard candle or a standard ruler
-\citep{Sonnenfeld:2011}  can break these fundamental degeneracies
-\citep{Holz:2001}.
+background source's flux and size. \change{In the case of the simple
+mass sheet degeneracy described above, the magnification scales as
+$\mu\propto(1-\lambda)^{-2}$ \citep[see e.g.][]{Bartelmann:2010}.}
+Therefore, one can break these fundamental degeneracies with an
+absolute measurement of magnification from a standard
+candle \citep{Holz:2001} or a standard ruler \citep{Sonnenfeld:2011}.
 
 In Section~\ref{sec:DiscoveryAndFollowup} we present the discovery and
 follow-up observations of SN \tomas\ at $z=1.3457$, discovered behind
-the galaxy cluster Abell 2744.  Sections~\ref{sec:Spectroscopy}
+the galaxy cluster Abell 2744.  Section~\ref{sec:HostGalaxy} examines
+the SN host galaxy.  Sections~\ref{sec:Spectroscopy}
 and \ref{sec:PhotometricClassification} describe the spectroscopy and
 photometry of this SN, leading to a classification of the object as a
 normal Type Ia SN.  In Section~\ref{sec:DistanceAndMagnification} we
 make a direct measurement of the magnification of this source due to
 gravitational lensing.  Section~\ref{sec:Discussion} discusses the
-tension between our magnification measurement and the lens models,
-and our conclusions are summarized in Section~\ref{sec:SummaryAndConclusions}.
-with implications for the systematic error budget in magnification
-estimates for other high-$z$ lensed sources.
-
+tension between our magnification measurement and the lens models. Our
+conclusions are summarized in Section~\ref{sec:SummaryAndConclusions},
+along with a discussion of future prospects. 
 
 \section{Discovery, Follow-up, and Data Processing}
 \label{sec:DiscoveryAndFollowup}
@@ -202,7 +203,6 @@ image credit: NASA, ESA, and J. Lotz, M. Mountain, A. Koekemoer, and
 the HFF Team (STScI)) }
 \end{center}
 \end{figure*}
-
 
 SN \tomas\ was discovered in Hubble Space Telescope (\HST) observations
 with the Advanced Camera for Surveys (ACS) in the F606W and F814W
@@ -239,6 +239,37 @@ from HST+ACS observations taken in 2009 (PI:Dupke, HST-PID:11689).
 %\end{center}
 %\end{figure}
 
+Upon discovery, HST target-of-opportunity observations were triggered
+from the FrontierSN program (PI:Rodney, HST-PID:13386), which aims to
+discover and follow transient sources in the HFF cluster and parallel
+fields. The FrontierSN observations provided WFC3-IR imaging as well
+as spectroscopy of the SN itself using the ACS G800L grism,
+supplementing the rapid-cadence optical imaging from HST+ACS already
+being provided by the HFF program. The last detections in the IR F105W
+and F140W bands came from the direct-imaging component of the GLASS
+program.  Difference images for the IR follow-up data were generated
+using templates constructed from the HFF WFC3-IR imaging campaign,
+which concluded in November, 2013.
+
+All of the imaging data were processed using the {\tt sndrizpipe}
+pipeline,\footnote{\url{https://github.com/srodney/sndrizpipe} v1.2
+DOI:10.5281/zenodo.10731} a custom data reduction package in Python
+that employs the {\tt DrizzlePac} tools from the Space Telescope
+Science Institute (STScI) \citep{Fruchter:2010}.  Photometry was
+collected using the {\tt PyPhot} software
+package,\footnote{\url{https://github.com/djones1040/PyPhot}} a
+pure-Python implementation of the photometry algorithms from the IDL
+AstroLib package \citep{Landsman:1993}, which in turn are based on the
+DAOPHOT program \citep{Stetson:1987}.  For the IR bands we used point
+spread function (PSF) fitting on the difference images, and in the ACS
+optical bands we collected photometry with a
+0\farcs3 aperture. Table~\ref{tab:Photometry} presents the list of
+observations, along with measured photometry from all available
+imaging data.
+
+\section{Host Galaxy}
+\label{sec:HostGalaxy}
+
 The most probable host galaxy for SN \tomas\ is a faint and diffuse
 galaxy immediately to the south-east of the SN location.  With
 photometry of the host galaxy collected from the template images, we
@@ -267,34 +298,26 @@ incompatible with $z=1.742$ from this brighter galaxy.  This means
 that the latter galaxy is a background object and therefore has no
 impact on the SN magnification.
 
-Upon discovery, HST target-of-opportunity observations were triggered
-from the FrontierSN program (PI:Rodney, HST-PID:13386), which aims to
-discover and follow transient sources in the HFF cluster and parallel
-fields. The FrontierSN observations provided WFC3-IR imaging as well
-as spectroscopy of the SN itself using the ACS G800L grism,
-supplementing the rapid-cadence optical imaging from HST+ACS already
-being provided by the HFF program. The last detections in the IR F105W
-and F140W bands came from the direct-imaging component of the GLASS
-program.  Difference images for the IR follow-up data were generated
-using templates constructed from the HFF WFC3-IR imaging campaign,
-which concluded in November, 2013.
+\change{
+The galaxy identified as the host is not close enough to the cluster
+core to {\it necessarily} be multiply-imaged, but it is still possible
+that the host galaxy is one of the outer images of a multiple image
+system.  In such a case, and given the position of the SN host, one
+would expect that another image of the galaxy would be present at a
+similar brightness, and would therefore be detectable in HST
+imaging. To date, no plausible candidate for a counter-image has been
+identified.}
 
-All of the imaging data were processed using the {\tt sndrizpipe}
-pipeline,\footnote{\url{https://github.com/srodney/sndrizpipe} v1.2
-DOI:10.5281/zenodo.10731} a custom data reduction package in Python
-that employs the {\tt DrizzlePac} tools from the Space Telescope
-Science Institute (STScI) \citep{Fruchter:2010}.  Photometry was
-collected using the {\tt PyPhot} software
-package,\footnote{\url{https://github.com/djones1040/PyPhot}} a
-pure-Python implementation of the photometry algorithms from the IDL
-AstroLib package \citep{Landsman:1993}, which in turn are based on the
-DAOPHOT program \citep{Stetson:1987}.  For the IR bands we used point
-spread function (PSF) fitting on the difference images, and in the ACS
-optical bands we collected photometry with a
-0\farcs3 aperture. Table~\ref{tab:Photometry} presents the list of
-observations, along with measured photometry from all available
-imaging data.
- 
+
+\change{To measure the stellar mass of the host galaxy
+we use Eq. 8 of \citet{Taylor:2011}, which relates the rest-frame
+(g-i) color and i-band luminosity to the total stellar mass. To derive
+these values, we fixed the redshift at $z=1.3457$ and repeated the SED
+fitting using BPZ. From the best-fit SED we extracted rest-frame
+optical magnitudes, and corrected them for lensing using a
+magnification factor of $\mu=2.0$ -- a value that we will derive from
+the SN itself in Section~\ref{sec:DistanceAndMagnification}.  From
+this we determine the host galaxy mass to be $10^{10.1}$ \Msun. }
 
 
 \section{Spectroscopy}
@@ -754,11 +777,7 @@ corrections for light curve shape and color) than SNe in low-mass
 hosts \citep{Kelly:2010,Sullivan:2010}.  The dividing line for this
 purely empirical ``mass step'' correction is generally set around
 $10^{10}$\Msun, although this is somewhat arbitrary \citep[see
-e.g.][]{Betoule:2014}.  This happens to be very close to the
-SN \tomas\ host galaxy mass, which we have measured to be
-$10^{10.1}$ \Msun\ based on Eq. 7 of \citet{Taylor:2011}, using the
-{\it BPZ} SED fit (Section~\ref{sec:DiscoveryAndFollowup}) to define rest-frame optical magnitudes.
-
+e.g.][]{Betoule:2014}.  
 
 The physical mechanism that drives the mass step is not yet
 understood, but may be related to the metallicity or age of the SN
@@ -772,6 +791,19 @@ $z>1$ \citep{Suzuki:2012,Shafer:2014,Betoule:2014}.  Given the
 absence of a clear physical model and the lack of empirical support
 for a high-$z$ mass step, we do not apply any correction to SN \tomas\
 or the control sample. 
+
+\change{
+If we were to apply the correction to this sample, then the SN \tomas\
+distance modulus would not be adjusted, because its host galaxy mass
+(Section~\ref{sec:HostGalaxy}) is below 10$^{10}$ \Msun. Note that
+there is some circularity here, as we used the SN magnification in
+deriving the host galaxy mass, and now use the host mass to inform the
+magnification.  However, changing the magnification value to $mu=2.5$
+does not move the \tomas\ host mass above the mass step threshold, so
+the circularity is not relevant in this case. Applying the
+mass step correction across the entire control sample would lead to a
+small adjustment of the inferred SN \tomas\ magnification, but it is $<5\%$
+and therefore could not relieve the observed tension.}
 
 \subsection{Control Sample Comparison}
 \label{sec:ControlSampleComparison}
@@ -879,14 +911,27 @@ or pseudo isothermal elliptical mass
 distributions \citep[PIEMD][]{Kassiola:1993}.
 
 The seven free-form models divide the cluster field into a grid,
-generally using a multi-scale grid to get better sampling in regions with a higher density of information. Each grid cell is assigned a mass or a potential, and then
+generally using a multi-scale grid to get better sampling in regions
+with a higher density of information (e.g. density of multiple
+images). Each grid cell is assigned a mass or a potential, and then
 the mass values are iteratively refined to match the observed lensing
 constraints. In some cases an adaptive grid is used so that the grid
 spacing itself can also be modified as the model is
 iterated \citep[e.g.][]{Liesenborgs:2006,Merten:2009,Bradac:2009}.
-\change{ In general, free-form methods tend to be more flexible than 
-parametric methods, as they are not guided (or restricted) by
-assumptions about the mass distribution of dark matter halos. }
+
+\change{
+As usual, there is a tradeoff between a model's flexibility, the
+strength of the model assumptions, and the resulting uncertainties. In
+a probabilistic framework, the posterior distribution function of the
+desired quantities depends on all the priors, including model
+assumptions like parametrization.  In general, free-form methods tend
+to be more flexibile than simply parameterized models, and thus tend
+to result in larger error bars.  In brief, if the free form methods
+are too flexible, then they will result in overestimated error
+bars. Conversely, if the simply parameterized models are too
+inflexible, they will result in underestimated error bars.
+}
+
 
 %\change{
 % Table~\ref{tab:PredictedMagnifications} also shows that the quoted
@@ -1183,6 +1228,15 @@ than 10\% \citep{DAloisio:2014}.  The CWL effect is therefore unable
 to account for the observed discrepancy of $\sim23$\% by
 itself.
 
+In
+addition, some sources of uncertainty are taken into account only by a
+subset of models. For example, the Willams model (using GRALE;
+Liesenborgs et al. 2006, 2007; Mohammed et al. 2014) accounts for mass
+sheet degeneracy by introducing a free parameter in the reconstruction
+that represents an arbitrarily scaled mass sheet. The flexibility of
+the Williams model and the inclusion of this source of uncertainty
+contribute to its relatively large uncertainties compared to the other
+models.
 
 \subsubsection{Nearby Cluster Member}
 A component of the Abell 2744 lens that is particularly relevant to SN \tomas\ is the cluster member
