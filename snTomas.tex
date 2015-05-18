@@ -43,13 +43,13 @@ $\mu_{\rm obs}=2.03\pm0.29$.
 \change{In future lens models of Abell 2744, this could
 provide some leverage for breaking degeneracies that positional
 constraints cannot disentangle.}  We compare the measured $\mu$
-against predicted magnifications from 15 lens models, \change{ of
+against predicted magnifications from 17 lens models, \change{ of
 which 13 were generated before the SN magnification was known,
 qualifying as a pure ``blind test.''}  The models are collectively
-fairly accurate: \change{6 of the blind models and both of the post-SN
-models} deliver median magnifications that are consistent with the
-measured $\mu$ to within 1$\sigma$.  However, there is a subtle
-systematic bias: all of the models that disagree with the SN $\mu$ 
+fairly accurate: 8 of the models deliver median magnifications that
+are consistent with the measured $\mu$ to within 1$\sigma$.  However,
+there is a subtle systematic bias: all of the models that disagree
+with the SN $\mu$
 %by more than $1\sigma$ 
 are {\it higher} than the measured value and 6 of these
 are $\geq1.5\sigma$ above the measured magnification.  We
@@ -881,11 +881,11 @@ magnification and uncertainty for a source at $z=1.3457$ and at the
 position of \tomas.  
 \changeG{For thirteen of these models the SN magnification qualifies as a true
 ``blind test'', as they were completed before the SN \tomas\
-magnification measurement was known.  The final two models (Bradac-v2
-and Lam-v2) are technically not blind, although none of these modelers
-used the SN magnification as a constraint, and the modelers did not
-have access to the final SN magnification value when constructing
-their model.}
+magnification measurement was known.  The final four models
+(Bradac-v2, Lam-v2, CATSv2.1 and 2.2) are technically not blind,
+although none of these modelers used the SN magnification as a
+constraint, and the modelers did not have access to the final SN
+magnification value when constructing their model.}
 
 These models represent a broad sampling of the
 techniques and assumptions that can be applied to the modeling of mass
@@ -956,7 +956,7 @@ lens models. The vertical blue line shows the constraints from
 SN \tomas\ derived in Section~\ref{sec:DistanceAndMagnification} using
 the MLCS2k2 fitter, with a shaded region marking the total
 uncertainty. Markers with horizontal error bars show the median
-magnification and 68\%\ confidence region from each of the 15 lensing
+magnification and 68\%\ confidence region from each of the 17 lensing
 models.  Circles indicate models that use only strong-lensing
 constraints, while diamonds denote those that also incorporate
 weak-lensing measurements.  \change{Models using a ``free-form''
@@ -979,33 +979,24 @@ unweighted mean for these six models, at $\mu=2.3$.
 In Figure~\ref{fig:LensingTest} the model predictions are plotted
 alongside the observed magnification of SN \tomas, derived in
 Section~\ref{sec:DistanceAndMagnification}.  To first order, this
-comparison shows that these 15 models are largely consistent with each
-other and with the observed magnification of SN \tomas. \change{If we
-take the first set of 9 pre-HFF models and naively treat each as an
-independent prediction for the magnification (they are not all
-independent) and if we ignore their quoted uncertainties, we would get
-an unweighted mean for the pre-HFF sample of $\mu_{\rm
-pre}=2.6\pm0.4$.  This is separated from the observed SN magnification
-by $\delta\mu/\mu=28\%$, which is approximately a 1.5$\sigma$
-difference. The addition of deeper imaging and new spectroscopic
-constraints from the HFF program and affiliated efforts should be
-expected to improve the lens models, and in
-Figure~\ref{fig:LensingTest} we see that it does: the mean for the
-post-HFF sample is $\mu_{\rm post}=2.3\pm0.6$, fully consistent with
-the observed SN magnification.}
+comparison shows that these 17 models are largely consistent with each
+other and with the observed magnification of SN \tomas. \change{ The
+``naive mean'' of the full set of models is $\mu_{\rm pre}=2.6\pm0.4$.
+This is an unweighted mean (i.e. we ignore all quoted uncertainties)
+derived by naively treating each as an independent
+prediction for the magnification (this is clearly incorrect, as
+several models are represented multiple times as different versions).
+The naive mean is separated from the observed SN magnification by
+$\delta\mu/\mu=28\%$, which is approximately a 1.5$\sigma$ difference.}
 
-%Figure~\ref{fig:LensingTest} also separates the models based on the
-%scope of input data constraints used.  Ten of the models rely only on
-%strong-lensing constraints (plotted as circles), while the other four
-%also use weak-lensing measurements (diamonds).  
-
-This is largely in agreement with the results
-of \citetalias{Patel:2014} and \citet{Nordin:2014}, \change{where
+\change{
+This is approximately consistent with the results
+of \citetalias{Patel:2014} and \citet{Nordin:2014}, where
 model predictions were found to be in reasonably good agreement with a
 set of 3 lensed SNe from the CLASH program.  The general agreement
-between the model predictions and the SN measurement} is especially
+between the model predictions and the SN measurement is especially
 encouraging for these Abell 2744 models. This is a merging cluster
-with a complex mass distribution, and \change{the SN is located
+with a complex mass distribution, and the SN is located
 outside of the strong-lensing region where the models are most tightly
 constrained.}
 
@@ -1283,7 +1274,7 @@ effect]{Johnson:2014}.  However, \citet{Jauzac:2014c} also evaluated a
 version of the CATS(v2) model in which this single source is left in
 the original position and found that the location of image 3.3 does
 not significantly affect the predicted magnifications.  Furthermore,
-dividing our 15 models into those using the original location vs those
+dividing our 17 models into those using the original location vs those
 that adopt the new position, we find that both groups include models
 that are within 1$\sigma$ of the observed $\mu$ as well as
 significantly discrepant points.
@@ -1314,7 +1305,7 @@ generate overly small re-lensed sources \citep{Sendra:2014,Diego:2014}.
 Finally, the effect of this bias should be reduced when one uses many strong
 lensing constraints over a wide range of redshifts. }
 
-\change{ Of the 15 models examined here, both of the Zitrin models 
+\change{ Of the 17 models examined here, both of the Zitrin models 
 follow the first strategy, using image-plane optimization.  The
 Zitrin-LTM model delivers a significantly discrepant magnification,
 while the Zitrin-NFW latter is within 1$\sigma$ of the SN
@@ -1364,65 +1355,72 @@ total number of multiply imaged systems used, and the right panel
 plots the fraction of
 multiply-imaged systems that have a spectroscopic redshift
 constraint.  Marker shapes and colors are the same as in
-Figure~\ref{fig:LensingTest}.}
+Figure~\ref{fig:LensingTest}.  \change{In both panels, three lens model sequences are highlighted with connecting lines: the Bradac, Lam, and CATS(v2) models, which are the three examples where the quantity and quality of strong lensing constraints changed substantially from one model version to the next.}
+} 
 \end{center}
 \end{figure*}
 
 \change{
-Increasing the number of multiply imaged galaxies used as
-strong-lensing constraints should in principle lead to improvements in
-the accuracy and precision of magnification predictions.  We have
-already seen some suggestion of this from
-Figure~\ref{fig:LensingTest}, which shows that the post-HFF models are
-collectively better than the pre-HFF models at predicting the
-SN \tomas\ magnification.  
-The left panel of Figure~\ref{fig:Nspecz} isolates this variable by
-plotting the tension between each model prediction and the measured SN
-magnification against the number of multiply-imaged galaxies used as
-strong-lensing constraints. There is no clear correlation here, and in
-fact the most significant outlier (CATS(v2)) is actually the one using
-the most multiply-imaged systems.  
+The addition of deeper imaging and new spectroscopic constraints from
+the HFF program and affiliated efforts might be expected to improve
+the accuracy of magnification predictions. However, in
+Figure~\ref{fig:LensingTest} we saw no evidence for a universal
+improvement in model accuracy when moving from the pre- to the
+post-HFF models.  In Figure~\ref{fig:Nspecz} we attempt to refine this
+hypothesis by isolating the quantity and quality of strong lensing constraints. 
 }
+
+\change{
+The left panel plots the tension between each model prediction and the
+measured SN magnification against the number of multiply-imaged
+galaxies used as strong-lensing constraints. The Bradac, Lam and
+CATSv2 model series are highlighted here with connecting lines, as
+three examples where the number of systems used has changed
+substantially from one version to the next, but the model construction
+has remained fundamentally unchanged.
+There is no clear correlation here, and in
+fact for both the Lam and CATSv2 model series, we see the tension
+actually {\it increases} for a larger number of strong-lensing constraints.}
 
 \change{
 In the right panel of Figure~\ref{fig:Nspecz} we examine an
 alternative explanation by plotting the model tension against the
 fraction of strong-lensing constraints that have a spectroscopic
-redshift. Here we see evidence for a correlation between model
-accuracy and the fraction of multiply-imaged galaxies with
-spectroscopic redshifts.  The apparent correlation is anchored on one
-end by the low spectroscopic fraction and high tension for the
-CATS(v2) model. At the other end we find two of the most accurate lens
-models (Bradac(v2) and Lam(v2)), which both have a high spec-$z$
-fraction and low tension.}
+redshift. Here we see that all three of the testable model series
+(Bradac,Lam,CATSv2) become {\it more} accurate as the spec-z fraction
+increases.\footnote{Of course this apparent correlation does not imply
+any direct causation. Consider the limit of just a single
+multiply-imaged galaxy constraint: the spec-$z$ fraction could be 1.0
+but the model would be wildly unconstrained.}  The spec-$z$ fraction
+here serves as a crude stand-in for measuring how
+stringently the strong-lensing constraints are selected in these
+models.
+}
 
 \change{
-Of course this is not direct causation.  Consider the limit of just a
-single multiply-imaged galaxy constraint: the spec-$z$ fraction could
-be 1.0 but the model would be wildly unconstrained.  Rather, the
-spec-$z$ fraction here serves as a stand-in for how stringently the
-strong-lensing constraints are defined in these models.  Erroneous
-redshifts assigned to multiply-imaged systems lacking a spec-$z$ are especially
-problematic for relatively low redshift background systems. At lower
-redshifts, the model-derived deflection angle and magnification show a
-more rapid variation with the redshift of the background galaxy than
-for similarly positioned high redshift background galaxies}
+The SN \tomas\ comparison therefore supports the notion that the {\it
+quality} of strong-lensing constraints is just as important as the
+{\it quantity}.  To get accurate magnifications, lens models should
+employ a strict vetting of the multiply-imaged systems.  Each system
+used should ideally have a spectroscopic redshift, or at least a very
+well constrained photometric redshift.  The primary value in this
+strict vetting is to avoid erroneous redshifts being assigned to
+multiply-imaged systems that are unconstrained in redshift space.
+Such redshift errors are especially problematic for relatively low-$z$
+background systems: at lower redshifts the model-derived deflection
+angle and magnification show a more rapid variation with the redshift
+of the background galaxy than for similarly positioned high redshift
+galaxies.}
 
-The SN \tomas\ comparison therefore suggests that to get accurate
-magnifications, lens models should employ a strict vetting of the
-strong-lensing constraints.  Multiply-imaged systems should ideally
-have spectroscopic redshifts, or at least very well constrained
-photometric redshifts.  The {\it quality} of strong-lensing
-constraints is perhaps just as important as the {\it quantity}.
-
-It is relevant to note that the two models highlighted for their
-accuracy here (Bradac(v2) and Lam(v2)) also happen to be the two
-models that are not truly ``blind,'' in that the modelers were aware
-of preliminary analysis of the SN magnification.  However, neither of
-these models used the SN magnification as an input constraint, neither
-were consciously tuned to match the SN magnification, and the modelers did not
-have a final measurement of the SN magnification at the time their
-models were generated.
+It is relevant to note that the three model series highlighted here
+(Bradac, CATSv2 and Lam) also happen to be the three models that are
+not truly ``blind,'' in that the modelers were aware of preliminary
+analysis of the SN magnification when constructing the latest version.
+However, none of these models used the SN magnification as an input
+constraint, and none were consciously tuned to match the SN
+magnification. In fact, for the Bradac(v2) and Lam(v2) cases, the
+modelers did not have access to a final measurement of the SN
+magnification at the time their models were generated.
 
 
 %\subsubsection{Source Plane Minimization}
@@ -1462,7 +1460,7 @@ have derived a consistent measured magnification of $\mu_{\rm
 SALT2}=1.99\pm0.38$.  $\mu_{\rm MLCS2k2}=2.03\pm0.29$, from the two
 light curve fitters.
 
-Taking advantage of the availability of 15 well-constrained lens
+Taking advantage of the availability of 17 well-constrained lens
 models for the Abell 2744 cluster, we have used SN \tomas\ to ask how
 accurately these lens models can predict the magnification along this
 line of sight.  We find that these models are consistent, and fairly

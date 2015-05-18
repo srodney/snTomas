@@ -3,7 +3,7 @@
 # The lensing comparison figure
 import numpy as np
 
-def mkLensingTestFig( show2snfits=False, showlegend=False, presfig=False,
+def mkLensingTestFig( show2snfits=False, showlegend=True, presfig=False,
                       labelvalues=False ):
     from matplotlib import pyplot as pl
     from matplotlib.patches import FancyArrowPatch
@@ -23,7 +23,7 @@ def mkLensingTestFig( show2snfits=False, showlegend=False, presfig=False,
         ax1 = pl.axes( [0.01,0.14,0.67,0.83] )
         ms=15
     else :
-        fig = plotsetup.fullpaperfig( figsize=[4,5])
+        fig = plotsetup.fullpaperfig( figsize=[4,6])
         ms=8
         pl.clf()
         if showlegend:
@@ -124,8 +124,8 @@ def mkLensingTestFig( show2snfits=False, showlegend=False, presfig=False,
             ['MLCS2k2','SALT2','Pre-HFF','Post-HFF'] ):
         if not show2snfits :
             if fitter=='SALT2': continue
-        ax1.axvline( muSN, ls=ls, color=textcolor, lw=2, ymin=ymin, ymax=ymax )
         if not ls=='--':
+            ax1.axvline( muSN, ls=ls, color=textcolor, lw=2, ymin=ymin, ymax=ymax )
             ax1.axvspan( muSN-muSNerr, muSN+muSNerr, ymin=ymin, ymax=ymax,
                          color=color, alpha=0.3,zorder=-100 )
         #ax1.text( muSN-0.03,  ymax*ytop+0.05, fitter, color=textcolor,
@@ -134,7 +134,7 @@ def mkLensingTestFig( show2snfits=False, showlegend=False, presfig=False,
     ax1.text( 1.75, 2*ytop/3, 'SN HFF14tom', rotation=90,
               ha='right', va='center', color=cp.darkblue )
 
-    # ax1.axvline( np.mean(lensingdat['med']), ls='--', color='0.5', lw=1 )
+    ax1.axvline( np.mean(lensingdat['med']), ls='--', color='0.5', lw=1 )
     print( "All models : mu=%.2f +- %.2f"%(np.mean(lensingdat['med']),np.std(lensingdat['med'])))
 
     if showlegend:
@@ -168,7 +168,7 @@ def mkLensingTestFig( show2snfits=False, showlegend=False, presfig=False,
     pl.draw()
 
 
-def mkTensionFig(presfig=False, showlegend=True):
+def mkTensionFig(presfig=False, showlegend=True, showlines=True):
     from matplotlib import ticker,pyplot as pl, rcParams
     from pytools import plotsetup
     from astropy.io import ascii
@@ -265,5 +265,36 @@ def mkTensionFig(presfig=False, showlegend=True):
         axleg.set_ylim(-0.6,3.7)
         axleg.xaxis.set_ticks([])
         axleg.yaxis.set_ticks([])
+
+
+    if showlines:
+        for modname in ['CATS(v2','Bradac','Lam']:
+            ithismod = np.where([mod.startswith(modname)
+                                 for mod in lensingdat['model']])[0]
+            med = lensingdat['med'][ithismod]
+            errminus = lensingdat['med-'][ithismod] - med
+            tension = (med-muSNmlcs)/np.sqrt(errminus**2+muSNmlcserr**2)
+
+            nsys = lensingdat['nSys'][ithismod]
+            specfrac = lensingdat['nzSpec'][ithismod]/nsys.astype(float)
+            ax1.plot( nsys, tension, ls='-', marker=' ', color='0.5' )
+            ax2.plot( specfrac, tension, ls='-', marker=' ', color='0.5' )
+        ax1.text(48,4.1,'CATS(v2)',color='0.5',fontsize='small',ha='right',va='bottom')
+        ax1.text(50,2.8,'2.1',color='0.5',fontsize='small',ha='center',va='top')
+        ax1.text(25,2.8,'2.2',color='0.5',fontsize='small',ha='center',va='top')
+        ax1.text(27,0.6,'v2',color='0.5',fontsize='small',ha='left',va='bottom')
+        ax1.text(14,1.2,'Bradac(v1)',color='0.5',fontsize='small',ha='right',va='bottom')
+        ax1.text(22,1.7,'Lam(v1)',color='0.5',fontsize='small',ha='left',va='bottom')
+        ax1.text(8,-0.1,'v2',color='0.5',fontsize='small',ha='right',va='top')
+
+        ax2.text(0.15,4.4,'CATS(v2)',color='0.5',fontsize='small',ha='right',va='bottom')
+        ax2.text(0.13,2.8,'2.1',color='0.5',fontsize='small',ha='center',va='top')
+        ax2.text(0.3,2.8,'2.2',color='0.5',fontsize='small',ha='center',va='top')
+        ax2.text(0.1,1.3,'Bradac',color='0.5',fontsize='small',ha='right',va='bottom')
+        ax2.text(0.08,1.25,'(v1)',color='0.5',fontsize='small',ha='right',va='top')
+        ax2.text(0.28,0.3,'v2',color='0.5',fontsize='small',ha='left',va='bottom')
+        ax2.text(0.23,1.6,'Lam(v1)',color='0.5',fontsize='small',ha='left',va='bottom')
+        ax2.text(0.53,-0.2,'v2',color='0.5',fontsize='small',ha='left',va='center')
+
     pl.draw()
 
