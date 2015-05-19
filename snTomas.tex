@@ -59,7 +59,7 @@ evaluate possible causes for this mild bias,
 %definition of the lens models. We 
 and \changeR{find that model accuracy can be improved to some extent
 by using multiply-imaged systems vetted with stringent quality cuts
-and requiring a large fraction with spectroscopic redshifts.}
+and requiring that a large fraction have spectroscopic redshifts.}
 % -- at least for this
 %cluster and this line of sight -- 
 % A more robust evaluation
@@ -317,7 +317,7 @@ optical magnitudes, and corrected them for lensing using a
 magnification factor of $\mu=2.0$ -- a value that we will derive from
 the SN itself in Section~\ref{sec:DistanceAndMagnification}.  From
 this we determine the host galaxy mass to be 
-\changeR{$10^{9}$ \Msun.} }
+\changeR{$10^{9.8}$ \Msun.} }
 
 
 \section{Spectroscopy}
@@ -776,8 +776,9 @@ massive hosts are observed to be $\sim$0.08 mag brighter (after
 corrections for light curve shape and color) than SNe in low-mass
 hosts \citep{Kelly:2010,Sullivan:2010}.  The dividing line for this
 purely empirical ``mass step'' correction is generally set around
-$10^{10}$\Msun, although this is somewhat arbitrary \citep[see
-e.g.][]{Betoule:2014}.  
+$10^{10}$\Msun.  \changeR{Although this threshold value} is somewhat arbitrary \citep[see
+e.g.][]{Betoule:2014}, \changeR{it happens to be very close to the
+-SN \tomas\ host galaxy mass of $10^{9.8}$\Msun (Section~\ref{sec:HostGalaxy}).}
 
 The physical mechanism that drives the mass step is not yet
 understood, but may be related to the metallicity or age of the SN
@@ -792,18 +793,20 @@ absence of a clear physical model and the lack of empirical support
 for a high-$z$ mass step, we do not apply any correction to SN \tomas\
 or the control sample. 
 
-\change{
-If we were to apply the correction to this sample, then the SN \tomas\
-distance modulus would not be adjusted, because its host galaxy mass
-(Section~\ref{sec:HostGalaxy}) is \changeR{below} 10$^{10}$ \Msun. Note that
-there is some circularity here, as we used the SN magnification in
-deriving the host galaxy mass, and now use the host mass to inform the
-magnification.  However, changing the magnification value to $mu=2.5$
-\changeR{does not move the \tomas\ host mass above the mass} step threshold, so
-the circularity is not relevant in this case. Applying the
-mass step correction across the entire control sample would lead to a
-small adjustment of the inferred SN \tomas\ magnification, but it is $<5\%$
-and therefore could not relieve the observed tension.}
+\changeR{
+If we were to apply the correction to this sample using the standard
+approach, then the SN \tomas\ distance modulus would not be adjusted,
+because its host galaxy mass (Section~\ref{sec:HostGalaxy}) is just
+below 10$^{10}$ \Msun. Note that there is some circularity here, as we
+used the SN magnification in deriving the host galaxy mass, and now
+use the host mass to inform the magnification.  However, regardless of
+whether the \tomas\ host mass falls above the mass threshold or below,
+this correction is not substantial enough to account for the observed
+magnification tension.  The appropriate correction to be applied to
+a SN above the mass threshold in this redshift range would be $<$0.04
+mag \citep{Rigault:2013,Childress:2014b}, which results in a change to
+the inferred magnification of \tomas\ that is much less than the
+observed discrepancy of $\sim$0.24 mag.}
 
 \subsection{Control Sample Comparison}
 \label{sec:ControlSampleComparison}
