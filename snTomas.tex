@@ -1303,27 +1303,32 @@ magnifications, which force all sources toward the same location in
 the source plane.  }
 
 \change{  There are several strategies for mitigating this well known bias.
-Optimizing a model in the image plane can  avoid this bias entirely \citep{Broadhurst:2005,Zitrin:2009a}. Alternatively, one may guard against it by using
-a modified source plane minimization that is constrained not to
-generate overly small re-lensed sources \citep{Sendra:2014,Diego:2014}.
-Finally, the effect of this bias should be reduced when one uses many strong
-lensing constraints over a wide range of redshifts. }
+Optimizing a model in the image plane can avoid this bias
+entirely \citep{Broadhurst:2005,Zitrin:2009a}.} \changeR{The
+Sharon(v2), Zitrin-LTM, Zitrin-NFW, and CATS(v2-2.2) models all use
+image plane minimization.}  \change{Alternatively, one may guard against this
+bias by using a modified source plane minimization that is constrained
+not to generate overly small re-lensed
+sources \citep{Sendra:2014,Diego:2014}.} \changeR{In our test set, this
+second strategy is employed by the Diego model.}  \change{Finally, the
+effect of this bias should be reduced when one uses many strong
+lensing constraints over a wide range of redshifts.} \changeR{The
+CATS(v2) and CATS(v2.1) models have the largest number of
+strong-lensing constraints, using 50 and 55 multiply-imaged systems,
+respectively.}
 
-\change{ Of the 17 models examined here, both of the Zitrin models 
-follow the first strategy, using image-plane optimization.  The
-Zitrin-LTM model delivers a significantly discrepant magnification,
-while the Zitrin-NFW latter is within 1$\sigma$ of the SN
-magnification.  The Diego model uses the second strategy of restricted
-source-plane minimization, and reports a magnification very close to
-the measured value.  The CATS(v2) model is the most extreme example of
-the final strategy, as it incorporates more multiply-imaged sources
-over a wider redshift range than any other model. However, this model
-is also the most discrepant, with a predicted $\mu$ that is $>4\sigma$
-from the SN magnification.  Thus, the results from this simplistic
-model comparison are mixed.  We therefore cannot conclude that source
-plane minimization alone is the root cause of the observed systematic
-bias. }
-
+\changeR{ Although many of the tested models utilize these 
+strategies to avoid a source plane minimization bias,
+Table~\ref{tab:PredictedMagnifications} and
+Figure~\ref{fig:LensingTest} show that these models do not uniformly
+deliver more accurate magnification predictions.  The most direct test
+of this is in the Sharon and CATS model series.  In both cases the v1
+model used the faster source plane minimization approach, but the v2
+model was constructed with the more costly image plane minimization.
+Neither of those models show a significant improvement in model
+accuracy from v1 to v2.  T his provides a strong indication that the
+observed tension between models and the SN observation cannot be
+entirely attributed to a bias arising from source plane minimization.}
 
 %\change{
 %\subsection{Best Practices for Magnification Prediction}
@@ -1390,16 +1395,16 @@ actually {\it increases} for a larger number of strong-lensing constraints.}
 In the right panel of Figure~\ref{fig:Nspecz} we examine an
 alternative explanation by plotting the model tension against the
 fraction of strong-lensing constraints that have a spectroscopic
-redshift. Here we see that all three of the testable model series
-(Bradac,Lam,CATSv2) become {\it more} accurate as the spec-z fraction
-increases.\footnote{Of course this apparent correlation does not imply
-any direct causation. Consider the limit of just a single
-multiply-imaged galaxy constraint: the spec-$z$ fraction could be 1.0
-but the model would be wildly unconstrained.}  The spec-$z$ fraction
-here serves as a crude stand-in for measuring how
-stringently the strong-lensing constraints are selected in these
-models.  
-} 
+redshift. 
+For the SN \tomas\ magnification prediction, we see that all three of
+the testable model series (Bradac,Lam,CATSv2) become {\it more}
+accurate as the spec-z fraction increases.\footnote{Of course this
+apparent correlation does not imply any direct causation. Consider the
+limit of just a single multiply-imaged galaxy constraint: the spec-$z$
+fraction could be 1.0 but the model would be wildly unconstrained.}
+The spec-$z$ fraction here serves as a crude stand-in for measuring
+how stringently the strong-lensing constraints are selected in these
+models.  }
 
 \change{
 The SN \tomas\ comparison therefore supports the notion that the {\it
@@ -1415,7 +1420,15 @@ Such redshift errors are especially problematic for relatively low-$z$
 background systems: at lower redshifts the model-derived deflection
 angle and magnification show a more rapid variation with the redshift
 of the background galaxy than for similarly positioned high redshift
-galaxies.}
+galaxies.}  \changeR{This conclusion should be unsurprising, as for
+example, \citet{Bayliss:2015} have shown that cosmological
+uncertainties are smaller for models that use a large fraction of
+strong-lensing constraints with spectroscopic redshifts,
+and \citet{Johnson:2014} have shown a case study where adding
+spectroscopic redshift information changes the inferred magnification
+by $\sim$10\%.}
+
+
 
 It is relevant to note that the three model series highlighted here
 (Bradac, CATSv2 and Lam) also happen to be the three models that are
