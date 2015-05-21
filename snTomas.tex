@@ -14,66 +14,41 @@
 
 \begin{document}
 
-\title{Illuminating a Dark Lens : A Type Ia Supernova \\ Magnified by the Galaxy Cluster Abell 2744}
+\title{Illuminating a Dark Lens : A Type Ia Supernova Magnified by \\ the \changeR{Frontier Fields} Galaxy Cluster Abell 2744}
 
 \input{authors}
 
 
 \begin{abstract}
-\changenote{Reduced to $<250$ words.}\\
+\changeG{
 SN \tomas\ is a Type Ia Supernova (SN) discovered at
-$z=1.3457\pm0.0001$ behind the galaxy cluster Abell 2744
-($z=0.308$). This SN 
-%has a projected separation from the cluster core
-%of $\sim$40\arcsec, 
-is closer to the critical lensing line than any
-previous cluster-lensed Type Ia SN, 
-%As such, it provides 
-providing a valuable
-opportunity to test galaxy cluster lens models
-with the direct measurement of an absolute magnification at the edge
-of the strong-lensing region.  
-%We derive a tightly constrained measure
-%of the peak apparent magnitude, corrected for light curve shape and
-%extinction.  
+$z=1.3457\pm0.0001$ behind the galaxy cluster Abell 2744 ($z=0.308$).
 In a cosmology-independent analysis, we find that \tomas\ is
 $0.77\pm0.15$ magnitudes brighter than unlensed Type Ia SNe at similar
-redshift, implying a lensing magnification of 
-$\mu_{\rm obs}=2.03\pm0.29$. 
-\change{In future lens models of Abell 2744, this could
-provide some leverage for breaking degeneracies that positional
-constraints cannot disentangle.}  We compare the measured $\mu$
-against predicted magnifications from 17 lens models, \change{ of
-which 13 were generated before the SN magnification was known,
-qualifying as a pure ``blind test.''}  The models are collectively
-fairly accurate: 8 of the models deliver median magnifications that
-are consistent with the measured $\mu$ to within 1$\sigma$.  However,
-there is a subtle systematic bias: all of the models that disagree
-with the SN $\mu$
-%by more than $1\sigma$ 
-are {\it higher} than the measured value and \changeR{8} of these
-are $\geq1.5\sigma$ above the measured magnification.  We
-evaluate possible causes for this mild bias,
-%and reject explanations
-%that invoke misinterpretation of the SN data or errors in the
-%definition of the lens models. We 
-and \changeR{find that model accuracy can be improved to some extent
-by using multiply-imaged systems vetted with stringent quality cuts
-and requiring that a large fraction of those systems have
-spectroscopic redshifts.}
-% -- at least for this
-%cluster and this line of sight -- 
-% A more robust evaluation
-%\change{Further examination} of systematic biases 
-%could be achieved 
-%\change{could be pursued with more}
-%lens model comparisons using lensed
-%Type Ia SNe, as well as cluster lensing simulations.
+redshift, implying a lensing magnification of $\mu_{\rm
+obs}=2.03\pm0.29$.  This observed magnification provides a rare
+opportunity for a direct empirical test of galaxy cluster lens models.
+Here we test 17 lens models, 13 of which were generated before the SN
+magnification was known, qualifying as pure ``blind tests''.  The
+models are collectively fairly accurate: 8 of the models deliver
+median magnifications that are consistent with the measured $\mu$ to
+within 1$\sigma$.  However, there is a subtle systematic bias: the
+significant disagreements all involve models {\it overpredicting} the
+magnification. We evaluate possible causes for this mild bias, and
+find no single physical or methodological explanation to account for
+it.  We do find that model accuracy can be improved to some extent
+with stringent quality cuts on multiply-imaged systems, such as
+requiring that a large fraction have spectroscopic redshifts.  In
+addition to testing model accuracies as we have done here, Type Ia SN
+magnifications could also be used as inputs for future lens models of
+Abell 2744 and other clusters, providing valuable constraints in
+regions where traditional strong- and weak-lensing information is
+unavailable.}
 \end{abstract}
 
-%\keywords{ supernovae: general, supernovae: individual: HFF14Tom, 
-%galaxies: clusters: general, galaxies: clusters: individual: Abell 2744, 
-%gravitational lensing: strong, gravitational lensing: weak  }
+\keywords{ supernovae: general, supernovae: individual: HFF14Tom, 
+galaxies: clusters: general, galaxies: clusters: individual: Abell 2744, 
+gravitational lensing: strong, gravitational lensing: weak  }
 
 \section{Introduction}
 \label{sec:Introduction}
@@ -895,7 +870,7 @@ These models represent a broad sampling of the
 techniques and assumptions that can be applied to the modeling of mass
 distributions in galaxy clusters. 
 \change{We discuss some of the modeling choices here, but
-a more rigorous comparison of these disparate lens modeling techniques
+a more rigorous comparison of these diverse lens modeling techniques
 is beyond the scope of this work. For a complete discussion of each
 model's methodology the reader is directed to the listed references.}
 Eight of these are so-called {\it parametric}\footnote{Although this
@@ -1297,8 +1272,8 @@ an increase in the predicted magnifications across the field.  As the
 magnification applies to both flux and area, the shallower profile
 also leads to a smaller source plane area, which necessarily brings
 delensed images of the same source closer together in the source
-plane.  Thus, any models that are optimized in the source plane will
-have a tendency toward shallower mass profiles and larger
+plane.  \changeR{Thus, models that are optimized in the source plane may
+have a tendency} toward shallower mass profiles and larger
 magnifications, which force all sources toward the same location in
 the source plane.  }
 
@@ -1308,7 +1283,7 @@ entirely \citep{Broadhurst:2005,Zitrin:2009a}.} \changeR{The
 Sharon(v2), Zitrin-LTM, Zitrin-NFW, and CATS(v2-2.2) models all use
 image plane minimization.}  \change{Alternatively, one may guard against this
 bias by using a modified source plane minimization that is constrained
-not to generate overly small re-lensed
+not to generate overly small de-lensed
 sources \citep{Sendra:2014,Diego:2014}.} \changeR{In our test set, this
 second strategy is employed by the Diego model.}  \change{Finally, the
 effect of this bias should be reduced when one uses many strong
@@ -1562,7 +1537,22 @@ revisions of the lens models for Abell 2744 could either incorporate
 the observed magnification of \tomas\ as a new model constraint, or
 can revisit this test to evaluate whether the bias persists.
 
-A promising avenue for exploring the origins of systematic biases in
+\changeR{
+The general problem of combining predictions from many independent
+models has a rich history in the astronomical and statistical
+literature \citep[e.g.,][]{Press:1997,Hoeting:1999,Liddle:2009}.
+In a recent example, \citet{Dahlen:2013} examined the photometric
+redshifts from multiple galaxy SED fitting codes using the same input
+data.  They found that the photo-z accuracy and precision can be
+substantially improved by combining the outputs using a sum of
+probability distributions, a hierarchical Bayesian method, or even a
+technique as simple as taking the straight median from all available
+models.  It may be that lensing magnifications are similar, in that
+they can in general be improved through a simple combination of lens
+model predictions.  Such model averaging will not, however, resolve a
+{\it systematic} bias that is shared by many models.}
+
+A promising avenue for exploring the origins of such systematic biases in
 cluster lens models is through the use of simulated lensing data.  One
 can start with very deep high-resolution multi-band imaging on an
 unlensed field that has a fairly complete spectroscopic redshift
@@ -1582,17 +1572,17 @@ axis direction of a simulated cluster that is very
 elongated, similar to Abell 2744.  This indicates that some
 lens models significantly underestimate the ellipticity of the mass
 distribution on large scales for that simulated cluster, which is
-consistent with a recent lens model comparison on 25 real clusters
+consistent with a recent lens model comparison using 25 real clusters
 from the CLASH program \citep{Zitrin:2015}. Our analysis of
 SN \tomas\ here indicates that such simulation efforts and
 head-to-head lens model comparisons will be an important step for
 moving toward precision science with cluster-lensed sources.  
 
-Increasing the sample of SNe behind clusters like those in
-the HFF program -- with rich lensing constraints and deep imaging -- 
-would allow this test to be repeated and refined.  With 10 or 100 such
-objects, it would be possible to see whether the SN \tomas\ $\mu$
-discrepancy is simply an outlier, or an indication of a more
+Increasing the sample of SNe behind clusters like those in the HFF
+program -- with rich lensing constraints and deep imaging -- would
+allow the test described here to be repeated and refined.  With 10 or
+100 such objects, it would be possible to see whether the SN \tomas\
+$\mu$ discrepancy is simply an outlier, or an indication of a more
 pernicious systematic error.  Any cluster that has been vetted by
 pencil-beam magnification tests using lensed \SNIa\ will be able to
 provide a more reliable measure of the magnifications for very high
