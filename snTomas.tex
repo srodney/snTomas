@@ -203,17 +203,6 @@ from HST+ACS observations taken in 2009 (PI:Dupke, HST-PID:11689).
 
 \input{TABLE/photometry}
 
-%\begin{figure}
-%\begin{center}
-%\includegraphics[width=\columnwidth]{FIG/host_sed_fit}
-%\caption{  \label{fig:HostSED}
-%Best-fit SED template match for the most probable \tomas\ host
-%galaxy. Using the {\it BPZ} code to match the observed SED, we find
-%the nearest galaxy to the SN position is a late type galaxy with a
-%photometric redshift of $z=1.5\pm0.2$.}
-%\end{center}
-%\end{figure}
-
 Upon discovery, HST target-of-opportunity observations were triggered
 from the FrontierSN program (PI:Rodney, HST-PID:13386), which aims to
 discover and follow transient sources in the HFF cluster and parallel
@@ -250,7 +239,6 @@ galaxy immediately to the south-east of the SN location.  With
 photometry of the host galaxy collected from the template images, we
 fit the spectral energy distribution (SED) using the {\it BPZ} code --
 a Bayesian photometric redshift estimator \citep{Benitez:2000}. 
-%The best-fit SED template match is shown in Figure~\ref{fig:HostSED}.
 From the {\it BPZ} analysis, we found the host to be most likely an
 actively star-forming galaxy at a redshift of
 $z=1.5\pm0.2$.  This photo-z was subsequently refined to a
@@ -341,10 +329,6 @@ bright sources and the host galaxy is diffuse and optically faint.
 Thus, the SN spectral features can be unambiguously identified, most
 notably the red slope of the continuum and a prominent absorption
 feature at $\sim$8700\AA.  
-%However, the signal to noise ratio (S/N)
-%for the host galaxy spectrum was too weak to yield any additional
-%constraints on the host type or redshift.
-
 
 Spectra of Type I SNe (including all sub-classes Ia, Ib and Ic) are
 dominated by broad absorption features, which cannot in general be
@@ -838,10 +822,6 @@ reported at the bottom of each panel.
 \end{center}
 \end{figure}
 
-
-%\section{Discussion}
-%\label{sec:Discussion}
-
 \section{Comparison to Model Predictions}
 \label{sec:Discussion}
 \label{sec:ComparisonToModelPredictions}
@@ -895,8 +875,6 @@ be more accurate, though we adopt the more common usage here.}
 models, and the remining seven are {\it free-form} models.  
 Broadly speaking, the parametric models use parameterized density
 distributions to describe the arrangement of mass within the cluster.
-%typically associating massive dark matter halos with the positions of
-%bright cluster member galaxies. 
 Therefore, parametric models rely (to
 varying degrees) on the assumption that the cluster's dark matter can
 be described by analytic forms such as NFW halos \citep{Navarro:1997},
@@ -924,20 +902,6 @@ are too flexible, then they will result in overestimated error
 bars. Conversely, if the simply parameterized models are too
 inflexible, they will result in underestimated error bars.
 }
-
-
-%\change{
-% Table~\ref{tab:PredictedMagnifications} also shows that the quoted
-% errors from these models vary widely.  At one extreme is the
-% Bradac(v2) model, with quoted magnification uncertainties of
-% $\pm$0.04, not accounting for systematic errors.  At the other
-% extreme is the Williams model, which has the largest uncertainties,
-% with a 68\% confidence range that encompasses the median
-% magnification values returned by all other models.  This is due in
-% part to the intentional exploration of many systematic error sources
-% such as the mass sheet degeneracy and more complex
-% degeneracies \citep{Liesenborgs:2006,Liesenborgs:2007,Mohammed:2014}.
-% }
 
 
 \begin{figure}
@@ -992,15 +956,6 @@ encouraging for these Abell 2744 models. This is a merging cluster
 with a complex mass distribution, and the SN is located
 outside of the strong-lensing region where the models are most tightly
 constrained.}
-
-%In spite of the great variety in input data and methodology, these
-%lens models overall are delivering consistent and fairly accurate
-%estimates of the magnification.  Seven of the tested models (CATS(v1),
-%GLAFIC, Merten, Zitrin-NFW, Bradac(v2), Diego, Lam(v2)) report a
-%median value that falls within the 1$\sigma$ uncertainty range of the
-%measured magnification, and three of the models (Williams,
-%Diego, Lam(v2)) report uncertainties that overlap the central $\mu$ as
-%measured from both of the SN light curve fitters.  
 
 However, beyond this first-order agreement, there is a small
 systematic bias apparent. All but two of the lens models return median
@@ -1319,11 +1274,6 @@ accuracy from v1 to v2.  T his provides a strong indication that the
 observed tension between models and the SN observation cannot be
 entirely attributed to a bias arising from source plane minimization.}
 
-%\change{
-%\subsection{Best Practices for Magnification Prediction}
-%\label{sec:BestPractices}
-%}
-
 \change{
 \subsection{Quantity and Quality of Strong Lensing Constraints}
 \label{sec:QuantityAndQuality}
@@ -1428,21 +1378,6 @@ constraint, and none were consciously tuned to match the SN
 magnification. In fact, for the Bradac(v2) and Lam(v2) cases, the
 modelers did not have access to a final measurement of the SN
 magnification at the time their models were generated.
-
-
-%\subsubsection{Source Plane Minimization}
-%
-%A third model that stands out for delivering both an accurate and fairly precise estimate of the magnification 
-%
-%
-%
-%
-%\subsubsection{Model Flexibility}
-%
-%Let us first define a successful magnification prediction as one whose
-%quoted uncertainties overlap the measured $\mu=2.03$ from the SN.
-%There are three models that meet this criteria: Williams, Diego, and
-%Lam(v2). All of these are free-form models
 
 
 \section{Summary and Conclusions}
@@ -1672,9 +1607,6 @@ acknowledges the support of the Minnesota Supercomputing Institute.
 {\it Facilities:} \facility{HST (WFC3)}
 \pagebreak
 
-\bibliographystyle{apj}
-\bibliography{bibdesk}
-
-%\input{TABLE/magnifications}
+\input{snTomas.bbl}
 \end{document}
 
