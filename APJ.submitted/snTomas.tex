@@ -903,7 +903,7 @@ inflexible, they will result in underestimated error bars.
 \change{Thirteen of the mass models evaluated here are constrained only using
 strong-lensing features such as multiply-imaged background galaxies
 and highly magnified arcs.  There are now $\sim$150 known lensed
-images behind Abell 2744 \citep{Jauzac:2014c}, but SN \tomas\ is
+images behind Abell 2744 \citep{Jauzac:2015b}, but SN \tomas\ is
 located several arcseconds outside the core region of the cluster
 where these multiply-imaged galaxies are found.  Therefore these
 ``strong-lensing only'' models must necessarily rely on extrapolations
@@ -1271,14 +1271,14 @@ resolve the overall systematic shift.  \citet{Bayliss:2015} find that for Abell 
 
 
 \subsubsection{Misidentification of a multiple image}
-\citet{Jauzac:2014c} proposed a correction
+\citet{Jauzac:2015b} proposed a correction
 for the location of image 3.3, the third component of a triply-imaged
 galaxy \citep{Merten:2011} at $z=3.98\pm0.02$ \citep{Johnson:2014}.
 This possibly specious multiple image is only $\sim$10\arcsec\ from
 the SN \tomas\ position, meaning a change in its location could have a
 large impact on the predicted magnification for
 SN \tomas\ \citep[see][for a quantitative discussion of this
-effect]{Johnson:2014}.  However, \citet{Jauzac:2014c} also evaluated a
+effect]{Johnson:2014}.  However, \citet{Jauzac:2015b} also evaluated a
 version of the CATS(v2) model in which this single source is left in
 the original position and found that the location of image 3.3 does
 not significantly affect the predicted magnifications.  Furthermore,
@@ -1306,22 +1306,23 @@ the source plane
 
 There are several strategies for mitigating this well known bias.
 Optimizing a model in the image plane can avoid this bias
-entirely \citep{Broadhurst:2005,Zitrin:2009a}. The
-Sharon(v2), Zitrin-LTM, Zitrin-NFW, and CATS(v2-2.2) models all use
-image plane minimization.  Alternatively, one may guard against this
-bias by using a modified source plane minimization that is constrained
-not to generate overly small de-lensed
-sources \citep{Sendra:2014,Diego:2014}. In our test set, this
-second strategy is employed by the Diego model. 
-\change{ Similarly, the Williams model uses source plane optimization 
-in the GRALE algorithm, but avoids bias by maximizing the {\it
-fractional} overlap of extended sources plane images.}  Finally, the
-effect of this bias should be reduced when one uses many strong
-lensing constraints over a wide range of redshifts. The CATS(v2) and
-CATS(v2.1) models have the largest number of strong-lensing
-constraints, using 50 and 55 multiply-imaged systems, respectively.
+entirely \citep{Broadhurst:2005,Zitrin:2009a}. The Sharon(v2),
+Zitrin-LTM, Zitrin-NFW, and CATS(v1,v2-2.2) models all use image plane
+minimization.  Alternatively, one may guard against this bias by using
+a modified source plane minimization that is constrained not to
+generate overly small de-lensed
+sources \citep{Sendra:2014,Diego:2014}. In our test set, a version of
+this second strategy is employed by the \change{GLAFIC, Williams, and
+Diego} models.  \change{For example, the Williams model uses source
+plane optimization in the GRALE algorithm, but avoids bias by
+maximizing the {\it fractional} overlap of extended source plane
+images.}  Finally, the effect of this bias should be reduced when one
+uses many strong lensing constraints over a wide range of
+redshifts. The CATS(v2) and CATS(v2.1) models have the largest number
+of strong-lensing constraints, using 50 and 55 multiply-imaged
+systems, respectively.
 
-Although many of the tested models utilize these 
+Although most of the tested models utilize one of these 
 strategies to prevent a source plane minimization bias,
 Table~\ref{tab:PredictedMagnifications} and
 Figure~\ref{fig:LensingTest} show that these models do not uniformly
@@ -1329,14 +1330,17 @@ deliver more accurate magnification predictions.  The most direct test
 of this is in the Sharon and CATS model series.  
 \change{Both of these model series use the LENSTOOL 
 software \citep{Kneib:1996,Jullo:2007,Jullo:2009,Kneib:2011a}, which
-allows a choice of how the minimization is done.  For both the Sharon
-and CATS model sets,} the v1 model used the faster source plane
-minimization approach, but the v2 model was constructed with the more
-costly image plane minimization.  Neither of those models show a
-significant improvement in model accuracy from v1 to v2.  This
-provides a strong indication that the observed tension between models
-and the SN observation cannot be entirely attributed to a bias arising
-from source plane minimization.
+allows a choice of how the minimization is done.  For the Sharon
+series, the v1 model used the faster source plane minimization
+approach, but the v2 model was constructed with the more accurate
+image plane minimization.  The CATS v1, 2, 2.1, and 2.2 models all
+used image plane optimization, while the v1.1 employed source plane
+optimization (and also added in weak lensing constraints).  In neither
+of these model series do we see a uniform improvement in accuracy when
+optimization is done in the image plane.  This test strongly suggests
+that the observed tension between the lens models and the SN
+observation cannot be entirely attributed to a bias arising from
+source plane minimization.}
 
 \subsection{Quantity and Quality of Strong Lensing Constraints}
 \label{sec:QuantityAndQuality}
@@ -1667,10 +1671,10 @@ acknowledges the support of the Minnesota Supercomputing Institute.
 {\it Facilities:} \facility{HST (WFC3)}
 \pagebreak
 
-\input{snTomas.bbl}
+%\input{snTomas.bbl}
 
-%\bibliographystyle{apj}
-%\bibliography{bibdesk}
+\bibliographystyle{apj}
+\bibliography{bibdesk}
 
 \end{document}
 
