@@ -1,0 +1,43 @@
+2015.08.10 
+Author's Response to Referee Report
+
+Dear Editors, 
+ The referee provided a very positive and helpful report with only minor changes required.  Below, we provide the referee's comments (REF) and our responses (SR).   The re-submitted manuscript highlights all additions or changes with blue text.  Thank you for your attention to this paper, and please let us know if anything else is needed. 
+
+Sincerely,
+Steve Rodney and co-authors
+
+
+REF:   This paper reports the discovery of a type Ia supernova behind one of the HFF clusters, and uses its measured magnification to test cluster mass models. The discovery is definitely important, and this indeed provides quite a rare opportunity to do a blind test of many mass models constructed by different groups. The analysis is conducted very carefully to get convincing results, and the results are also presented very well. This paper clearly deserves publication in ApJ. I only have a few minor comments which I think are straightforward to address.
+
+-----------------
+
+REF:   1. HFF14Tom is located outside the strong lensing region, so naive expectation is that adding weak lensing constraints more or less reduces the potential bias in predicting its magnification. I'm sure the authors are aware of this, as they use different symbols for methods combining strong and weak lensing in e.g., Figure 6, but there is virtually no discussion about the role of weak lensing in the text. The SN region can at least be probed well by HST weak lensing. Even ground based weak lensing can get reasonable constraints on enclosed mass within 1 arcmin radius or so if the SN is high. On the other hand, looking at Figure 6 it is not clear if methods using weak lensing are better than strong lensing only methods. In particular CATS v1.1 is worse than CATS v1, which looks a bit strange given that their difference come from weak lensing constraints. Anyways, I think it's worth adding a paragraph or two to discuss effects of weak lensing constraints. I'm interested in the authors' opinion about this.   Also please describe (e.g., in Table 4) which weak lensing data each method used.
+
+
+SR: A discussion of strong vs strong+weak lensing has been added to section 7 when first introducing the models.  Additionally, a new subsection (7.2.1) discusses how weak lensing could possibly avoid a particular extrapolation bias, but we conclude that there is no evidence for such a bias in this case.   Also, Table 4 has been updated with new table notes indicating the weak lensing data used. 
+
+-----------------
+
+REF:  2. Sec. 7.2.5: Are there any good references for the discussion in the first paragraph? I see the point that the source plane minimization prefers high magnification solutions, but this is the case only when distances in the source plane (I mean the distances between average source position and source positions computed from individual image positions) are naively minimized. In fact one can convert these distances to corresponding image plane distances using magnifications (or more rigorously the Jacobian matrix), and once these corrections are applied this bias can easily be avoided. I know several methods (such as LENSTOOL, GLAFIC, ...) already implement this, although some details look different between different codes. It may be worth studying further which models are possibly affected by this source plane minimization bias.
+
+SR:  We have updated this section (now 7.2.6) with some additional references, and clarifying text.   The Kochanek 1991 and Kochanek 2006 references provide a more general discussion of the issues of source plane vs image plane minimization.  Jee et al 2007 and Ponente & Diego 2011 include sections dealing more specifically with the bias toward high magnification. 
+
+-----------------
+
+REF:  3. Figure 8 is nice, but it's a bit unclear what the y-axis means. It takes negative values, so it should be something like (\mu_model-\mu_SN)/\sigma, but \sigma here includes only the measurement error on the magnification from HFF14Tom, or does it also include model errors listed in Table 5? If so those errors are quadratically added?
+
+SR:  Yes.  The referee is precisely correct on all counts.  This has been added in the figure caption.
+
+-----------------
+
+REF:  4. Sec. 5: ``we do not include any prior on...' Do you mean by flat prior?
+
+SR:  Yes.  The text has been updated. 
+
+-----------------
+
+REF:  5. Sec. 5: ``... the host galaxy photo-z and spectroscopic redshift (Section 2 and 4.2)'. I believe it is Section 3 not Section 2. In the caption of Figure 3 ``consistent with both the photo-z of the probable...' it should be spectroscopic redshift rather than photo-z.
+
+SR: These corrections have been made.    We have also made a few other small corrections in the text that were not noted by the referee.  These are also highlighted in blue text in the revised manuscript.
+

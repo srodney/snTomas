@@ -1,0 +1,186 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  PREAMBLE: sets up compiler modes, loads packages, defines macros, etc
+%  Steve Rodney, 2012
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%
+% COMPILER MODES
+%%%%%%%%%%%%%%%%%%%%
+
+%% Set default compiler modes 
+%% (these will be overridden by the -options.tex  file below, if it exists)
+
+% Changetext mode : highlight modified text in bold blue font
+\newif{\ifchangetext}
+\changetexttrue
+%\changetextfalse
+
+\documentclass[iop]{emulateapj}
+\citestyle{aa} 
+
+
+
+%%%%%%%%%%%%%%%%%%%%
+% PACKAGES INCLUDED
+%%%%%%%%%%%%%%%%%%%%
+\usepackage{ifthen}
+\usepackage{natbib}   % reference citations and bibliography
+\usepackage{amsmath}  % extended math symbols
+\usepackage{hyperref}      % url text formatting
+\usepackage[usenames,dvipsnames]{xcolor}  % colored text
+%\usepackage{pdflscape}
+
+%\usepackage{amssymb}  % extended symbols lib
+%\usepackage{verbatim} % verbatim text formatting
+%\usepackage{enumerate}% enumerated lists
+%\usepackage{url}      % url text formatting
+%\usepackage{multirow}  % muti-row table cells
+%\usepackage{amsmath}  % extended equations lib (split)
+%\usepackage{mathrsfs} % extended math fonts (mathscr)
+%\usepackage{paralist} % inline enumeration (for Table ref lists)
+%\usepackage{authblk}
+%\usepackage{appendix}
+%\usepackage{array}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% changetext  mode settings
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifchangetext
+  % Changed text is highlighted in bold, blue font 
+  \newcommand{\change}[1]{{ \textcolor{blue}{#1}}}
+  \newcommand{\changenote}[1]{{ \textcolor{blue}{#1}}}
+  \newcommand{\changeB}[1]{{ \textcolor{blue}{#1}}}
+  \newcommand{\changeG}[1]{{ \textcolor{ForestGreen}{#1}}}
+  \newcommand{\changeR}[1]{{ \textcolor{red}{#1}}}
+  \newcommand{\changeP}[1]{{ \textcolor{DarkOrchid}{#1}}}
+\else
+  % Changed text is indistinguishable
+  \newcommand{\change}[1]{#1}
+  \newcommand{\changeB}[1]{#1}
+  \newcommand{\changeG}[1]{#1}
+  \newcommand{\changeR}[1]{#1}
+  \newcommand{\changeP}[1]{#1}
+  \newcommand{\changenote}[1]{}
+\fi
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% New table column types, allowing left- or right-justified text in 
+% paragraph mode, that also allows manual line-breaks
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+%\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+%\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PDF mode settings : Auto-select eps or pdf figures 
+% based  on the compiler used (i.e. latex vs pdflatex)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifx\pdfoutput\undefined
+  \pdffalse
+  \DeclareGraphicsExtensions{.eps,.ps}
+\else
+  \ifnum\pdfoutput=1
+    % \pdftrue
+    \DeclareGraphicsExtensions{.pdf,.png,.jpg}
+  \else
+    % \pdffalse
+    \DeclareGraphicsExtensions{.eps,.ps}
+  \fi
+\fi
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AUTHOR-DEFINED MACROS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Paper aliases 
+\defcitealias{Patel:2014}{P14}
+\def\P14{\citetalias{Patel:2014}}
+
+\def\tomas{HFF14Tom}
+\def\33p{\ensuremath{3.3^{\prime}}}
+%\def\tomas{Tomas}
+
+% General purpose usefulness:
+\newcommand{\etal}{{et al.~}}                                             
+\def\eg{{e.g.}}
+\def\ie{{i.e.}}
+\def\etc{{etc.}}
+\newcommand{\lta}{\lesssim}                                               
+\newcommand{\gta}{\gtrsim}                                                
+\newcommand{\gt}{\gtsim}
+\newcommand{\kms}{\,\rm km\,s^{-1}}                                       
+
+
+%\def\pmstat{ \ensuremath{ \substack{ \resizebox{0.7em}{0.5em}{$\pm$} \\ \resizebox{0.7em}{0.2em}{stat}} } }
+\def\pmstat{\ensuremath{\substack{\pm \\ \mbox{\scalebox{0.45}{stat}} } } }
+\def\pmsyst{\ensuremath{\substack{\pm \\ \mbox{\scalebox{0.45}{syst}} } } }
+
+% Cosmology:
+\def\Om{\ensuremath{\Omega_{\rm m}}}
+\def\Ot{\ensuremath{\Omega_{\rm tot}}}
+\def\Ob{\ensuremath{\Omega_{\rm b}}}
+\def\OL{\ensuremath{\Omega_{\Lambda}}}
+\def\Ok{\ensuremath{\Omega_{\rm k}}}
+\def\om{\ensuremath{\omega_{\rm m}}}
+\def\ob{\ensuremath{\omega_{\rm b}}}
+\def\wo{\ensuremath{w_0}}
+\def\wa{\ensuremath{w_{\rm a}}}
+\def\lcdm{$\Lambda$CDM}
+\def\LCDM{$\Lambda$CDM}
+\def\wcdm{$w$CDM}
+\def\Ho{\ensuremath{H_0}}
+\def\DA{\ensuremath{D_A}}
+\def\DL{\ensuremath{D_L}}
+
+% Astronomy:
+\def\arcsec{\ensuremath{^{\prime\prime}}} 
+\def\kms{\ensuremath{{\rm km s}^{-1}}}
+\def\hgpcq{\mbox{$h^{-3}$Gpc$^3$}}
+\def\hmpcq{\mbox{$h^{-3}$Mpc$^3$}}
+\def\perhmpcq{\mbox{$h^{3}$Mpc$^{-3}$}}
+\def\hmpc{\mbox{$h^{-1}$Mpc}}
+\def\hmpci{\mbox{$h$\,Mpc$^{-1}$}}
+\def\mpc{\mbox{Mpc}}
+\def\mpci{\mbox{Mpc$^{-1}$}}
+\def\mpcq{\mbox{Mpc$^{-3}$}}
+\def\Msun{\mbox{M$_{\odot}$}}
+\def\Av{\mbox{$A_V$}}
+\def\Rv{\mbox{$R_V$}}
+
+% Supernovae : 
+\newcommand{\CCSN}{CC\,SN}
+\newcommand{\CCSNe}{CC\,SNe}
+\newcommand{\TNSN}{TN\,SN}
+\newcommand{\TNSNe}{TN\,SNe}
+\newcommand{\SNIa}{SN\,Ia}
+\newcommand{\SNeIa}{SNe\,Ia}
+\newcommand{\SNRz}{SNR($z$)}
+\def\Mch{\mbox{M$_{\rm Ch}$}}
+\def\Ni{\ensuremath{^{56}\mbox{Ni}}}
+\newcommand{\dmfifteen}{\ensuremath{\Delta\mbox{m}_{15}}}
+\newcommand{\deltamfifteen}{\ensuremath{\Delta\mbox{m}_{15}}}
+
+% Missions:
+\def\HST{{\it HST}}
+\def\Hubble{{\it Hubble}}
+\def\Hubbles{{\it Hubble's}}
+\def\Spitzer{{\it Spitzer}}
+\def\Chandra{{\it Chandra}}
+\def\Herschel{{\it Herschel}}
+\def\XMM{{\it XMM}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Page Setup 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\renewcommand{\topfraction}{0.9}
+%\renewcommand{\bottomfraction}{0.9}
+%\renewcommand{\textfraction}{0.1}
+%\renewcommand{\floatpagefraction}{0.9}
+%\renewcommand{\dbltopfraction}{0.9}
+%\renewcommand{\dblfloatpagefraction}{0.9}
